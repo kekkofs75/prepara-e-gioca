@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#EE8860" id="meta-theme-color">
+  <meta name="description" content="Riassunti strutturati dei tuoi giochi da tavolo preferiti">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Prepara &amp; Gioca">
+  <title>Prepara &amp; Gioca</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Reset & Root ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary:         #EE8860;
+      --primary-mid:     #E07040;
+      --primary-dark:    #C25A2A;
+      --primary-light:   #F5AA88;
+      --primary-pale:    #FDEEE5;
+      --primary-ghost:   #FFF8F3;
+
+      --bg:              #FFF8F3;
+      --surface:         #FFFFFF;
+      --surface-2:       #FFF3EC;
+
+      --text:            #2A1A0E;
+      --text-secondary:  #7A6050;
+      --text-disabled:   #B8A898;
+
+      --border:          #EDCFBC;
+      --border-light:    #F5E5DA;
+
+      --shadow-sm:  0 1px 4px rgba(180,80,30,0.08);
+      --shadow-md:  0 4px 16px rgba(180,80,30,0.12);
+      --shadow-lg:  0 8px 32px rgba(180,80,30,0.16);
+
+      --radius:    16px;
+      --radius-sm: 10px;
+      --radius-xs:  6px;
+
+      --nav-height:   60px;
+      --safe-bottom:  env(safe-area-inset-bottom, 0px);
+      --safe-top:     env(safe-area-inset-top, 0px);
+
+      /* Game theme – overridden dynamically per gioco */
+      --game-color:       var(--primary);
+      --game-color-mid:   var(--primary-mid);
+      --game-color-pale:  var(--primary-pale);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── View System ──────────────────────────────────────────── */
+    .view {
+      display: none;
+      min-height: calc(100dvh - var(--nav-height) - var(--safe-bottom));
+      padding-bottom: 12px;
+      animation: fadeUp .22s ease both;
+    }
+    .view.active { display: block; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Bottom Navigation ────────────────────────────────────── */
+    #bottom-nav {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: calc(var(--nav-height) + var(--safe-bottom));
+      padding-bottom: var(--safe-bottom);
+      background: var(--surface);
+      border-top: 1.5px solid var(--border-light);
+      display: flex;
+      z-index: 200;
+      box-shadow: 0 -2px 16px rgba(180,80,30,0.08);
+    }
+
+    .nav-btn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-disabled);
+      padding: 8px 4px;
+      -webkit-tap-highlight-color: transparent;
+      transition: color .15s, transform .1s;
+      letter-spacing: 0.01em;
+      user-select: none;
+    }
+    .nav-btn:active { transform: scale(0.93); }
+    .nav-btn.active { color: var(--primary); }
+    .nav-btn svg { width: 22px; height: 22px; }
+    .nav-btn.active svg path, .nav-btn.active svg rect,
+    .nav-btn.active svg circle, .nav-btn.active svg polyline,
+    .nav-btn.active svg line { stroke: var(--primary); }
+
+    /* ── HOME VIEW ────────────────────────────────────────────── */
+    #view-home { background: var(--bg); }
+
+    .home-header {
+      background: linear-gradient(160deg, var(--primary) 0%, var(--primary-light) 100%);
+      padding: calc(var(--safe-top) + 18px) 20px 22px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .home-header-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .header-logo {
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 5px;
+      flex-shrink: 0;
+    }
+    .header-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .home-header h1 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: #fff;
+      letter-spacing: -0.3px;
+      line-height: 1;
+    }
+    .home-header h1 span { opacity: 0.85; font-weight: 700; }
+
+    .search-wrap { position: relative; }
+    .search-wrap svg {
+      position: absolute; left: 13px; top: 50%;
+      transform: translateY(-50%);
+      width: 17px; height: 17px;
+      pointer-events: none; opacity: 0.65;
+    }
+    #search-input {
+      width: 100%;
+      padding: 11px 14px 11px 40px;
+      background: rgba(255,255,255,0.22);
+      border: 1.5px solid rgba(255,255,255,0.38);
+      border-radius: 50px;
+      font-size: 0.92rem;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      transition: all .2s;
+      -webkit-appearance: none;
+    }
+    #search-input::placeholder { color: rgba(255,255,255,0.65); }
+    #search-input:focus {
+      background: rgba(255,255,255,0.32);
+      border-color: rgba(255,255,255,0.65);
+    }
+
+    #games-count {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      padding: 12px 20px 4px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    #games-list {
+      padding: 8px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Game Card */
+    .game-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 12px;
+      display: flex;
+      gap: 13px;
+      align-items: center;
+      cursor: pointer;
+      border: 1.5px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .game-card:active {
+      transform: scale(0.982);
+      box-shadow: none;
+      border-color: var(--border);
+    }
+
+    .game-card-img-wrap {
+      width: 76px; height: 76px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--surface-2);
+      border: 1px solid var(--border-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+    }
+    .game-card-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .game-card-body { flex: 1; min-width: 0; }
+    .game-card-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.0rem;
+      color: var(--text);
+      margin-bottom: 7px;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .game-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 6px;
+    }
+    .meta-pill {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 0.77rem;
+      color: var(--text-secondary);
+      line-height: 1.2;
+    }
+    .meta-pill svg { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.75; }
+
+    .game-card-arrow {
+      color: var(--border);
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      margin-left: 2px;
+    }
+
+    /* ── GAME MENU VIEW ───────────────────────────────────────── */
+    #view-game-menu { background: var(--bg); }
+
+    .copertina-wrap {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      position: relative;
+      background: var(--game-color);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .copertina-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .copertina-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.35) 100%);
+    }
+
+    .game-menu-header {
+      background: var(--surface);
+      padding: 14px 20px 16px;
+      border-bottom: 1.5px solid var(--border-light);
+    }
+    .game-menu-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--game-color);
+      margin-bottom: 3px;
+      opacity: 0.85;
+    }
+    #game-menu-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: var(--game-color);
+      line-height: 1.15;
+      letter-spacing: -0.3px;
+    }
+    .game-meta-strip {
+      display: flex; gap: 12px;
+      margin-top: 10px; flex-wrap: wrap;
+    }
+    .meta-chip {
+      display: flex; align-items: center; gap: 5px;
+      background: var(--game-color-pale);
+      border: 1px solid color-mix(in srgb, var(--game-color) 25%, transparent);
+      border-radius: 50px;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      color: var(--game-color-mid);
+      font-weight: 600;
+    }
+    .meta-chip svg { width: 13px; height: 13px; opacity: 0.8; }
+
+    .sections-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      padding: 16px 20px 8px;
+    }
+
+    #sections-list {
+      padding: 0 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .section-btn {
+      background: var(--surface);
+      border: 2px solid var(--game-color);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--game-color);
+      transition: all .15s ease;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      text-align: left;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-btn::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: var(--game-color);
+      opacity: 0;
+      transition: opacity .15s;
+    }
+    .section-btn:active::after { opacity: 1; }
+    .section-btn:active .btn-label,
+    .section-btn:active .btn-icon { position: relative; z-index: 1; color: white; }
+
+    .btn-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1; }
+    .btn-label { flex: 1; }
+    .btn-arrow { font-size: 0.9rem; opacity: 0.45; flex-shrink: 0; }
+
+    /* ── SECTION DETAIL VIEW ──────────────────────────────────── */
+    #view-section { background: #fff; }
+
+    .section-hero {
+      background: var(--game-color);
+      padding: calc(var(--safe-top) + 16px) 20px 18px;
+      position: relative;
+    }
+    .section-hero-inner { position: relative; z-index: 1; }
+    .section-hero-game {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 4px;
+    }
+    .section-hero h2 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: #fff;
+      letter-spacing: -0.3px;
+    }
+    .section-hero-icon {
+      position: absolute; right: 20px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.6rem;
+      opacity: 0.18;
+    }
+
+    /* Markdown */
+    #markdown-content {
+      padding: 22px 20px 32px;
+      background: #fff;
+      line-height: 1.72;
+      font-size: 0.94rem;
+    }
+
+    #markdown-content h1 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 1.25rem;
+      color: var(--game-color);
+      margin: 1.4em 0 0.5em;
+      line-height: 1.25;
+      padding-bottom: 6px;
+      border-bottom: 2px solid color-mix(in srgb, var(--game-color) 20%, transparent);
+    }
+    #markdown-content h2 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700; font-size: 1.1rem;
+      color: var(--game-color);
+      margin: 1.2em 0 0.45em;
+      line-height: 1.3;
+    }
+    #markdown-content h3 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700; font-size: 0.98rem;
+      color: var(--text);
+      margin: 1em 0 0.35em;
+    }
+    #markdown-content h1:first-child,
+    #markdown-content h2:first-child,
+    #markdown-content h3:first-child { margin-top: 0; }
+
+    #markdown-content p { margin: 0.55em 0; }
+    #markdown-content ul, #markdown-content ol {
+      margin: 0.5em 0 0.5em 1.3em;
+    }
+    #markdown-content li { margin: 0.28em 0; }
+    #markdown-content li > ul, #markdown-content li > ol { margin: 0.2em 0 0.2em 1.1em; }
+
+    #markdown-content strong {
+      font-weight: 600;
+      color: var(--text);
+    }
+    #markdown-content em { color: var(--text-secondary); }
+
+    #markdown-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+      margin: 1em 0;
+      display: block;
+      box-shadow: var(--shadow-md);
+    }
+
+    #markdown-content table {
+      width: 100%; border-collapse: collapse;
+      margin: 1em 0; font-size: 0.88rem;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    #markdown-content th {
+      background: var(--game-color);
+      color: #fff; padding: 9px 12px;
+      text-align: left;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+    }
+    #markdown-content td {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+    }
+    #markdown-content tr:last-child td { border-bottom: none; }
+    #markdown-content tr:nth-child(even) td { background: var(--surface-2); }
+
+    #markdown-content blockquote {
+      border-left: 3px solid var(--game-color);
+      padding: 8px 14px;
+      margin: 0.8em 0;
+      background: var(--game-color-pale);
+      border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+
+    #markdown-content code {
+      background: var(--surface-2);
+      border: 1px solid var(--border-light);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.86em;
+      font-family: 'Courier New', monospace;
+      color: var(--game-color-mid);
+    }
+    #markdown-content pre {
+      background: var(--surface-2);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      overflow-x: auto;
+      margin: 0.8em 0;
+    }
+    #markdown-content pre code {
+      background: none; border: none;
+      padding: 0; font-size: 0.85rem;
+    }
+
+    #markdown-content hr {
+      border: none;
+      border-top: 2px solid color-mix(in srgb, var(--game-color) 20%, transparent);
+      margin: 1.4em 0;
+    }
+
+    /* ── Shared States ────────────────────────────────────────── */
+    .loading-state {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 60px 20px; gap: 16px;
+      color: var(--text-secondary);
+    }
+    .spinner {
+      width: 34px; height: 34px;
+      border: 3px solid var(--primary-pale);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin .75s linear infinite;
+    }
+    .loading-state p { font-size: 0.9rem; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .empty-state {
+      text-align: center; padding: 64px 24px;
+      color: var(--text-secondary);
+    }
+    .empty-state .empty-icon { font-size: 3.2rem; margin-bottom: 14px; }
+    .empty-state p { font-size: 0.95rem; line-height: 1.5; }
+
+    /* ── Install banner (iOS hint) ────────────────────────────── */
+    #install-banner {
+      display: none;
+      position: fixed; bottom: calc(var(--nav-height) + var(--safe-bottom) + 10px);
+      left: 16px; right: 16px;
+      background: var(--text);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      box-shadow: var(--shadow-lg);
+      z-index: 150;
+    }
+    #install-banner strong { display: block; margin-bottom: 3px; font-family: 'Nunito', sans-serif; }
+    #install-close {
+      position: absolute; top: 10px; right: 12px;
+      background: none; border: none; color: rgba(255,255,255,0.7);
+      font-size: 1.1rem; cursor: pointer; padding: 2px 4px;
+    }
+
+    /* ── Scrollbar ────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 50px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- HOME VIEW                                               -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="view-home" class="view active">
+    <header class="home-header">
+      <div class="home-header-top">
+        <div class="header-logo">
+          <img src="icon.png" alt="logo">
+        </div>
+        <h1>Prepara &amp; <span>Gioca</span></h1>
+      </div>
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="search" id="search-input" placeholder="Cerca gioco…" autocomplete="off" autocorrect="off" spellcheck="false">
+      </div>
+    </header>
+    <div id="games-count"></div>
+    <div id="games-list">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Caricamento giochi…</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- GAME MENU VIEW                                          -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="view-game-menu" class="view">
+    <div class="copertina-wrap" id="copertina-wrap">
+      <img id="game-copertina" src="" alt="" style="display:none">
+      <div class="copertina-overlay"></div>
+    </div>
+    <div class="game-menu-header">
+      <div class="game-menu-label">Gioco da Tavolo</div>
+      <div id="game-menu-title">Titolo</div>
+      <div class="game-meta-strip" id="game-meta-strip"></div>
+    </div>
+    <div class="sections-label">Sezioni del Regolamento</div>
+    <div id="sections-list"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- SECTION DETAIL VIEW                                     -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="view-section" class="view">
+    <div class="section-hero" id="section-hero">
+      <div class="section-hero-inner">
+        <div class="section-hero-game" id="section-hero-game">Gioco</div>
+        <h2 id="section-hero-title">Sezione</h2>
+      </div>
+      <div class="section-hero-icon" id="section-hero-icon"></div>
+    </div>
+    <div id="markdown-content"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- BOTTOM NAVIGATION                                       -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <nav id="bottom-nav">
+    <button class="nav-btn active" id="nav-home" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+        <polyline points="9,21 9,13 15,13 15,21"/>
+      </svg>
+      Home
+    </button>
+    <button class="nav-btn" id="nav-back" aria-label="Indietro">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15,18 9,12 15,6"/>
+      </svg>
+      Indietro
+    </button>
+  </nav>
+
+  <!-- iOS install hint -->
+  <div id="install-banner">
+    <button id="install-close" aria-label="Chiudi">✕</button>
+    <strong>📲 Installa l'app!</strong>
+    Tocca <strong>Condividi</strong> poi <strong>Aggiungi a schermata Home</strong> per un'esperienza completa offline.
+  </div>
+
+  <!-- Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+
+  <script>
+  "use strict";
+
+  /* ── Constants ──────────────────────────────────────────── */
+  const SECTIONS = [
+    { id: 'preparazione', label: 'Preparazione',        icon: '🎲', file: 'preparazione.md' },
+    { id: 'obiettivo',    label: 'Obiettivo',            icon: '🎯', file: 'obiettivo.md'    },
+    { id: 'svolgimento',  label: 'Svolgimento del Gioco',icon: '▶️', file: 'svolgimento.md'  },
+    { id: 'finepartita',  label: 'Fine della Partita',   icon: '🏆', file: 'finepartita.md'  },
+    { id: 'panoramica',   label: 'Panoramica Elementi',  icon: '📖', file: 'panoramica.md'   },
+  ];
+
+  /* ── State ──────────────────────────────────────────────── */
+  let gamesData    = [];
+  let currentGame  = null;
+  let navHistory   = ['home'];  // stack of view names
+
+  /* ── DOM refs ───────────────────────────────────────────── */
+  const $ = id => document.getElementById(id);
+  const views = {
+    home:     $('view-home'),
+    gameMenu: $('view-game-menu'),
+    section:  $('view-section'),
+  };
+
+  /* ── Marked config ──────────────────────────────────────── */
+  marked.setOptions({ breaks: true, gfm: true });
+
+  /* ── View router ────────────────────────────────────────── */
+  function showView(name) {
+    Object.values(views).forEach(v => v.classList.remove('active'));
+    views[name].classList.add('active');
+    $('nav-home').classList.toggle('active', name === 'home');
+    $('nav-back').classList.toggle('active', name !== 'home');
+    views[name].scrollTop = 0;
+    window.scrollTo(0, 0);
+  }
+
+  /* ── Theme color ─────────────────────────────────────────── */
+  function setGameTheme(hex) {
+    const root = document.documentElement;
+    root.style.setProperty('--game-color', hex);
+    // Compute mid (slightly darker) – simple approximation
+    const r = parseInt(hex.slice(1,3),16);
+    const g = parseInt(hex.slice(3,5),16);
+    const b = parseInt(hex.slice(5,7),16);
+    const mid = `rgb(${Math.max(0,r-25)},${Math.max(0,g-25)},${Math.max(0,b-25)})`;
+    root.style.setProperty('--game-color-mid', mid);
+    root.style.setProperty('--game-color-pale', `color-mix(in srgb, ${hex} 12%, white)`);
+    document.querySelector('#meta-theme-color').setAttribute('content', hex);
+  }
+
+  function resetTheme() {
+    const root = document.documentElement;
+    root.style.removeProperty('--game-color');
+    root.style.removeProperty('--game-color-mid');
+    root.style.removeProperty('--game-color-pale');
+    document.querySelector('#meta-theme-color').setAttribute('content', '#EE8860');
+  }
+
+  /* ── Init: load games.json ──────────────────────────────── */
+  async function init() {
+    try {
+      const res = await fetch('./games.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      gamesData = (data.games || []).sort((a,b) => a.title.localeCompare(b.title, 'it'));
+      renderHomeList(gamesData);
+    } catch(e) {
+      $('games-list').innerHTML = `
+        <div class="empty-state">
+          <div class="empty-icon">⚠️</div>
+          <p>Impossibile caricare i giochi.<br>Controlla la connessione.</p>
+        </div>`;
+      $('games-count').textContent = '';
+    }
+  }
+
+  /* ── Meta SVG icons ─────────────────────────────────────── */
+  const metaSVG = {
+    rank:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>`,
+    score:   `<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`,
+    time:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+    players: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>`,
+  };
+
+  /* ── Render home list ───────────────────────────────────── */
+  function renderHomeList(games) {
+    const count = $('games-count');
+    const list  = $('games-list');
+
+    if (!games.length) {
+      count.textContent = '';
+      list.innerHTML = `
+        <div class="empty-state">
+          <div class="empty-icon">🔍</div>
+          <p>Nessun gioco trovato.</p>
+        </div>`;
+      return;
+    }
+
+    count.textContent = `${games.length} gioch${games.length === 1 ? 'o' : 'i'}`;
+
+    list.innerHTML = games.map(g => `
+      <div class="game-card" onclick="openGame('${g.id}')" role="button" tabindex="0">
+        <div class="game-card-img-wrap">
+          <img
+            src="${g.cover || (g.folder + '/img/cover.png')}"
+            alt="${g.title}"
+            loading="lazy"
+            onerror="this.parentElement.innerHTML='🎲'"
+          >
+        </div>
+        <div class="game-card-body">
+          <div class="game-card-title">${g.title}</div>
+          <div class="game-meta">
+            <div class="meta-pill">${metaSVG.rank}   <span>#${g.bggRank  ?? '—'} BGG</span></div>
+            <div class="meta-pill">${metaSVG.score}  <span>${g.bggScore ?? '—'}/10</span></div>
+            <div class="meta-pill">${metaSVG.time}   <span>${g.duration ?? '—'} min</span></div>
+            <div class="meta-pill">${metaSVG.players}<span>${g.players  ?? '—'} gioc.</span></div>
+          </div>
+        </div>
+        <div class="game-card-arrow">›</div>
+      </div>
+    `).join('');
+  }
+
+  /* ── Open Game Menu ─────────────────────────────────────── */
+  function openGame(gameId) {
+    const game = gamesData.find(g => g.id === gameId);
+    if (!game) return;
+    currentGame = game;
+    navHistory.push('gameMenu');
+    setGameTheme(game.themeColor || '#EE8860');
+
+    // Copertina
+    const copertinaImg  = $('game-copertina');
+    const copertinaWrap = $('copertina-wrap');
+    const copertinaUrl  = game.copertina || (game.folder + '/img/copertina.png');
+    copertinaImg.src = copertinaUrl;
+    copertinaImg.style.display = 'block';
+    copertinaWrap.style.background = game.themeColor || '#EE8860';
+    copertinaImg.onerror = () => { copertinaImg.style.display = 'none'; };
+
+    // Title
+    $('game-menu-title').textContent = game.title;
+
+    // Meta chips
+    const chips = [
+      game.bggRank  ? `<div class="meta-chip">${metaSVG.rank}   #${game.bggRank} BGG</div>`   : '',
+      game.bggScore ? `<div class="meta-chip">${metaSVG.score}  ${game.bggScore}/10</div>`     : '',
+      game.duration ? `<div class="meta-chip">${metaSVG.time}   ${game.duration} min</div>`   : '',
+      game.players  ? `<div class="meta-chip">${metaSVG.players} ${game.players} gioc.</div>` : '',
+    ].join('');
+    $('game-meta-strip').innerHTML = chips;
+
+    // Section buttons
+    $('sections-list').innerHTML = SECTIONS.map(s => `
+      <button class="section-btn" onclick="openSection('${s.id}')">
+        <span class="btn-icon">${s.icon}</span>
+        <span class="btn-label">${s.label}</span>
+        <span class="btn-arrow">›</span>
+      </button>
+    `).join('');
+
+    showView('gameMenu');
+  }
+
+  /* ── Open Section ───────────────────────────────────────── */
+  async function openSection(sectionId) {
+    const sec = SECTIONS.find(s => s.id === sectionId);
+    if (!sec || !currentGame) return;
+    navHistory.push('section');
+
+    // Set hero
+    $('section-hero-game').textContent  = currentGame.title;
+    $('section-hero-title').textContent = sec.label;
+    $('section-hero-icon').textContent  = sec.icon;
+
+    // Show loading
+    $('markdown-content').innerHTML = `
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Caricamento…</p>
+      </div>`;
+
+    showView('section');
+
+    try {
+      const url = `${currentGame.folder}/${sec.file}`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      let md = await res.text();
+
+      // Rebase relative image paths to the game's img/ folder
+      const imgBase = currentGame.folder + '/img/';
+      md = md.replace(/!\[([^\]]*)\]\((?!https?:\/\/|\/|data:)([^)]+)\)/g,
+        (_, alt, src) => {
+          // Strip leading ./img/ or img/ if already prefixed
+          const clean = src.replace(/^\.?\/?img\//, '');
+          return `![${alt}](${imgBase}${clean})`;
+        }
+      );
+
+      $('markdown-content').innerHTML = marked.parse(md);
+    } catch(e) {
+      $('markdown-content').innerHTML = `
+        <div class="empty-state">
+          <div class="empty-icon">📄</div>
+          <p>Contenuto non ancora disponibile.<br>Aggiungi il file <code>${sec.file}</code>.</p>
+        </div>`;
+    }
+  }
+
+  /* ── Back navigation ────────────────────────────────────── */
+  function goBack() {
+    if (navHistory.length <= 1) return;
+    navHistory.pop();
+    const dest = navHistory[navHistory.length - 1];
+    if (dest === 'home') {
+      currentGame = null;
+      resetTheme();
+      showView('home');
+    } else if (dest === 'gameMenu') {
+      showView('gameMenu');
+    }
+  }
+
+  /* ── Search ─────────────────────────────────────────────── */
+  $('search-input').addEventListener('input', function() {
+    const q = this.value.trim().toLowerCase();
+    renderHomeList(q
+      ? gamesData.filter(g => g.title.toLowerCase().includes(q) || (g.subtitle||'').toLowerCase().includes(q))
+      : gamesData
+    );
+  });
+
+  /* ── Nav buttons ────────────────────────────────────────── */
+  $('nav-home').addEventListener('click', () => {
+    navHistory = ['home'];
+    currentGame = null;
+    resetTheme();
+    showView('home');
+  });
+  $('nav-back').addEventListener('click', goBack);
+
+  /* ── Hardware back (Android) ────────────────────────────── */
+  window.addEventListener('popstate', goBack);
+
+  /* ── iOS install hint ───────────────────────────────────── */
+  const isIOS    = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStand  = window.matchMedia('(display-mode: standalone)').matches;
+  const dismissed = sessionStorage.getItem('install-dismissed');
+  if (isIOS && !isStand && !dismissed) {
+    setTimeout(() => { $('install-banner').style.display = 'block'; }, 3500);
+  }
+  $('install-close').addEventListener('click', () => {
+    $('install-banner').style.display = 'none';
+    sessionStorage.setItem('install-dismissed', '1');
+  });
+
+  /* ── Service Worker ─────────────────────────────────────── */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(r => console.log('[PWA] SW registered, scope:', r.scope))
+        .catch(e => console.warn('[PWA] SW failed:', e));
+    });
+  }
+
+  /* ── Bootstrap ──────────────────────────────────────────── */
+  init();
+  </script>
+</body>
+</html>

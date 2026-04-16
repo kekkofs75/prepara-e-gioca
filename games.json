@@ -1,0 +1,31 @@
+{
+  "_comment": "Aggiungi qui ogni nuovo gioco. Il campo 'themeColor' definisce il colore dominante del gioco nell'interfaccia.",
+  "games": [
+    {
+      "id": "war-chest",
+      "title": "War Chest",
+      "subtitle": "Gioco di strategia con meccanica a sacchetto",
+      "themeColor": "#4A7C59",
+      "bggRank": 174,
+      "bggScore": 7.8,
+      "duration": "30-60",
+      "players": "2-4",
+      "folder": "games/war-chest",
+      "cover":    "games/war-chest/img/cover.png",
+      "copertina":"games/war-chest/img/copertina.png"
+    },
+    {
+      "id": "thunder-road-vendetta",
+      "title": "Thunder Road: Vendetta",
+      "subtitle": "Corse post-apocalittiche ad alta velocità",
+      "themeColor": "#C0392B",
+      "bggRank": 127,
+      "bggScore": 8.1,
+      "duration": "45-75",
+      "players": "2-4",
+      "folder": "games/thunder-road-vendetta",
+      "cover":    "games/thunder-road-vendetta/img/cover.png",
+      "copertina":"games/thunder-road-vendetta/img/copertina.png"
+    }
+  ]
+}
