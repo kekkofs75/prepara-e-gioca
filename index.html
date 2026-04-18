@@ -785,6 +785,9 @@
     }
   }
 
+  /* ── Score formatter: sempre 1 decimale (es. 8.0, 8.1) ──── */
+  const fmtScore = v => (v == null) ? '—' : parseFloat(v).toFixed(1);
+
   /* ── SVG icone ──────────────────────────────────────────── */
   const metaSVG = {
     rank:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>`,
@@ -818,7 +821,7 @@
           <div class="game-card-title">${g.title}</div>
           <div class="game-meta">
             <div class="meta-pill">${metaSVG.rank}   <span>#${g.bggRank  ?? '—'} BGG</span></div>
-            <div class="meta-pill">${metaSVG.score}  <span>${g.bggScore ?? '—'}/10</span></div>
+            <div class="meta-pill">${metaSVG.score}  <span>${fmtScore(g.bggScore)}/10</span></div>
             <div class="meta-pill">${metaSVG.time}   <span>${g.duration ?? '—'} min</span></div>
             <div class="meta-pill">${metaSVG.players}<span>${g.players  ?? '—'} gioc.</span></div>
           </div>
@@ -848,7 +851,7 @@
 
     $('game-meta-strip').innerHTML = [
       game.bggRank  ? `<div class="meta-chip">${metaSVG.rank}    #${game.bggRank} BGG</div>`   : '',
-      game.bggScore ? `<div class="meta-chip">${metaSVG.score}   ${game.bggScore}/10</div>`     : '',
+      game.bggScore ? `<div class="meta-chip">${metaSVG.score}   ${fmtScore(game.bggScore)}/10</div>`     : '',
       game.duration ? `<div class="meta-chip">${metaSVG.time}    ${game.duration} min</div>`    : '',
       game.players  ? `<div class="meta-chip">${metaSVG.players} ${game.players} gioc.</div>`   : '',
     ].join('');

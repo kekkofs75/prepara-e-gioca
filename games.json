@@ -26,6 +26,58 @@
       "folder": "games/thunder-road-vendetta",
       "cover":    "games/thunder-road-vendetta/img/cover.png",
       "copertina":"games/thunder-road-vendetta/img/copertina.png"
+    },
+    {
+      "id": "flip-7",
+      "title": "Flip 7",
+      "subtitle": "Press your luck fino a 200 punti",
+      "themeColor": "#2B8FCC",
+      "bggRank": 522,
+      "bggScore": 7.2,
+      "duration": "20",
+      "players": "3-18",
+      "folder": "games/flip-7",
+      "cover":    "games/flip-7/img/cover.png",
+      "copertina":"games/flip-7/img/copertina.png"
+    },
+    {
+      "id": "tag-team",
+      "title": "Tag Team",
+      "subtitle": "Classico combattimento arcade due contro due",
+      "themeColor": "#1A3A6B",
+      "bggRank": 848,
+      "bggScore": 7.7,
+      "duration": "15",
+      "players": "2",
+      "folder": "games/tag-team",
+      "cover":    "games/tag-team/img/cover.png",
+      "copertina":"games/tag-team/img/copertina.png"
+    },
+    {
+      "id": "arcs",
+      "title": "Arcs",
+      "subtitle": "Domina la galassia con la tua corte, la tua flotta e le tue città.",
+      "themeColor": "#2A1504",
+      "bggRank": 103,
+      "bggScore": 8.0,
+      "duration": "60-120",
+      "players": "2-4",
+      "folder": "games/arcs",
+      "cover":    "games/arcs/img/cover.png",
+      "copertina":"games/arcs/img/copertina.png"
+    },
+    {
+      "id": "arcs-k75",
+      "title": "Arcs K75",
+      "subtitle": "Domina la galassia con la tua corte, la tua flotta e le tue città.",
+      "themeColor": "#2A1504",
+      "bggRank": 103,
+      "bggScore": 8.0,
+      "duration": "60-120",
+      "players": "2-4",
+      "folder": "games/arcs-k75",
+      "cover":    "games/arcs-k75/img/cover.png",
+      "copertina":"games/arcs-k75/img/copertina.png"
     }
   ]
 }
