@@ -1,4 +1,5 @@
 # Setup del Tabellone
+![Mappa Numerata](img/mappa_preparazione.png)
 
 Posiziona la mappa al centro del tavolo e poni accanto la riserva di **18 dadi Combattimento** e di **25 segnalini Risorsa**. Mescola insieme e poni accanto alla mappa le 6 carte Vox e le 25 carte Gilda per formare il **mazzo Corte**.
 
@@ -18,9 +19,8 @@ Mescola e pesca **1 carta Preparazione** in base al numero di giocatori. In **2 
 > - Custode: Reliquie
 > - Empate: Psicoenergia
 
----
-
 # Setup dei Giocatori
+![Plancia e Pezzi](img/plancia_giocatore.png)
 
 Ogni giocatore prende una **plancia Giocatore** e un set di 5 città, 5 spazioporti, 15 navi e 10 agenti dello stesso colore, più l'indicatore Potere corrispondente che posiziona nello spazio **"0"** del tracciato Potere sulla mappa. Pone le città sugli spazi triangolari della propria plancia Giocatore.
 

@@ -78,6 +78,19 @@
       "folder": "games/arcs-k75",
       "cover":    "games/arcs-k75/img/cover.png",
       "copertina":"games/arcs-k75/img/copertina.png"
+    },
+    {
+      "id": "arcs-gemini",
+      "title": "Arcs Gemini",
+      "subtitle": "Domina la galassia con la tua corte, la tua flotta e le tue città.",
+      "themeColor": "#2A1504",
+      "bggRank": 103,
+      "bggScore": 8.0,
+      "duration": "60-120",
+      "players": "2-4",
+      "folder": "games/arcs-gemini",
+      "cover":    "games/arcs-gemini/img/cover.png",
+      "copertina":"games/arcs-gemini/img/copertina.png"
     }
   ]
 }
