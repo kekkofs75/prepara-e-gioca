@@ -91,6 +91,19 @@
       "folder": "games/arcs-gemini",
       "cover":    "games/arcs-gemini/img/cover.png",
       "copertina":"games/arcs-gemini/img/copertina.png"
+    },
+    {
+      "id": "gloomhaven-buttons-bugs",
+      "title": "Gloomhaven: Buttons & Bugs",
+      "subtitle": "Gloomhaven nel palmo della tua mano!",
+      "themeColor": "#2D1C12",
+      "bggRank": 906,
+      "bggScore": 3.33,
+      "duration": "20",
+      "players": "1",
+      "folder": "games/gloomhaven-buttons-bugs",
+      "cover":    "games/gloomhaven-buttons-bugs/img/cover.png",
+      "copertina":"games/gloomhaven-buttons-bugs/img/copertina.png"
     }
   ]
 }
