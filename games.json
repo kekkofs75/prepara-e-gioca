@@ -12,6 +12,7 @@
       "players": "2-4",
       "folder": "games/war-chest",
       "cover":    "games/war-chest/img/cover.png",
+      "coverBig": "games/war-chest/img/cover-big.webp",
       "copertina":"games/war-chest/img/copertina.png"
     },
     {
@@ -25,6 +26,7 @@
       "players": "2-4",
       "folder": "games/thunder-road-vendetta",
       "cover":    "games/thunder-road-vendetta/img/cover.png",
+      "coverBig": "games/thunder-road-vendetta/img/cover-big.webp",
       "copertina":"games/thunder-road-vendetta/img/copertina.png"
     },
     {
@@ -38,6 +40,7 @@
       "players": "3-18",
       "folder": "games/flip-7",
       "cover":    "games/flip-7/img/cover.png",
+      "coverBig": "games/flip-7/img/cover-big.webp",
       "copertina":"games/flip-7/img/copertina.png"
     },
     {
@@ -51,6 +54,7 @@
       "players": "2",
       "folder": "games/tag-team",
       "cover":    "games/tag-team/img/cover.png",
+      "coverBig": "games/tag-team/img/cover-big.webp",
       "copertina":"games/tag-team/img/copertina.png"
     },
     {
@@ -64,6 +68,7 @@
       "players": "2-4",
       "folder": "games/arcs",
       "cover":    "games/arcs/img/cover.png",
+      "coverBig": "games/arcs/img/cover-big.webp",
       "copertina":"games/arcs/img/copertina.png"
     },
     {
@@ -77,6 +82,7 @@
       "players": "2-4",
       "folder": "games/arcs-k75",
       "cover":    "games/arcs-k75/img/cover.png",
+      "coverBig": "games/arcs-k75/img/cover-big.webp",
       "copertina":"games/arcs-k75/img/copertina.png"
     },
     {
@@ -90,6 +96,7 @@
       "players": "2-4",
       "folder": "games/arcs-gemini",
       "cover":    "games/arcs-gemini/img/cover.png",
+      "coverBig": "games/arcs-gemini/img/cover-big.webp",
       "copertina":"games/arcs-gemini/img/copertina.png"
     },
     {
@@ -97,13 +104,28 @@
       "title": "Gloomhaven: Buttons & Bugs",
       "subtitle": "Gloomhaven nel palmo della tua mano!",
       "themeColor": "#2D1C12",
-      "bggRank": 906,
-      "bggScore": 3.33,
+      "bggRank": 904,
+      "bggScore": 7.5,
       "duration": "20",
       "players": "1",
       "folder": "games/gloomhaven-buttons-bugs",
       "cover":    "games/gloomhaven-buttons-bugs/img/cover.png",
+      "coverBig": "games/gloomhaven-buttons-bugs/img/cover-big.webp",
       "copertina":"games/gloomhaven-buttons-bugs/img/copertina.png"
+    },
+    {
+      "id": "aeons-end",
+      "title": "Aeon's End",
+      "subtitle": "I maghi devono raggiungere il loro pieno potenziale per difendere l'umanità da terribili mostruosità",
+      "themeColor": "#1A3A6B",
+      "bggRank": 108,
+      "bggScore": 7.9,
+      "duration": "60",
+      "players": "1-4",
+      "folder": "games/aeons-end",
+      "cover":    "games/aeons-end/img/cover.png",
+      "coverBig": "games/aeons-end/img/cover-big.webp",
+      "copertina":"games/aeons-end/img/copertina.png"
     }
   ]
 }
