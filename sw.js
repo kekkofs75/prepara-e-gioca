@@ -4,7 +4,7 @@
    Modifica CACHE_VERSION per forzare un aggiornamento.
    ═══════════════════════════════════════════════════════════ */
 
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v2';
 const CACHE_NAME    = `prepara-gioca-${CACHE_VERSION}`;
 
 /* File core da precachare al momento dell'install */
@@ -17,7 +17,9 @@ const CORE_ASSETS = [
   './icon-192.png',
   './icon-512.png',
   'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap',
-  'https://cdn.jsdelivr.net/npm/marked@9/marked.min.js',
+  'https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js',
+  'https://cdn.jsdelivr.net/npm/markdown-it-attrs@4/markdown-it-attrs.browser.js',
+  'https://cdn.jsdelivr.net/npm/markdown-it-container@3/dist/markdown-it-container.min.js',
 ];
 
 /* ── Install: precache core assets ─────────────────────────── */

@@ -587,6 +587,29 @@
       margin: 1.4em 0;
     }
 
+    /* ── Estensioni markdown-it ───────────────────────────────── */
+
+    /* ::: indent — paragrafo/blocco indentato */
+    .md-indent {
+      margin-left: 1.4em;
+      padding-left: 10px;
+      border-left: 2px solid var(--border);
+    }
+
+    /* ::: accent — blocco con testo nel colore del gioco */
+    .md-accent,
+    .md-accent p,
+    .md-accent li,
+    .md-accent h1, .md-accent h2, .md-accent h3 {
+      color: var(--game-color);
+    }
+
+    /* **testo**{.accent} — grassetto colorato inline nel colore del gioco */
+    .accent {
+      color: var(--game-color);
+      font-weight: 600;
+    }
+
     /* ── Shared States ────────────────────────────────────────── */
     .loading-state {
       display: flex; flex-direction: column;
@@ -745,7 +768,10 @@
     Tocca <strong>Condividi</strong> poi <strong>Aggiungi a schermata Home</strong>.
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+  <!-- markdown-it + plugin attrs (classi su qualsiasi elemento) + container (blocchi :::) -->
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-attrs@4/markdown-it-attrs.browser.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-container@3/dist/markdown-it-container.min.js"></script>
 
   <script>
   "use strict";
@@ -773,8 +799,22 @@
     section:  $('view-section'),
   };
 
-  /* ── Marked ─────────────────────────────────────────────── */
-  marked.setOptions({ breaks: true, gfm: true });
+  /* ── markdown-it + plugin ───────────────────────────────────
+     - markdown-it-attrs  → classi CSS su qualsiasi elemento
+       es. **testo**{.accent}  ![](img.png){.img-center}
+     - markdown-it-container → blocchi ::: nome ... :::
+       es. ::: indent  ...testo...  :::
+  ══════════════════════════════════════════════════════════ */
+  const mdParser = markdownit({ breaks: true, html: false, linkify: false })
+    .use(markdownItAttrs)
+    .use(markdownItContainer, 'indent', {
+      render: (tokens, idx) =>
+        tokens[idx].nesting === 1 ? '<div class="md-indent">\n' : '</div>\n'
+    })
+    .use(markdownItContainer, 'accent', {
+      render: (tokens, idx) =>
+        tokens[idx].nesting === 1 ? '<div class="md-accent">\n' : '</div>\n'
+    });
 
   /* ── History per tasto back hardware ───────────────────── */
   history.replaceState({ pg: 'home' }, '');
@@ -949,11 +989,11 @@
       if (!res.ok) throw new Error('HTTP ' + res.status);
       let md = await res.text();
 
-      // Preprocessa: rebase URL relative + gestisce {inline} e {center}
+      // Rebase URL relative → img/ del gioco, poi rendering con markdown-it
       const imgBase = currentGame.folder + '/img/';
-      md = preprocessMarkdown(md, imgBase);
+      md = rebaseImgUrls(md, imgBase);
 
-      $('markdown-content').innerHTML = marked.parse(md);
+      $('markdown-content').innerHTML = mdParser.render(md);
     } catch(e) {
       $('markdown-content').innerHTML = `
         <div class="empty-state">
@@ -1001,24 +1041,20 @@
     }
   });
 
-  /* ── Preprocessore Markdown ──────────────────────────────
-     Gestisce prima del parser:
-     1. Rebasing URL relative → imgBase
-     2. Modificatori {inline} e {center} → classi CSS
-     Sintassi: ![alt](url "titolo opzionale" {inline|center})
+  /* ── Rebase URL immagini relative → cartella img/ del gioco ─
+     markdown-it-attrs gestisce già {.img-center} ecc.
+     Qui serve solo correggere i percorsi relativi.
   ══════════════════════════════════════════════════════════ */
-  function preprocessMarkdown(md, imgBase) {
-    // Regex: ![alt](url "title" {modifier}) — tutti i campi opzionali tranne url
+  function rebaseImgUrls(md, imgBase) {
     return md.replace(
-      /!\[([^\]]*)\]\(([^)"'\s]+)(?:\s+"([^"]*)")?(?:\s+\{(inline|center)\})?\s*\)/g,
-      (match, alt, src, title, modifier) => {
-        // Rebase URL relative alla cartella img/ del gioco
-        if (!/^https?:\/\/|^\/|^data:/.test(src)) {
-          src = imgBase + src.replace(/^\.?\/?img\//, '');
-        }
-        const titleAttr = title    ? ` title="${title}"`       : '';
-        const classAttr = modifier ? ` class="img-${modifier}"` : '';
-        return `<img src="${src}" alt="${alt}"${titleAttr}${classAttr}>`;
+      /!\[([^\]]*)\]\((?!https?:\/\/|\/|data:)([^)]+)\)/g,
+      (_, alt, rest) => {
+        // rest può essere: "url", "url 'title'", "url {.cls}", "url 'title' {.cls}"
+        const urlMatch = rest.match(/^([^\s"']+)(.*)/);
+        if (!urlMatch) return _;
+        let [, src, tail] = urlMatch;
+        src = imgBase + src.replace(/^\.?\/?img\//, '');
+        return `![${alt}](${src}${tail})`;
       }
     );
   }
