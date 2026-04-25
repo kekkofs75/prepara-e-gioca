@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#EE8860" id="meta-theme-color">
   <meta name="description" content="Riassunti strutturati dei tuoi giochi da tavolo preferiti">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Prepara &amp; Gioca">
@@ -768,10 +769,10 @@
     Tocca <strong>Condividi</strong> poi <strong>Aggiungi a schermata Home</strong>.
   </div>
 
-  <!-- markdown-it + plugin attrs (classi su qualsiasi elemento) + container (blocchi :::) -->
+  <!-- markdown-it + plugin attrs + container (blocchi :::) -->
   <script src="https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/markdown-it-attrs@4/markdown-it-attrs.browser.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/markdown-it-container@3/dist/markdown-it-container.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-container@4/index.js"></script>
 
   <script>
   "use strict";
@@ -800,21 +801,37 @@
   };
 
   /* ── markdown-it + plugin ───────────────────────────────────
-     - markdown-it-attrs  → classi CSS su qualsiasi elemento
-       es. **testo**{.accent}  ![](img.png){.img-center}
-     - markdown-it-container → blocchi ::: nome ... :::
-       es. ::: indent  ...testo...  :::
+     Variabili globali esposte dai CDN:
+       markdownit           → markdown-it
+       markdownItAttrs      → markdown-it-attrs
+       markdownitContainer  → markdown-it-container (tutto minuscolo dopo "markdown-it")
   ══════════════════════════════════════════════════════════ */
-  const mdParser = markdownit({ breaks: true, html: false, linkify: false })
-    .use(markdownItAttrs)
-    .use(markdownItContainer, 'indent', {
-      render: (tokens, idx) =>
-        tokens[idx].nesting === 1 ? '<div class="md-indent">\n' : '</div>\n'
-    })
-    .use(markdownItContainer, 'accent', {
-      render: (tokens, idx) =>
-        tokens[idx].nesting === 1 ? '<div class="md-accent">\n' : '</div>\n'
-    });
+  let mdParser;
+  try {
+    mdParser = markdownit({ breaks: true, html: false, linkify: false });
+
+    if (typeof markdownItAttrs !== 'undefined') {
+      mdParser.use(markdownItAttrs);
+    }
+
+    // Nome corretto: markdownitContainer (tutto minuscolo)
+    if (typeof markdownitContainer !== 'undefined') {
+      mdParser
+        .use(markdownitContainer, 'indent', {
+          render: (tokens, idx) =>
+            tokens[idx].nesting === 1 ? '<div class="md-indent">\n' : '</div>\n'
+        })
+        .use(markdownitContainer, 'accent', {
+          render: (tokens, idx) =>
+            tokens[idx].nesting === 1 ? '<div class="md-accent">\n' : '</div>\n'
+        });
+    } else {
+      console.warn('[MD] markdown-it-container non disponibile');
+    }
+  } catch(e) {
+    console.warn('[MD] Errore init markdown-it:', e);
+    mdParser = { render: text => text.replace(/\n\n/g, '<br><br>') };
+  }
 
   /* ── History per tasto back hardware ───────────────────── */
   history.replaceState({ pg: 'home' }, '');
@@ -989,9 +1006,9 @@
       if (!res.ok) throw new Error('HTTP ' + res.status);
       let md = await res.text();
 
-      // Rebase URL relative → img/ del gioco, poi rendering con markdown-it
+      // Preprocessa: blocchi :::, rebase URL → poi rendering con markdown-it
       const imgBase = currentGame.folder + '/img/';
-      md = rebaseImgUrls(md, imgBase);
+      md = preprocessMarkdown(md, imgBase);
 
       $('markdown-content').innerHTML = mdParser.render(md);
     } catch(e) {
@@ -1041,16 +1058,18 @@
     }
   });
 
-  /* ── Rebase URL immagini relative → cartella img/ del gioco ─
-     markdown-it-attrs gestisce già {.img-center} ecc.
-     Qui serve solo correggere i percorsi relativi.
+  /* ── Preprocessore Markdown ─────────────────────────────────
+     Eseguito sul testo raw PRIMA di markdown-it.
+     Rebasa URL immagini relative → cartella img/ del gioco.
+     markdown-it-attrs gestisce le classi {.img-center} ecc.
+     markdown-it-container gestisce i blocchi ::: indent / ::: accent
   ══════════════════════════════════════════════════════════ */
-  function rebaseImgUrls(md, imgBase) {
+  function preprocessMarkdown(md, imgBase) {
+    // Rebase URL immagini relative
     return md.replace(
       /!\[([^\]]*)\]\((?!https?:\/\/|\/|data:)([^)]+)\)/g,
       (_, alt, rest) => {
-        // rest può essere: "url", "url 'title'", "url {.cls}", "url 'title' {.cls}"
-        const urlMatch = rest.match(/^([^\s"']+)(.*)/);
+        const urlMatch = rest.match(/^([^\s"'{}]+)(.*)/);
         if (!urlMatch) return _;
         let [, src, tail] = urlMatch;
         src = imgBase + src.replace(/^\.?\/?img\//, '');

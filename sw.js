@@ -19,7 +19,7 @@ const CORE_ASSETS = [
   'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap',
   'https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js',
   'https://cdn.jsdelivr.net/npm/markdown-it-attrs@4/markdown-it-attrs.browser.js',
-  'https://cdn.jsdelivr.net/npm/markdown-it-container@3/dist/markdown-it-container.min.js',
+  'https://cdn.jsdelivr.net/npm/markdown-it-container@4/index.js',
 ];
 
 /* ── Install: precache core assets ─────────────────────────── */
