@@ -140,6 +140,20 @@
       "cover":    "games/scout/img/cover.png",
       "coverBig": "games/scout/img/cover-big.webp",
       "copertina":"games/scout/img/copertina.png"
+    },
+    {
+      "id": "castle-combo",
+      "title": "Castle Combo",
+      "subtitle": "Costruisci una griglia di personaggi e crea combinazioni per ottenere più punti",
+      "themeColor": "#4D90A9",
+      "bggRank": 226,
+      "bggScore": 7.7,
+      "duration": "10-25",
+      "players": "2-5",
+      "folder": "games/castle-combo",
+      "cover":    "games/castle-combo/img/cover.png",
+      "coverBig": "games/castle-combo/img/cover-big.webp",
+      "copertina":"games/castle-combo/img/copertina.png"
     }
   ]
 }
