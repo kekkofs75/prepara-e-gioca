@@ -9,6 +9,8 @@ La partita termina quando ogni giocatore ha completato la griglia 3×3.
 ## Monete nei borselli
 - Alcune carte possono contenere Monete per punti extra
 
+> **Carte con i borselli": posiziona le tue Monete d'Oro sulle carte che riportano l'icona del Borsello in base al loro numero massimo.
+
 # Vittoria
 
 - Vince chi ha più punti

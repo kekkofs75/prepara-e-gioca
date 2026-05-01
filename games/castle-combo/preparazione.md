@@ -5,7 +5,7 @@
 - Rivela 3 carte per ciascun mazzo formando:
   - **Galleria del Castello**
   - **Galleria del Villaggio**
-- Posiziona la **pedina Messaggero** accanto a una delle due gallerie.
+- Posiziona la **pedina Messaggero** accanto alla **galleria Villaggio**.
 - Metti **Monete** e **Chiavi** a portata di tutti: questa è la **riserva**.
 
 # Setup dei Giocatori
