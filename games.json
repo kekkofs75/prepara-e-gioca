@@ -126,6 +126,20 @@
       "cover":    "games/aeons-end/img/cover.png",
       "coverBig": "games/aeons-end/img/cover-big.webp",
       "copertina":"games/aeons-end/img/copertina.png"
+    },
+    {
+      "id": "scout",
+      "title": "Scout",
+      "subtitle": "Rubate gli artisti ai vostri avversari e superatevi a vicenda con gli spettacoli circensi.",
+      "themeColor": "#3F0099",
+      "bggRank": 106,
+      "bggScore": 7.8,
+      "duration": "20",
+      "players": "2-5",
+      "folder": "games/scout",
+      "cover":    "games/scout/img/cover.png",
+      "coverBig": "games/scout/img/cover-big.webp",
+      "copertina":"games/scout/img/copertina.png"
     }
   ]
 }
