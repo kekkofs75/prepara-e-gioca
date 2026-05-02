@@ -395,7 +395,19 @@
       transition: opacity .15s;
     }
     .section-btn:active::after { opacity: 0.08; }
-    .btn-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1; }
+    .btn-icon {
+      width: 28px; height: 28px;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    /* Nei pulsanti (sfondo bianco): icona nel colore del gioco via invert+sepia trick */
+    .btn-icon img {
+      width: 24px; height: 24px;
+      object-fit: contain;
+      filter: invert(1);      /* bianco → nero come base */
+      mix-blend-mode: multiply; /* si moltiplica col bg bianco → resta visibile */
+      opacity: 0.75;
+    }
     .btn-label { flex: 1; }
     .btn-arrow { font-size: 0.9rem; opacity: 0.45; flex-shrink: 0; }
 
@@ -426,8 +438,13 @@
     .section-hero-icon {
       position: absolute; right: 20px; top: 50%;
       transform: translateY(-50%);
-      font-size: 2.6rem;
-      opacity: 0.18;
+      width: 56px; height: 56px;
+      opacity: 0.22;
+    }
+    .section-hero-icon img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      /* L'icona è bianca su trasparente: perfetta sull'header colorato */
     }
 
     /* FIX: padding-bottom sicuro anche nel markdown */
@@ -779,11 +796,11 @@
 
   /* ── Sezioni ────────────────────────────────────────────── */
   const SECTIONS = [
-    { id: 'preparazione', label: 'Preparazione',         icon: '🎲', file: 'preparazione.md' },
-    { id: 'obiettivo',    label: 'Obiettivo',             icon: '🎯', file: 'obiettivo.md'    },
-    { id: 'svolgimento',  label: 'Svolgimento del Gioco', icon: '▶️', file: 'svolgimento.md'  },
-    { id: 'finepartita',  label: 'Fine della Partita',    icon: '🏆', file: 'finepartita.md'  },
-    { id: 'panoramica',   label: 'Panoramica',            icon: '📖', file: 'panoramica.md'   },
+    { id: 'preparazione', label: 'Preparazione',         icon: 'icons/checklist.png',      file: 'preparazione.md' },
+    { id: 'obiettivo',    label: 'Obiettivo',             icon: 'icons/dice-target.png',    file: 'obiettivo.md'    },
+    { id: 'svolgimento',  label: 'Svolgimento del Gioco', icon: 'icons/pawn-clockwise.png', file: 'svolgimento.md'  },
+    { id: 'finepartita',  label: 'Fine della Partita',    icon: 'icons/laurels-trophy.png', file: 'finepartita.md'  },
+    { id: 'panoramica',   label: 'Panoramica',            icon: 'icons/stack.png',          file: 'panoramica.md'   },
   ];
 
   /* ── State ──────────────────────────────────────────────── */
@@ -973,7 +990,7 @@
 
     $('sections-list').innerHTML = SECTIONS.map(s => `
       <button class="section-btn" onclick="openSection('${s.id}')">
-        <span class="btn-icon">${s.icon}</span>
+        <span class="btn-icon"><img src="${s.icon}" alt="${s.label}"></span>
         <span class="btn-label">${s.label}</span>
         <span class="btn-arrow">›</span>
       </button>
@@ -991,7 +1008,7 @@
 
     $('section-hero-game').textContent  = currentGame.title;
     $('section-hero-title').textContent = sec.label;
-    $('section-hero-icon').textContent  = sec.icon;
+    $('section-hero-icon').innerHTML    = `<img src="${sec.icon}" alt="${sec.label}">`;
 
     $('markdown-content').innerHTML = `
       <div class="loading-state">
