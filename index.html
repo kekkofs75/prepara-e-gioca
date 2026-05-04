@@ -485,6 +485,20 @@
     #markdown-content li > ul, #markdown-content li > ol { margin: 0.2em 0 0.2em 1.1em; }
     #markdown-content strong { font-weight: 600; color: var(--text); }
     #markdown-content em { color: var(--text-secondary); }
+
+    /* accent sovrascrive le regole base di strong ed em */
+    #markdown-content .md-accent,
+    #markdown-content .md-accent p,
+    #markdown-content .md-accent li,
+    #markdown-content .md-accent h1,
+    #markdown-content .md-accent h2,
+    #markdown-content .md-accent h3,
+    #markdown-content .md-accent strong,
+    #markdown-content .md-accent b,
+    #markdown-content .md-accent em,
+    #markdown-content .md-accent i {
+      color: var(--game-color);
+    }
     /* Immagine standard (nessun modificatore) */
     #markdown-content img:not(.img-inline):not(.img-center) {
       max-width: 100%;
@@ -611,19 +625,11 @@
     .md-indent {
       margin-left: 1.4em;
       padding-left: 10px;
-      border-left: 2px solid var(--border);
-    }
-
-    /* ::: accent — blocco con testo nel colore del gioco */
-    .md-accent,
-    .md-accent p,
-    .md-accent li,
-    .md-accent h1, .md-accent h2, .md-accent h3 {
-      color: var(--game-color);
+      border-left: 2px solid var(--game-color);
     }
 
     /* **testo**{.accent} — grassetto colorato inline nel colore del gioco */
-    .accent {
+    #markdown-content .accent {
       color: var(--game-color);
       font-weight: 600;
     }
@@ -786,10 +792,10 @@
     Tocca <strong>Condividi</strong> poi <strong>Aggiungi a schermata Home</strong>.
   </div>
 
-  <!-- markdown-it + plugin attrs + container (blocchi :::) -->
+  <!-- markdown-it + plugin attrs (classi CSS su qualsiasi elemento markdown) -->
+  <!-- I blocchi ::: sono gestiti dal preprocessore JS interno -->
   <script src="https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/markdown-it-attrs@4/markdown-it-attrs.browser.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/markdown-it-container@4/index.js"></script>
 
   <script>
   "use strict";
@@ -817,33 +823,17 @@
     section:  $('view-section'),
   };
 
-  /* ── markdown-it + plugin ───────────────────────────────────
-     Variabili globali esposte dai CDN:
-       markdownit           → markdown-it
-       markdownItAttrs      → markdown-it-attrs
-       markdownitContainer  → markdown-it-container (tutto minuscolo dopo "markdown-it")
+  /* ── markdown-it + markdown-it-attrs ────────────────────────
+     markdown-it-attrs: aggiunge classi CSS a qualsiasi elemento
+       es. **testo**{.accent}   ![](img.png){.img-center}
+     I blocchi ::: indent / ::: accent sono gestiti dal
+     preprocessore JS (nessun plugin CDN necessario).
   ══════════════════════════════════════════════════════════ */
   let mdParser;
   try {
-    mdParser = markdownit({ breaks: true, html: false, linkify: false });
-
+    mdParser = markdownit({ breaks: true, html: true, linkify: false });
     if (typeof markdownItAttrs !== 'undefined') {
       mdParser.use(markdownItAttrs);
-    }
-
-    // Nome corretto: markdownitContainer (tutto minuscolo)
-    if (typeof markdownitContainer !== 'undefined') {
-      mdParser
-        .use(markdownitContainer, 'indent', {
-          render: (tokens, idx) =>
-            tokens[idx].nesting === 1 ? '<div class="md-indent">\n' : '</div>\n'
-        })
-        .use(markdownitContainer, 'accent', {
-          render: (tokens, idx) =>
-            tokens[idx].nesting === 1 ? '<div class="md-accent">\n' : '</div>\n'
-        });
-    } else {
-      console.warn('[MD] markdown-it-container non disponibile');
     }
   } catch(e) {
     console.warn('[MD] Errore init markdown-it:', e);
@@ -1077,22 +1067,31 @@
 
   /* ── Preprocessore Markdown ─────────────────────────────────
      Eseguito sul testo raw PRIMA di markdown-it.
-     Rebasa URL immagini relative → cartella img/ del gioco.
-     markdown-it-attrs gestisce le classi {.img-center} ecc.
-     markdown-it-container gestisce i blocchi ::: indent / ::: accent
+     1. Converte blocchi ::: tipo ... ::: in <div class="md-tipo">
+        (markdown-it-container non disponibile come UMD browser)
+     2. Rebasa URL immagini relative → cartella img/ del gioco
   ══════════════════════════════════════════════════════════ */
   function preprocessMarkdown(md, imgBase) {
-    // Rebase URL immagini relative
-    return md.replace(
+    // 1. Blocchi ::: tipo → <div class="md-tipo"> ... </div>
+    //    La regex cattura contenuto multiriga tra ::: apertura e ::: chiusura
+    md = md.replace(
+      /^:::[ \t]+(\S+)[ \t]*\n([\s\S]*?)^:::[ \t]*$/gm,
+      (_, tipo, contenuto) => `<div class="md-${tipo}">\n\n${contenuto}\n</div>\n`
+    );
+
+    // 2. Rebase URL immagini relative → img/ del gioco
+    md = md.replace(
       /!\[([^\]]*)\]\((?!https?:\/\/|\/|data:)([^)]+)\)/g,
       (_, alt, rest) => {
-        const urlMatch = rest.match(/^([^\s"'{}]+)(.*)/);
-        if (!urlMatch) return _;
-        let [, src, tail] = urlMatch;
+        const m = rest.match(/^([^\s"'{}]+)(.*)/);
+        if (!m) return _;
+        let [, src, tail] = m;
         src = imgBase + src.replace(/^\.?\/?img\//, '');
         return `![${alt}](${src}${tail})`;
       }
     );
+
+    return md;
   }
 
   /* ── Back navigation ────────────────────────────────────── */
