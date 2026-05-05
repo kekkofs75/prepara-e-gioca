@@ -1,83 +1,85 @@
-# Svolgimento del Gioco
+# Struttura: Round e Turni
 
-## Struttura del Round
-
-Ogni round si svolge in **3 fasi** nell'ordine seguente:
-
-1. **Avanza la pista** (Hazard Phase)
-2. **Turni dei giocatori** (in ordine, dal più arretrato al più avanzato)
-3. **Scorrimento della pista** (se necessario)
+Il gioco si svolge in **round**, ognuno composto da **3 turni per giocatore**. All'inizio di ogni round tutti rilanciano i propri 4 dadi movimento (escluso il primo round, dove si usano i dadi della preparazione). Il primo giocatore lancia anche il **dado strada**. Al termine del tuo turno, il giocatore alla tua sinistra svolge il turno successivo.
 
 ---
 
-## Fase 1 — Avanzamento della Pista
+# Il Tuo Turno — 4 Passi in Ordine
 
-All'inizio di ogni round:
+## Passo 1 — Assegnazione
 
-- Fai avanzare la pista di **1 sezione** verso il traguardo (sposta la sezione più arretrata in fondo al mazzo o eliminala).
-- I veicoli rimasti nella sezione eliminata sono **distrutti** (rimossi dal gioco).
+Assegna uno dei tuoi dadi movimento inutilizzati a un'**auto operativa** che non hai ancora mosso in questo round, posizionandolo al centro del relativo cruscotto. Il valore del dado indica quante caselle si muoverà quell'auto nel Passo 3.
 
-> Questa meccanica crea urgenza: stare indietro è pericoloso quanto essere attaccati.
+Se hai già mosso tutte le tue auto operative, puoi assegnare un dado allo spazio **inerzia** di un'auto già mossa (massimo 2 volte per auto per round). Non puoi usare l'inerzia se hai ancora un'auto operativa non mossa. In caso di inerzia, l'auto si muove esattamente di **1 casella**, indipendentemente dal valore del dado, e non può usare il dado strada.
 
----
+## Passo 2 — Comando *(una volta per round)*
 
-## Fase 2 — Turno del Giocatore
+In aggiunta all'assegnazione del dado all'auto, puoi assegnare un secondo dado inutilizzato a uno dei 4 comandi della tua **plancia comando**, rispettando il valore richiesto. Il comando si attiva **prima del movimento**. Non puoi usare un comando in un turno di inerzia.
 
-Nel tuo turno esegui nell'ordine:
+| Comando | Valore dado | Effetto |
+|---|---|---|
+| **Assalto Aereo** | Qualsiasi | Posiziona il tuo elicottero su una casella libera e spara con esso. Non disponibile nel primo round. |
+| **Nitro** | 1–3 | Aumenta il movimento dell'auto del valore del dado. Puoi superare 6. Devi usare tutto il movimento. |
+| **Drift** | 3–5 | La tua auto ignora il primo tamponamento del turno. Se termini in una casella con un altro veicolo, il tamponamento avviene comunque. |
+| **Riparazione** | 6 | Rimuovi un segnalino danno da una qualsiasi tua auto. Se era fuori uso, torna operativa e può muoversi nel round corrente se ci sono ancora turni. |
 
-### A) Muovi i Veicoli
+## Passo 3 — Movimento
 
-Muovi **ciascuno dei tuoi veicoli** (auto e/o elicottero). Ogni veicolo si muove in modo diverso:
+Muovi l'auto assegnata di tante caselle quante indicate dal dado. Regole fondamentali:
 
-**Auto:**
-- Lancia i **2 dadi movimento** (dadi con numeri e simboli).
-- Dividi il totale dei punti movimento tra le tue auto come preferisci.
-- Le auto si muovono **ortogonalmente o diagonalmente** di 1 casella per punto movimento.
-- Non puoi muovere sulla stessa casella di un'altra auto.
+- Devi sempre muoverti nell'**arco frontale** (le tre caselle davanti a sinistra, di fronte, davanti a destra).
+- Devi usare tutto il movimento, salvo effetti che lo interrompono.
+- Entrare in una **casella fango** costa 2 movimenti (puoi comunque entrarci con 1 solo movimento rimasto).
+- Entrare in una **casella invalicabile** elimina l'auto.
+- Incontrare un **segnalino pericolo coperto** significa rivelarlo e risolverlo immediatamente.
+- Entrare nella casella di un altro **veicolo su strada** provoca un tamponamento e azzera il movimento rimanente.
+- Subire un **danno** fa perdere il movimento rimanente.
+- Puoi passare attraverso la casella di un elicottero senza effetti, ma se ci **termini il turno** sei eliminato.
 
-**Elicottero:**
-- Si muove **liberamente** fino a 3 caselle (ignora ostacoli e auto).
-- Può sovrapporsi ad auto (proprie o altrui).
+> **Primo round:** il movimento della prima auto deve portarla verso il bordo posteriore della tessera posteriore per entrare in gioco.
 
-### B) Attacca (facoltativo)
+### Bonus Dado Strada
 
-Dopo aver mosso, puoi attaccare con **una o più auto** che sono adiacenti a veicoli nemici:
+Se durante il movimento hai percorso **solo caselle strada**, dopo il movimento puoi usare il **dado strada** per ottenere movimento aggiuntivo pari al suo valore. È opzionale, ma se lo usi devi usarlo tutto. Non si applica in caso di inerzia.
 
-1. Il **difensore** lancia i **dadi difesa** (blu).
-2. L'**attaccante** lancia i **dadi attacco** (rossi).
-3. Confronta i risultati: se l'attaccante supera il difensore, il bersaglio subisce **1 danno**.
+## Passo 4 — Sparare
 
-**Attacco con Elicottero:**
-- L'elicottero attacca qualsiasi auto nella sua casella o adiacente.
-- Usa dado speciale: risultati variabili (danno, nessun effetto, o colpisce l'attaccante).
+Dopo il movimento, l'auto che hai mosso (o l'elicottero posizionato con Assalto Aereo) può sparare a un veicolo su strada nell'**arco frontale**. Se ci sono più bersagli, ne scegli uno.
 
-### C) Carte Turbo
+Lancia il **dado mira**: se la dimensione del veicolo bersaglio compare nel risultato, il colpo va a segno e il proprietario pesca un segnalino danno.
 
-Puoi giocare **1 carta Turbo** per round in qualsiasi momento del tuo turno per ottenere effetti speciali (velocità extra, attacchi bonus, scudi, ecc.).
+- Non puoi bersagliare elicotteri.
+- Puoi bersagliare rottami (trattati come auto piccole fuori uso: se subiscono danno, sono eliminati).
+- Puoi bersagliare le tue stesse auto.
+- Puoi sparare dopo aver risolto un tamponamento.
 
-Pesca 1 nuova carta Turbo alla fine del tuo turno.
-
----
-
-## Danni e Distruzione
-
-Ogni auto ha **3 punti vita** (segnalini danno). Quando riceve il 3° danno, è **distrutta** (rimossa dalla plancia).
-
-L'elicottero ha **1 solo punto vita**: se attaccato con successo, è immediatamente distrutto.
+> **Primo round:** il passo Sparare viene saltato. Le armi non sono ancora collegate.
 
 ---
 
-## Hazard (Pericoli sulla Pista)
+# Fine del Turno
 
-Le sezioni stradali possono contenere **Hazard** (buche, detriti, ostacoli):
-
-- Passare su un Hazard richiede un **tiro difesa**: fallire significa subire 1 danno.
-- L'elicottero ignora tutti gli Hazard.
+Sposta il dado movimento dal cruscotto allo spazio **"fine del turno"**: quell'auto non può ricevere un altro dado per movimento regolare in questo round (ma può ancora muoversi per inerzia). Qualsiasi auto che si trovi nella casella di un elicottero a fine turno è **eliminata**.
 
 ---
 
-## Ordine di Gioco
+# Fine del Round e Aggiornamento del Tabellone
 
-L'ordine dei turni si determina **all'inizio di ogni round** in base alla posizione: chi è più **arretrato** va per primo.
+Dopo che ogni giocatore ha svolto 3 turni, il dado strada passa al giocatore alla sinistra, che diventa il nuovo primo giocatore. Si inizia un nuovo round.
 
-In caso di parità di posizione, va prima chi ha meno veicoli rimasti.
+Quando un'auto **supera il bordo anteriore** della tessera anteriore (e quella non è la tessera finale), il tabellone si aggiorna:
+
+1. Tutte le auto sulla **tessera posteriore** sono eliminate.
+2. I segnalini pericolo sulla tessera posteriore sono scartati.
+3. Gli elicotteri sulla tessera posteriore tornano ai rispettivi proprietari.
+4. La tessera posteriore viene rimossa, girata e messa in fondo alla pila di pesca.
+5. Le tessere centrale e anteriore diventano rispettivamente la nuova posteriore e la nuova centrale.
+6. Si pesca una nuova tessera anteriore con nuovi segnalini pericolo sulle caselle apposite.
+7. Se l'auto ha ancora movimento rimasto, continua a muoversi sulla nuova tessera.
+8. Controlla se la nuova tessera è la tessera finale.
+
+---
+
+# Fuori dal Gioco
+
+Un giocatore è **fuori dal gioco** quando tutte le sue auto sono fuori uso o eliminate. Il suo elicottero viene rimosso dal tabellone; le sue auto fuori uso rimangono sul tabellone. Quel giocatore non svolge più turni.

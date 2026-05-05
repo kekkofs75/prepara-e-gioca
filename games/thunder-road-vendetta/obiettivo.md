@@ -1,18 +1,3 @@
-# Obiettivo
+Guidi un equipaggio di tre auto attraverso strade post-apocalittiche pericolose, combattendo gli avversari a colpi di armi e tamponamenti mentre corri verso il traguardo.
 
-## Condizione di Vittoria
-
-Vince il giocatore che **supera per primo il traguardo** con almeno un veicolo (auto o elicottero), **oppure** l'ultimo giocatore con almeno un veicolo ancora in gioco.
-
----
-
-## Struttura dell'Obiettivo
-
-Thunder Road: Vendetta è simultaneamente una gara e un combattimento:
-
-- **Avanzare** lungo la pista per arrivare al traguardo
-- **Sopravvivere** agli attacchi degli avversari
-- **Gestire** i danni ai propri veicoli
-- **Usare** le carte Turbo nel momento giusto
-
-Non esiste un punteggio: si vince per posizione o per sopravvivenza.
+Vinci se sei il **primo a tagliare la linea del traguardo** con una delle tue auto, oppure se sei l'**ultimo giocatore rimasto con auto operative** dopo che tutti gli altri sono stati eliminati.

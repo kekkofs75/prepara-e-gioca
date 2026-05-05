@@ -1,41 +1,31 @@
-# Preparazione
+# Setup del Tabellone
 
-## Componenti
+Poni la **tessera strada iniziale** (*Il Parcheggio* oppure *Pista del Disastro*) al centro del tavolo: è la **tessera posteriore**. Mescola le tessere strada rimanenti e pescane due: la prima diventa la **tessera centrale**, la seconda la **tessera anteriore**. Tieni le tessere rimaste come pila di pesca e metti il **traguardo** vicino ad essa.
 
-- 4 plance stradali modulari (Double-sided)
-- 4 squadre di veicoli (3 auto + 1 elicottero ciascuna)
-- Plance personaggio / squadra
-- Dadi attacco (rossi), dadi difesa (blu), dado speciale
-- Segnalini danno, segnalini Hazard
-- Mazzo carte Turbo
-- Mazzo carte evento (opzionale)
+Mescola i **segnalini pericolo** a faccia in giù e posizionane uno su ogni casella pericolo delle tre tessere.
+
+> Sulla tessera iniziale, posiziona i segnalini pericolo solo sulle caselle che indicano il numero di giocatori corretto.
+
+I segnalini pericolo rimanenti formano una pila coperta a lato. Mescola allo stesso modo i **segnalini danno** e mettili in un'altra pila coperta. Poni i **dadi FX** vicino al tabellone.
 
 ---
 
-## Costruzione della Pista
+# Setup dei Giocatori
 
-1. Posiziona **4 sezioni stradali** in fila, formando la pista di gara.
-2. La direzione di gara va da destra a sinistra (o come concordato).
-3. Usa la **faccia standard** delle sezioni per la prima partita; le facce avanzate aggiungono effetti speciali (rocce, buche, rampe).
+Ogni giocatore sceglie un colore e prende:
 
-> In partite a 2–3 giocatori puoi usare 3 sezioni per una partita più rapida.
+- 1 **plancia comando**
+- 3 **cruscotti** (uno per ogni auto: piccola S, media M, grande L)
+- 3 **auto** (piccola, media, grande)
+- 1 **elicottero**
+- 4 **dadi movimento** del proprio colore
 
-## Preparazione Personale
+Posiziona le tue tre auto nell'**area iniziale** dietro la tessera posteriore e disponi i cruscotti in fila davanti a te.
 
-Ciascun giocatore sceglie (o pesca a caso) una **squadra** e prende:
+---
 
-- Le 3 auto del proprio colore
-- L'elicottero del proprio colore
-- La plancia squadra
-- **1 carta Turbo** pescata casualmente dal mazzo (tienila coperta)
+# Determinare il Primo Giocatore
 
-## Posizionamento Iniziale
+Ogni giocatore lancia i propri 4 dadi movimento e **conserva** il risultato: sarà usato nel primo turno. Chi ottiene il **totale più basso** è il primo giocatore. In caso di pareggio, **tutti i giocatori** rilanciano tutti i propri dadi, ripetendo finché non emerge un totale più basso unico.
 
-1. Schiera le tue **3 auto** nella sezione di partenza (la più a destra), nelle caselle assegnate in base al numero di giocatori:
-   - Riempite le corsie disponibili, alternando un'auto per giocatore finché non sono tutte piazzate.
-2. L'**elicottero** si posiziona sopra una delle tue auto a tua scelta (stacking consentito).
-3. Ordine di posizionamento: si determina casualmente (dado o carte).
-
-## Primo Turno
-
-Il giocatore il cui veicolo è più arretrato nella griglia di partenza va per primo. In caso di parità, si lancia un dado.
+Il primo giocatore lancia infine il **dado strada** e lo lascia visibile a tutti.
