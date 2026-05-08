@@ -634,6 +634,160 @@
       font-weight: 600;
     }
 
+    /* ── Badge AI Summary ─────────────────────────────────────── */
+    .ai-badge {
+      position: absolute;
+      top: 4px; right: 4px;
+      font-size: 0.7rem;
+      line-height: 1;
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      border-radius: 50px;
+      padding: 2px 5px;
+      pointer-events: none;
+      user-select: none;
+      z-index: 2;
+    }
+    /* Badge inline nel titolo del menu gioco */
+    .ai-badge-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 0.65rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      color: var(--text-disabled);
+      background: var(--surface-2);
+      border: 1px solid var(--border-light);
+      border-radius: 50px;
+      padding: 1px 6px;
+      vertical-align: middle;
+      margin-left: 6px;
+      position: relative;
+      top: -2px;
+      white-space: nowrap;
+    }
+
+    /* ── Termine cliccabile {.def} ───────────────────────────── */
+    #markdown-content .def {
+      color: var(--game-color);
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+      cursor: pointer;
+      font-weight: inherit;
+      transition: opacity .15s;
+    }
+    #markdown-content .def:active { opacity: 0.65; }
+
+    /* ── Popup definizione ────────────────────────────────────── */
+    #def-popup {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 600;
+      align-items: flex-end;    /* sale dal basso su mobile */
+      justify-content: center;
+      padding: 0;
+    }
+    #def-popup.open { display: flex; }
+
+    #def-popup-backdrop {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.45);
+      animation: fadeIn .2s ease both;
+    }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+    #def-popup-box {
+      position: relative;
+      z-index: 1;
+      background: var(--surface);
+      width: 100%;
+      max-width: 560px;
+      max-height: 72vh;
+      border-radius: var(--radius) var(--radius) 0 0;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      animation: slideUp .25s cubic-bezier(0.34,1.2,0.64,1) both;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to   { transform: translateY(0); }
+    }
+
+    #def-popup-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px 10px;
+      border-bottom: 1.5px solid var(--border-light);
+      flex-shrink: 0;
+    }
+    #def-popup-term {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--game-color);
+      letter-spacing: -0.2px;
+    }
+    /* Maniglietta drag in cima */
+    #def-popup-box::before {
+      content: '';
+      display: block;
+      width: 36px; height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      margin: 10px auto 0;
+      flex-shrink: 0;
+    }
+    #def-popup-close {
+      background: var(--surface-2);
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      border-radius: 50%;
+      width: 30px; height: 30px;
+      font-size: 0.9rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      flex-shrink: 0;
+    }
+    #def-popup-close:active { background: var(--border-light); }
+
+    #def-popup-content {
+      overflow-y: auto;
+      padding: 14px 18px calc(var(--safe-bottom) + 18px);
+      font-size: 0.91rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+    /* Il contenuto del popup usa gli stessi stili markdown della sezione */
+    #def-popup-content h1 { font-family:'Nunito',sans-serif; font-weight:800;
+      font-size:1.1rem; color:var(--game-color); margin:.8em 0 .3em;
+      border-bottom:1.5px solid color-mix(in srgb,var(--game-color) 20%,transparent);
+      padding-bottom:4px; }
+    #def-popup-content h2 { font-family:'Nunito',sans-serif; font-weight:700;
+      font-size:.97rem; color:var(--game-color); margin:.7em 0 .3em; }
+    #def-popup-content strong { font-weight:600; color:var(--text); }
+    #def-popup-content em { color:var(--text-secondary); }
+    #def-popup-content ul, #def-popup-content ol { margin:.4em 0 .4em 1.2em; }
+    #def-popup-content li { margin:.2em 0; }
+    #def-popup-content img:not(.img-inline) { max-width:100%; border-radius:var(--radius-sm);
+      margin:.7em 0; display:block; box-shadow:var(--shadow-md); }
+    #def-popup-content img.img-inline { display:inline-block; vertical-align:middle;
+      height:1.4em; width:auto; margin:0 3px; box-shadow:none; position:relative; top:-1px; }
+    #def-popup-content table { width:100%; border-collapse:collapse; margin:.6em 0;
+      font-size:.85rem; }
+    #def-popup-content th { background:var(--game-color); color:#fff; padding:6px 10px;
+      font-family:'Nunito',sans-serif; font-weight:700; text-align:left; }
+    #def-popup-content td { padding:6px 10px; border-bottom:1px solid var(--border-light); }
+    #def-popup-content blockquote { border-left:3px solid var(--game-color);
+      padding:6px 10px; margin:.5em 0; background:var(--primary-pale);
+      border-radius:0 var(--radius-xs) var(--radius-xs) 0;
+      font-style:italic; color:var(--text-secondary); }
+
     /* ── Shared States ────────────────────────────────────────── */
     .loading-state {
       display: flex; flex-direction: column;
@@ -678,6 +832,20 @@
 </head>
 
 <body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       POPUP DEFINIZIONE — aperto cliccando su termini {.def}
+  ══════════════════════════════════════════════════════════ -->
+  <div id="def-popup" role="dialog" aria-modal="true" aria-labelledby="def-popup-term">
+    <div id="def-popup-backdrop"></div>
+    <div id="def-popup-box">
+      <div id="def-popup-header">
+        <span id="def-popup-term"></span>
+        <button id="def-popup-close" aria-label="Chiudi">✕</button>
+      </div>
+      <div id="def-popup-content"></div>
+    </div>
+  </div>
 
   <!-- ══════════════════════════════════════════════════════════
        LIGHTBOX — cover-big.png a tutto schermo
@@ -933,11 +1101,12 @@
       const bgColor   = g.themeColor || 'var(--surface-2)';
       return `
       <div class="game-card" onclick="openGame('${g.id}')" role="button" tabindex="0">
-        <div class="game-card-img-wrap" style="background:${bgColor}"
+        <div class="game-card-img-wrap" style="background:${bgColor}; position:relative;"
              onclick="event.stopPropagation(); openLightbox('${bigSrc}','${g.title}')">
           <img src="${coverSrc}"
                alt="${g.title}" loading="lazy"
                onerror="this.parentElement.innerHTML='🎲'">
+          ${g.aiSummary ? '<span class="ai-badge">✨ AI</span>' : ''}
         </div>
         <div class="game-card-body">
           <div class="game-card-title">${g.title}</div>
@@ -969,7 +1138,11 @@
     cw.style.background = game.themeColor || '#EE8860';
     ci.onerror = () => { ci.style.display = 'none'; };
 
-    $('game-menu-title').textContent = game.title;
+    $('game-menu-title').innerHTML =
+      game.title +
+      (game.aiSummary
+        ? ' <span class="ai-badge-title">✨ riassunto AI</span>'
+        : '');
 
     $('game-meta-strip').innerHTML = [
       game.bggRank  ? `<div class="meta-chip">${metaSVG.rank}    #${game.bggRank} BGG</div>`   : '',
@@ -1013,7 +1186,8 @@
       if (!res.ok) throw new Error('HTTP ' + res.status);
       let md = await res.text();
 
-      // Preprocessa: blocchi :::, rebase URL → poi rendering con markdown-it
+      // Preprocessa: glossario, blocchi :::, rebase URL → poi rendering con markdown-it
+      glossaryMap = {};
       const imgBase = currentGame.folder + '/img/';
       md = preprocessMarkdown(md, imgBase);
 
@@ -1026,6 +1200,40 @@
         </div>`;
     }
   }
+
+  /* ── Popup Definizione ──────────────────────────────────── */
+  function openDefPopup(key) {
+    const entry = glossaryMap[key];
+    if (!entry) return;
+
+    $('def-popup-term').textContent = entry.term;
+
+    // Renderizza il markdown della definizione (con rebase immagini se serve)
+    const imgBase = currentGame ? (currentGame.folder + '/img/') : '';
+    const rendered = mdParser.render(
+      preprocessMarkdown(entry.def, imgBase)
+    );
+    $('def-popup-content').innerHTML = rendered;
+
+    $('def-popup').classList.add('open');
+    history.pushState({ pg: 'defpopup' }, '');
+  }
+
+  function closeDefPopup() {
+    $('def-popup').classList.remove('open');
+    $('def-popup-content').innerHTML = '';
+  }
+
+  $('def-popup-backdrop').addEventListener('click', closeDefPopup);
+  $('def-popup-close').addEventListener('click', closeDefPopup);
+
+  // Delegazione eventi: click su qualsiasi .def dentro il contenuto markdown
+  $('markdown-content').addEventListener('click', function(e) {
+    const el = e.target.closest('.def');
+    if (!el) return;
+    const key = el.dataset.def;
+    if (key) openDefPopup(key);
+  });
 
   /* ── Lightbox ───────────────────────────────────────────── */
   function openLightbox(src, alt) {
@@ -1050,6 +1258,10 @@
 
   // Chiude il lightbox anche col tasto back hardware
   window.addEventListener('popstate', function () {
+    if ($('def-popup').classList.contains('open')) {
+      closeDefPopup();
+      return;
+    }
     if ($('lightbox').classList.contains('open')) {
       closeLightbox();
       return;
@@ -1071,15 +1283,55 @@
         (markdown-it-container non disponibile come UMD browser)
      2. Rebasa URL immagini relative → cartella img/ del gioco
   ══════════════════════════════════════════════════════════ */
+  /* ── Mappa del glossario (per sezione corrente) ─────────── */
+  let glossaryMap = {};   // { "termine": "markdown della definizione" }
+
+  /* ── Preprocessore Markdown ─────────────────────────────────
+     Ordine operazioni:
+     1. Estrae :::glossary e popola glossaryMap (poi lo elimina)
+     2. Converte :::tipo ... ::: in <div class="md-tipo">
+     3. Sostituisce [termine]{.def} con <span class="def" data-def="...">
+     4. Rebasa URL immagini relative → img/ del gioco
+  ══════════════════════════════════════════════════════════ */
   function preprocessMarkdown(md, imgBase) {
-    // 1. Blocchi ::: tipo → <div class="md-tipo"> ... </div>
-    //    La regex cattura contenuto multiriga tra ::: apertura e ::: chiusura
+    glossaryMap = {};
+
+    // 1. Estrai e rimuovi :::glossary
+    md = md.replace(
+      /^:::[ \t]+glossary[ \t]*\n([\s\S]*?)^:::[ \t]*$/gm,
+      (_, contenuto) => {
+        // Ogni riga "[termine]: definizione (può essere multiriga con indentazione)"
+        // Supporta definizioni su più paragrafi (riga vuota = nuovo paragrafo)
+        const entries = contenuto.split(/\n(?=\[)/);
+        entries.forEach(entry => {
+          const m = entry.match(/^\[([^\]]+)\]:\s*([\s\S]+?)(?:\n*$)/);
+          if (m) {
+            const term = m[1].trim();
+            const def  = m[2].trim();
+            glossaryMap[term.toLowerCase()] = { term, def };
+          }
+        });
+        return '';   // rimuovi il blocco dal markdown
+      }
+    );
+
+    // 2. Blocchi :::tipo → <div class="md-tipo">
     md = md.replace(
       /^:::[ \t]+(\S+)[ \t]*\n([\s\S]*?)^:::[ \t]*$/gm,
       (_, tipo, contenuto) => `<div class="md-${tipo}">\n\n${contenuto}\n</div>\n`
     );
 
-    // 2. Rebase URL immagini relative → img/ del gioco
+    // 3. [termine]{.def} → <span class="def" data-def="chiave">termine</span>
+    md = md.replace(
+      /\[([^\]]+)\]\{\.def\}/g,
+      (_, term) => {
+        const key = term.toLowerCase();
+        // data-def contiene la chiave; il testo visibile rimane il termine originale
+        return `<span class="def" data-def="${key.replace(/"/g,'&quot;')}">${term}</span>`;
+      }
+    );
+
+    // 4. Rebase URL immagini relative
     md = md.replace(
       /!\[([^\]]*)\]\((?!https?:\/\/|\/|data:)([^)]+)\)/g,
       (_, alt, rest) => {
