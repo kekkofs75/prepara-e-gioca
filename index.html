@@ -356,6 +356,9 @@
       text-transform: uppercase;
       color: var(--text-secondary);
       padding: 16px 20px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     /* FIX: padding-bottom sicuro */
@@ -648,24 +651,27 @@
       user-select: none;
       z-index: 2;
     }
-    /* Badge inline nel titolo del menu gioco */
+    /* Badge inline nella sections-label */
     .ai-badge-title {
       display: inline-flex;
       align-items: center;
-      gap: 3px;
-      font-size: 0.65rem;
+      gap: 4px;
+      font-size: 0.7rem;
       font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      color: var(--text-disabled);
-      background: var(--surface-2);
-      border: 1px solid var(--border-light);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #fff;
+      background: var(--game-color);
       border-radius: 50px;
-      padding: 1px 6px;
-      vertical-align: middle;
-      margin-left: 6px;
-      position: relative;
-      top: -2px;
+      padding: 3px 8px;
       white-space: nowrap;
+      text-transform: none;
+    }
+    .ai-badge-title img {
+      width: 0.8rem;
+      height: 0.8rem;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
     }
 
     /* ── Termine cliccabile {.def} ───────────────────────────── */
@@ -904,7 +910,7 @@
       <div id="game-menu-title">Titolo</div>
       <div class="game-meta-strip" id="game-meta-strip"></div>
     </div>
-    <div class="sections-label">Sezioni del Regolamento</div>
+    <div class="sections-label" id="sections-label-wrap">Sezioni del Regolamento</div>
     <div id="sections-list"></div>
   </div>
 
@@ -1106,7 +1112,7 @@
           <img src="${coverSrc}"
                alt="${g.title}" loading="lazy"
                onerror="this.parentElement.innerHTML='🎲'">
-          ${g.aiSummary ? '<span class="ai-badge">✨ AI</span>' : ''}
+          ${g.aiSummary ? '<span class="ai-badge">✨ IA</span>' : ''}
         </div>
         <div class="game-card-body">
           <div class="game-card-title">${g.title}</div>
@@ -1138,11 +1144,12 @@
     cw.style.background = game.themeColor || '#EE8860';
     ci.onerror = () => { ci.style.display = 'none'; };
 
-    $('game-menu-title').innerHTML =
-      game.title +
-      (game.aiSummary
-        ? ' <span class="ai-badge-title">✨ riassunto AI</span>'
-        : '');
+    $('game-menu-title').textContent = game.title;
+
+    const aiBadgeHtml = game.aiSummary
+      ? '<span class="ai-badge-title">✨ riassunto IA</span>'
+      : '';
+    $('sections-label-wrap').innerHTML = `Sezioni del Regolamento${aiBadgeHtml ? ' ' + aiBadgeHtml : ''}`;
 
     $('game-meta-strip').innerHTML = [
       game.bggRank  ? `<div class="meta-chip">${metaSVG.rank}    #${game.bggRank} BGG</div>`   : '',
