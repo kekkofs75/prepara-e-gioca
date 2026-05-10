@@ -1199,6 +1199,10 @@
       md = preprocessMarkdown(md, imgBase);
 
       $('markdown-content').innerHTML = mdParser.render(md);
+      // Reset scroll dopo inserimento asincrono del contenuto
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     } catch(e) {
       $('markdown-content').innerHTML = `
         <div class="empty-state">
