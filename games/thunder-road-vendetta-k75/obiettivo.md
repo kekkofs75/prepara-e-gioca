@@ -1,0 +1,1 @@
+Il 1° giocatore che **taglia la linea del traguardo** con una delle sue auto, oppure l'**ultimo giocatore rimasto con 1+ auto operative** in gioco dopo che tutti gli altri sono stati eliminati, vince.

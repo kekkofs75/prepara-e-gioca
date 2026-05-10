@@ -32,6 +32,21 @@
       "aiSummary": true
     },
     {
+      "id": "thunder-road-vendetta-k75",
+      "title": "Thunder Road: Vendetta",
+      "subtitle": "Corse post-apocalittiche ad alta velocità",
+      "themeColor": "#C0392B",
+      "bggRank": 127,
+      "bggScore": 8.1,
+      "duration": "45-75",
+      "players": "2-4",
+      "folder": "games/thunder-road-vendetta-k75",
+      "cover":    "games/thunder-road-vendetta-k75/img/cover.png",
+      "coverBig": "games/thunder-road-vendetta-k75/img/cover-big.webp",
+      "copertina":"games/thunder-road-vendetta-k75/img/copertina.png",
+      "aiSummary": false
+    },
+    {
       "id": "flip-7",
       "title": "Flip 7",
       "subtitle": "Press your luck fino a 200 punti",
