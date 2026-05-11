@@ -1105,10 +1105,11 @@
       const coverSrc  = g.cover     || (g.folder + '/img/cover.png');
       const bigSrc    = g.coverBig  || (g.folder + '/img/cover-big.png');
       const bgColor   = g.themeColor || 'var(--surface-2)';
+      const safeTitle = g.title.replace(/'/g, "\\'");  // sfugge apostrofi nel JS inline
       return `
       <div class="game-card" onclick="openGame('${g.id}')" role="button" tabindex="0">
         <div class="game-card-img-wrap" style="background:${bgColor}; position:relative;"
-             onclick="event.stopPropagation(); openLightbox('${bigSrc}','${g.title}')">
+             onclick="event.stopPropagation(); openLightbox('${bigSrc}','${safeTitle}')">
           <img src="${coverSrc}"
                alt="${g.title}" loading="lazy"
                onerror="this.parentElement.innerHTML='🎲'">
@@ -1219,12 +1220,10 @@
 
     $('def-popup-term').textContent = entry.term;
 
-    // Renderizza il markdown della definizione (con rebase immagini se serve)
+    // Renderizza il markdown della definizione senza toccare glossaryMap
     const imgBase = currentGame ? (currentGame.folder + '/img/') : '';
-    const rendered = mdParser.render(
-      preprocessMarkdown(entry.def, imgBase)
-    );
-    $('def-popup-content').innerHTML = rendered;
+    const defMd   = rebaseImages(entry.def, imgBase);
+    $('def-popup-content').innerHTML = mdParser.render(defMd);
 
     $('def-popup').classList.add('open');
     history.pushState({ pg: 'defpopup' }, '');
@@ -1295,55 +1294,25 @@
      2. Rebasa URL immagini relative → cartella img/ del gioco
   ══════════════════════════════════════════════════════════ */
   /* ── Mappa del glossario (per sezione corrente) ─────────── */
-  let glossaryMap = {};   // { "termine": "markdown della definizione" }
+  let glossaryMap = {};
 
-  /* ── Preprocessore Markdown ─────────────────────────────────
-     Ordine operazioni:
-     1. Estrae :::glossary e popola glossaryMap (poi lo elimina)
-     2. Converte :::tipo ... ::: in <div class="md-tipo">
-     3. Sostituisce [termine]{.def} con <span class="def" data-def="...">
-     4. Rebasa URL immagini relative → img/ del gioco
-  ══════════════════════════════════════════════════════════ */
-  function preprocessMarkdown(md, imgBase) {
-    glossaryMap = {};
-
-    // 1. Estrai e rimuovi :::glossary
-    md = md.replace(
-      /^:::[ \t]+glossary[ \t]*\n([\s\S]*?)^:::[ \t]*$/gm,
-      (_, contenuto) => {
-        // Ogni riga "[termine]: definizione (può essere multiriga con indentazione)"
-        // Supporta definizioni su più paragrafi (riga vuota = nuovo paragrafo)
-        const entries = contenuto.split(/\n(?=\[)/);
-        entries.forEach(entry => {
-          const m = entry.match(/^\[([^\]]+)\]:\s*([\s\S]+?)(?:\n*$)/);
-          if (m) {
-            const term = m[1].trim();
-            const def  = m[2].trim();
-            glossaryMap[term.toLowerCase()] = { term, def };
-          }
-        });
-        return '';   // rimuovi il blocco dal markdown
+  /* ── Parser del blocco glossario ────────────────────────── */
+  function parseGlossaryContent(content) {
+    // Divide sulle righe che iniziano con [ — ogni entry è [termine]: def
+    const entries = content.split(/\n(?=\[)/);
+    entries.forEach(entry => {
+      const m = entry.match(/^\[([^\]]+)\]:\s*([\s\S]+?)(?:\n*$)/);
+      if (m) {
+        const term = m[1].trim();
+        const def  = m[2].trim();
+        if (term && def) glossaryMap[term.toLowerCase()] = { term, def };
       }
-    );
+    });
+  }
 
-    // 2. Blocchi :::tipo → <div class="md-tipo">
-    md = md.replace(
-      /^:::[ \t]+(\S+)[ \t]*\n([\s\S]*?)^:::[ \t]*$/gm,
-      (_, tipo, contenuto) => `<div class="md-${tipo}">\n\n${contenuto}\n</div>\n`
-    );
-
-    // 3. [termine]{.def} → <span class="def" data-def="chiave">termine</span>
-    md = md.replace(
-      /\[([^\]]+)\]\{\.def\}/g,
-      (_, term) => {
-        const key = term.toLowerCase();
-        // data-def contiene la chiave; il testo visibile rimane il termine originale
-        return `<span class="def" data-def="${key.replace(/"/g,'&quot;')}">${term}</span>`;
-      }
-    );
-
-    // 4. Rebase URL immagini relative
-    md = md.replace(
+  /* ── Rebase immagini (senza toccare glossaryMap) ─────────── */
+  function rebaseImages(md, imgBase) {
+    return md.replace(
       /!\[([^\]]*)\]\((?!https?:\/\/|\/|data:)([^)]+)\)/g,
       (_, alt, rest) => {
         const m = rest.match(/^([^\s"'{}]+)(.*)/);
@@ -1353,6 +1322,46 @@
         return `![${alt}](${src}${tail})`;
       }
     );
+  }
+
+  /* ── Preprocessore Markdown ─────────────────────────────────
+     Ordine operazioni:
+     1. Estrae :::glossary e popola glossaryMap (poi lo elimina)
+     2. Converte :::tipo ... ::: in <div class="md-tipo">
+     3. Sostituisce [termine]{.def} con <span class="def" data-def="...">
+     4. Rebasa URL immagini relative → img/ del gioco
+     FIX: usa \s* invece di [ \t]+ — funziona sia con che senza spazio
+          (:::glossary e ::: glossary entrambi validi)
+  ══════════════════════════════════════════════════════════ */
+  function preprocessMarkdown(md, imgBase) {
+    glossaryMap = {};
+
+    // 1. Estrai e rimuovi :::glossary (con o senza spazio dopo :::)
+    md = md.replace(
+      /^:::\s*glossary\s*\r?\n([\s\S]*?)^:::\s*$/gm,
+      (_, contenuto) => {
+        parseGlossaryContent(contenuto);
+        return '';
+      }
+    );
+
+    // 2. Blocchi :::tipo → <div class="md-tipo">
+    md = md.replace(
+      /^:::\s*(\S+)\s*\r?\n([\s\S]*?)^:::\s*$/gm,
+      (_, tipo, contenuto) => `<div class="md-${tipo}">\n\n${contenuto}\n</div>\n`
+    );
+
+    // 3. [termine]{.def} → <span class="def" data-def="chiave">termine</span>
+    md = md.replace(
+      /\[([^\]]+)\]\{\.def\}/g,
+      (_, term) => {
+        const key = term.toLowerCase();
+        return `<span class="def" data-def="${key.replace(/"/g,'&quot;')}">${term}</span>`;
+      }
+    );
+
+    // 4. Rebase URL immagini relative
+    md = rebaseImages(md, imgBase);
 
     return md;
   }
