@@ -674,6 +674,25 @@
       filter: brightness(0) invert(1);
     }
 
+    /* {.icon} — icona dalla cartella /icons/, colorata col colore del gioco */
+    .img-icon {
+      display: inline-block;
+      width: 1.15em;
+      height: 1.15em;
+      background-color: var(--game-color);
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      vertical-align: middle;
+      position: relative;
+      top: -0.1em;
+      margin: 0 3px;
+      flex-shrink: 0;
+    }
+
     /* ── Termine cliccabile {.def} ───────────────────────────── */
     #markdown-content .def {
       color: var(--game-color);
@@ -1335,6 +1354,17 @@
   ══════════════════════════════════════════════════════════ */
   function preprocessMarkdown(md, imgBase) {
     glossaryMap = {};
+
+    // 0. ![nome]{.icon} → <span class="img-icon" style="mask-image:url(icons/nome.png)"
+    //    Il percorso è sempre relativo alla root del sito (non al file .md)
+    md = md.replace(
+      /!\[([^\]]*)\]\{\.icon\}/g,
+      (_, name) => {
+        const iconName = name.trim().toLowerCase().replace(/\s+/g, '-');
+        const url = `icons/${iconName}.png`;
+        return `<span class="img-icon" style="-webkit-mask-image:url(${url});mask-image:url(${url})" role="img" aria-label="${name}"></span>`;
+      }
+    );
 
     // 1. Estrai e rimuovi :::glossary (con o senza spazio dopo :::)
     md = md.replace(

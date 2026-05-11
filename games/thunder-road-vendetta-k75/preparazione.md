@@ -30,8 +30,9 @@ Ogni giocatore lancia i propri **4 dadi movimento** e **conserva** il risultato 
 Il primo giocatore lancia e pone il **dado strada** ![dado strada](img/dadofx-strada.png){.img-inline} accanto al tabellone, visibile a tutti.
 
 ---
+---
 
-# ![puzzle](img/puzzle.png){.img-inline} Munizioni Extra
+# ![puzzle]{.icon} Munizioni Extra
 
 Puoi aggiungere **uno o più dei seguenti mazzi** al gioco base. Mescola ogni mazzo **separatamente**.
 
@@ -43,7 +44,7 @@ Puoi aggiungere **uno o più dei seguenti mazzi** al gioco base. Mescola ogni ma
 | **Ricompense** | **1 carta coperta** a testa. | Riscuoti quando soddisfi la condizione. |
 | **Condizioni Stradali** | **1 carta scoperta** su ogni tessera (esclusa la posteriore). | Applica la regola alla tessera corrispondente. |
 
-# ![puzzle](img/puzzle.png){.img-inline} Solo Parti Originali
+# ![puzzle]{.icon} Solo Parti Originali
 
 Puoi usare i **capitani** e le **carte accessorio** separatamente o insieme nella stessa partita.
 

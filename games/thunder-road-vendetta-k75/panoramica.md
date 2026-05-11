@@ -7,7 +7,7 @@ Il **tabellone** è composto da **3 tessere strada** affiancate in fila (**poste
 Ogni tessera ha **caselle di terreno** diverso e **caselle pericolo**.
 
 |   | Casella | Costo |
-|:---:|:---:|:---|
+| :---: | :---: | :--- |
 | ![casella strada](img/casella-strada.png){.img-inline} | **Strada** | 1 punto movimento |
 | ![casella fuori-strada](img/casella-fuori-strada.png){.img-inline} | **Fuori-strada** | 1 punto movimento |
 | ![casella fango](img/casella-fango.png){.img-inline} | **Fango** | punto movimento (o 1 rimasto) |
@@ -19,7 +19,7 @@ Ogni tessera ha **caselle di terreno** diverso e **caselle pericolo**.
 I **segnalini pericolo** ![segnalino pericolo](img//segnalino-pericolo.png){.img-inline} sono posti **coperti** sulle **caselle pericolo** quando viene aggiunta una nuova tessera e vengono risolti quando un'**auto** si muove su di essi. Alcuni vengono **scartati**, altri **rimangono** sul tabellone.
 
 |   | Segnalino | Effetto | Dopo |
-|:---:|:---:|:---|:---|
+| :---: | :---: | :--- | :--- |
 | ![pericolo rottame](img/pericolo-rottame.png){.img-inline} | **Rottame** | Poni 1 miniatura rottame e tampona | Scarta (sostituito dal rottame) |
 | ![pericolo mina](img/pericolo-mina.png){.img-inline} | **Mina** | Subisci 1 danno e termina il movimento | Scarta il segnalino |
 | ![pericolo strada](img/pericolo-strada.png){.img-inline} | **Strada** | La casella diventa terreno Strada | Resta sul tabellone |
@@ -60,7 +60,7 @@ L'arco frontale sono le **3 caselle di fronte a sinistra, di fronte e di fronte 
 Ogni equipaggio ha **2 tipi** di veicoli. 
 
 |   | Veicolo | Dimensione | Mira (Difficoltà) | Potenza Tamponamento |
-|:---:|:---:|:---:|:---|:---|
+| :---: | :---: | :---: | :--- | :--- |
 | ![auto piccola](img/auto-piccola.png){.img-inline} | **Auto Picola** | **S** | Difficile da colpire | Minima |
 | ![auto media](img/auto-media.png){.img-inline} | **Auto Media** | **M** | Bilanciata | Media |
 | ![auto grande](img/auto-grande.png){.img-inline} | **Auto Grande** | **L** | Bersaglio facile | Massima |
@@ -82,7 +82,7 @@ Ogni auto ha il proprio cruscotto con:
 ## Stato delle Auto
 
 | Stato | Condizione | Effetti |
-| :--- | :--- | :--- |
+| :---: | :--- | :--- |
 | **Operativa** | 0-1 Danni | Può muovere e sparare normalmente |
 | **Fuori Uso** | 2 Danni | Gira auto e cruscotto. No movimento/fuoco. Riparabile. |
 | **Eliminata** | - | Rimossa dal gioco. Libera i segnalini danno. |
@@ -104,7 +104,7 @@ Se si stava muovendo, perde il **movimento rimanente**.
 :::
 
 |   | Segnalino | Effetto | Dadi usati |
-|:---:|:---:|:---|:---:|
+| :---: | :---: | :--- | :---: |
 | ![ammaccatura](img/danno-ammaccatura.png){.img-inline} | **Ammaccatura** | Nessun effetto extra | — |
 | ![schegge](img/danno-schegge.png){.img-inline} | **Schegge** | Colpisce il primo veicolo in linea retta | ![dado direzione](img/dadofx-direzione.png){.img-inline} |
 | ![slittamento](img/danno-slittamento.png){.img-inline} | **Slittamento** | Sposta l'auto di 1 casella nella direzione indicata | — |
@@ -131,7 +131,7 @@ Ogni giocatore ha una plancia comando con **4 comandi** da usare **una sola volt
 Oltre ai **4 dadi movimento** nei colori dei vari giocatori sono presenti nel gioco anche i **4 dadi FX**.
 
 |   | Dado | Quando si usa |
-|:---:|:---:|:---|
+| :---: | :---: | :--- |
 | ![dado movimento](img/dado-movimento.png){.img-inline} | **Dado Movimento** | Movimento, inerzia e comando |
 | ![dado strada](img/dadofx-strada.png){.img-inline} | **Dado Strada** | Bonus movimento dopo un turno tutto su strada |
 | ![dado acrobazia](img/dadofx-acrobazia.png){.img-inline} | **Dado Acrobazia** | Sbandate e sbalzi da segnalini danno |
@@ -139,7 +139,10 @@ Oltre ai **4 dadi movimento** nei colori dei vari giocatori sono presenti nel gi
 | ![dado tamponamento](img/dadofx-tamponamento.png){.img-inline} | **Dado Tamponamento** | Per determinare quale veicolo si sposta nel tamponamento |
 | ![dado direzione](img/dadofx-direzione.png){.img-inline} | **Dado Direzione** | Per determinare la direzione di movimenti causati da effetti |
 
-# ![puzzle](img/puzzle.png){.img-inline} Solo Parti Originali
+---
+---
+
+# ![puzzle]{.icon} Solo Parti Originali
 
 ## Plancia Comando dei Capitani
 
