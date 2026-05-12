@@ -5,11 +5,11 @@ Componi il **tabellone di gioco** come segue (tieni poi le **tessere** rimaste c
 - Poni la **tessera strada iniziale** (*Il Parcheggio* o la *Pista del Disastro*) al centro del tavolo come **tessera posteriore**.
 - Mescola e pesca **2 tessere strada** tra le rimanenti: la prima diventa la **tessera centrale**, la seconda la **tessera anteriore**.
 
-Mescola e poni **1 [segnalino pericolo]{.def} coperto** su ogni casella pericolo delle 3 tessere. Poni i rimanenti segnalini in una **pila coperta** accanto all'area di gioco.
+Mescola e poni **1 segnalino pericolo coperto** ![segnalino danno](img/segnalino-pericolo.png){.img-inline} su ogni casella pericolo delle 3 tessere. Poni i rimanenti segnalini in una **pila coperta** accanto all'area di gioco.
 
 > Sulla **tessera iniziale**, poni i segnalini pericolo solo sulle caselle indicate per il numero di giocatori corretto.
 
-Mescola e poni i [segnalini danno]{.def} in un'altra **pila coperta** insieme ai **dadi FX** accanto all'area di gioco.
+Mescola e poni i **segnalini danno** ![segnalino danno](img/segnalino-danno.png){.img-inline} in un'altra **pila coperta** insieme ai **dadi FX** accanto all'area di gioco.
 
 # Giocatori
 
@@ -67,9 +67,3 @@ Mescola e dai **4 carte accessorio** ad ogni giocatore, poi eseguite un draft di
 - Si continua finché tutti hanno **3 carte** (rimetti le rimanenti nella scatola).
 
 Ogni giocatore pone **1 carta accessorio** al di sopra del cruscotto di ciascuna delle proprie **auto**. Al termine, tutti le **rivelano insieme**.
-
-:::glossary
-[segnalino pericolo]: Segnalino posto coperto sulle caselle pericolo del tabellone; viene risolto quando un'auto vi entra.
-
-[segnalino danno]: Segnalino pescato casualmente quando un'auto subisce danno; ne determina l'effetto immediato.
-:::

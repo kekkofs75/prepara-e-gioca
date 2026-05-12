@@ -2,7 +2,7 @@ Il giocatore la cui auto taglia per prima la **linea del traguardo** oppure è l
 
 # Tessera Finale
 
-La **[tessera finale]{.def}** è quella su cui viene posizionata la **linea del traguardo**. Il momento in cui diventa finale dipende dal numero di giocatori a inizio partita:
+La **tessera finale** è quella su cui viene posizionata la **linea del traguardo**. Il momento in cui diventa finale dipende dal numero di giocatori a inizio partita:
 
 | Giocatori | La tessera finale è… |
 | :---: | :--- |
@@ -15,14 +15,8 @@ In entrambi i casi, aggiungi la **linea del traguardo** a quella tessera.
 
 # Fuori dal Gioco
 
-Un giocatore è **[fuori dal gioco]{.def}** quando **tutte** le sue auto sono **fuori uso o eliminate**.
+Un giocatore è **fuori dal gioco** quando **tutte** le sue auto sono **fuori uso o eliminate**.
 
 - Il suo **elicottero** viene rimosso dal tabellone.
 - Le sue **auto fuori uso** rimangono sul tabellone.
 - Quel giocatore **non** svolge più turni.
-
-:::glossary
-[tessera finale]: La tessera su cui viene posizionata la linea del traguardo. Segna l'avvicinarsi della fine della partita.
-
-[fuori dal gioco]: Condizione di un giocatore le cui auto sono tutte fuori uso o eliminate. Non svolge più turni e il suo elicottero viene rimosso.
-:::

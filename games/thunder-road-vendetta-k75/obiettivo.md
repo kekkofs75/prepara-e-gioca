@@ -5,7 +5,7 @@
 :::glossary
 [stato delle auto]: 
 | Stato | Condizione | Effetti |
-| :--- | :--- | :--- |
+| :---: | :--- | :--- |
 | **Operativa** | 0-1 Danni | Può muovere e sparare normalmente |
 | **Fuori Uso** | 2 Danni | Gira auto e cruscotto. No movimento/fuoco. Riparabile. |
 | **Eliminata** | - | Rimossa dal gioco. Libera i segnalini danno. |
