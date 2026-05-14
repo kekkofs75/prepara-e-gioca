@@ -21,10 +21,10 @@ I **segnalini pericolo** ![segnalino pericolo](img//segnalino-pericolo.png){.img
 |   | Segnalino | Effetto | Dopo |
 | :---: | :---: | :--- | :--- |
 | ![pericolo rottame](img/pericolo-rottame.png){.img-inline} | **Rottame** | Poni 1 miniatura rottame e tampona | Scarta (sostituito dal rottame) |
-| ![pericolo mina](img/pericolo-mina.png){.img-inline} | **Mina** | Subisci 1 danno e termina il movimento | Scarta il segnalino |
-| ![pericolo strada](img/pericolo-strada.png){.img-inline} | **Strada** | La casella diventa terreno Strada | Resta sul tabellone |
-| ![pericolo fango](img/pericolo-fango.png){.img-inline} | **Fango** | La casella diventa terreno Fango | Resta sul tabellone |
-| ![pericolo petrolio](img/pericolo-petrolio.png){.img-inline} | **Petrolio** | Sposta l'auto di 1 casella, poi diventa terreno Strada | Resta sul tabellone |
+| ![pericolo mina](img/pericolo-mina.png){.img-inline} | **Mina** | Subisci 1 danno (pesca e risolvi 1 segnalino danno) e termina il movimento | Scarta il segnalino |
+| ![pericolo strada](img/pericolo-strada.png){.img-inline} | **Strada** | La casella diventa casella Strada | Resta sul tabellone |
+| ![pericolo fango](img/pericolo-fango.png){.img-inline} | **Fango** | La casella diventa casella Fango | Resta sul tabellone |
+| ![pericolo petrolio](img/pericolo-petrolio.png){.img-inline} | **Petrolio** | Sposta l'auto di 1 casella, poi diventa casella Strada | Resta sul tabellone |
 
 ## Rottami
 
@@ -36,7 +36,7 @@ Sono **veicoli carbonizzati** ![rottami](img/rottami.png){.img-inline} di preced
 
 ## Ostacoli
 
-Esistono **5 tipi** di ostacoli. Se un** veicolo su strada** entra in una casella che ne contiene, devi risolvere quanto segue:
+Esistono **5 tipi** di ostacoli. Se un **veicolo su strada** entra in una casella che ne contiene, devi risolvere quanto segue:
 
 - **Casella occupata** da un altro veicolo su strada (anche dello stesso equipaggio): perde il movimento rimanente, lo impili sopra all'altro e risolvi immediatamente un tamponamento.
 - **Elicottero:** può attraversarla liberamente senza effetti, ma se vi termina il turno (per qualsiasi motivo, anche a seguito di tamponamento o danno) è immediatamente eliminato.
@@ -107,7 +107,7 @@ Se si stava muovendo, perde il **movimento rimanente**.
 | :---: | :---: | :--- | :---: |
 | ![ammaccatura](img/danno-ammaccatura.png){.img-inline} | **Ammaccatura** | Nessun effetto extra | — |
 | ![schegge](img/danno-schegge.png){.img-inline} | **Schegge** | Colpisce il primo veicolo in linea retta | ![dado direzione](img/dadofx-direzione.png){.img-inline} |
-| ![slittamento](img/danno-slittamento.png){.img-inline} | **Slittamento** | Sposta l'auto di 1 casella nella direzione indicata | — |
+| ![slittamento](img/danno-slittamento.png){.img-inline} | **Slittamento** | Sposta l'auto di 1 casella nella direzione mostrata | — |
 | ![sbandata](img/danno-sbandata.png){.img-inline} | **Sbandata** | Movimento casuale (il terreno ha effetto) | ![dado acrobazia](img/dadofx-acrobazia.png){.img-inline} ![dado direzione](img/dadofx-direzione.png){.img-inline} |
 | ![sbalzo](img/danno-sbalzo.png){.img-inline} | **Sbalzo** | L'auto "salta" in linea retta (ignora ostacoli) | ![dado acrobazia](img/dadofx-acrobazia.png){.img-inline} ![dado direzione](img/dadofx-direzione.png){.img-inline} |
 
