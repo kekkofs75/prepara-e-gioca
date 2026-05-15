@@ -1,35 +1,22 @@
-Mescola separatamente e poni le **carte Castello** e le **carte Villaggio** al centro del tavolo su due file l'una sotto l'altra.
+Mescola separatamente e poni le **carte Villaggio** (*retro marrone*) e le **carte Castello** (*retro grigio*) al centro del tavolo su due file separate, le prime al di sotto delle seconde.
 
-::: indent
-Rivela **3 carte** da ciascun mazzo formando rispettivamente la **galleria del Castello** e la **galleria del Villaggio**.
+Poi rivela **3 carte da ciascun mazzo** formando rispettivamente la [galleria del Villaggio]{.def} e la [galleria del Castello]{.def}.
 
-Poni la **pedina Messaggero** accanto alle **carte Villaggio** rivelate.
-:::
+Poni la **pedina del Messaggero** accanto alle **carte Villaggio** rivelate.
 
-Poni i **segnalini Moneta d'Oro** e i **segnalini Chiave** in una **riserva** raggiungibile da tutti.
-
-Ogni giocatore prende **15 Monete d'Oro** e **2 Chiavi**.
-
-::: accent
-Determinate poi casualmente il **primo giocatore**.
-:::
+Distribuisci ad ogni giocatore **2 Chiavi** e **15 Monete d'Oro**, mettendo le rimanenti accanto ai mazzi formando la [riserva]{.def}. Poi determinate casualmente il **primo giocatore**.
 
 ---
 ---
 
-# Setup del Tavolo
+# ![puzzle]{.icon} Fuori dalle Segrete
 
-- Mescola separatamente le **carte Castello** e **Villaggio**.
-- Posiziona i due mazzi su **due file** al centro del tavolo.
-- Rivela **3 carte** per ciascun mazzo formando:
-  - **Galleria del Castello**
-  - **Galleria del Villaggio**
-- Posiziona la **pedina Messaggero** accanto alla **galleria del Villaggio**.
-- Metti i **segnalini Monete d'Oro** e **Chiavi** a portata di tutti: questa è la **riserva**.
+Aggiungi le **nuove 12 carte** ai corrispondenti mazzi, poi procedi con la normale preparazione.
 
-# Setup dei Giocatori
+:::glossary
+[galleria del Villaggio]: La fila di **3 carte Villaggio** scoperte disponibili all'acquisto quando il **Messaggero** si trova in quel luogo.
 
-- Ogni giocatore prende:
-  - **15 Monete d’Oro**
-  - **2 Chiavi**
-- Determinate casualmente il **primo giocatore**.
+[galleria del Castello]: La fila di **3 carte Castello** scoperte disponibili all'acquisto quando il **Messaggero** si trova in quel luogo.
+
+[riserva]: La scorta comune di **Monete d'Oro** e **Chiavi** da cui i giocatori attingono durante la partita.
+:::

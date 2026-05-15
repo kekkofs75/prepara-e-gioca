@@ -72,12 +72,14 @@ Gli **elicotteri non** ricevono danni, **non** possono essere bersagliati, **non
 
 ![cruscotto](img/cruscotto.png){.img-center}
 
-Ogni auto ha il proprio cruscotto con:
+Ogni auto ha il proprio **cruscotto** caratterizzato dai seguenti elementi:
 
-1. **Dimensione**
-2. **Slot dei Danni** (2 al massimo)
-3. **Movimento** e **Fine Turno**
-4. **Inerzia** (con 2 pallini come limite)
+| # | Elemento | Note |
+|:---:|:---|:---|
+| **1**{.accent} | **Dimensione** | |
+| **2**{.accent} | **Slot dei Danni** | 2 al massimo |
+| **3**{.accent} | **Movimento** e **Fine Turno** | |
+| **3**{.accent} | **Inerzia** | Con 2 pallini come limite |
 
 ## Stato delle Auto
 
@@ -119,12 +121,17 @@ Se un'auto viene mossa su un altro veicolo, perde il **movimento rimanente** e r
 
 Ogni giocatore ha una plancia comando con **4 comandi** da usare **una sola volta** per round e solo se **non** sta muovendo per **inerzia**.
 
-1. **Spazio comando**.
-2. **Valori del dado** consentiti per poter usare quel comando.
-   2.1. **Assalto Aereo**: dado con valore da 1 a 6.
-   2.2. **Nitro**: dado con valore da 1 a 3.
-   2.3. **Drift**: dado con valore da 3 a 5.
-   2.4. **Riparazione**: dado con valore 6.
+| # | Elemento |
+|:---:|:---|
+| **1**{.accent} | **Spazio comando** |
+| **2**{.accent} | **Valori del dado consenti** |
+
+| # | Comando | Valore del Dado |
+|:---:|:---|:---:|
+| **2.1**{.accent} | **Assalto Aereo** | 1-6 |
+| **2.2**{.accent} | **Nitro** | 1-3 |
+| **2.3**{.accent} | **Drift** | 3-5 |
+| **2.4**{.accent} | **Riparazione** | 6 |
 
 # Dadi
 
@@ -148,8 +155,10 @@ Oltre ai **4 dadi movimento** nei colori dei vari giocatori sono presenti nel gi
 
 ![plancia capitani](img/plancia-capitani.png){.img-center}
 
-Sostituisce la plancia comando regolare. Conferisce nuovi comandi e 1 potere speciale:
+Sostituisce la plancia comando regolare. Conferisce **nuovi comandi** e **1 potere speciale**:
 
-1. **Potere speciale**: sempre attivo, senza dado.
-2. **Comandi**: alcuni attivabili solo con segnalino comando.
-3. **Icona segnalino comando**: identifica i comandi che richiedono un segnalino invece di un dado.
+| # | Elemento | Note |
+|:---:|:---|:---|
+| **1**{.accent} | **Potere speciale** | Sempre attivo, senza dado | 
+| **2**{.accent} | **Comandi** | Alcuni attivabili solo con segnalino comando |
+| **3**{.accent} | **Icona segnalino comando** | Identifica i comandi che richiedono un segnalino invece di un dado |

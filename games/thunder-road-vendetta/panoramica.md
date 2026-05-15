@@ -1,148 +1,164 @@
-# Il Tabellone e le Tessere Strada
+# Tabellone e Tessere Strada
 
-Il tabellone è composto da 3 tessere affiancate in fila (**posteriore → centrale → anteriore**) che scorrono man mano che la gara avanza. Le auto si muovono dalla posteriore verso l'anteriore. Un'auto che esce dal bordo sinistro, destro o posteriore è eliminata.
+Il **tabellone** è composto da **3 tessere strada** affiancate in fila (**posteriore → centrale → anteriore**) che scorrono man mano che la gara avanza. Le **auto** si muovono dalla tessera posteriore verso quella anteriore.
 
-## Tipi di caselle
+## Terreno
 
-| Casella | Costo di entrata | Note |
-|---|---|---|
-| **Strada** | 1 movimento | Consente il bonus dado strada |
-| **Fuori-strada** | 1 movimento | Nessun bonus |
-| **Fango** | 2 movimenti | Puoi entrarci anche con 1 solo movimento rimasto |
-| **Invalicabile** | — | Elimina qualsiasi auto che vi entra. Bordo giallo doppio. |
-| **Pericolo** | — | Indica dove posizionare i segnalini pericolo quando si aggiunge una tessera |
+Ogni tessera ha **caselle di terreno** diverso e **caselle pericolo**.
 
----
+|   | Casella | Costo |
+| :---: | :---: | :--- |
+| ![casella strada](img/casella-strada.png){.img-inline} | **Strada** | 1 punto movimento |
+| ![casella fuori-strada](img/casella-fuori-strada.png){.img-inline} | **Fuori-strada** | 1 punto movimento |
+| ![casella fango](img/casella-fango.png){.img-inline} | **Fango** | punto movimento (o 1 rimasto) |
+| ![casella invalicabile](img/casella-invalicabile.png){.img-inline} | **Invalicabile** | L’auto è eliminata |
+| ![casella pericolo](img/casella-pericolo.png){.img-inline} | **Pericolo** | Posizione per segnalino pericolo |
 
-# Veicoli
+## Segnalini Pericolo
 
-## Auto
+I **segnalini pericolo** ![segnalino pericolo](img//segnalino-pericolo.png){.img-inline} sono posti **coperti** sulle **caselle pericolo** quando viene aggiunta una nuova tessera e vengono risolti quando un'**auto** si muove su di essi. Alcuni vengono **scartati**, altri **rimangono** sul tabellone.
 
-Ogni equipaggio ha 3 auto di dimensione diversa. La dimensione influenza la facilità di essere colpita e la potenza in tamponamento.
-
-| Dimensione | Colpire con armi | Tamponamento |
-|---|---|---|
-| **Piccola (S)** | Difficile da colpire | Poco efficace |
-| **Media (M)** | Intermedia | Intermedio |
-| **Grande (L)** | Facile da colpire | Molto efficace |
-
-## Elicottero
-
-Ogni equipaggio ha 1 elicottero. Non riceve danni, non può essere bersagliato, non tampona altri veicoli. Può sparare. Elimina qualsiasi auto (anche propria) che termini il turno nella sua casella.
+|   | Segnalino | Effetto | Dopo |
+| :---: | :---: | :--- | :--- |
+| ![pericolo rottame](img/pericolo-rottame.png){.img-inline} | **Rottame** | Poni 1 miniatura rottame e tampona | Scarta (sostituito dal rottame) |
+| ![pericolo mina](img/pericolo-mina.png){.img-inline} | **Mina** | Subisci 1 danno (pesca e risolvi 1 segnalino danno) e termina il movimento | Scarta il segnalino |
+| ![pericolo strada](img/pericolo-strada.png){.img-inline} | **Strada** | La casella diventa casella Strada | Resta sul tabellone |
+| ![pericolo fango](img/pericolo-fango.png){.img-inline} | **Fango** | La casella diventa casella Fango | Resta sul tabellone |
+| ![pericolo petrolio](img/pericolo-petrolio.png){.img-inline} | **Petrolio** | Sposta l'auto di 1 casella, poi diventa casella Strada | Resta sul tabellone |
 
 ## Rottami
 
-I rottami sono carcasse di auto di gare precedenti. Sono trattati come **auto piccole fuori uso** di nessun giocatore:
+Sono **veicoli carbonizzati** ![rottami](img/rottami.png){.img-inline} di precedenti gare, rappresentati da apposite miniature, da trattare come **auto piccole fuori uso**.
 
-- Se un veicolo su strada entra nella loro casella, vengono tamponati normalmente.
-- Se un rottame entra in una casella con un segnalino pericolo (per via di un tamponamento), quest'ultimo viene risolto.
-- Sono eliminati se subiscono danno o se terminano il turno nella casella di un elicottero.
+- Se un **veicolo** su strada entra nella loro casella, vengono **tamponati** normalmente.
+- Se un **rottame** entra in una casella con un **segnalino pericolo** (per via di un tamponamento), quest'ultimo viene **risolto**.
+- Se subiscono **danno** o terminano il turno nella casella di un **elicottero**, sono **eliminati** e rimossi dal tabellone.
 
-Compaiono in gioco quando viene rivelato un segnalino pericolo Rottame: si posiziona la miniatura sulla casella, il veicolo che vi era entrato si impila sopra e si risolve un tamponamento.
+## Ostacoli
 
----
+Esistono **5 tipi** di ostacoli. Se un **veicolo su strada** entra in una casella che ne contiene, devi risolvere quanto segue:
 
-# Cruscotti
+- **Casella occupata** da un altro veicolo su strada (anche dello stesso equipaggio): perde il movimento rimanente, lo impili sopra all'altro e risolvi immediatamente un tamponamento.
+- **Elicottero:** può attraversarla liberamente senza effetti, ma se vi termina il turno (per qualsiasi motivo, anche a seguito di tamponamento o danno) è immediatamente eliminato.
+- **Pericolo coperto:** il segnalino viene girato a faccia in su e risolto immediatamente.
+- **Pericolo scoperto:** viene risolto immediatamente.
+- **Casella invalicabile:** il veicolo viene immediatamente eliminato.
 
-Ogni auto ha il proprio cruscotto che mostra:
+Una casella senza ostacoli è invece una **casella libera**.
 
-- La **dimensione** dell'auto
-- Lo slot centrale per il **dado movimento**
-- Lo spazio **inerzia** (con 2 pallini come limite massimo di usi per round)
-- Gli **slot danno** (2 slot: al secondo danno l'auto diventa fuori uso)
+## Arco Frontale
 
----
+![arco frontale](img/arco-frontale.png){.img-center}
 
-# Stato delle Auto
+L'arco frontale sono le **3 caselle di fronte a sinistra, di fronte e di fronte a destra**.
+
+- Le auto in **movimento** (di turno, su tamponamento o danni) si possono muovere solo verso l'arco frontale.
+- Le auto possono **sparare** solo su bersagli nel proprio arco frontale.
+
+# Veicoli
+
+Ogni equipaggio ha **2 tipi** di veicoli. 
+
+|   | Veicolo | Dimensione | Mira (Difficoltà) | Potenza Tamponamento |
+| :---: | :---: | :---: | :--- | :--- |
+| ![auto piccola](img/auto-piccola.png){.img-inline} | **Auto Picola** | **S** | Difficile da colpire | Minima |
+| ![auto media](img/auto-media.png){.img-inline} | **Auto Media** | **M** | Bilanciata | Media |
+| ![auto grande](img/auto-grande.png){.img-inline} | **Auto Grande** | **L** | Bersaglio facile | Massima |
+| ![elicottero](img/elicottero.png){.img-inline} | **Elicottero** | - | - | - |
+
+Gli **elicotteri non** ricevono danni, **non** possono essere bersagliati, **non** tamponano. Possono però **sparare** ed **eliminano** qualsiasi auto (anche della propria squadra) che termini il turno nella loro casella.
+
+## Cruscotti
+
+![cruscotto](img/cruscotto.png){.img-center}
+
+Ogni auto ha il proprio **cruscotto** caratterizzato dai seguenti elementi:
+
+| # | Elemento | Note |
+|:---:|:---|:---|
+| **1**{.accent} | **Dimensione** | |
+| **2**{.accent} | **Slot dei Danni** | 2 al massimo |
+| **3**{.accent} | **Movimento** e **Fine Turno** | |
+| **3**{.accent} | **Inerzia** | Con 2 pallini come limite |
+
+## Stato delle Auto
 
 | Stato | Condizione | Effetti |
-|---|---|---|
-| **Operativa** | 0 o 1 segnalino danno | Può muoversi e sparare normalmente |
-| **Fuori uso** | 2 segnalini danno | Girata al contrario. Non si muove, non spara, non riceve ulteriori danni. Può essere tamponata. Recuperabile con Riparazione. |
-| **Eliminata** | Condizione di eliminazione | Rimossa definitivamente. Segnalini danno tornano nella pila, cruscotto nella scatola. |
+| :---: | :--- | :--- |
+| **Operativa** | 0-1 Danni | Può muovere e sparare normalmente |
+| **Fuori Uso** | 2 Danni | Gira auto e cruscotto. No movimento/fuoco. Riparabile. |
+| **Eliminata** | - | Rimossa dal gioco. Libera i segnalini danno. |
 
-Un'auto è **eliminata** se:
-- Entra in una casella invalicabile
-- Termina il turno nella casella di un elicottero (anche proprio)
-- Si trova sulla tessera posteriore quando questa viene rimossa
-- Esce dal bordo sinistro, destro o posteriore del tabellone
-- Incontra un effetto che la elimina direttamente
+Un'auto viene **Eliminata** se:
+- Entra in una casella invalicabile o termina su un elicottero.
+- Esce dai bordi (sinistro, destro o posteriore).
+- Si trova sulla tessera posteriore quando viene rimossa.
+- Subisce un effetto che la elimina direttamente.
 
----
+> **Nota**: Se tutte le tue auto sono Fuori Uso o Eliminate, sei **fuori dal gioco**!
+> Quando accade, l'attuale tessera strada anteriore diventa la **tessera finale** (aggiungi la **linea del traguardo**).
 
-# Ostacoli
+## Segnalini Danno
 
-Una casella è **libera** se non contiene ostacoli. Sono ostacoli: veicoli su strada, elicotteri, segnalini pericolo (coperti o scoperti) e caselle invalicabili.
+Quando un'auto subisce **danno**, pesca **1 segnalino danno** ![segnalino danno](img/segnalino-danno.png){.img-inline}, risolvine l'**effetto**, poi posizionalo **coperto** in **1 slot danno** libero del cruscotto (se ha 2 danni, è **fuori uso**).
+::: indent
+Se si stava muovendo, perde il **movimento rimanente**.
+:::
 
-Quando un veicolo su strada entra in una casella con un ostacolo:
+|   | Segnalino | Effetto | Dadi usati |
+| :---: | :---: | :--- | :---: |
+| ![ammaccatura](img/danno-ammaccatura.png){.img-inline} | **Ammaccatura** | Nessun effetto extra | — |
+| ![schegge](img/danno-schegge.png){.img-inline} | **Schegge** | Colpisce il primo veicolo in linea retta | ![dado direzione](img/dadofx-direzione.png){.img-inline} |
+| ![slittamento](img/danno-slittamento.png){.img-inline} | **Slittamento** | Sposta l'auto di 1 casella nella direzione mostrata | — |
+| ![sbandata](img/danno-sbandata.png){.img-inline} | **Sbandata** | Movimento casuale (il terreno ha effetto) | ![dado acrobazia](img/dadofx-acrobazia.png){.img-inline} ![dado direzione](img/dadofx-direzione.png){.img-inline} |
+| ![sbalzo](img/danno-sbalzo.png){.img-inline} | **Sbalzo** | L'auto "salta" in linea retta (ignora ostacoli) | ![dado acrobazia](img/dadofx-acrobazia.png){.img-inline} ![dado direzione](img/dadofx-direzione.png){.img-inline} |
 
-- **Casella occupata** da altro veicolo su strada: il veicolo in movimento perde il movimento rimanente, si impila sopra e si risolve un tamponamento.
-- **Elicottero**: puoi attraversare liberamente la casella. Se però ci *termini il turno* per qualsiasi motivo, sei eliminato.
-- **Pericolo coperto**: viene girato a faccia in su e risolto immediatamente.
-- **Pericolo scoperto**: viene risolto immediatamente.
-- **Casella invalicabile**: il veicolo è eliminato.
+Se un'auto viene mossa su un altro veicolo, perde il **movimento rimanente** e risolve un **tamponamento**. Se un'auto viene mossa su una casella invalicabile o oltre i bordi (sinistro, destro o posteriore) del tabellone, è **eliminata**.
 
----
+# Plancia Comando
 
-# Segnalini Pericolo
+![plancia comando](img/plancia-comando.png){.img-center}
 
-Posizionati coperti sulle caselle apposite quando viene aggiunta una nuova tessera. Quando un veicolo su strada li rivela, si risolvono immediatamente.
+Ogni giocatore ha una plancia comando con **4 comandi** da usare **una sola volta** per round e solo se **non** sta muovendo per **inerzia**.
 
-## Da risolvere e scartare
+| # | Elemento |
+|:---:|:---|
+| **1**{.accent} | **Spazio comando** |
+| **2**{.accent} | **Valori del dado consenti** |
 
-| Pericolo | Effetto |
-|---|---|
-| **Rottame** | Posiziona una miniatura rottame sulla casella. Il veicolo si impila sopra e si risolve un tamponamento. |
-| **Mina** | Il veicolo prende un segnalino danno e perde il movimento rimanente. |
+| # | Comando | Valore del Dado |
+|:---:|:---|:---:|
+| **2.1**{.accent} | **Assalto Aereo** | 1-6 |
+| **2.2**{.accent} | **Nitro** | 1-3 |
+| **2.3**{.accent} | **Drift** | 3-5 |
+| **2.4**{.accent} | **Riparazione** | 6 |
 
-## Da lasciare sul tabellone (modificano la casella permanentemente)
+# Dadi
 
-| Pericolo | Effetto |
-|---|---|
-| **Strada** | La casella diventa casella strada. |
-| **Fango** | La casella diventa casella fango. |
-| **Chiazza di petrolio** | Lancia il dado direzione e sposta il veicolo di 1 casella in quella direzione (senza consumare movimento). La casella diventa strada. |
+Oltre ai **4 dadi movimento** nei colori dei vari giocatori sono presenti nel gioco anche i **4 dadi FX**.
 
----
-
-# Segnalini Danno
-
-Quando un'auto subisce danno, pesca un segnalino casuale, risolvine l'effetto, poi posizionalo coperto in uno slot danno. Se l'auto era in movimento, perde il movimento rimanente.
-
-| Segnalino | Effetto |
-|---|---|
-| **Ammaccatura** | Nessun effetto aggiuntivo. |
-| **Slittamento** *(6 varianti)* | L'auto si sposta di 1 casella nella direzione mostrata sul segnalino. |
-| **Sbandata** | Lancia il dado acrobazia: l'auto si muove di tante caselle, lanciando il dado direzione per ognuna. Il terreno ha effetto normale. La sbandata termina se l'auto perde il movimento (es. tamponamento). |
-| **Sbalzo** | Lancia dado direzione e dado acrobazia: l'auto si sposta di tante caselle in quella direzione ignorando tutto ciò che c'è in mezzo. La casella finale ha effetto normale. |
-| **Schegge** | Lancia il dado direzione: il primo veicolo su strada in quella direzione riceve 1 danno. Ignorano qualsiasi terreno, anche invalicabile. Se non c'è nessun veicolo, non succede nulla. |
-
-> Se un'auto viene mossa su una casella invalicabile o oltre i bordi sinistro, destro o posteriore a causa di un segnalino danno, è eliminata.
-
----
-
-# Tamponamento
-
-Si verifica ogni volta che due veicoli su strada occupano la stessa casella, per qualsiasi motivo (movimento, pericoli, effetti danno).
-
-1. Lancia **dado tamponamento** e **dado direzione**: indicano quale veicolo si sposta (quello in cima o in fondo) e in che direzione.
-2. Se un veicolo è di **dimensione maggiore** dell'altro, il suo proprietario può chiedere un unico ritiro di entrambi i dadi (vale anche se il veicolo più grande è fuori uso, o se entrambi appartengono allo stesso giocatore).
-3. Il veicolo indicato si sposta di **1 casella**. Se si genera un nuovo tamponamento, si continua a risolvere finché ogni casella ha al massimo 1 veicolo su strada.
+|   | Dado | Quando si usa |
+| :---: | :---: | :--- |
+| ![dado movimento](img/dado-movimento.png){.img-inline} | **Dado Movimento** | Movimento, inerzia e comando |
+| ![dado strada](img/dadofx-strada.png){.img-inline} | **Dado Strada** | Bonus movimento dopo un turno tutto su strada |
+| ![dado acrobazia](img/dadofx-acrobazia.png){.img-inline} | **Dado Acrobazia** | Sbandate e sbalzi da segnalini danno |
+| ![dado mira](img/dadofx-mira.png){.img-inline} | **Dado Mira** | Per determinare se un colpo va a segno |
+| ![dado tamponamento](img/dadofx-tamponamento.png){.img-inline} | **Dado Tamponamento** | Per determinare quale veicolo si sposta nel tamponamento |
+| ![dado direzione](img/dadofx-direzione.png){.img-inline} | **Dado Direzione** | Per determinare la direzione di movimenti causati da effetti |
 
 ---
-
-# Dado Strada
-
-Lanciato dal primo giocatore all'inizio del round. Dopo il movimento di un'auto che ha percorso **solo caselle strada**, puoi facoltativamente ottenere movimento bonus pari al suo valore. Se decidi di usarlo, devi usarlo tutto. Non si applica durante l'inerzia.
-
 ---
 
-# Dadi FX — Riepilogo
+# ![puzzle]{.icon} Solo Parti Originali
 
-| Dado | Quando si usa |
-|---|---|
-| **Dado strada** | Bonus movimento dopo un turno tutto su strada |
-| **Dado acrobazia** | Sbandate e sbalzi da segnalini danno |
-| **Dado mira** | Per determinare se un colpo va a segno |
-| **Dado tamponamento** | Per determinare quale veicolo si sposta nel tamponamento |
-| **Dado direzione** | Per determinare la direzione di movimenti causati da effetti |
+## Plancia Comando dei Capitani
+
+![plancia capitani](img/plancia-capitani.png){.img-center}
+
+Sostituisce la plancia comando regolare. Conferisce **nuovi comandi** e **1 potere speciale**:
+
+| # | Elemento | Note |
+|:---:|:---|:---|
+| **1**{.accent} | **Potere speciale** | Sempre attivo, senza dado | 
+| **2**{.accent} | **Comandi** | Alcuni attivabili solo con segnalino comando |
+| **3**{.accent} | **Icona segnalino comando** | Identifica i comandi che richiedono un segnalino invece di un dado |

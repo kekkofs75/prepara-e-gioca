@@ -1,15 +1,7 @@
-Dopo che tutti i giocatori hanno formato una **griglia 3x3 di Personaggi** davanti a sé, il giocatore con **più punti** è il **vincitore**.
+Forma una **griglia 3×3** di [carte Personaggio]{.def} (**Villaggio e Castello**) per ottenere da ognuna punti in base alle condizioni indicate sulla carta.
 
+Il giocatore con **più punti vince** la partita.
 
----
----
-
-
-Scopo del gioco è ottenere il **maggior numero di punti** costruendo una **griglia 3×3 di Personaggi**.
-
-I punti derivano da:
-- **effetti di fine partita** delle carte
-- **Chiavi** accumulate
-- gestione delle **Monete d'Oro** su carte specifiche
-
-Vince chi totalizza più punti.
+:::glossary
+[carte Personaggio]: Le carte che compongono la griglia di ogni giocatore, divise in **carte Villaggio** e **carte Castello**, ciascuna con un'**abilità** e una **Pergamena dei punti**.
+:::
