@@ -47,21 +47,6 @@
       "aiSummary": false
     },
     {
-      "id": "thunder-road-vendetta-k75",
-      "title": "Thunder Road: Vendetta",
-      "subtitle": "Corse post-apocalittiche ad alta velocità",
-      "themeColor": "#C0392B",
-      "bggRank": 127,
-      "bggScore": 8.1,
-      "duration": "45-75",
-      "players": "2-4",
-      "folder": "games/thunder-road-vendetta-k75",
-      "cover":    "games/thunder-road-vendetta-k75/img/cover.png",
-      "coverBig": "games/thunder-road-vendetta-k75/img/cover-big.webp",
-      "copertina":"games/thunder-road-vendetta-k75/img/copertina.png",
-      "aiSummary": false
-    },
-    {
       "id": "thunder-road-vendetta-ia",
       "title": "Thunder Road: Vendetta",
       "subtitle": "Corse post-apocalittiche ad alta velocità",
@@ -75,7 +60,7 @@
       "coverBig": "games/thunder-road-vendetta-ia/img/cover-big.webp",
       "copertina":"games/thunder-road-vendetta-ia/img/copertina.png",
       "aiSummary": true,
-      "hidden": false
+      "hidden": true
     },
     {
       "id": "flip-7",
@@ -90,6 +75,21 @@
       "cover":    "games/flip-7/img/cover.png",
       "coverBig": "games/flip-7/img/cover-big.webp",
       "copertina":"games/flip-7/img/copertina.png",
+      "aiSummary": false
+    },
+    {
+      "id": "flip-7-ia",
+      "title": "Flip 7",
+      "subtitle": "Press your luck fino a 200 punti",
+      "themeColor": "#2B8FCC",
+      "bggRank": 522,
+      "bggScore": 7.2,
+      "duration": "20",
+      "players": "3-18",
+      "folder": "games/flip-7-ia",
+      "cover":    "games/flip-7-ia/img/cover.png",
+      "coverBig": "games/flip-7-ia/img/cover-big.webp",
+      "copertina":"games/flip-7-ia/img/copertina.png",
       "aiSummary": true
     },
     {
@@ -120,7 +120,8 @@
       "cover":    "games/arcs/img/cover.png",
       "coverBig": "games/arcs/img/cover-big.webp",
       "copertina":"games/arcs/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": true,
+      "hidden": true
     },
     {
       "id": "arcs-k75",
@@ -135,7 +136,8 @@
       "cover":    "games/arcs-k75/img/cover.png",
       "coverBig": "games/arcs-k75/img/cover-big.webp",
       "copertina":"games/arcs-k75/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "hidden": true
     },
     {
       "id": "gloomhaven-buttons-bugs",
@@ -165,7 +167,8 @@
       "cover":    "games/aeons-end/img/cover.png",
       "coverBig": "games/aeons-end/img/cover-big.webp",
       "copertina":"games/aeons-end/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": true,
+      "hidden": true
     },
     {
       "id": "scout",

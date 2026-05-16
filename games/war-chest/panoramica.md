@@ -1,65 +1,59 @@
-# Panoramica Elementi e Concetti
+# Tabellone
 
-## Tipi di Monete
+| Elemento | Descrizione |
+|---|---|
+| **Lati Fazione** | I due lati opposti del tabellone, uno per ogni fazione |
+| **Posizioni di partenza** | Le posizioni inizialmente controllate dai giocatori |
+| **Posizioni neutrali** | Le posizioni non controllate all'inizio della partita |
+| **Spazi normali e aggiuntivi** | Usati anche in 4 giocatori (aree esterne più scure) |
+| **Area degli scarti** | Zona personale per i gettoni usati, sempre visibile a entrambi |
+| **Spazi normali** | Esagoni di movimento, non controllabili |
 
-| Moneta | Tipo | Descrizione |
-|--------|------|-------------|
-| **Unità** | Vari | Raffigurano il tipo di soldato. Si usano per Muovere, Attaccare, Schierare, Reclamare. |
-| **Iniziativa** | Speciale | Oro/giallo, 3 per giocatore. Gestiscono l'ordine del turno. |
-| **Controllo** | Neutro | Dischetti piatti. Segnano le ubicazioni dominate dal giocatore. |
+# Carte Unità
 
----
+Ogni carta mostra:
 
-## Unità del Gioco Base (Esempio)
+| Elemento | Contenuto |
+|---|---|
+| **Nome** | Il nome dell'unità |
+| **Immagine gettone** | Il simbolo del gettone corrispondente |
+| **Numero gettoni** | Quanti gettoni di quell'unità esistono (es. ×4, ×5) |
+| **Illustrazione** | Il disegno dell'unità |
+| **Tattica** | L'abilità speciale dell'unità (se presente) |
+| **Attributi e Restrizioni** | Simboli (!) e (X) con regole aggiuntive |
 
-Ogni unità ha una capacità di movimento e/o attacco specifica. Qui il riepilogo delle unità più comuni:
+# Carte Decreto Reale
 
-| Unità | Mov. | Attacco | Nota |
-|-------|------|---------|------|
-| **Arciere** | 1 ortog. | A distanza (2 caselle) | Non si muove per attaccare |
-| **Cavaliere** | 1 diag. | A contatto | Movimento diagonale |
-| **Fante** | 1 ortog. | A contatto | Unità base, versatile |
-| **Ballista** | — | A distanza (3 caselle, linea retta) | Non si muove |
-| **Catapulta** | — | Area (2×2) | Colpisce un'area, non si muove |
-| **Berserker** | 1 qualsiasi | A contatto, +1 dado | Può attaccare dopo aver mosso |
-| **Lancer** | Carica (2 linea retta) | A contatto durante la carica | Deve muovere almeno 1 casella per attaccare |
-| **Royal Guard** | 1 ortog. | A contatto | Protegge: se adiacente al Re, il Re non può essere attaccato |
-| **Swordsman** | 1 qualsiasi | A contatto | Nessuna abilità speciale, ottima mobilità |
+> Componente dell'**Espansione Nobiltà**
 
-> Consulta il retro della scheda di ogni unità per le regole dettagliate di abilità speciali.
+Ogni carta mostra:
 
----
+- **Titolo** del Decreto
+- **Abilità** da eseguire quando proclamata
+- **Spazi sigilli Proclamazione** (uno per fazione)
 
-## Plancia di Gioco
+# Carte Mappa Fortificazioni
 
-La plancia è una griglia con:
+> Componente dell'**Espansione Assedio**
 
-- **Caselle normali**: movimento libero
-- **Ubicazioni** (contrassegnate): possono essere reclamate per il controllo
-- **Fasce di partenza**: sulle estremità, per lo schieramento iniziale
+Ogni carta indica le **posizioni di partenza** per le **4 Fortificazioni** da piazzare sul tabellone all'inizio della partita. Si seleziona casualmente 1 carta su 6.
 
-La plancia ha **fronte/retro**: un lato per 2 giocatori (schema simmetrico), l'altro per 4 giocatori (schema a 4 settori).
+# Nuove Unità
 
----
+## Espansione Nobiltà
 
-## Sacchetto e Mano
+| Unità | Note |
+|---|---|
+| **Alfiere** | — |
+| **Araldo** | — |
+| **Conte** | — |
+| **Vescovo** | — |
 
-- Il **sacchetto** funge da mazzo: pesca casuale delle monete.
-- La **mano** (3 monete) rappresenta le opzioni tattiche disponibili nel turno.
-- Le monete **scartate** (usate) tornano nel sacchetto solo quando si esaurisce (meccanismo di deck-building).
+## Espansione Assedio
 
----
-
-## Ubicazioni Speciali
-
-Alcune versioni avanzate o espansioni introducono ubicazioni con effetti speciali (vedi espansioni *Nobiltà* e *Assedio*).
-
----
-
-## Modalità di Gioco
-
-| Modalità | Giocatori | Note |
-|----------|-----------|------|
-| Scontro Diretto | 2 | Partita standard, fronte plancia "2 giocatori" |
-| Alleanze | 4 (2v2) | Turni alternati tra squadre, retro plancia |
-| Sfida Rapida | 2 | Meno unità, obiettivo a 4 ubicazioni |
+| Unità | Note |
+|---|---|
+| **Carro da Guerra** | Unità d'assedio — Tattica d'Assedio |
+| **Geniere** | Può costruire Fortificazioni |
+| **Torre d'Assedio** | Unità d'assedio — Tattica d'Assedio |
+| **Trabucco** | Unità d'assedio — Tattica d'Assedio |

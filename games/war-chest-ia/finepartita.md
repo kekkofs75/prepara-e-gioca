@@ -1,31 +1,66 @@
-# Fine della Partita
+La partita **termina immediatamente** nel momento in cui un giocatore piazza il suo **ultimo indicatore Controllo** su una posizione del tabellone.
 
-## Condizione di Vittoria Immediata
+:::accent
+Non è necessario attendere la fine del round: chi piazza l'ultimo indicatore **vince sul momento**.
+:::
 
-La partita termina **immediatamente** al termine del turno di un giocatore se questi controlla **6 o più ubicazioni** sulla plancia.
+Il regolamento non prevede condizioni di pareggio.
 
-Quel giocatore (o quella squadra in modalità 4 giocatori) **vince la partita**.
+> **In 4 giocatori:** la partita termina immediatamente nel momento in cui un giocatore piazza l'**ultimo indicatore Controllo della sua squadra**. L'intera squadra vince.
+
+# Setup Ispirati a Battaglie Famose
+
+Per una partita con setup predefinito puoi usare le seguenti combinazioni di unità, ispirate a battaglie storiche reali.
+
+## Battaglia di Gaugamela (331 a.C.)
+
+| Greci | Persiani |
+|---|---|
+| Cavaliere | Cavalleria |
+| Cavalleria Leggera | Fanteria |
+| Picchiere | Mercenario |
+| Maresciallo | Guardia Reale |
+
+## Battaglia di Bannockburn (1314 d.C.)
+
+| Inglesi | Scozzesi |
+|---|---|
+| Arciere | Cavalleria Leggera |
+| Cavalleria | Picchiere |
+| Lanciere | Sacerdote Guerriero |
+| Fanteria | Spadaccino |
+
+## Battaglia di Crécy (1346 d.C.)
+
+| Inglesi | Francesi |
+|---|---|
+| Arciere | Cavalleria |
+| Stendardiere | Balestriere |
+| Cavaliere | Lanciere |
+| Guardia Reale | Esploratore |
 
 ---
 
-## Fine Anticipata per Sacchetto Esaurito
+# Espansione — Nobiltà
 
-Se durante il tuo turno non hai più monete nel sacchetto **e** la tua mano è vuota (o è rimasta vuota dopo aver giocato), la partita termina.
+## Battaglia di Bosworth Field (1485 d.C.)
 
-In questo caso, vince il giocatore con il **maggior numero di ubicazioni controllate** in quel momento.
-
-**In caso di parità**, vince chi ha più unità ancora in gioco sulla plancia.
-
----
-
-## Fine Partita in Modalità 4 Giocatori (Coppie)
-
-La squadra che per prima raggiunge il totale di **6 ubicazioni combinate** (somma delle ubicazioni controllate dai due alleati) vince la partita.
-
-Se entrambe le squadre raggiungono 6 nello stesso turno, vince la squadra il cui giocatore ha completato il turno per ultimo.
+| Lancaster | York |
+|---|---|
+| Conte | Alfiere |
+| Araldo | Cavalleria |
+| Mercenario | Cavaliere |
+| Picchiere | Spadaccino |
 
 ---
 
-## Nessun Pareggio Formale
+# Espansione — Assedio
 
-Le regole base non prevedono un meccanismo di pareggio. La seconda condizione di spareggio (unità in gioco) risolve quasi sempre le parità residue.
+## Battaglia di Xiangyang (1267–1273 d.C.)
+
+| Yuan | Song |
+|---|---|
+| Cavalleria Leggera | Geniere |
+| Cavalleria | Picchiere |
+| Trabucco | Maresciallo |
+| Torre d'Assedio | Balestriere |

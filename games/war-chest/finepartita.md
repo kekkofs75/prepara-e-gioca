@@ -1,31 +1,56 @@
-# Fine della Partita
+La partita **termina immediatamente** nel momento in cui un giocatore piazza il suo **ultimo indicatore Controllo** su una posizione, decretandolo come **vincitore**.
 
-## Condizione di Vittoria Immediata
+> **In 4 giocatori:** la partita termina immediatamente nel momento in cui un giocatore piazza l'**ultimo indicatore Controllo della sua squadra** su una posizione, decretandola come **vincitrice**.
 
-La partita termina **immediatamente** al termine del turno di un giocatore se questi controlla **6 o più ubicazioni** sulla plancia.
+# Modalità Battaglie Famose
 
-Quel giocatore (o quella squadra in modalità 4 giocatori) **vince la partita**.
+Per rivivere battaglie famose usa le seguenti combinazioni di unità.
 
----
+## Battaglia di Guagamela (331 a.C.)
 
-## Fine Anticipata per Sacchetto Esaurito
+| Unità Greche | Unità Persiane |
+|---|---|
+| Cavaliere | Cavalleria |
+| Cavalleria Leggera | Fanteria |
+| Picchiere | Mercenario |
+| Maresciallo | Guardia Reale |
 
-Se durante il tuo turno non hai più monete nel sacchetto **e** la tua mano è vuota (o è rimasta vuota dopo aver giocato), la partita termina.
+## Battaglia di Bannockburn (1314 d.C.)
 
-In questo caso, vince il giocatore con il **maggior numero di ubicazioni controllate** in quel momento.
+| Unità Inglesi | Unità Scozzesi |
+|---|---|
+| Arciere | Cavalleria Leggera |
+| Cavalleria | Picchiere |
+| Lanciere | Sacerdote Guerriero |
+| Fanteria | Spadaccino |
 
-**In caso di parità**, vince chi ha più unità ancora in gioco sulla plancia.
+## Battaglia di Crécy (1346 d.C.)
 
----
+| Unità Inglesi | Unità Francesi |
+|---|---|
+| Arciere | Cavalleria |
+| Stendardiere | Balestriere |
+| Cavaliere | Lanciere |
+| Guardia Reale | Esploratore |
 
-## Fine Partita in Modalità 4 Giocatori (Coppie)
+## Battaglia di Bosworth Field (1485 d.C.)
 
-La squadra che per prima raggiunge il totale di **6 ubicazioni combinate** (somma delle ubicazioni controllate dai due alleati) vince la partita.
+> Richiede l'**Espansione Nobiltà**
 
-Se entrambe le squadre raggiungono 6 nello stesso turno, vince la squadra il cui giocatore ha completato il turno per ultimo.
+| Unità Lancaster | Unità York |
+|---|---|
+| Conte | Alfiere |
+| Araldo | Cavalleria |
+| Mercenario | Cavaliere |
+| Picchiere | Spadaccino |
 
----
+## Battaglia di Xiangyang (1267 d.C.)
 
-## Nessun Pareggio Formale
+> Richiede l'**Espansione Assedio**
 
-Le regole base non prevedono un meccanismo di pareggio. La seconda condizione di spareggio (unità in gioco) risolve quasi sempre le parità residue.
+| Unità Yuan | Unità Song |
+|---|---|
+| Cavalleria Leggera | Geniere |
+| Cavalleria | Picchiere |
+| Trabucco | Maresciallo |
+| Torre d'Assedio | Balestriere |

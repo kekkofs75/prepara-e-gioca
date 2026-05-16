@@ -1,17 +1,9 @@
-Tieni a portata di mano carta e penna per segnare i punteggi durante la partita.
+Mescola insieme e **accuratamente** le **carte Numero** (0-12), le **carte Azione** (Freeze, Flip Three, Second Chance) e le **carte Modificatore Punteggio** (+2, +4, +6, +8, +10 e x2) per formare il mazzo di gioco e ponilo al centro del tavolo.
 
-> 📊 **Segnapunti online:** puoi usare l'app ufficiale su [qr1.be/YD2R](https://qr1.be/YD2R) per tenere traccia dei punteggi (include anche scoresheet stampabili e video tutorial).
+Scegliete in modo casuale il primo giocatore che farà da [Mazziere]{.def} per il primo round.
 
-# Setup comune
+Tieni a portata di mano **carta e penna** per segnare i **punteggi** via via al termine di ogni round.
 
-**1. Mazzo**
-Mescola il mazzo **a fondo**.
-
-**2. Dealer**
-Decidete chi è il Dealer per il primo round (ruota a sinistra a ogni round successivo).
-
----
-
-Nessun altro setup necessario: non ci sono plance, pedine o componenti da distribuire. Si inizia subito!
-
-> Con più di 18 giocatori si consiglia di giocare con un secondo mazzo.
+:::glossary
+[Mazziere]: Il giocatore incaricato di distribuire le carte. A partire dal secondo round, il ruolo passa al giocatore alla sinistra del Mazziere precedente.
+:::

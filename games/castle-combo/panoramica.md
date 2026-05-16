@@ -30,7 +30,7 @@ Ogni **carta Personaggio** (**Villaggio e Castello**) è composta dai seguenti e
 
 ## Scudo
 
-| Tipo | Scudi | Reperibilità Maggiore |
+| Tipo | Scudo | Reperibilità Maggiore |
 |:---:|:---:|:---|
 | ![scudo esercito](img/scudo-esercito.png){.img-inline} | **Esercito** |  Villaggio  |
 | ![scudo artigianato](img/scudo-artigianato.png){.img-inline} | **Artigianato** |  Villaggio  |
@@ -43,8 +43,11 @@ Ogni **carta Personaggio** (**Villaggio e Castello**) è composta dai seguenti e
 
 La tabella mostra quante **carte per ciascun tipo di scudo** sono presenti in ogni mazzo.
 
-|   |   | ![scudo nobiltà](img/scudo-nobiltà.png){.img-inline} | ![scudo fede](img/scudo-fede.png){.img-inline} | ![scudo sapienza](img/scudo-sapienza.png){.img-inline} | ![scudo esercito](img/scudo-esercito.png){.img-inline} | ![scudo artigianato](img/scudo-artigianato.png){.img-inline} | ![scudo agricoltura](img/scudo-agricoltura.png){.img-inline} |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| ![vessillo castello](img/vessillo-castello.png){.img-inline} | **Castello** | 14 | 12 | 11 | 8 | 7 | 0 |
-| ![vessillo villaggio](img/vessillo-villaggio.png){.img-inline} | **Villaggio** | 1 | 5 | 6 | 10 | 11 | 20 |
-|   | **Totale** | 15 | 17 | 17 | 18 | 18 | 20 |
+| Scudo | ![vessillo castello](img/vessillo-castello.png){.img-inline} | ![vessillo villaggio](img/vessillo-villaggio.png){.img-inline} | Totale |
+|:--:|:--:|:--:|:--:|
+| ![scudo nobiltà](img/scudo-nobiltà.png){.img-inline} | 14 | 1 | 15 |
+| ![scudo fede](img/scudo-fede.png){.img-inline} | 12 | 5 | 17 |
+| ![scudo sapienza](img/scudo-sapienza.png){.img-inline} | 11 | 6 | 17 |
+| ![scudo esercito](img/scudo-esercito.png){.img-inline} | 8 | 10 | 18 |
+| ![scudo artigianato](img/scudo-artigianato.png){.img-inline} | 7 | 11 | 18 |
+| ![scudo agricoltura](img/scudo-agricoltura.png){.img-inline} | 0 | 20 | 20 |

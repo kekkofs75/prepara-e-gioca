@@ -1,78 +1,56 @@
-Il round si svolge in due fasi:
+# Distribuzione Iniziale
 
-1. **Distribuzione iniziale** — il Dealer dà una carta a testa a tutti i giocatori.
-2. **Turni Hit / Stay** — il Dealer offre a ogni giocatore la scelta di continuare o fermarsi.
+Il [Mazziere]{.def} distribuisce **1 carta scoperta** ad ogni giocatore, iniziando da sé stesso e procedendo poi in **senso orario**.
 
-Il round termina quando non ci sono più giocatori attivi oppure qualcuno completa il Flip 7.
+Se durante la distribuzione viene rivelata una **carta Azione**, si interrompe immediatamente la distribuzione per risolverne l'effetto, poi si riprende.
 
-# Fase 1 — Distribuzione iniziale
+> A questo punto i giocatori avranno **0+ carte** in base alle carte via via distribuite.
 
-Il Dealer distribuisce **una carta a faccia in su** a ogni giocatore, incluso se stesso, procedendo in ordine di turno.
+# Turno del Giocatore
 
-Se durante la distribuzione viene pescata una **carta Azione**, la distribuzione si interrompe immediatamente per risolverla, poi riprende.
+Ora a turno ogni giocatore, partendo dal Mazziere e procedendo sempre in senso orario, sceglie una delle seguenti opzioni:
 
-> Al termine della distribuzione iniziale non tutti i giocatori avranno necessariamente una carta Numero: alcuni potrebbero averne zero, uno, o anche più di una a seconda delle Azioni pescate.
+**PESCARE (HIT)**
+:::indent
+Riceve **1 carta** dal mazzo. Pone le **carte Numero** in fila davanti a sé, le **carte Azione e Modificatore** sopra di esse. Se pesca una carta Numero con un **valore già presente** nella sua fila [**SBALLA (BUST)**]{.def}, ovvero è **fuori dal round** e **non ottiene punti** (gira le proprie carte a faccia in giù).
+:::
 
-# Fase 2 — Turni Hit / Stay
+**FERMARSI (STAY)**
+:::indent
+Abbandona il round (solo se ha **1+ carte** davanti a sé). Mette al sicuro i **punti accumulati** e gira le proprie carte a faccia in giù.
+:::
 
-Il Dealer propone a ogni giocatore attivo, in ordine di turno, la scelta:
-
-- **Hit** — accetti un'altra carta dal mazzo. Le carte Numero vengono disposte in fila davanti a te (in una riga orizzontale). Se peschi una carta Numero con un valore che hai già in fila: **Bust**.
-- **Stay** — esci volontariamente dal round e banchi i punti che hai accumulato fino a quel momento. Gira le tue carte a faccia in giù per segnalare che sei inattivo.
-
-> Puoi scegliere Stay anche se hai solo una carta Modifier e nessuna carta Numero davanti a te.
-
-Il giro di Hit/Stay si ripete finché il round non termina.
-
-# Bust!
-
-Se peschi una carta Numero con lo stesso valore di una che hai già in fila, fai **Bust**: sei fuori dal round e segni **0 punti** in questo round, indipendentemente dalle carte che avevi.
-
-# Giocatore Attivo
-
-Un giocatore è **attivo** se non ha ancora fatto Bust e non ha scelto Stay. Solo i giocatori attivi possono ricevere carte.
-
-# Carte Azione
-
-Le carte Azione si risolvono appena pescate, **durante la distribuzione o durante un Hit**. Possono essere assegnate a **qualsiasi giocatore attivo**, incluso se stessi. Se sei l'unico giocatore attivo, devi assegnarla a te stesso. Posiziona le carte Azione sopra la tua fila di carte Numero.
-
-# 🔒 Freeze
-Il giocatore che la riceve **banca immediatamente** i punti che ha e **esce dal round** (come uno Stay forzato, ma senza poter scegliere).
-
-# ⚡ Flip Three
-Il giocatore che la riceve deve **accettare obbligatoriamente le prossime 3 carte**, una alla volta. La sequenza si interrompe prima se il giocatore fa Bust o completa il Flip 7. Tutte le carte (Numero, Azione, Modifier) contano verso le 3 da pescare.
-
-- Se durante le 3 carte viene pescata una **Second Chance**, può essere messa da parte e usata.
-- Se vengono pescate altre carte **Flip Three o Freeze**, si risolvono **dopo** aver completato le 3 carte (solo se il giocatore non ha fatto Bust).
-
-# 💛 Second Chance
-**Tienila**. Se in futuro peschi una carta Numero duplicata, invece di fare Bust scarta la Second Chance e la carta duplicata: sei salvo.
-
-- Puoi avere **una sola** Second Chance alla volta. Se ne ricevi un'altra, dala a un altro giocatore attivo senza Second Chance. Se non è possibile, scartala.
-- Tutte le Second Chance non usate vengono **scartate a fine round** (anche se il giocatore non ha mai rischiato il Bust).
+> Ricorda che puoi giocare una **carta Azione** solo su un **giocatore attivo** (compreso te stesso).
 
 # Fine del Round
 
-Il round termina in uno di questi due casi:
-
-1. **Nessun giocatore attivo** — tutti hanno fatto Bust o Stay.
-2. **Flip 7** — un giocatore raggiunge 7 carte Numero tutte diverse: il round termina immediatamente per tutti con +15 punti bonus per quel giocatore.
+:::accent
+Il round termina quando tutti i giocatori si sono fermati o hanno sballato, oppure non appena un giocatore completa un [**FLIP 7**]{.def} (**7 carte Numero uniche** nella propria fila).
+:::
 
 # Calcolo del Punteggio
 
-Al termine del round, ogni giocatore che non ha fatto Bust calcola il proprio punteggio nell'ordine seguente:
+Ogni giocatore attivo calcola il proprio punteggio seguendo questo ordine:
 
-1. **Somma** i valori delle carte Numero.
-2. Se hai la carta **×2**, moltiplica per due la somma delle carte Numero.
-3. **Aggiungi** i bonus delle carte +2 / +4 / +6 / +8 / +10.
-4. Se hai fatto **Flip 7**, aggiungi **+15 punti**.
+- Somma i valori delle sue **carte Numero**
+- Se ha la carta **x2**, moltiplica per due la somma
+- Aggiunge i bonus delle eventuali carte **+2, +4, +6, +8, +10**
+- Se ha completato il Flip 7, aggiunge **+15 punti**
 
-*Esempio: carte Numero 3+11+5+7+10 = 36 → con ×2 = 72 → con +10 = 82 → con Flip 7 = 97*
+> I giocatori che hanno **sballato** non ottengono punti.
 
-Chi ha fatto Bust segna **0 punti** per il round.
+Annota il punteggio di tutti i giocatori per questo round, poi scartate tutte le carte giocate in una **pila degli scarti**.
 
-# Inizio del Round Successivo
+# Passaggio al Round Successivo
 
-Le carte giocate nel round vengono messe da parte (non rimescolate nel mazzo). Il ruolo di Dealer passa al giocatore alla sinistra. Si usa lo stesso mazzo finché non si esaurisce: a quel punto si mescolano tutte le carte scartate per formare un nuovo mazzo.
+Se il mazzo finisce, mescola la pila degli scarti per formarne uno nuovo. Se finisce a metà di un round, lascia tutte le carte in gioco (anche dei giocatori non attivi) davanti a loro.
 
-> Se il mazzo si esaurisce nel mezzo di un round, mescola le carte scartate per ricreare il mazzo senza spostare le carte già di fronte ai giocatori (anche quelli che hanno fatto Bust).
+Se almeno un giocatore ha **200+ punti** si innesca la **Fine della Partita**, altrimenti inizia un **nuovo round**: il giocatore alla sinistra dell'attuale Mazziere diventa il **nuovo Mazziere**.
+
+:::glossary
+[Mazziere]: Il giocatore incaricato di distribuire le carte. A partire dal secondo round, il ruolo passa al giocatore alla sinistra del Mazziere precedente.
+
+[SBALLA (BUST)]: Condizione che si verifica quando un giocatore pesca una carta Numero con lo stesso valore di una già presente nella sua fila. Il giocatore è fuori dal round e non ottiene punti.
+
+[FLIP 7]: Condizione che si raggiunge quando un giocatore ha 7 carte Numero tutte di valore diverso nella propria fila. Termina immediatamente il round e vale un bonus di +15 punti.
+:::

@@ -1,27 +1,10 @@
-# Obiettivo
+In War Chest vesti i panni di un **comandante medievale** in competizione per il controllo di posizioni strategiche sul campo di battaglia.
 
-## Condizione di Vittoria
+Devi gestire non solo le unità già schierate, ma anche quelle in attesa di essere deployate, decidendo ogni round come usare al meglio i gettoni pescati dal sacchetto.
 
-Vince il giocatore (o la squadra, in modalità 4 giocatori) che per primo **controlla 6 ubicazioni** sulla plancia contemporaneamente.
+:::accent
+Vince il giocatore — o la squadra nel gioco a 4 — che per primo riesce a piazzare **tutti i propri indicatori Controllo** sulle posizioni del tabellone.
+:::
 
-> In partite a 4 giocatori in coppia, le ubicazioni controllate dai due alleati si sommano.
-
-## Controllare un'Ubicazione
-
-Un'ubicazione è **controllata** quando vi è posizionata una tua moneta controllo (dischetto piatto del tuo colore) **e nessuna unità avversaria occupa quella casella**.
-
----
-
-## Struttura dell'Obiettivo
-
-Il gioco è una gara al controllo del territorio: non si tratta di eliminare tutte le unità avversarie, ma di **mantenere il dominio strategico** su abbastanza posizioni chiave della plancia.
-
-Questo crea una tensione costante tra:
-
-- **Avanzare** per reclamare nuove ubicazioni
-- **Difendere** quelle già controllate
-- **Cacciare** le unità nemiche dalle tue ubicazioni
-
-## Condizione Alternativa di Fine Partita
-
-Se un giocatore esaurisce completamente le monete nel proprio sacchetto **e** nella propria mano durante il suo turno, la partita può terminare anticipatamente. In tal caso, vince chi controlla **più ubicazioni** in quel momento.
+In una partita a **2 giocatori** ogni giocatore ha **6 indicatori Controllo**.
+In una partita a **4 giocatori** ogni squadra condivide **8 indicatori Controllo**.
