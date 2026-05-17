@@ -29,7 +29,8 @@
       "cover":    "games/war-chest-ia/img/cover.png",
       "coverBig": "games/war-chest-ia/img/cover-big.webp",
       "copertina":"games/war-chest-ia/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": true,
+      "hidden": true
     },
     {
       "id": "thunder-road-vendetta",
@@ -90,7 +91,8 @@
       "cover":    "games/flip-7-ia/img/cover.png",
       "coverBig": "games/flip-7-ia/img/cover-big.webp",
       "copertina":"games/flip-7-ia/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": true,
+      "hidden": true
     },
     {
       "id": "tag-team",
