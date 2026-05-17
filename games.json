@@ -185,7 +185,23 @@
       "cover":    "games/scout/img/cover.png",
       "coverBig": "games/scout/img/cover-big.webp",
       "copertina":"games/scout/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": false
+    },
+    {
+      "id": "scout-ia",
+      "title": "Scout",
+      "subtitle": "Rubate gli artisti ai vostri avversari e superatevi a vicenda con gli spettacoli circensi.",
+      "themeColor": "#3F0099",
+      "bggRank": 106,
+      "bggScore": 7.8,
+      "duration": "20",
+      "players": "2-5",
+      "folder": "games/scout-ia",
+      "cover":    "games/scout-ia/img/cover.png",
+      "coverBig": "games/scout-ia/img/cover-big.webp",
+      "copertina":"games/scout-ia/img/copertina.png",
+      "aiSummary": true,
+      "hidden": true
     },
     {
       "id": "castle-combo",

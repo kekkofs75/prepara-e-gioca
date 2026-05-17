@@ -1,40 +1,31 @@
 # Componenti
 
-| | Elemento | Qtà | Funzione |
-|:---:|:---:|:---:|:---|
-| ![carta](img/carta.png){.img-inline} | **Carte** | 45 | Il cuore del gioco |
-| ![segnalino scout](img/segnalino-scout.png){.img-inline} | **Segnalini Scout** | 23 | Compenso ricevuto quando un avversario esplora dal tuo Set Attivo |
-| ![segnalino punti positivo](img/segnalino-punti-positivo.png){.img-inline} ![segnalino punti negativo](img/segnalino-punti-negativo.png){.img-inline} | **Segnalini Punteggio** | 30 | Tracciamento del punteggio (valori: 1, 3, 5, -1, -3, -5) |
-| ![segnalino scout & show](img/segnalino-scout-show.png){.img-inline} | **Segnalini Scout & Show** | 5 | 1 per giocatore; abilitano l'azione Scout & Show una volta per round |
-| ![segnalino primo giocatore](img/segnalino-primo-giocatore.png){.img-inline} | **Segnalino Primo Giocatore** | 1 | Indica chi inizia il round |
+| Elemento | Qtà | Funzione |
+|---|---|---|
+| Carte | 45 | Il cuore del gioco |
+| Segnalini Scout | 23 | Compenso ricevuto quando un avversario esplora dal tuo Set Attivo |
+| Fiches Punteggio | 30 | Tracciamento del punteggio (valori: 1, 3, 5) |
+| Segnalini Scout & Show | 5 | 1 per giocatore; abilitano l'azione C una volta per round |
+| Segnalino Primo Giocatore | 1 | Indica chi inizia il round |
 
 # Le Carte
 
-![carta](img/panoramica-carta.png){.img-center}
-
-| # | Elemento |
-|:---:|:---|
-| **1**{.accent} | Valore della carta |
-| **2**{.accent} | Valore della carta se capovolta |
-
-Ogni carta ha **due numeri diversi**, uno per ciascun orientamento (lato sopra/sotto). Il **numero visibile in alto a sinistra** quando tieni le carte in mano è il **valore "attivo"** di quella carta per quel round.
+Ogni carta ha **due numeri diversi**, uno per ciascun orientamento (lato top/bottom). Il numero visibile in alto a sinistra quando tieni le carte in mano è il valore "attivo" di quella carta per quel round.
 
 Girando fisicamente tutta la mano all'inizio del round, i numeri sull'altro orientamento diventano quelli attivi. **Durante il round non puoi riordinare le carte né cambiarne l'orientamento individualmente.**
 
 # Tipi di Set
 
 ## Numeri consecutivi
-Le carte del set mostrano **numeri in sequenza**, senza salti. L'**ordine crescente o decrescente** è indifferente.
-:::indent
+Le carte del set mostrano numeri in sequenza, senza salti. L'ordine crescente o decrescente è indifferente.
+
 *Esempi validi: 4-5-6 / 9-8-7-6 / 2-3*
 *Esempio non valido: 4-6-7 (manca il 5)*
-:::
 
 ## Numeri abbinati
-Tutte le carte del set mostrano lo **stesso numero**.
-:::indent
+Tutte le carte del set mostrano lo stesso numero.
+
 *Esempi validi: 3-3 / 7-7-7*
-:::
 
 # Cos'è un Set più Forte
 
