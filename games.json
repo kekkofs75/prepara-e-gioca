@@ -110,6 +110,21 @@
       "aiSummary": true
     },
     {
+      "id": "tag-team-ia",
+      "title": "Tag Team",
+      "subtitle": "Auto battler con deckbuilding per 2 giocatori",
+      "themeColor": "#E65A14",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "15-30",
+      "players": "2",
+      "folder": "games/tag-team-ia",
+      "cover":    "games/tag-team-ia/img/cover.png",
+      "coverBig": "games/tag-team-ia/img/cover-big.webp",
+      "copertina":"games/tag-team-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
       "id": "arcs",
       "title": "Arcs",
       "subtitle": "Domina la galassia con la tua corte, la tua flotta e le tue città.",
@@ -217,6 +232,21 @@
       "coverBig": "games/castle-combo/img/cover-big.webp",
       "copertina":"games/castle-combo/img/copertina.png",
       "aiSummary": false
+    },
+    {
+      "id": "regicide-ia",
+      "title": "Regicide",
+      "subtitle": "Gioco cooperativo per sconfiggere i monarchi corrotti",
+      "themeColor": "#6B1E1E",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "10-30",
+      "players": "1-4",
+      "folder": "games/regicide-ia",
+      "cover":    "games/regicide-ia/img/cover.png",
+      "coverBig": "games/regicide-ia/img/cover-big.webp",
+      "copertina":"games/regicide-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
