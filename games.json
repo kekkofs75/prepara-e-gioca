@@ -247,6 +247,21 @@
       "coverBig": "games/regicide-ia/img/cover-big.webp",
       "copertina":"games/regicide-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "signore-anelli-duel-ia",
+      "title": "Il Signore degli Anelli: Duel",
+      "subtitle": "Duello asimmetrico per 2 nella Terra di Mezzo",
+      "themeColor": "#3C2810",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-45",
+      "players": "2-2",
+      "folder": "games/signore-anelli-duel-ia",
+      "cover":    "games/signore-anelli-duel-ia/img/cover.png",
+      "coverBig": "games/signore-anelli-duel-ia/img/cover-big.webp",
+      "copertina":"games/signore-anelli-duel-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
