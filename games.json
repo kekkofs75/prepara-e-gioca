@@ -292,6 +292,21 @@
       "coverBig": "games/nemesis-lockdown-ia/img/cover-big.webp",
       "copertina":"games/nemesis-lockdown-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "blood-rage",
+      "title": "Blood Rage",
+      "subtitle": "Conduci il tuo clan vichingo alla gloria nel Ragnarok",
+      "themeColor": "#8B0000",
+      "bggRank": 38,
+      "bggScore": 8.1,
+      "duration": "60-90",
+      "players": "2-5",
+      "folder": "games/blood-rage",
+      "cover":    "games/blood-rage/img/cover.png",
+      "coverBig": "games/blood-rage/img/cover-big.webp",
+      "copertina":"games/blood-rage/img/copertina.png",
+      "aiSummary": false
     }
   ]
 }

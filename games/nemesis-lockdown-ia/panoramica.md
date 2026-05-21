@@ -88,7 +88,7 @@ Il **Generatore d'Emergenza** (Stanza in S-03) permette di ripristinare l'Energi
 | **Stanza di Decontaminazione** | Scansiona tutte le Contaminazione in mano; rimuovi le Infette; rimuovi Larva e Secrezione |
 | **Infermeria** | Benda tutte le Ferite Gravi OPPURE Guarisci 1 Ferita Grave Bendata OPPURE Guarisci tutte le Ferite Leggere |
 | **Laboratorio** | Analizza 1 Oggetto (Carcassa/Cadavere/Uovo): acquisisci 3 Conoscenze, rivela 1 carta Debolezza |
-| **Nido** | Prendi 1 Uovo dalla plancia Laboratorio + Tiro Rumore (effetto una tantum all'esplorazione: 1 Conoscenza) |
+| **Nido** | Prendi 1 Uovo dalla plancia Laboratorio + Tiro Rumore (effetto una tantum all'esplorazione: 1 Conoscenza). Le Uova si possono distruggere anche con qualsiasi Strumento che infligge Ferite (es. Termite, Granata): ogni Ferita di qualsiasi tipo distrugge 1 Uovo. Eccezione: la Sala Controllo Ventilazione non distrugge Uova perché non infligge Ferite. |
 | **Generatore di Energia** | Ferma l'Autodistruzione (se gettone giallo) OPPURE Alimenta la Sezione corrente |
 | **Sala Controllo Trasmissioni** | Poni segnalino Segnale sulla tua plancia OPPURE Guarda l'Obiettivo di un Personaggio con il Segnale |
 | **Sistema di Spedizione Cargo A/B/C** | Entra nella Capsula SSC corrispondente (se il Tempo è sullo stesso spazio del gettone SSC e la capsula è vuota) |
@@ -114,7 +114,7 @@ Il **Generatore d'Emergenza** (Stanza in S-03) permette di ripristinare l'Energi
 
 **Generatore d'Emergenza:** ripristina l'Energia (vedi sopra). Stanza "grigia" priva di colore.
 
-**Deposito:** i Lavoratori del Complesso partono qui. Azione speciale: puoi usare l'Azione Base Creare Strumenti scartando **1 solo** componente invece di 2 (ne serve uno solo dei due richiesti).
+**Deposito:** i Lavoratori del Complesso partono qui. Azione speciale: puoi usare l'Azione Base Creare Strumenti scartando **1 solo** componente invece di 2 (ne serve uno solo dei due richiesti). Tutti gli altri Personaggi presenti nel Deposito in quel momento possono fare lo stesso gratuitamente, in ordine di turno dopo chi ha eseguito l'Azione.
 
 **Stanza di Isolamento:** passivo — all'inizio del turno peschi 6 carte invece di 5 (se non c'è Malfunzionamento). Azione (solo quando la stanza è "aperta"): esegui Tiro Rumore; se non compare alcun Intruso, rimuovi la miniatura dal gioco. Saprai se hai sopravvissuto solo alla fine della partita.
 
@@ -165,7 +165,7 @@ I Chytridi sono una specie fungina aliena completamente diversa dai Predatori No
 
 **Micelio:** stadio finale, irremovibile. Non influenza i Personaggi. Se la riserva degli 8 segnalini Micelio si esaurisce, tutti i Personaggi nel Complesso (inclusa la Stanza di Isolamento) muoiono e la partita finisce.
 
-**Gambomarcio:** equivalente dell'Intruso Adulto. Si muove secondo le carte Evento. I Personaggi nella stessa stanza sono in Combattimento. Se ucciso, lascia 1 gettone Carcassa. Se rimosso per altri motivi, torna sulla plancia Regina.
+**Gambomarcio:** equivalente dell'Intruso Adulto. Si muove secondo le carte Evento. I Personaggi nella stessa stanza sono in Combattimento. Se ucciso, lascia 1 gettone Carcassa. Se rimosso per altri motivi, torna sulla plancia Regina. Subisce 1 Danno nella Fase Evento solo se si trova in una stanza con un segnalino Fuoco.
 
 **Necrombrello:** può essere piazzato e si muove solo in stanze con Germinaspore o Micelio. Se la stanza di destinazione ne è priva, viene piazzata una Spora invece. Per ucciderlo, pesca 2 carte Attacco.
 

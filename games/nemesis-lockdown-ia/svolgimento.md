@@ -51,6 +51,8 @@ L'**Azione Interruzione** (disponibile per alcuni Personaggi come l'Hacker) perm
 
 Alcune carte Strumento consentono azioni speciali, come curarsi, rimuovere secrezione, o colpire Intrusi. Le carte **Monouso** vengono scartate dopo l'uso.
 
+> Uno Strumento può essere usato **solo dal Personaggio che lo possiede**, salvo diversa indicazione sulla carta. Per applicare un Medkit o Vestiti a un altro Personaggio, devi prima scambiarglielo: sarà lui a doverlo usare.
+
 ## Azioni Stanza
 
 La maggior parte delle stanze ha un'azione specifica eseguibile dal Personaggio al suo interno. Non puoi eseguire Azioni Stanza se sei in Combattimento o se è presente un segnalino Malfunzionamento.
@@ -158,7 +160,7 @@ Dopo che tutti i giocatori hanno passato, si risolve la Fase Evento in sequenza:
 | Aracnide | Rimuovilo, aggiungi 1 Nutrice |
 | Adulto | Rimetti nel sacchetto; tutti i giocatori fanno il Tiro Rumore |
 | Nutrice | Rimetti nel sacchetto; tutti i giocatori fanno il Tiro Rumore |
-| Regina | Rimetti nel sacchetto; se ci sono Personaggi nel Nido, piazza la Regina lì → Incontro; altrimenti aggiungi 1 Uovo |
+| Regina | Se ci sono Personaggi nel Nido, piazza la Regina lì → Incontro. Altrimenti aggiungi 1 Uovo sulla plancia Laboratorio e rimetti il gettone nel sacchetto. |
 | Vuoto | Rimetti nel sacchetto; aggiungi 1 Adulto |
 
 **Passo 11 — Fine turno:** inizia un nuovo turno.
@@ -198,7 +200,7 @@ Quando esplori il Nido, piazza un **segnalino Micelio** invece di eseguire norma
 
 La Fase Evento segue le stesse fasi del gioco base, con queste differenze:
 
-- Nel passo 8, anche i Germinaspore subiscono 1 Danno per ogni Fuoco nella loro stanza. I segnalini Spora nelle stanze con Fuoco vengono rimossi.
+- Nel passo 8, i Germinaspore in una stanza con un segnalino Fuoco subiscono 1 Danno (come tutti gli altri Intrusi). I segnalini Spora nelle stanze con Fuoco vengono rimossi.
 - Nel passo 9, la carta Evento include 3 elementi: Propagazione delle Spore (simbolo grigio), Movimento dei Gambimarci, Necrombrelli e Regina, e la Crescita dei Germinaspore (simbolo colorato). I Necrombrelli e la Regina possono muoversi solo in stanze con Germinaspore o Micelio; altrimenti piazzano una Spora.
 
 ## Contaminazione con i Chytridi
