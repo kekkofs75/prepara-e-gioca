@@ -277,6 +277,21 @@
       "coverBig": "games/ticket-to-ride-europa/img/cover-big.webp",
       "copertina":"games/ticket-to-ride-europa/img/copertina.png",
       "aiSummary": false
+    },
+    {
+      "id": "nemesis-lockdown-ia",
+      "title": "Nemesis: Lockdown",
+      "subtitle": "Sopravvivi al Complesso BSL-4 infestato dai Predatori Notturni",
+      "themeColor": "#8B0000",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "90-180",
+      "players": "1-5",
+      "folder": "games/nemesis-lockdown-ia",
+      "cover":    "games/nemesis-lockdown-ia/img/cover.png",
+      "coverBig": "games/nemesis-lockdown-ia/img/cover-big.webp",
+      "copertina":"games/nemesis-lockdown-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }

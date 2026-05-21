@@ -9,14 +9,16 @@ Ogni giocatore riceve **4 punti** per ogni **Stazione Ferroviaria** che non ha c
 Il giocatore con il **[Percorso Continuo Più Lungo]{.def}** ottiene **10 punti bonus** dell'European Express.
 
 :::indent
-Si calcolano solo le linee continue di vagoni dello stesso colore.
+Si calcolano solo le **linee continue** di **vagoni** dello stesso colore.
 
-Una linea continua può essere collegata in circolo e passare dalla stessa città più di una volta, ma ogni singolo vagone deve essere usato **una sola volta**.
+Si contano i **vagoni individuali** (ogni casella occupata conta 1), **non** il numero di tratte.
 
-Le Stazioni Ferroviarie e le linee avversarie così usabili **non** devono essere considerate ai fini del calcolo.
+Una linea continua può essere collegata in **circolo** e passare dalla stessa **città più di una volta**, ma ogni singolo **vagone** deve essere usato **una sola volta**.
+
+Le **Stazioni Ferroviarie** e le linee avversarie così usabili **non** devono essere considerate ai fini del calcolo.
 :::
 
-> Se più giocatori sono in parità per il Percorso Continuo Più Lungo, **ognuno** riceve i 10 punti bonus.
+> Se **più giocatori** sono in parità per il Percorso Continuo Più Lungo, **ognuno** riceve i 10 punti bonus.
 
 ---
 
