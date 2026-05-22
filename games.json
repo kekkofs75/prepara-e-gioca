@@ -279,6 +279,21 @@
       "aiSummary": false
     },
     {
+      "id": "nemesis-ia",
+      "title": "Nemesis",
+      "subtitle": "Sopravvivi all'astronave infestata dagli Intrusi",
+      "themeColor": "#00B478",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "90-180",
+      "players": "1-5",
+      "folder": "games/nemesis-ia",
+      "cover":    "games/nemesis-ia/img/cover.png",
+      "coverBig": "games/nemesis-ia/img/cover-big.webp",
+      "copertina":"games/nemesis-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
       "id": "nemesis-lockdown-ia",
       "title": "Nemesis: Lockdown",
       "subtitle": "Sopravvivi al Complesso BSL-4 infestato dai Predatori Notturni",
@@ -306,6 +321,36 @@
       "cover":    "games/blood-rage/img/cover.png",
       "coverBig": "games/blood-rage/img/cover-big.webp",
       "copertina":"games/blood-rage/img/copertina.png",
+      "aiSummary": false
+    },
+    {
+      "id": "carcassonne",
+      "title": "Carcassonne",
+      "subtitle": "Costruisci la città medievale, piazza i tuoi meeple, vinci",
+      "themeColor": "#527844",
+      "bggRank": 68,
+      "bggScore": 7.7,
+      "duration": "30-45",
+      "players": "2-5",
+      "folder": "games/carcassonne",
+      "cover":    "games/carcassonne/img/cover.png",
+      "coverBig": "games/carcassonne/img/cover-big.webp",
+      "copertina":"games/carcassonne/img/copertina.png",
+      "aiSummary": false
+    },
+    {
+      "id": "death-roads",
+      "title": "Death Roads: All Stars",
+      "subtitle": "Corse violente su strada con veicoli armati",
+      "themeColor": "#c82828",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "45-90",
+      "players": "2-5",
+      "folder": "games/death-roads",
+      "cover":    "games/death-roads/img/cover.png",
+      "coverBig": "games/death-roads/img/cover-big.webp",
+      "copertina":"games/death-roads/img/copertina.png",
       "aiSummary": false
     }
   ]
