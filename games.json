@@ -309,6 +309,21 @@
       "aiSummary": true
     },
     {
+      "id": "nemesis-retaliation-ia",
+      "title": "Nemesis: Retaliation",
+      "subtitle": "Sopravvivi al Complesso. Consegui il tuo obiettivo.",
+      "themeColor": "#12343A",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "90-180",
+      "players": "1-5",
+      "folder": "games/nemesis-retaliation-ia",
+      "cover":    "games/nemesis-retaliation-ia/img/cover.png",
+      "coverBig": "games/nemesis-retaliation-ia/img/cover-big.webp",
+      "copertina":"games/nemesis-retaliation-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
       "id": "blood-rage",
       "title": "Blood Rage",
       "subtitle": "Conduci il tuo clan vichingo alla gloria nel Ragnarok",
@@ -382,6 +397,21 @@
       "coverBig": "games/duello-per-cardia/img/cover-big.webp",
       "copertina":"games/duello-per-cardia/img/copertina.png",
       "aiSummary": false
+    },
+    {
+      "id": "gloomhaven-jotl-ia",
+      "title": "Gloomhaven: Jaws of the Lion",
+      "subtitle": "Dungeon crawler cooperativo a campagna con personaggi persistenti",
+      "themeColor": "#2A1C12",
+      "bggRank": 4,
+      "bggScore": 8.4,
+      "duration": "60-120",
+      "players": "1-4",
+      "folder": "games/gloomhaven-jotl-ia",
+      "cover":    "games/gloomhaven-jotl-ia/img/cover.png",
+      "coverBig": "games/gloomhaven-jotl-ia/img/cover-big.webp",
+      "copertina":"games/gloomhaven-jotl-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
