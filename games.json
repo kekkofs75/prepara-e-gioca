@@ -352,6 +352,36 @@
       "coverBig": "games/death-roads/img/cover-big.webp",
       "copertina":"games/death-roads/img/copertina.png",
       "aiSummary": false
+    },
+    {
+      "id": "era-medioevo",
+      "title": "Era - Il Medioevo",
+      "subtitle": "Costruisci la tua città medievale lanciando dadi",
+      "themeColor": "#8B4513",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "45-75",
+      "players": "1-4",
+      "folder": "games/era-medioevo",
+      "cover":    "games/era-medioevo/img/cover.png",
+      "coverBig": "games/era-medioevo/img/cover-big.webp",
+      "copertina":"games/era-medioevo/img/copertina.png",
+      "aiSummary": false
+    },
+    {
+      "id": "duello-per-cardia",
+      "title": "Duello per Cardia",
+      "subtitle": "Un duello di influenza tra fazioni per conquistare i Sigilli",
+      "themeColor": "#781428",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "15-30",
+      "players": "2-4",
+      "folder": "games/duello-per-cardia",
+      "cover":    "games/duello-per-cardia/img/cover.png",
+      "coverBig": "games/duello-per-cardia/img/cover-big.webp",
+      "copertina":"games/duello-per-cardia/img/copertina.png",
+      "aiSummary": false
     }
   ]
 }
