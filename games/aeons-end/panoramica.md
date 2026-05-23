@@ -1,65 +1,111 @@
-# Panoramica Elementi e Concetti
+# Plance Giocatore
 
-## Tipi di Monete
+Ogni plancia Giocatore riporta le seguenti informazioni:
 
-| Moneta | Tipo | Descrizione |
-|--------|------|-------------|
-| **Unità** | Vari | Raffigurano il tipo di soldato. Si usano per Muovere, Attaccare, Schierare, Reclamare. |
-| **Iniziativa** | Speciale | Oro/giallo, 3 per giocatore. Gestiscono l'ordine del turno. |
-| **Controllo** | Neutro | Dischetti piatti. Segnano le ubicazioni dominate dal giocatore. |
-
----
-
-## Unità del Gioco Base (Esempio)
-
-Ogni unità ha una capacità di movimento e/o attacco specifica. Qui il riepilogo delle unità più comuni:
-
-| Unità | Mov. | Attacco | Nota |
-|-------|------|---------|------|
-| **Arciere** | 1 ortog. | A distanza (2 caselle) | Non si muove per attaccare |
-| **Cavaliere** | 1 diag. | A contatto | Movimento diagonale |
-| **Fante** | 1 ortog. | A contatto | Unità base, versatile |
-| **Ballista** | — | A distanza (3 caselle, linea retta) | Non si muove |
-| **Catapulta** | — | Area (2×2) | Colpisce un'area, non si muove |
-| **Berserker** | 1 qualsiasi | A contatto, +1 dado | Può attaccare dopo aver mosso |
-| **Lancer** | Carica (2 linea retta) | A contatto durante la carica | Deve muovere almeno 1 casella per attaccare |
-| **Royal Guard** | 1 ortog. | A contatto | Protegge: se adiacente al Re, il Re non può essere attaccato |
-| **Swordsman** | 1 qualsiasi | A contatto | Nessuna abilità speciale, ottima mobilità |
-
-> Consulta il retro della scheda di ogni unità per le regole dettagliate di abilità speciali.
+| # | Elemento | Descrizione |
+|---|----------|-------------|
+| 1 | **Nome del Mago** | Il nome del Mago delle Brecce |
+| 2 | **Preparazione delle Brecce** | Configurazione iniziale delle Brecce (diversa per ogni Mago) |
+| 3 | **Mano iniziale** | Le 5 carte con cui si inizia la partita |
+| 4 | **Mazzo iniziale** | Le 5 carte del mazzo iniziale (da disporre in ordine, da sinistra in cima a destra più in fondo) |
+| 5 | **Numero giocatore** | Spazio per il segnalino Numero giocatore a cui le carte Ordine di turno faranno riferimento |
+| 6 | **Punti vita** | Spazio per i segnalini Vita |
+| 7 | **Abilità** | [Abilità Unica]{.def} del Mago: dopo aver posto 1 segnalino Carica su ogni spazio (anche subito dopo aver piazzato l'ultimo) è possibile attivarla; dopo averla attivata, rimuovere tutti i segnalini |
+| 8 | **Mazzo di pesca** | Spazio per il mazzo di pesca (faccia in giù) |
+| 9 | **Pila degli scarti** | Spazio per le carte scartate (faccia in su) |
+| 10 | **Storia** | Testo narrativo del Mago |
 
 ---
 
-## Plancia di Gioco
+# Brecce
 
-La plancia è una griglia con:
+Una **tessera Breccia** (fronte-retro) viene usata per preparare in un turno 1 carta Incantesimo (porla sulla Breccia aperta o chiusa se stabilizzata) e per lanciarla nel turno successivo (poi scartarla).
 
-- **Caselle normali**: movimento libero
-- **Ubicazioni** (contrassegnate): possono essere reclamate per il controllo
-- **Fasce di partenza**: sulle estremità, per lo schieramento iniziale
+> Due tessere Breccia sono **adiacenti** se sono una accanto all'altra.
 
-La plancia ha **fronte/retro**: un lato per 2 giocatori (schema simmetrico), l'altro per 4 giocatori (schema a 4 settori).
+| # | Elemento | Descrizione |
+|---|----------|-------------|
+| 1 | **Breccia Aperta/Chiusa** | Lo stato attuale della Breccia |
+| 2 | **Numero della Breccia** | Posizione sopra la plancia Giocatore |
+| 3 | **Costo di apertura** | Costo in Etere per aprire la Breccia (una volta aperta rimane tale fino a fine partita) |
+| 4 | **Costo di stabilizzazione** | Costo in Etere per stabilizzare la Breccia (ruotarla di 90°). Puoi preparare un Incantesimo su una Breccia chiusa solo dopo averla stabilizzata nello stesso turno |
+| 5 | **Bonus di Breccia aperta** | Bonus al lancio di Incantesimi fornito dalla Breccia una volta aperta |
 
----
-
-## Sacchetto e Mano
-
-- Il **sacchetto** funge da mazzo: pesca casuale delle monete.
-- La **mano** (3 monete) rappresenta le opzioni tattiche disponibili nel turno.
-- Le monete **scartate** (usate) tornano nel sacchetto solo quando si esaurisce (meccanismo di deck-building).
+> Puoi aprire/stabilizzare le Brecce in qualsiasi ordine di numero.
 
 ---
 
-## Ubicazioni Speciali
+# Carte Giocatore
 
-Alcune versioni avanzate o espansioni introducono ubicazioni con effetti speciali (vedi espansioni *Nobiltà* e *Assedio*).
+Sono le carte con cui costruire il tuo mazzo e sconfiggere la Nemesi. Ogni Mago inizia con una mano e mazzo iniziale differenti. Puoi spendere [Etere]{.def} per ottenere nuove carte dalla Riserva.
+
+| Tipo | Funzione | Effetto |
+|------|----------|---------|
+| **Gemme** | Producono Etere da spendere per ottenere carte e Cariche; permettono di stabilizzare le Brecce | Immediato |
+| **Reliquie** | Effetti istantanei | Immediato |
+| **Incantesimi** | Infliggono danni alla Nemesi e ai suoi Seguaci dopo essere stati preparati su una Breccia | Dopo la preparazione su Breccia |
+
+Ogni carta riporta anche:
+- **Costo**: quantità di Etere da spendere per ottenerla.
+- **Testo di ambientazione**: testo narrativo.
+
+## Carte Randomizzatore
+
+Le **carte Randomizzatore** hanno un bordo grigio e si usano in fase di preparazione per determinare casualmente Gemme, Reliquie e Incantesimi da porre nella Riserva (ne esiste una per ogni carta Giocatore).
 
 ---
 
-## Modalità di Gioco
+# Plancia Nemesi
 
-| Modalità | Giocatori | Note |
-|----------|-----------|------|
-| Scontro Diretto | 2 | Partita standard, fronte plancia "2 giocatori" |
-| Alleanze | 4 (2v2) | Turni alternati tra squadre, retro plancia |
-| Sfida Rapida | 2 | Meno unità, obiettivo a 4 ubicazioni |
+| # | Elemento | Descrizione |
+|---|----------|-------------|
+| 1 | **Nome della Nemesi** | — |
+| 2 | **Punti Vita** | Iniziali da segnare sul Contatore (se scendono a 0 i giocatori hanno vinto) |
+| 3 | **Effetto Scatenare** | Si applica quando indicato da alcune carte o eventi (diverso per ogni Nemesi) |
+| 4 | **Regole aggiuntive** | Regole specifiche da applicare |
+| 5 | **Difficoltà superiore** | Regole facoltative per rendere la partita più difficile |
+| 6 | **Livello di difficoltà** | Da 1 (più facile) a 10 (più difficile) |
+| 7 | **Storia della Nemesi** | Testo narrativo |
+| 8 | **Preparazione** | Informazioni aggiuntive per la fase di Preparazione |
+
+---
+
+# Carte Nemesi
+
+Rappresentano Attacchi, Seguaci e Poteri che la Nemesi usa contro i giocatori e Gravehold. Il mazzo Nemesi è composto da **carte Nemesi Base** (generiche) e **carte specifiche** della Nemesi affrontata.
+
+| Tipo | Caratteristiche |
+|------|----------------|
+| **Seguaci** | Entrano in gioco con segnalini Vita; rimangono finché non sconfitti; hanno effetti permanenti da applicare nella fase principale della Nemesi |
+| **Poteri** | Hanno la parola *Potere X* ed entrano in gioco con X segnalini Potere; ogni turno della Nemesi si rimuove 1 segnalino, e appena esauriti si applica l'effetto e la carta viene scartata |
+| **Attacchi** | Risolti immediatamente e poi scartati |
+
+Ogni carta Nemesi riporta anche:
+- **Punti Vita** (solo Seguaci): se scendono a 0 la carta viene scartata.
+- **Effetto Per Scartare**: al tuo turno puoi risolvere questo effetto per scartarla (senza applicare il suo normale effetto).
+- **Nemesi** di appartenenza: se Base, usabile da qualsiasi Nemesi.
+- **Livello**: da 1 (meno pericolose) a 10 (più pericolose). Se livello 0, vedi le regole aggiuntive della Nemesi.
+
+---
+
+# Termini di Gioco
+
+| Termine | Definizione |
+|---------|-------------|
+| **[Alleato]{.def}** | Un qualsiasi giocatore all'infuori di te |
+| **[Distruggi]{.def}** | Rimuovi la carta dal gioco (non puoi né usarla né interagirci) |
+| **"Oppure"** | Puoi scegliere una o l'altra opzione indicate sulla carta (se non puoi applicare interamente un'opzione devi scegliere l'altra) |
+| **"Per Scartare"** | Durante la tua Fase Principale puoi risolvere l'effetto indicato per scartare la carta (l'effetto della carta Potere non si applica) |
+| **"[Scatenare]{.def}"** | Alcune carte Nemesi riportano la parola *Scatena*. Ogni Nemesi ha un effetto Scatenare che si applica in questi casi (segui le regole sulla plancia Nemesi) |
+
+:::glossary
+[Abilità Unica]: Il potere speciale di ogni Mago, attivabile riempiendo tutti gli spazi Carica sulla plancia Giocatore. Dopo l'attivazione tutti i segnalini Carica vengono rimossi.
+
+[Etere]: La risorsa prodotta dalle Gemme, usata per acquistare carte dalla Riserva, stabilizzare/aprire Brecce e ottenere Cariche. Non è cumulabile tra turni né cedibile ad altri giocatori.
+
+[Alleato]: Qualsiasi giocatore diverso da te. Alcune carte hanno effetti che coinvolgono gli alleati.
+
+[Distruggi]: Azione che rimuove permanentemente una carta dal gioco, rendendola inutilizzabile per il resto della partita.
+
+[Scatenare]: Effetto speciale della Nemesi, unico per ciascuna, che si attiva in situazioni specifiche indicate sulle carte (es. quando un giocatore diventa esausto).
+:::

@@ -107,16 +107,17 @@
       "cover":    "games/tag-team/img/cover.png",
       "coverBig": "games/tag-team/img/cover-big.webp",
       "copertina":"games/tag-team/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": false,
+      "hidden": true
     },
     {
       "id": "tag-team-ia",
       "title": "Tag Team",
-      "subtitle": "Auto battler con deckbuilding per 2 giocatori",
-      "themeColor": "#E65A14",
-      "bggRank": null,
-      "bggScore": null,
-      "duration": "15-30",
+      "subtitle": "Classico combattimento arcade due contro due",
+      "themeColor": "#1A3A6B",
+      "bggRank": 848,
+      "bggScore": 7.7,
+      "duration": "15",
       "players": "2",
       "folder": "games/tag-team-ia",
       "cover":    "games/tag-team-ia/img/cover.png",
@@ -184,8 +185,8 @@
       "cover":    "games/aeons-end/img/cover.png",
       "coverBig": "games/aeons-end/img/cover-big.webp",
       "copertina":"games/aeons-end/img/copertina.png",
-      "aiSummary": true,
-      "hidden": true
+      "aiSummary": false,
+      "hidden": false
     },
     {
       "id": "scout",
@@ -411,6 +412,21 @@
       "cover":    "games/gloomhaven-jotl-ia/img/cover.png",
       "coverBig": "games/gloomhaven-jotl-ia/img/cover-big.webp",
       "copertina":"games/gloomhaven-jotl-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "7wonders-duel-ia",
+      "title": "7 Wonders Duel",
+      "subtitle": "Il duello tra civiltà dell'antichità",
+      "themeColor": "#B4781E",
+      "bggRank": 2,
+      "bggScore": 8.1,
+      "duration": "30-45",
+      "players": "2-2",
+      "folder": "games/7wonders-duel-ia",
+      "cover":    "games/7wonders-duel-ia/img/cover.png",
+      "coverBig": "games/7wonders-duel-ia/img/cover-big.webp",
+      "copertina":"games/7wonders-duel-ia/img/copertina.png",
       "aiSummary": true
     }
   ]

@@ -1,31 +1,53 @@
-# Fine della Partita
+# Condizioni di Vittoria
 
-## Condizione di Vittoria Immediata
+La partita termina e i giocatori **vincono** in una di queste condizioni:
 
-La partita termina **immediatamente** al termine del turno di un giocatore se questi controlla **6 o più ubicazioni** sulla plancia.
-
-Quel giocatore (o quella squadra in modalità 4 giocatori) **vince la partita**.
-
----
-
-## Fine Anticipata per Sacchetto Esaurito
-
-Se durante il tuo turno non hai più monete nel sacchetto **e** la tua mano è vuota (o è rimasta vuota dopo aver giocato), la partita termina.
-
-In questo caso, vince il giocatore con il **maggior numero di ubicazioni controllate** in quel momento.
-
-**In caso di parità**, vince chi ha più unità ancora in gioco sulla plancia.
+- Alla fine di un turno il mazzo Nemesi è terminato e non ci sono più carte [Seguace]{.def} o carte [Potere]{.def} in gioco.
+- Il Contatore della Nemesi scende a **0 Punti Vita**.
 
 ---
 
-## Fine Partita in Modalità 4 Giocatori (Coppie)
+# Condizioni di Sconfitta
 
-La squadra che per prima raggiunge il totale di **6 ubicazioni combinate** (somma delle ubicazioni controllate dai due alleati) vince la partita.
+La partita termina e i giocatori **perdono** in una di queste condizioni:
 
-Se entrambe le squadre raggiungono 6 nello stesso turno, vince la squadra il cui giocatore ha completato il turno per ultimo.
+- Tutti i giocatori diventano **esausti** (tutti a 0 Punti Vita).
+- Il Contatore di **Gravehold** scende a **0 Punti Vita**.
+- La Nemesi soddisfa una specifica **condizione di vittoria** indicata sulla sua plancia Nemesi.
 
 ---
 
-## Nessun Pareggio Formale
+# Difficoltà Variabile
 
-Le regole base non prevedono un meccanismo di pareggio. La seconda condizione di spareggio (unità in gioco) risolve quasi sempre le parità residue.
+Puoi modificare la difficoltà applicando queste varianti:
+
+| Livello | Modifiche |
+|---------|-----------|
+| **Principiante** | Ogni giocatore inizia con **+2 Punti Vita** (12 totali), Gravehold con **+5 Punti Vita** (35 totali), la Nemesi con **-10 Punti Vita** |
+| **Normale** | Nessuna modifica alle regole base |
+| **Esperto** | Usa le regole della sezione *Difficoltà superiore* sulla plancia Nemesi (modificano la preparazione, lo Scatenare o le Regole aggiuntive) |
+| **Estinzione** | Come Esperto, più: ogni giocatore inizia con **-2 Punti Vita** (8 totali), Gravehold con **-5 Punti Vita** (25 totali), la Nemesi con **+10 Punti Vita** |
+
+---
+
+# Partita in Solitario
+
+Scegli un numero di Maghi da controllare (consigliato un massimo di **2 Maghi**), poi segui le normali regole in base al numero scelto.
+
+## Regole Avanzate
+
+Controlla **1 solo Mago** e costruisci il mazzo Nemesi come indicato nella sezione Preparazione – Nemesi.
+
+Crea il mazzo Ordine di turno con **3 carte Ordine di turno dei giocatori** (come tuoi turni) e **2 carte Ordine di turno della Nemesi**.
+
+Tu sei l'**alleato di te stesso**: tutte le carte che si riferiscono ad un alleato o altro giocatore vengono applicate a te. Se un effetto si applica a te e ad un altro giocatore, **applicalo 2 volte** a te.
+
+### Difficoltà Principiante (Solitario)
+
+Gioca con **4 carte Ordine di turno** dei giocatori e inizia la partita con **12 o 15 Punti Vita**.
+
+:::glossary
+[Seguace]: Carta Nemesi che entra in gioco con segnalini Vita e rimane attiva finché non viene sconfitta, applicando effetti permanenti ogni turno della Nemesi.
+
+[Potere]: Carta Nemesi con segnalini Potere che si decrementano ogni turno. Quando esauriti, scatena il suo effetto e viene scartata.
+:::
