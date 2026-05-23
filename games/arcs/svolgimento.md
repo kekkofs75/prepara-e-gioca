@@ -1,200 +1,240 @@
-# Struttura della Partita
+Una partita può durare fino a **5 Capitoli**, ognuno composto da diversi [round]{.def} in cui ogni giocatore, dal **1° Giocatore** (che possiede l'**indicatore Iniziativa**) poi in senso orario fino all'ultimo, svolge un turno giocando **1 carta Azione** per svolgere **1+ Azioni**.
 
-**Partita → Capitoli (3–5) → Round → Turni**
+Alla fine del round l'**indicatore Iniziativa** può passare ad un altro giocatore in base alle carte giocate.
 
-In ogni round, inizia il giocatore con l'**indicatore Iniziativa** (detto 1° Giocatore), poi si prosegue in senso orario. Ogni giocatore svolge il proprio turno giocando 1 carta Azione. Quando tutti hanno giocato, si verifica chi ha l'iniziativa nel round successivo, si scartano le carte e si riparte.
+Giocate nuovi round fino a quando nessuno ha più **carte Azione** in mano o tutti hanno passato. A quel punto il Capitolo termina.
 
-Il Capitolo termina quando nessuno ha più carte in mano oppure quando tutti i giocatori rimasti con carte passano l'iniziativa consecutivamente (in quel caso le carte vengono scartate immediatamente).
+# Passo 1: Turno del Primo Giocatore
 
----
+Il giocatore con l'**indicatore Iniziativa** gioca e pone **1 carta Azione** scoperta come [carta Guida]{.def} nello spazio Guida sulla mappa.
 
-# Turno del 1° Giocatore
+Se la carta lo consente ed è disponibile almeno un **segnalino Ambizione** puoi dichiarare l'ambizione (vedi sezione Dichiarare un'Ambizione).
 
-Il giocatore con l'iniziativa **deve** giocare 1 carta Azione scoperta nello spazio **Guida** sulla mappa: questa diventa la carta Guida del round.
+Poi può svolgere **1+ azioni [Preludio]{.def}** (vedi sezione Azioni Preludio).
 
-Prima di svolgere qualsiasi azione può:
-- **Dichiarare un'Ambizione** (vedi sotto)
-- **Svolgere azioni Preludio** (vedi Panoramica)
+Poi può svolgere **1 azione per ogni punto azione** presente sulla carta in base al suo [seme]{.def}:
 
-Poi svolge **1 azione per ogni punto azione** indicato sulla carta, in base al suo **seme**:
-
-| Seme | Azioni disponibili |
-|------|-------------------|
-| **Amministrazione** | Tassare, Riparare, Influenzare |
-| **Aggressione** | Combattere, Muovere, Acquisire |
-| **Costruzione** | Costruire, Riparare |
-| **Mobilitazione** | Muovere, Influenzare |
+| Seme              | Azioni disponibili                |
+|-------------------|-----------------------------------|
+| **Amministrazione** | Tassare, Riparare o Influenzare  |
+| **Aggressione**     | Combattere, Muovere o Acquisire  |
+| **Costruzione**     | Costruire o Riparare             |
+| **Mobilitazione**   | Muovere o Influenzare            |
 
 ## Passare l'Iniziativa
 
-Se non hai carte in mano o scegli di saltare il turno, **devi passare l'iniziativa**: dai l'indicatore Iniziativa al prossimo giocatore (in senso orario) con almeno 1 carta in mano, poi il round termina immediatamente.
+Se non hai nessuna carta in mano o scegli di saltare il turno, devi **passare l'iniziativa** dando l'**indicatore Iniziativa** al giocatore successivo (in senso orario) con 1+ carte Azione in mano.
 
-Se tutti i giocatori con carte passano l'iniziativa consecutivamente, scartate tutte le carte Azione: il Capitolo termina immediatamente.
+Poi il round termina immediatamente.
 
----
+Se tutti i giocatori con ancora carte Azione in mano passano l'iniziativa consecutivamente, scartate tutte le carte Azioni e il Capitolo termina immediatamente.
 
-# Turno degli Altri Giocatori
+## Dichiarare un'Ambizione
 
-Dopo il 1° Giocatore, gli altri giocano in senso orario. Chi non ha carte in mano salta il turno.
+Prima di svolgere qualsiasi azione, puoi dichiarare l'[ambizione]{.def} indicata sulla **carta Guida**:
 
-Devi giocare 1 carta Azione in uno dei tre modi:
+- Le carte **"1"** non hanno ambizione.
+- Le carte **"2-6"** indicano **1 tipo** di ambizione.
+- Le carte **"7"** consentono di dichiarare **qualsiasi** ambizione.
 
-**Superare** — Gioca 1 carta scoperta con **stesso seme** della Guida e **valore maggiore**.
-→ Puoi svolgere 1 azione per ogni punto azione della tua carta.
+Prendi e poni il **segnalino Ambizione** con il valore più alto tra quelli disponibili nel **riquadro Ambizione** corrispondente a quella dichiarata.
 
-**Cambiare** — Gioca 1 carta scoperta di **seme diverso** (qualsiasi valore).
-→ Puoi svolgere **1 sola azione** tra quelle indicate sulla tua carta.
+Poi prendi e poni il **segnalino Zero** sul valore della carta Guida: il valore della carta è ora 0, mentre i punti azione rimangono intatti.
 
-**Copiare** — Gioca 1 qualsiasi carta **a faccia in giù**.
-→ Puoi svolgere **1 sola azione** tra quelle indicate sulla carta **Guida**.
+> Se non ci sono segnalini Ambizione disponibili non puoi dichiarare l'ambizione.
 
-Poni la carta giocata nel riquadro "Superare, Copiare o Cambiare" sulla mappa.
+# Passo 2: Turno degli Altri Giocatori
 
-> Quando Superi, il confronto è sempre col valore della carta Guida (che può essere 0 se è stata dichiarata un'ambizione), non con le altre carte giocate.
+Dopo che il 1° Giocatore ha terminato il proprio turno, ogni altro giocatore, in senso orario, svolge il proprio turno.
 
----
+Se un giocatore non ha carte in mano salta il proprio turno.
 
-# Dichiarare un'Ambizione
+Gioca **1 carta Azione** in uno dei seguenti 3 modi:
 
-Prima di qualsiasi azione, il giocatore con l'iniziativa può dichiarare l'ambizione indicata sulla sua carta Guida:
-- Carte "1": nessuna ambizione (solo in 4 giocatori)
-- Carte "2–6": ambizione corrispondente al simbolo sulla carta
-- Carte "7": qualsiasi ambizione (solo in 4 giocatori)
+| Modo          | Condizione                                                                    | Azioni disponibili                                        |
+|---------------|-------------------------------------------------------------------------------|-----------------------------------------------------------|
+| **Superare**  | Carta scoperta di valore **maggiore** e **stesso seme** della carta Guida     | 1 azione per ogni punto azione sulla tua carta            |
+| **Cambiare**  | Carta scoperta di **qualsiasi valore** e **seme diverso** dalla carta Guida   | 1 sola azione tra quelle indicate sulla tua carta         |
+| **Copiare**   | Qualsiasi carta coperta                                                       | 1 sola azione tra quelle indicate sulla **carta Guida**   |
 
-Prendi il segnalino Ambizione con il **valore più alto** disponibile e posizionalo nel riquadro Ambizione corrispondente. Poi copri il valore della carta Guida con il segnalino Zero (il valore diventa 0, ma i **punti azione restano invariati**).
+Poni la carta giocata nel riquadro **"Superare, Copiare o Cambiare"** sulla mappa.
 
-Se non ci sono segnalini Ambizione disponibili, non puoi dichiarare.
+## Sottrarre l'Iniziativa
 
-> Puoi dichiarare la stessa ambizione più volte nella stessa partita. Ogni carta permette di posizionare un solo segnalino Ambizione.
+Prima di svolgere qualsiasi azione, puoi **sottrarre l'indicatore Iniziativa** al giocatore che lo possiede in uno dei seguenti 2 modi:
 
----
+- **Giocare +1 carta Azione aggiuntiva:** poni la carta **coperta** accanto a quella che hai giocato. Non puoi svolgere le azioni di questa carta.
+- **Superare con 1 carta Azione "7":** puoi comunque svolgere le azioni di questa carta.
 
-# Sottrarre l'Iniziativa
+Sdraia l'**indicatore Iniziativa** per indicare che lo hai sottratto. Gli altri giocatori non possono sottrarlo ulteriormente per questo round.
 
-Prima di svolgere qualsiasi azione (anche nel tuo turno come non-1° Giocatore), puoi sottrarre l'iniziativa al giocatore che la possiede in uno di questi due modi:
+> Il giocatore con l'iniziativa non può sottrarre l'iniziativa.
 
-- **Gioca 1 carta aggiuntiva a faccia in giù** accanto a quella già giocata. Non puoi usare le azioni di questa carta extra.
-- **Supera con una carta "7"** (solo in 4 giocatori). Puoi comunque usare le azioni di questa carta.
+# Passo 3: Controllare chi ha l'Iniziativa
 
-Sdraia l'indicatore Iniziativa per indicare che è stato sottratto. **Nessun altro giocatore** può sottrarlo per il resto del round. Il giocatore con l'iniziativa non può sottrarre l'iniziativa a se stesso.
+Quando tutti i giocatori hanno svolto il proprio turno, in ordine:
 
----
+- Se un giocatore ha **sottratto l'iniziativa** → prende l'**indicatore Iniziativa**.
+- Se un giocatore ha **Superato** con la carta di valore maggiore → prende l'**indicatore Iniziativa**.
+- Altrimenti, rimane al giocatore che già lo possiede.
 
-# Fine del Round — Chi ha l'Iniziativa?
+# Passo 4: Scartare le Carte e Nuovo Round
 
-Dopo che tutti hanno giocato, in ordine di priorità:
+Poni coperte tutte le **carte Azione** giocate (anche quella per sottrarre l'iniziativa) nella pila delle **Azioni Scartate**.
 
-1. Se qualcuno ha **sottratto l'iniziativa** → prende l'indicatore Iniziativa.
-2. Se nessuno ha sottratto ma qualcuno ha **Superato** → chi ha Superato con la carta di valore **più alto** prende l'iniziativa.
-3. Altrimenti l'iniziativa **rimane** al giocatore che già la possiede.
-
-Poi poni tutte le carte giocate (anche quella usata per sottrarre) a faccia in giù nella pila delle Azioni Scartate. Se almeno 1 giocatore ha ancora carte in mano, inizia un nuovo round.
-
----
+Se **1+ Giocatori** hanno **1+ carte Azione** in mano giocate un nuovo round, altrimenti terminate il Capitolo.
 
 # Azioni Principali
 
-## Tassare *(Amministrazione)*
-Scegli 1 città Leale o Rivale in un sistema che **controlli** → ottieni 1 segnalino Risorsa del tipo di pianeta dove è costruita. Puoi tassare la stessa città **1 sola volta per turno**.
-Se la città è Rivale: cattura anche 1 agente di quel rivale dalla sua riserva (anche se non ottieni la risorsa) e ponilo nel tuo riquadro Prigionieri.
+## Tassare (Amministrazione)
 
-## Costruire *(Costruzione)*
-Costruisci un edificio o una nave:
-- **Edificio** (città o spazioporto): posizionalo in uno spazio Edificio libero in un sistema con almeno 1 pezzo Leale. Se è una città, prendi la più a sinistra dalla tua plancia.
-- **Nave**: posizionala in uno spazioporto Leale. Ogni spazioporto può costruire **1 sola nave per turno**.
+Scegli **1 città** (Leale o Rivale) in un sistema che **controlli** ed ottieni **1 Risorsa** dalla riserva che corrisponde al tipo di pianeta su cui si trova quella città.
 
-Se costruisci in un sistema controllato da un rivale, il pezzo viene posizionato **danneggiato**.
+Se **Rivale** catturi e poni anche **1 Agente** di quel rivale (dalla sua riserva, e anche se non ottieni la risorsa) nel riquadro **Prigionieri** sulla tua plancia Giocatore (vedi Ambizione Tiranno).
 
-## Muovere *(Mobilitazione e Aggressione)*
-Muovi un qualsiasi numero di navi Leali da un sistema a un **sistema adiacente**.
+> Puoi tassare la stessa città **1 sola volta per turno**.
 
-**Fionda:** se muovi da un sistema con uno spazioporto Leale, puoi continuare a muovere finché non entri in un portale controllato da un rivale o su qualsiasi pianeta. Puoi lasciare navi indietro lungo il percorso. Il controllo si determina **prima** del movimento. Non puoi attivare la Fionda da spazioporti Rivali che controlli.
+## Costruire (Costruzione)
 
-**Settori Fuori dal Gioco:** non puoi muovere in quei sistemi. Il segnalino Rotta rende adiacenti i portali dei 2 settori confinanti.
+Puoi costruire uno tra i seguenti pezzi:
 
-## Riparare *(Costruzione e Amministrazione)*
-Raddrizza 1 nave Leale danneggiata **o** gira 1 edificio Leale danneggiato (ovunque sulla mappa).
+- **Edificio:** poni **1 Spazioporto** o **1 Città** (più a sinistra dalla tua plancia Giocatore) in uno spazio Edificio libero in un sistema con **1+ pezzi Leali**.
+- **Nave:** poni **1 Nave** in uno spazioporto Leale. Ogni spazioporto può costruire **1 sola nave per turno**.
 
-## Influenzare *(Mobilitazione e Amministrazione)*
-Posiziona 1 tuo agente su **qualsiasi carta** della Corte.
+> Se costruisci un pezzo in un sistema controllato da un rivale, ponilo **danneggiato**.
 
-## Acquisire *(Aggressione)*
-Prendi 1 carta dalla Corte su cui hai **più agenti Leali** rispetto a tutti i Rivali. Rimetti i tuoi agenti Leali nella riserva; cattura gli eventuali agenti Rivali e ponili nel tuo riquadro Prigionieri. Risolvi subito l'azione **Appena Acquisita** se presente. Pesca 1 nuova carta Corte per rimpiazzarla.
+## Muovere (Mobilitazione e Aggressione)
 
-## Combattere *(Aggressione)*
+Muovi **1+ Navi Leali** da un sistema ad un sistema adiacente.
 
-1. **Scegli il Sistema del Combattimento**: 1 sistema con almeno 1 nave Leale (tutte le navi Leali sono in attacco).
-2. **Scegli il Difensore**: 1 rivale con almeno 1 pezzo in quel sistema (tutti i suoi pezzi sono in difesa).
-3. **Scegli i Dadi**: per ogni nave in attacco scegli 1 dado — Assalto, Incursione o Razzia (massimo 6 per tipo). I dadi Razzia si possono scegliere solo se c'è almeno 1 edificio in difesa o se il difensore non ha edifici Leali in tutta la mappa.
+### Fionda
 
-| Dado | Effetto |
-|------|---------|
-| **Assalto** 🔴 | Molti danni al difensore, ma rischioso anche per l'attaccante |
-| **Incursione** ⬜ | Nessun rischio per l'attaccante, pochi danni al difensore |
-| **Razzia** 🟧 | Ruba risorse/carte, possibili danni — molto rischioso per l'attaccante |
+Se muovi da un sistema con uno **spazioporto Leale** puoi muovere le navi quanto vuoi, lasciandone indietro quante ne vuoi, finché non muovi su un **portale controllato da un rivale** oppure su un **qualsiasi pianeta** (indipendentemente da chi lo controlla).
 
-4. **Tira e risolvi** in quest'ordine:
-   1. Per ogni 🪝 (danno attaccante): colpisci 1 tua nave in attacco.
-   2. Con almeno 1 ⭕ (intercettazione): per ogni nave in difesa integra, colpisci 1 tua nave in attacco *(1 sola volta per combattimento)*.
-   3. Per ogni 💥 (danno difensore-nave): colpisci 1 nave in difesa; se non ce ne sono, puoi colpire 1 edificio in difesa.
-   4. Per ogni 🏗 (danno difensore-edificio): colpisci 1 edificio in difesa.
-   5. Se hai ancora almeno 1 nave in attacco, spendi 🗝 per **razziare** risorse e carte del difensore.
+### Settori Fuori dal Gioco
 
-**Un pezzo integro colpito → danneggiato** (nave sul fianco, edificio lato scuro).
-**Un pezzo danneggiato colpito → distrutto**: chi attacca prende i pezzi in difesa distrutti come **Trofei**; il difensore prende i pezzi in attacco distrutti come Trofei.
-Poni i Trofei nel riquadro Trofei della plancia (per l'ambizione Generale).
+Non puoi muovere in nessun sistema di settori fuori dal gioco. Il **segnalino Rotta** rende adiacenti 2 portali ad esso confinanti.
+
+## Riparare (Costruzione e Amministrazione)
+
+Raddrizza **1 Nave Leale danneggiata** o gira **1 Edificio Leale danneggiato** (ovunque sulla mappa).
+
+## Influenzare (Mobilitazione e Amministrazione)
+
+Poni **1 agente** su **1 qualsiasi carta della Corte**.
+
+## Acquisire (Aggressione)
+
+Prendi **1 carta dalla Corte** su cui hai più **agenti Leali** rispetto a tutti i tuoi Rivali. Rimetti i tuoi agenti Leali nella tua riserva e cattura e poni ogni eventuale altro agente Rivale presente sulla carta nel riquadro **Prigionieri** sulla tua plancia Giocatore (vedi Ambizione Tiranno).
+
+Svolgi immediatamente l'**Azione Appena Acquisita** se presente sulla carta. Se indica di scartarla ponila scoperta nella corrispondente pila degli scarti.
+
+Pesca e poni **1 carta Corte scoperta** nella Corte al suo posto.
+
+## Combattere (Aggressione)
+
+Svolgi i seguenti passi nell'ordine indicato:
+
+1. **Scegli il Sistema del Combattimento:** scegli **1 sistema** con **1+ navi Leali** (tutte sono considerate in attacco).
+2. **Scegli il Difensore:** scegli **1 Rivale** con **1+ pezzi** (tutti sono considerati in difesa) in quel sistema.
+3. **Scegli i Dadi Combattimento:** per ogni nave in attacco puoi scegliere **1 dado Assalto, Incursione o Razzia** (questi ultimi solo se ci sono **1+ Edifici in difesa** o se il difensore ha **0 edifici Leali** in tutta la mappa).
+
+| Tipo di Dado    | Effetto                                                                                     |
+|-----------------|---------------------------------------------------------------------------------------------|
+| **Assalto**     | Infliggono molti danni al difensore, ma sono rischiosi anche per l'attaccante               |
+| **Incursione**  | Nessun rischio per l'attaccante, ma infliggono pochi danni al difensore                     |
+| **Razzia**      | Rubano carte e risorse al difensore e potrebbero infliggere danni, ma molto rischiosi       |
+
+4. **Tirare e Risolvere Dadi:** tira e poi risolvi nel seguente ordine tutti i risultati dei dadi scelti:
+   - Per ogni **colpisci** una qualsiasi tua nave in attacco.
+   - Con **1+** il difensore ti **intercetta** (1 sola volta per combattimento): per ogni nave in difesa integra, colpisci una qualsiasi tua nave in attacco.
+   - Per ogni **colpisci** una qualsiasi nave in difesa. Se non ci sono navi in difesa, puoi colpire un qualsiasi edificio in difesa.
+   - Per ogni **colpisci** un qualsiasi edificio in difesa.
+   - Se hai ancora **1+ navi in attacco**, spendi per razziare le risorse e le carte del difensore (vedi sezione Razziare).
+
+Un pezzo **integro** colpito viene **danneggiato**:
+- **Nave:** sdraiatela sul fianco.
+- **Edificio:** giratelo sul lato con gli angoli più scuri.
+
+Un pezzo **danneggiato** colpito viene **distrutto**:
+- **Attaccante:** prende i pezzi in difesa come Trofei.
+- **Difensore:** prende i pezzi in attacco come Trofei.
+- **Trofei:** poni i pezzi nel riquadro Trofei della tua plancia Giocatore (vedi Ambizione Generale).
 
 ### Distruggere le Città
-Se distruggi una città (anche fuori dal combattimento):
-1. **Recare Oltraggio**: scarta tutte le tue risorse e carte Gilda del tipo di pianeta della città distrutta; posiziona un tuo agente nello spazio Oltraggio corrispondente sulla tua plancia → quella risorsa è ora **Negata** (non puoi spenderla per l'azione Preludio corrispondente).
-2. **Soggiogare la Corte**: acquisisci 1 carta Gilda della Corte con almeno 1 agente del difensore. Prendi tutti gli agenti Rivali come Trofei (non Prigionieri).
+
+Quando distruggi una **città** (anche fuori dal combattimento) devi:
+
+1. **Recare Oltraggio:** scarta tutte le tue **risorse** e **carte Gilda** (ponile scoperte nella pila degli scarti della Corte) del tipo di pianeta della città distrutta.
+:::indent
+**Risorse Negate:** poni **1 tuo agente** nello spazio Oltraggio corrispondente al tipo di pianeta della città distrutta sulla tua plancia Giocatore. Da ora non puoi spendere questa risorsa per la sua normale azione Preludio.
+:::
+
+2. **Soggiogare la Corte:** acquisisci **1 qualsiasi carta Gilda** con **1+ agenti del difensore**. Prendi e poni tutti gli agenti Rivali nel riquadro **Trofei** (non Prigionieri) sulla tua plancia Giocatore.
 
 ### Razziare
-Se dopo i colpi rimane almeno 1 nave in attacco, spendi 🗝 per rubare al difensore:
-- **Risorse**: spendi 🗝 pari al costo di razzia sopra agli spazi Risorsa della plancia.
-- **Carte Gilda**: spendi 🗝 pari al costo di razzia indicato in alto a sinistra della carta.
 
----
+Dopo aver subito colpi, se hai ancora **1+ navi in attacco**, puoi spendere per rubare (1 alla volta) al difensore:
 
-# Fine di un Capitolo
+- **Risorse:** spendi pari al costo di razzia indicato sopra agli spazi Risorsa della plancia Giocatore.
+- **Carte Gilda:** spendi pari al costo di razzia indicato in alto a sinistra delle carte Gilda.
 
-Quando il Capitolo termina si svolgono 4 passaggi in ordine:
+# Azioni Secondarie
 
-## Passo 1 — Calcolare il Potere dalle Ambizioni
+## Azioni Preludio
 
-Per ogni riquadro Ambizione che contiene almeno 1 segnalino, verificate chi soddisfa meglio ogni ambizione:
+Il [Preludio]{.def} inizia dopo aver giocato una carta Azione (e dopo aver dichiarato l'ambizione) e termina quando spendi il 1° punto Azione.
 
-| Ambizione | Come si soddisfa |
-|-----------|-----------------|
-| **Magnate** | Più simboli Carburante + Materiale su risorse e carte Gilda |
-| **Tiranno** | Più Prigionieri sulla plancia |
-| **Generale** | Più Trofei sulla plancia |
-| **Custode** | Più simboli Reliquie su risorse e carte Gilda |
-| **Empate** | Più simboli Psicoenergia su risorse e carte Gilda |
+Le carte con l'indicazione **"Preludio"** e tutte le **risorse** (non Negate) fanno ottenere azioni Preludio.
 
-Il giocatore **al 1° posto** ottiene il Potere indicato nella parte superiore di tutti i segnalini di quell'ambizione. Il giocatore **al 2° posto** ottiene il Potere indicato nella parte inferiore. In parità al 1° posto: tutti i pareggianti ottengono il Potere del 2° posto. In parità al 2° posto: nessuno ottiene Potere.
+Puoi svolgere **1+ azioni Preludio**, con i seguenti 2 limiti:
 
-> **Qualificarsi**: devi contribuire all'ambizione per ottenere Potere (es. se nessuno ha Trofei, nessuno ottiene Potere dall'ambizione Generale).
+- Le risorse spese nel Preludio tornano nella riserva al termine del Preludio stesso (quindi non puoi ottenerle nuovamente).
+- Se nel Preludio acquisisci **1+ carte Corte** non puoi svolgere eventuali loro azioni Preludio durante quello stesso Preludio.
 
-**Bonus Potere della Città** (solo per chi vince al 1° posto non in parità):
-- +2 Potere se lo spazio Città "+2 ogni ambizione vinta" sulla tua plancia è libero.
-- +5 Potere se entrambi gli spazi Città "+2 e +3 ogni ambizione vinta" sono liberi.
-- Ottenibile una sola volta per ambizione, indipendentemente dal numero di segnalini nel riquadro.
+> Se l'azione Preludio di una carta indica di scartarla, ponila scoperta nella pila degli scarti della Corte.
 
-**Solo in 2 giocatori:** considera le risorse piazzate nei riquadri Ambizione durante la preparazione come possedute da un 3° giocatore virtuale. Le Armi nel riquadro Generale contano come Trofei.
+## Risorse
 
-## Passo 2 — Restituire i Pezzi e Girare l'Ambizione
+Spendi **1+ Risorse** per svolgere le corrispondenti azioni Preludio:
 
-Se hai ottenuto Potere dall'ambizione Generale → restituisci tutti i Trofei. Se dall'ambizione Tiranno → restituisci tutti i Prigionieri.
+| Risorsa            | Azione Preludio                                                                  |
+|--------------------|----------------------------------------------------------------------------------|
+| **Materiale**      | Svolgi 1 azione Costruire o Riparare                                             |
+| **Carburante**     | Svolgi 1 azione Movimento                                                        |
+| **Armi**           | Spendi 1+ punti Azione della carta giocata per svolgere 1+ azioni Combattere    |
+| **Reliquie**       | Svolgi 1 azione Acquisire                                                        |
+| **Psicoenergia**   | Svolgi 1 azione tra quelle indicate sulla carta Guida                            |
 
-Rimetti tutti i segnalini Ambizione nella sezione Segnalini Disponibili sulla mappa. Poi gira il segnalino Ambizione con il **Potere più basso** (tra quelli non ancora girati) sul lato arancione (Potere più alto).
+Quando ottieni una risorsa, ponila in uno **spazio Risorsa libero** della tua plancia Giocatore. Puoi anche riorganizzare le risorse nei tuoi spazi Risorsa, ma devi scartare quelle in eccesso.
 
-## Passo 3 — Fine della Partita o Nuovo Capitolo
+Quando una città torna sulla tua plancia Giocatore e copre uno spazio Risorsa, puoi riorganizzare le risorse e scartare quelle in eccesso.
 
-La partita termina se almeno 1 giocatore ha raggiunto la soglia di Potere **oppure** se l'indicatore Capitolo è sul Capitolo 5. In questo caso vince chi ha più Potere (spareggio: chi ha giocato prima in ordine di turno).
+Ogni spazio Risorsa ha un **costo di razzia** che l'attaccante deve spendere in combattimento per rubarti quella risorsa.
 
-Se la partita non è terminata, fai avanzare l'indicatore Capitolo di 1 spazio.
+Alcune carte possono **conservare** le risorse. Puoi spenderle, puoi usarle per soddisfare le ambizioni e non possono essere rubate (a meno che non venga indicato diversamente).
 
-## Passo 4 — Pescare Carte
+- Quando una carta con risorse ti viene **rubata**, quelle risorse rimangono sulla carta.
+- Se una carta con risorse viene **sepolta, scartata o demolita**, rimetti quelle risorse nella riserva.
 
-Mescola tutte le carte Azione. Ogni giocatore pesca **6 carte Azione** per la nuova mano. Le rimanenti vanno a faccia in giù nella pila delle Azioni Scartate. **Solo in 2 giocatori:** il giocatore senza iniziativa può scartare tutte e 6 e pescarne altre 6 (deve tenere la nuova mano). Il giocatore con l'iniziativa inizia il capitolo successivo.
+## Nuove Azioni
+
+Alcune carte ti fanno ottenere **nuove azioni** indicate da un nome seguito dall'azione tra parentesi – es. *Assassinare (Combattere)*.
+
+Se spendi **1 punto azione** o **1 risorsa** (non Negata) per svolgere un'azione principale puoi invece svolgere la nuova azione.
+
+## Modificatori
+
+Alcune carte ti fanno ottenere dei **modificatori** (indicati in grassetto) alle azioni principali – es. *"In combattimento, scegli 1 dado aggiuntivo"*.
+
+Non modificano le nuove azioni, ma possono modificare le azioni principali a cui fanno riferimento.
+
+Alcuni di questi possono influenzare le **fasi di gioco principali** (preparazione, calcolo del Potere delle Ambizioni, dichiarare un'ambizione, sottrarre l'iniziativa, …).
+
+:::glossary
+[round]: Unità di gioco in cui ogni giocatore svolge un turno nell'ordine di iniziativa; termina quando tutti hanno giocato o passato.
+[carta Guida]: La carta Azione giocata scoperta dal 1° Giocatore che determina le azioni disponibili nel round.
+[Preludio]: Fase tra il gioco della carta Azione e il primo punto azione speso; permette di usare risorse per azioni aggiuntive.
+[seme]: Il tipo di una carta Azione (Amministrazione, Aggressione, Costruzione, Mobilitazione) che determina le azioni disponibili.
+[ambizione]: Obiettivo dichiarabile che assegna Potere a fine Capitolo al giocatore che lo soddisfa meglio.
+:::

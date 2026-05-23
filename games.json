@@ -139,7 +139,7 @@
       "coverBig": "games/arcs/img/cover-big.webp",
       "copertina":"games/arcs/img/copertina.png",
       "aiSummary": false,
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "arcs-ia",
@@ -443,6 +443,21 @@
       "coverBig": "games/7wonders-ia/img/cover-big.webp",
       "copertina":"games/7wonders-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "carnival-zombie",
+      "title": "Carnival Zombie",
+      "subtitle": "Sopravvivi alla notte a Venezia",
+      "themeColor": "#1E5043",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "60-120",
+      "players": "1-6",
+      "folder": "games/carnival-zombie",
+      "cover":    "games/carnival-zombie/img/cover.png",
+      "coverBig": "games/carnival-zombie/img/cover-big.webp",
+      "copertina":"games/carnival-zombie/img/copertina.png",
+      "aiSummary": false
     }
   ]
 }

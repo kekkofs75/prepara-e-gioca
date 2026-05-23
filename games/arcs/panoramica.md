@@ -1,131 +1,120 @@
-# Componenti
+# Arco della Partita
 
-| Componente | Quantità | Note |
-|---|---|---|
-| Mappa | 1 | Contiene tracciati Potere, Capitolo, riquadri Ambizione, spazio Guida |
-| Carte Azione | 28 | Valore 2–6 (×20) + valore 1 e 7 (×8, solo in 4 giocatori) |
-| Carte Preparazione | 12 | 4 per numero di giocatori; ne viene pescata 1 |
-| Carte Gilda | 25 | Effetti permanenti; si prendono dalla Corte |
-| Carte Vox | 6 | Effetti immediati; si prendono dalla Corte |
-| Carte Leader | 8 | Modalità Leader & Lore: abilità uniche e pezzi iniziali |
-| Carte Lore | 14 | Modalità Leader & Lore: abilità permanenti, non rubabili |
-| Plance Giocatore | 4 | Contengono risorse, città non costruite, Trofei, Prigionieri, spazi Oltraggio |
-| Navi | 15 per giocatore | Pezzi principali per controllo e combattimento |
-| Città | 5 per giocatore | Edifici tassabili; la più a sinistra è la prima da costruire |
-| Spazioporti | 5 per giocatore | Edifici che abilitano costruzione navi e Fionda |
-| Agenti | 10 per giocatore | Usati per Influenzare/Acquisire carte Corte e spazi Oltraggio |
-| Indicatori Potere | 2 per giocatore | Il secondo usato nell'espansione per Potere negativo o >50 |
-| Segnalini Risorsa | 25 (5 per tipo) | Materiale, Carburante, Armi, Reliquie, Psicoenergia |
-| Dadi Combattimento | 18 (6 per tipo) | Assalto, Incursione, Razzia |
-| Segnalini Ambizione | 3 | Lato blu (basso) e lato arancione (alto) |
-| Segnalino Zero | 1 | Copre il valore della carta Guida quando si dichiara un'ambizione |
-| Indicatore Capitolo | 1 | Tiene traccia del capitolo corrente (1–5) |
-| Indicatore Iniziativa | 1 | Indica il 1° Giocatore del round |
-| Segnalini Rotta | 4 | Coprono portali e uniscono settori confinanti |
-| Segnalini Fuori dal Gioco | 6 | Coprono pianeti rendendoli inaccessibili |
+Una partita dura un numero variabile di **Capitoli** (solitamente da 3 a 5), ognuno composto da diversi **round** in cui ogni giocatore, dal 1° Giocatore poi in senso orario, svolge un turno giocando **1 carta Azione** per svolgere azioni.
 
----
+Quando tutti hanno giocato il proprio turno, si controlla chi ha l'**iniziativa** per il round successivo: quel giocatore diventa il 1° Giocatore del round seguente e ottiene l'**indicatore Iniziativa**.
 
-# La Mappa
+Quando tutti sono senza **carte Azione** in mano, il Capitolo termina e ognuno ottiene **Potere** dalle proprie ambizioni soddisfatte. Poi tutti pescano una nuova mano di carte Azioni.
 
-La mappa è divisa in **6 settori**, ognuno con **4 sistemi**: 3 pianeti e 1 portale numerato.
+# Potere e Ambizioni
 
-Due sistemi sono **adiacenti** se condividono un bordo sottile. I bordi spessi separano pianeti non adiacenti.
+Il giocatore con l'**indicatore Iniziativa** può dichiarare l'**ambizione** indicata sulla carta Azione giocata nel proprio turno. Sposta poi il **segnalino Ambizione** del valore più alto nel **riquadro Ambizione** corrispondente.
 
-- Ogni **portale** è adiacente ai 3 pianeti del suo settore e ai portali dei 2 settori confinanti.
-- Ogni **pianeta** è adiacente al portale del suo settore e a 1–2 pianeti confinanti (non quelli separati da bordo spesso).
-- I settori con segnalini Fuori dal Gioco sono inaccessibili. Il segnalino Rotta sul portale rende adiacenti i portali dei settori confinanti.
+I giocatori che soddisfano meglio degli altri le ambizioni dichiarate — non importa chi le abbia dichiarate — ottengono **Potere** da esse.
 
-Ogni pianeta ha un **tipo** (Materiale, Carburante, Armi, Reliquie, Psicoenergia), 1–2 **spazi Edificio** e un simbolo ID (usato nell'espansione).
+# Mappa
 
----
+La [mappa]{.def} è divisa in **6 settori**, ognuno con **4 sistemi**: **3 pianeti** e **1 portale** su cui è indicato il numero del settore.
 
-# Struttura di una Carta Azione
+Due sistemi sono **adiacenti** se condividono un bordo sottile:
 
-- **Valore** (angolo alto a sinistra): usato per Superare e per determinare chi ottiene l'iniziativa. Viene coperto dal segnalino Zero quando si dichiara un'ambizione.
-- **Seme**: Amministrazione, Aggressione, Costruzione o Mobilitazione → determina le azioni disponibili.
-- **Punti Azione** (simboli 🔷): numero di azioni che puoi svolgere.
-- **Simbolo Ambizione** (sulle carte 2–6): indica quale ambizione puoi dichiarare.
+- Ogni [portale]{.def} è adiacente ai **3 pianeti** del suo settore e ai **2 settori confinanti**.
+- Ogni [pianeta]{.def} è adiacente al portale del suo settore e ai 1/2 pianeti confinanti (i pianeti separati da un bordo spesso **non** sono adiacenti).
+- Se un settore ha i propri pianeti coperti dai **segnalini Fuori dal Gioco** ed il portale coperto dal **segnalino Rotta**, è inteso fuori dal gioco; il segnalino Rotta unisce i portali dei 2 settori confinanti.
 
----
+Ogni pianeta ha:
+- un **tipo di pianeta**
+- **1-2 spazi Edificio** in cui poter costruire città e spazioporti
+- (solo per l'espansione) un **simbolo ID**
 
-# Struttura di una Carta Gilda
+> Il centro della mappa non è parte del gioco (contiene il logo Arcs).
 
-1. **Simbolo risorsa**: corrisponde a uno dei 5 tipi → permette di soddisfare le relative ambizioni (tranne le carte Armi).
-2. **Regole**: nuove azioni, modificatori, azioni Preludio.
-3. **Costo di razzia** 🗝: quanto l'attaccante deve spendere per rubarla.
+# Risorse e Città
 
-Le carte Vox si risolvono immediatamente all'acquisizione. Le carte Gilda restano di fronte al giocatore e forniscono effetti continui.
+Ci sono **5 tipi di risorse** che corrispondono ai **5 tipi di pianeta**.
 
----
+Si possono ottenere:
+- **tassando** le città
+- **razziando** i Rivali in combattimento
 
-# Risorse
+Si possono spendere per svolgere varie azioni o per soddisfare le ambizioni **Magnate**, **Custode** ed **Empate**.
 
-Ci sono 5 tipi di risorse, conservate negli spazi Risorsa della plancia. Ogni spazio ha un costo di razzia. Le risorse si ottengono tassando le città o razziando. Costruendo città si liberano nuovi spazi Risorsa e si scoprono i Bonus Potere della Città.
+I **segnalini Risorsa** si conservano negli spazi Risorsa della propria plancia giocatore. Costruendo **città** si liberano nuovi spazi Risorsa e si scopre il **bonus Potere della Città** da applicare quando si soddisfano le Ambizioni.
 
-Le risorse si **spendono** durante il Preludio per azioni extra:
+# Agenti e Corte – Carte Gilda
 
-| Risorsa | Azione Preludio |
-|---------|----------------|
-| **Materiale** | Costruire o Riparare |
-| **Carburante** | Muovere |
-| **Armi** | Spendi 1+ punti Azione della carta per 1+ azioni Combattere aggiuntive |
-| **Reliquie** | Acquisire |
-| **Psicoenergia** | 1 azione tra quelle indicate sulla carta Guida |
+Puoi porre gli **Agenti** sulle carte della **Corte** (Influenzare) e prenderla quando hai più agenti rispetto ai Rivali (Acquisire).
 
-Le risorse spese nel Preludio tornano nella riserva condivisa alla **fine del Preludio** (non durante). Una risorsa **Negata** (da Oltraggio) non può essere spesa per la sua azione Preludio ma può ancora soddisfare le ambizioni.
+Per ottenere le **carte della Gilda** devi prima svolgere l'azione **Influenzare** e poi l'azione **Acquisire**.
 
----
+Una [carta Gilda]{.def} è composta da:
 
-# Il Preludio
+1. **Simbolo:** 1 delle 5 risorse del gioco (consente di soddisfare le ambizioni, a meno delle carte Armi).
+2. **Regole:** nuove azioni e modificatori.
+3. **Costo di Razzia:** numero che l'attaccante deve spendere per rubare la carta.
 
-Il Preludio è una finestra di azioni aggiuntive che inizia **dopo** aver giocato la carta Azione (e dopo aver dichiarato un'ambizione o sottratto l'iniziativa) e termina quando **spendi il 1° punto Azione** della carta.
+# Danni e Controllo
 
-Nel Preludio puoi svolgere quante azioni Preludio vuoi, con due limiti:
-- Le risorse spese tornano alla riserva al termine del Preludio → non puoi ottenerle nuovamente nello stesso Preludio.
-- Se acquisisci carte Corte nel Preludio, non puoi usare le loro eventuali azioni Preludio nello stesso Preludio.
+I pezzi sono inizialmente **integri**: le navi poggiano sulla base e gli edifici sono sul lato più chiaro.
 
----
+Quando vengono **danneggiati** (combattimento) sdraia le navi sul fianco e gira gli edifici sul lato con gli angoli più scuri.
 
-# Nuove Azioni e Modificatori
+Se un pezzo viene danneggiato ulteriormente è **distrutto** (rimuovilo dalla mappa, vedi Trofei e Prigionieri).
 
-**Nuove azioni**: indicate da un nome seguito dall'azione principale tra parentesi (es. "Assassinare (Combattere)"). Se spendi un punto azione o una risorsa (non Negata) per un'azione principale, puoi usare la nuova azione al suo posto.
+:::accent
+Hai il **[controllo]{.def}** di un sistema e del suo contenuto se hai il maggior numero di **navi integre** rispetto a ogni altro Rivale in quel sistema. Puoi tassare le città Rivali, catturare i loro agenti, limitare il movimento delle navi Rivali e danneggiare i pezzi Rivali quando vengono costruiti.
 
-**Modificatori**: indicati in grassetto sulle carte (es. "In combattimento, scegli 1 dado aggiuntivo"). Si applicano alle azioni principali ma **non** alle nuove azioni — però possono modificare le azioni principali interne alle nuove azioni. Alcuni modificatori influenzano fasi di gioco strutturali (preparazione, calcolo Potere, dichiarare ambizione, sottrarre iniziativa).
-
----
-
-# Controllo, Danni e Pezzi
-
-**Controllo**: hai il controllo di un sistema se hai il **maggior numero di navi integre** rispetto a ogni altro rivale in quel sistema. In parità nessuno controlla.
-
-**Integro**: nave che poggia sulla base / edificio sul lato chiaro.
-**Danneggiato**: nave sdraiata sul fianco / edificio sul lato scuro.
-**Distrutto**: pezzo rimosso dalla mappa → diventa Trofeo di chi lo ha distrutto.
-
-**Pezzi Leali**: del tuo colore. **Pezzi Rivali**: degli altri giocatori.
-
-Posizionare un pezzo in un sistema controllato da un rivale → lo piazzi **danneggiato**.
-
----
+In parità, **nessuno** ha il controllo.
+:::
 
 # Trofei e Prigionieri
 
-| Tipo | Come si ottiene | Ambizione correlata |
-|------|----------------|-------------------|
-| **Trofei** | Distruggendo pezzi Rivali (combattimento, distruzione città) | Generale |
-| **Prigionieri** | Catturando agenti Rivali (Tassare, Acquisire) | Tiranno |
+- Quando **distruggi** (combattere) un pezzo Rivale ponilo nel riquadro **Trofei** sulla tua plancia Giocatore. Potresti soddisfare l'ambizione **Generale**.
+- Quando **catturi** (tassare, acquisire) un agente Rivale ponilo nel riquadro **Prigionieri** sulla tua plancia Giocatore. Potresti soddisfare l'ambizione **Tiranno**.
 
-Trofei e Prigionieri vengono restituiti a fine Capitolo dopo il calcolo del Potere.
+# Pezzi Leali e Rivali
 
----
+- I **pezzi Leali** sono tutti i tuoi componenti (navi, città, spazioporti ed agenti) sulla mappa e nella tua area di gioco.
+- I **pezzi Rivali** sono invece quelli dei colori degli altri giocatori.
 
 # Regole d'Oro
 
-**Gerarchia**: Regolamento > Plance/Schede. Carte > Regolamento. Il termine **"non puoi/potete"** è assoluto e può essere superato solo dal termine **"ignora"**.
+**Spareggi e Ordine di scelta:** in caso di spareggio o se non fosse chiaro a quale giocatore spetti una decisione, seguite l'**ordine di turno** (dal giocatore con l'iniziativa poi in senso orario). Se accadano più cose contemporaneamente da risolvere in ordine, il giocatore di turno sceglie l'ordine; altrimenti il giocatore con l'iniziativa.
 
-**Spareggi**: segui l'ordine di turno (dal giocatore con l'iniziativa in senso orario).
+---
 
-**Pezzi e riserve**: i pezzi vengono presi/rimessi dalla/nella loro riserva originale; le città provengono dagli spazi più liberi a destra della propria plancia. Se non hai abbastanza pezzi, posizionane il maggior numero possibile. Se un pezzo sostituisce un pezzo danneggiato, anche il nuovo pezzo è danneggiato.
+**Eliminazione e Resa:** se un giocatore non ha né spazioporti né navi sulla mappa, alla fine del proprio turno pone **3 navi integre** in un portale a sua scelta. Se un giocatore fosse nettamente in vantaggio, prima della fine della partita, è possibile arrendersi.
 
-**Pila Azioni Scartate**: normalmente tutte le carte vengono scartate a faccia in giù (favorisce la memoria). Variante: due pile separate (coperte e scoperte), pesca dalla coperta.
+---
+
+**Pezzi e Limite di Pezzi:** tutti i pezzi sono limitati a meno degli agenti (usa altro al loro posto). Quando viene indicato di posizionare pezzi si intende pezzi Leali e integri.
+
+I pezzi posizionati/restituiti vengono presi/si rimettono dalla/nella loro riserva originale, a meno delle città che provengono/si rimettono dagli/sugli spazi più liberi a destra della propria plancia Giocatore. Se non hai abbastanza pezzi posizionane/restituiscine il maggior numero.
+
+Quando **sostituisci** un pezzo, prima restituiscilo, poi poni l'altro pezzo nello stesso sistema. Se non hai il pezzo da restituire o l'altro nella riserva non puoi farlo. Se il pezzo restituito è danneggiato anche l'altro pezzo sarà danneggiato (non distrutto).
+
+---
+
+**Gerarchia delle regole:** il regolamento ha la precedenza sulle schede riassuntive e sulle plance Giocatore. Le carte hanno la precedenza sul regolamento (il termine *non puoi/potete* è invece assoluto e può essere superato solo dal termine *ignora*). I riquadri laterali (nel manuale) e il testo in corsivo o tra parentesi non hanno mai precedenza sulle regole.
+
+---
+
+**Negoziazioni:** i giocatori possono stringere alleanza e farsi promesse anche non vincolanti, ma non possono scambiarsi pezzi (a meno che una regola lo permetta).
+
+**Informazioni private:** i giocatori non possono mostrare le proprie carte in mano.
+
+---
+
+**Comportamento del turno:** per maggiore fluidità di gioco, potete dichiarare un'ambizione o sottrarre l'iniziativa anche dopo la prima azione a meno che nel frattempo non siano state rivelate nuove informazioni e vengano rispettati i modificatori pertinenti.
+
+---
+
+**Dividere la pila delle Azioni scartate:** normalmente le carte Azioni giocate coperte o scoperte vengono scartate coperte (*favorisce i giocatori con buona memoria*). Potete scartarle invece in due pile separate (rispettivamente coperte e scoperte). Quando devi pescare fallo dalla pila delle carte coperte. Se non ce ne sono abbastanza mescola le due pile per formare una nuova pila di carte coperte e poi pesca.
+
+:::glossary
+[mappa]: Plancia di gioco divisa in 6 settori, ognuno con 3 pianeti e 1 portale.
+[portale]: Sistema speciale di ogni settore, adiacente ai 3 pianeti del settore e ai 2 settori confinanti; punto di transito tra settori.
+[pianeta]: Sistema base con 1-2 spazi Edificio in cui costruire città e spazioporti.
+[carta Gilda]: Carta ottenibile dalla Corte tramite Influenzare e Acquisire; fornisce simboli risorsa, nuove azioni e modificatori.
+[controllo]: Condizione per cui un giocatore ha il maggior numero di navi integre in un sistema rispetto a ogni rivale; permette di tassare, catturare agenti e limitare il movimento avversario.
+:::
