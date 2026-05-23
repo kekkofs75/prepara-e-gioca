@@ -5,7 +5,7 @@
       "id": "war-chest",
       "title": "War Chest",
       "subtitle": "Gioco di strategia con meccanica a sacchetto",
-      "themeColor": "#4A7C59",
+      "themeColor": "#6B1E1E",
       "bggRank": 174,
       "bggScore": 7.8,
       "duration": "30-60",
@@ -20,7 +20,7 @@
       "id": "war-chest-ia",
       "title": "War Chest",
       "subtitle": "Recluta, potenzia e manovra per prendere il controllo del campo di battaglia esagonale",
-      "themeColor": "#4A7C59",
+      "themeColor": "#6B1E1E",
       "bggRank": 174,
       "bggScore": 7.8,
       "duration": "30-60",
@@ -238,7 +238,7 @@
       "id": "regicide-ia",
       "title": "Regicide",
       "subtitle": "Gioco cooperativo per sconfiggere i monarchi corrotti",
-      "themeColor": "#6B1E1E",
+      "themeColor": "#4A7C59",
       "bggRank": null,
       "bggScore": null,
       "duration": "10-30",
@@ -427,6 +427,21 @@
       "cover":    "games/7wonders-duel-ia/img/cover.png",
       "coverBig": "games/7wonders-duel-ia/img/cover-big.webp",
       "copertina":"games/7wonders-duel-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "7wonders-ia",
+      "title": "7 Wonders",
+      "subtitle": "Costruisci la civiltà più gloriosa dell'Antichità",
+      "themeColor": "#8B6914",
+      "bggRank": 27,
+      "bggScore": 7.8,
+      "duration": "30-60",
+      "players": "2-7",
+      "folder": "games/7wonders-ia",
+      "cover":    "games/7wonders-ia/img/cover.png",
+      "coverBig": "games/7wonders-ia/img/cover-big.webp",
+      "copertina":"games/7wonders-ia/img/copertina.png",
       "aiSummary": true
     }
   ]

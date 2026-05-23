@@ -4,7 +4,7 @@ La partita termina non appena si verifica una delle seguenti condizioni.
 
 **Il segnalino Tempo raggiunge lo spazio rosso finale del Tracciato del Tempo:** la nave salta immediatamente nell'iperspazio. Tutti i Personaggi a bordo che non sono in ibernazione muoiono per l'impatto della forza-g. Gli Intrusi sopravvivono al salto.
 
-**Il segnalino Autodistruzione raggiunge lo spazio con il teschio del Tracciato dell'Autodistruzione, oppure viene richiesto il 9° segnalino Fuoco o il 9° segnalino Malfunzionamento:** la nave esplode o perde l'integrità dello scafo. Tutti i Personaggi muoiono, siano svegli o ibernati. Muore anche tutto il resto a bordo, inclusi gli Intrusi — questo può essere rilevante per completare alcuni Obiettivi.
+**Il segnalino Autodistruzione raggiunge lo spazio con il teschio del Tracciato dell'Autodistruzione, oppure viene richiesto il 9° segnalino Fuoco o il 9° segnalino Malfunzionamento:** la nave esplode o perde l'integrità dello scafo. Tutti i Personaggi muoiono, siano svegli o ibernati. Muore anche tutto il resto a bordo, inclusi gli Intrusi — questo soddisfa gli obiettivi che richiedono di uccidere la Regina o di distruggere il Nido.
 
 **L'ultimo Personaggio vivo (non ibernato) a bordo muore, si iberna o usa una Capsula di Salvataggio:** non c'è altro da fare a bordo.
 
@@ -85,7 +85,7 @@ La partita Epilogo dura **5 turni** fissi. Al termine del Turno 5, la Navicella 
 3. Il Personaggio del giocatore deve essere sul tabellone Navicella quando questa si sgancia (oppure deve aver abbandonato la nave con una Capsula di Salvataggio).
 4. Superare il **Controllo Contaminazione** standard.
 
-Un giocatore che ha accettato l'**Offerta Redditizia** e ne ha soddisfatto le condizioni vince se sopravvive al Controllo Contaminazione, anche se restano gettoni Esplorazione coperti.
+Un giocatore che ha accettato l'**Offerta Redditizia** e ne ha soddisfatto le condizioni vince se sopravvive al Controllo Contaminazione, anche se restano gettoni Esplorazione coperti e anche se un Allerta non è stato completato.
 
 ---
 

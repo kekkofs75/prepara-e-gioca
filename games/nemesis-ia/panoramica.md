@@ -108,6 +108,8 @@ Tutte e 11 presenti in ogni partita.
 ## Sistema Antincendio
 **Inizia la Procedura di Controllo Incendio:** scegli 1 qualsiasi Stanza. Scarta 1 segnalino Fuoco da quella Stanza (se presente). Tutti gli Intrusi nella Stanza scappano in direzione casuale (pesca 1 carta Evento per ogni Intruso per determinare la direzione).
 
+> Puoi usare questa azione anche se non c'è Fuoco nella Stanza scelta, per far scappare gli Intrusi. Se un Intruso in fuga si dirige verso un Corridoio con Portellone Chiuso, **distrugge il Portellone e rimane nella Stanza** (stessa regola del normale movimento Intruso verso un Portellone Chiuso).
+
 ## Generatore
 **Inizia / Ferma la Sequenza di Autodistruzione:** posiziona 1 segnalino Status sul primo spazio verde del Tracciato Autodistruzione per avviarla. Il segnalino avanza di 1 spazio a ogni turno (insieme al segnalino Tempo). Non puoi avviarla se uno o più Personaggi si sono già ibernati. Una volta raggiunto uno spazio giallo, non può più essere fermata.
 
@@ -167,6 +169,8 @@ Il Nido è **Distrutto** quando non contiene più Uova: poni 1 segnalino Danno n
 ## Magazzino
 **Cerca 1 Strumento:** pesca 2 carte dal mazzo Strumenti di 1 colore a tua scelta, tieni 1 e metti l'altra in fondo al mazzo.
 
+> Il Contatore Strumenti è rilevante solo per l'Azione Cercare delle carte Azione personali. L'Azione Stanza del Magazzino può essere eseguita un numero illimitato di volte indipendentemente dal valore del Contatore, purché si paghi il costo dell'Azione.
+
 ## Chirurgia
 **Esegui una Procedura Chirurgica:** Scannerizza tutte le tue carte Contaminazione (mazzo, mano, pila degli scarti) e rimuovi tutte le Infette. Se hai una Larva sulla plancia, rimuovila. Dopo la Chirurgia, subisci 1 Ferita Leggera e **passi automaticamente**. Mescola tutte le carte Azione e poni il nuovo mazzo (la tua mano resta vuota fino al turno successivo).
 
@@ -176,9 +180,15 @@ Il Nido è **Distrutto** quando non contiene più Uova: poni 1 segnalino Danno n
 
 All'inizio della partita tutte le Capsule sono **Bloccate**. Si Sbloccano automaticamente alla morte del primo Personaggio o quando il segnalino Autodistruzione raggiunge uno spazio giallo. Possono essere Sbloccate o Bloccate manualmente tramite alcune carte Strumento o la Stanza Controllo Paratie.
 
-Per entrare in una Capsula devi trovarti nella corrispondente Sezione di Evacuazione, la Capsula deve essere Sbloccata e avere almeno 1 spazio libero (ogni Capsula ospita fino a 2 Personaggi), e non devono esserci Intrusi né segnalini Malfunzionamento nella Stanza. Esegui un Tiro Rumore: se nessun Intruso raggiunge la Stanza, il tentativo riesce.
+> Quando il segnalino Autodistruzione supera uno spazio giallo e le Capsule vengono bloccate manualmente, **non si risbloccano automaticamente** ai successivi spazi gialli: l'unico modo per sbloccarle nuovamente è farlo manualmente.
 
-Una volta in una Capsula puoi decidere di **lanciarti immediatamente** (la tua miniatura e il gettone Capsula vengono rimossi dal gioco) oppure **aspettare** (altri potrebbero unirsi). Se aspetti, puoi lanciare la Capsula all'inizio del tuo round, oppure uscire volontariamente senza azioni. Se aspetti e non lanci nel tuo round, passi automaticamente quel turno. Se un Intruso appare nella Sezione di Evacuazione, tutti nella Capsula tornano immediatamente nella Stanza.
+Per entrare in una Capsula devi trovarti nella corrispondente Sezione di Evacuazione, la Capsula deve essere Sbloccata e avere almeno 1 spazio libero (ogni Capsula ospita fino a 2 Personaggi), e non devono esserci Intrusi nella Stanza. Esegui un Tiro Rumore: se nessun Intruso raggiunge la Stanza, il tentativo riesce.
+
+> Un segnalino Malfunzionamento nella Sezione di Evacuazione impedisce di **entrare** nella capsula, ma se compare dopo che sei già dentro non ha alcun effetto: puoi comunque lanciare la capsula, aspettare o uscire.
+
+Una volta in una Capsula puoi decidere di **lanciarti immediatamente** (la tua miniatura e il gettone Capsula vengono rimossi dal gioco) oppure **aspettare**. Se aspetti, al tuo primo round del turno successivo hai tre opzioni: lanciare la capsula, restare ad aspettare (passi il turno), oppure uscire senza spendere un'azione — in tal caso la tua miniatura torna nella Sezione di Evacuazione e puoi giocare un round completo di 2 Azioni. Se aspetti e non lanci nel tuo round, passi automaticamente quel turno. Se un Intruso appare nella Sezione di Evacuazione, tutti nella Capsula tornano immediatamente nella Stanza.
+
+> Il Personaggio in attesa nella capsula è considerato **presente nella Stanza** ai fini del Tiro Rumore: se durante lo Sviluppo del Sacchetto viene pescato un gettone Adulto, esegue il Tiro Rumore normalmente.
 
 :::accent
 Tutti i Personaggi in una Capsula di Salvataggio lanciata sono considerati arrivati sulla Terra ai fini del Controllo Coordinate.

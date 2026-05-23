@@ -62,6 +62,7 @@ L'Epilogo si gioca *dopo* una partita standard. Se la nave è stata distrutta da
 **Modifiche al tabellone rispetto alla partita standard:**
 
 - Rimuovi dal tabellone tutti gli Intrusi e reinseriscine i gettoni nel sacchetto. Poi aggiungi al sacchetto:
+- **Scarta** tutti gli Oggetti Pesanti eventualmente rimasti nelle Stanze (Cadaveri del Personaggio, Carcasse degli Intrusi, Uova).
   - 1–3 giocatori: **1 Larva** e **2 Intrusi Adulti**
   - 4 giocatori: **2 Larve** e **4 Intrusi Adulti**
   - 5 giocatori: **3 Larve** e **6 Intrusi Adulti**

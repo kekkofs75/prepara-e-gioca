@@ -33,6 +33,8 @@ Gli Obiettivi variano per difficoltà e natura. Alcuni esempi di requisiti comun
 - **Un tale Personaggio non può sopravvivere** — quel Personaggio deve essere morto alla fine della partita (non ibernato né in capsula).
 - **Il tuo Personaggio è l'unico sopravvissuto** — nessun altro Personaggio deve essere vivo alla fine.
 
+> Far esplodere la nave tramite Autodistruzione soddisfa gli obiettivi che richiedono di **uccidere la Regina** o di **distruggere il Nido**, poiché l'esplosione uccide tutto ciò che si trova a bordo, inclusi gli Intrusi.
+
 ---
 
 ---
@@ -47,7 +49,7 @@ Nella modalità Epilogo non esistono Obiettivi Personali né Corporation. Ogni g
 3. Il Personaggio del giocatore deve trovarsi sul tabellone Navicella quando questa si sgancia (fine del Turno 5), oppure aver abbandonato la nave con una Capsula di Salvataggio.
 4. Il Personaggio deve superare il Controllo Contaminazione finale.
 
-In alternativa, un giocatore può accettare **l'Offerta Redditizia** in qualsiasi momento: scarta l'Intento Personale, prendi la carta e soddisfane le condizioni. Se riesci e sopravvivi al Controllo Contaminazione, vinci — anche se restano gettoni Esplorazione coperti.
+In alternativa, un giocatore può accettare **l'Offerta Redditizia** in qualsiasi momento: scarta l'Intento Personale, prendi la carta e soddisfane le condizioni. Se riesci e sopravvivi al Controllo Contaminazione, vinci — anche se restano gettoni Esplorazione coperti e anche se un Allerta non è stato completato.
 
 :::glossary
 [Obiettivo]: Carta segreta che descrive il requisito aggiuntivo che un Personaggio deve soddisfare per vincere, oltre alla sopravvivenza. Esistono Obiettivi Personali (incentrati sulle azioni del personaggio) e Obiettivi Corporation (incentrati sugli interessi della corporazione).

@@ -20,6 +20,10 @@ A partire dal Primo Giocatore e in senso orario, ogni giocatore completa un **ro
 
 **Passare:** se non puoi o non vuoi eseguire azioni, devi passare. Se esegui solo 1 azione (invece di 2), devi passare immediatamente dopo. Chi ha passato **non può più eseguire azioni** per il resto della Fase Giocatori. Quando passi, puoi scartare un qualsiasi numero di carte dalla mano. Gira la tua carta Aiuto sul lato "passare" come promemoria.
 
+> Avere **zero carte in mano non obbliga automaticamente a passare**: passare è esso stesso un'azione, che va eseguita nel proprio round. Se un giocatore esaurisce le carte durante il proprio round, deve aspettare il turno successivo per passare — con il rischio di subire ulteriori danni da Fuoco o Emorragia nel frattempo.
+
+> È possibile giocare una carta **Interruzione** anche dopo aver passato il proprio round.
+
 :::accent
 Quando un Personaggio termina il proprio round in una Stanza con un segnalino Fuoco, subisce sempre 1 Ferita Leggera — anche se ha passato.
 :::
@@ -37,7 +41,7 @@ Disponibili sempre per tutti i Personaggi:
 | Azione | Costo | Descrizione |
 |---|---|---|
 | **Movimento** | 1 | Spostati in una Stanza adiacente. |
-| **Movimento Cauto** | 2 | Come Movimento, ma invece del Tiro Rumore posiziona 1 segnalino Rumore in un Corridoio a tua scelta collegato alla stanza in cui entri. Non usabile in Combattimento. Un corridoio non può avere più di 1 segnalino Rumore. |
+| **Movimento Cauto** | 2 | Come Movimento, ma invece del Tiro Rumore posiziona 1 segnalino Rumore in un Corridoio a tua scelta collegato alla stanza in cui entri. Non usabile in Combattimento. Un corridoio non può avere più di 1 segnalino Rumore. Se si rivela un gettone Esplorazione con risultato Pericolo o Silenzio, il risultato del Movimento Cauto ha la precedenza e annulla l'effetto del gettone. |
 | **Sparare** | 1 | Attacca un Intruso nella tua Stanza con un'Arma in mano. Scarta 1 segnalino Munizione dall'Arma e tira il dado Combattimento. |
 | **Attacco in Mischia** | 1 | Attacca un Intruso nella tua Stanza a mani nude. Pesca 1 carta Contaminazione (nella pila degli scarti), poi tira il dado Combattimento. |
 | **Raccogliere Oggetto Pesante** | 1 | Prendi 1 Oggetto Pesante dalla Stanza (Cadavere, Carcassa, Uovo). |
@@ -135,7 +139,7 @@ I segnalini Fuoco hanno tre funzioni:
 2. **Danni agli Intrusi:** nella Fase Evento ogni Intruso in una Stanza con Fuoco subisce **1 Danno**.
 3. **Esplosione della nave:** la partita prevede **8 segnalini Fuoco**. Se occorre posizionarne un nono, la nave esplode e la partita termina.
 
-Una Stanza può contenere al massimo 1 segnalino Fuoco. Puoi comunque cercare Strumenti e svolgere Azioni Stanza in una Stanza in fiamme.
+Una Stanza può contenere al massimo 1 segnalino Fuoco. Puoi comunque cercare Strumenti e svolgere Azioni Stanza in una Stanza in fiamme. I segnalini Fuoco **possono** essere posizionati in Stanze inesplorate.
 
 ## Segnalino Malfunzionamento
 
@@ -144,7 +148,7 @@ I segnalini Malfunzionamento hanno due funzioni:
 1. **Bloccare le Azioni Stanza:** se c'è un segnalino Malfunzionamento in una Stanza, le sue Azioni Stanza (incluse quelle dei Computer) non sono disponibili. L'Azione Cercare funziona normalmente. Alcune carte Azione e Strumenti possono rimuovere un segnalino Malfunzionamento.
 2. **Perdita di integrità dello scafo:** la partita prevede **8 segnalini Malfunzionamento**. Se occorre posizionarne un nono, la nave perde integrità e la partita termina.
 
-> Un segnalino Malfunzionamento non può essere posizionato nel Nido o in una Stanza Ricoperta di Secrezioni. Un Malfunzionamento nella Sala Motori non modifica lo stato dei Motori (Funzionante/Danneggiato).
+> Un segnalino Malfunzionamento non può essere posizionato nel Nido, in una Stanza Ricoperta di Secrezioni, né in **Stanze inesplorate**. Un Malfunzionamento nella Sala Motori non modifica lo stato dei Motori (Funzionante/Danneggiato).
 
 ## Gettoni Portellone
 
@@ -215,7 +219,7 @@ Puoi sparare solo se hai un'Arma con almeno 1 segnalino Munizione in uno spazio 
 
 ### Fuga (costo 1)
 
-Per fuggire da una Stanza con Intrusi, esegui un'azione Movimento normale ma **prima** di spostare la miniatura risolvi **1 Attacco dell'Intruso** per ogni Intruso presente nella Stanza. Se sopravvivi, completa il Movimento nella Stanza adiacente (inclusa la normale procedura di Esplorazione e Tiro Rumore).
+Per fuggire da una Stanza con Intrusi, esegui un'azione Movimento normale ma **prima** di spostare la miniatura risolvi **1 Attacco dell'Intruso** per ogni Intruso presente nella Stanza, partendo da quelli di dimensioni maggiori (Regina, poi Nutrice, poi Adulto, poi Larva). Se sopravvivi, completa il Movimento nella Stanza adiacente (inclusa la normale procedura di Esplorazione e Tiro Rumore).
 
 Se il tuo Personaggio muore nel tentativo, il Cadavere resta nella Stanza di partenza.
 
@@ -232,6 +236,8 @@ Gli Attacchi dell'Intruso avvengono in tre situazioni: Attacco a Sorpresa (duran
 
 **Infestazione (attacco speciale della Larva):** quando una Larva attacca, non si pesca una carta Attacco. Si rimuove la miniatura Larva e la si posiziona sulla plancia del Personaggio attaccato (spazio miniatura). Il Personaggio riceve anche **1 carta Contaminazione**.
 
+> Se il Personaggio ha già una Larva sulla propria plancia al momento dell'attacco, la Larva attaccante **scompare** senza infestarla: la Larva esistente rimane intatta e il Personaggio riceve solo 1 carta Contaminazione. Non muore per effetto dell'attacco in sé.
+
 ## Danni agli Intrusi e Morte
 
 Ogni volta che un Intruso subisce Danni, posiziona il numero corrispondente di segnalini Danno sulla sua miniatura, poi controlla gli Effetti del Danno:
@@ -244,6 +250,8 @@ Se l'Intruso è ancora vivo (valore "sangue" > segnalini Danno), rimane in gioco
 
 **Ritirata dell'Intruso:** se appare un'icona Ritirata nell'icona "sangue" di una qualsiasi carta pescata durante il controllo Effetti del Danno, l'Intruso fugge. Pesca 1 carta Evento e sposta l'Intruso nel Corridoio il cui numero corrisponde al Simbolo Intruso sul movimento della carta. Poi scarta la carta Evento.
 
+> Se il Corridoio indicato contiene un Portellone Chiuso, l'Intruso **distrugge il Portellone** e rimane nella Stanza di partenza (non si muove).
+
 > Se devi posizionare un Adulto ma tutte e 8 le miniature sono già sul tabellone, tutti gli Adulti non in Combattimento si ritirano: rimettili nel sacchetto e posiziona 1 sola miniatura Adulto nella Stanza dell'Incontro.
 
 ## Contaminazione
@@ -255,6 +263,8 @@ Ogni carta Contaminazione ha un'informazione nascosta: il Personaggio potrebbe e
 :::accent
 Se sei INFETTO, posiziona una miniatura Larva sulla tua plancia Personaggio. Se c'è già una Larva, il tuo Personaggio muore — e poni 1 Aracnide nella Stanza dove è morto.
 :::
+
+> Durante un'Azione Riposo (o Cambusa/Doccia), anche se più carte Contaminazione risultano INFETTO, si posiziona comunque **una sola Larva**, indipendentemente dal numero di carte infette trovate. Il Personaggio muore solo se una Larva era già presente sulla plancia prima della Scannerizzazione.
 
 Le carte Contaminazione possono essere rimosse tramite alcune azioni specifiche (Riposo, Azione Stanza Cambusa, Doccia, Chirurgia, Antidoto). Ogni descrizione spiega la procedura esatta.
 
@@ -319,7 +329,9 @@ Pesca 1 carta Ferita Grave e posizionala a fianco della plancia. D'ora in avanti
 
 Quando un Personaggio con già 3 Ferite Gravi subisce un'ulteriore Ferita (leggera o grave), **muore immediatamente**.
 
-Alla morte: rimuovi la miniatura e posiziona un gettone Cadavere del Personaggio nella Stanza (conta come Oggetto Cadavere). Tutti gli Oggetti Pesanti vengono lasciati cadere nella Stanza.
+Alla morte: rimuovi la miniatura e posiziona un gettone Cadavere del Personaggio nella Stanza (conta come Oggetto Cadavere). Tutti gli Oggetti Pesanti vengono lasciati cadere nella Stanza. Gli Strumenti normali nell'Inventario scompaiono dal gioco.
+
+> I gettoni Intruso rimossi dal sacchetto o derivanti dalla morte di un Intruso tornano sempre nella **riserva di gettoni** a fianco del tabellone: rimangono disponibili per essere reinseriti nel sacchetto durante la partita.
 
 ## Bendare e Curare
 
@@ -391,7 +403,7 @@ Pesca 1 gettone dal Sacchetto Intruso e risolvi in base al tipo:
 
 - **Larva:** rimuovi e sostituisci con 1 gettone Adulto nel sacchetto.
 - **Aracnide:** rimuovi e sostituisci con 1 gettone Nutrice nel sacchetto.
-- **Adulto:** tutti i giocatori non in Combattimento eseguono un Tiro Rumore in ordine di turno. Reinserisci il gettone nel sacchetto.
+- **Adulto:** tutti i giocatori non in Combattimento eseguono un Tiro Rumore in ordine di turno. Reinserisci **immediatamente** il gettone nel sacchetto (prima di risolvere i Tiri Rumore), in modo che possa essere pescato di nuovo se uno di essi innesca un Incontro.
 - **Nutrice:** come Adulto. Reinserisci il gettone nel sacchetto.
 - **Regina:** se il Nido è stato scoperto e ci sono Personaggi, posiziona la Regina nel Nido e risolvi un Incontro. Se il Nido non è ancora scoperto o non ci sono Personaggi, aggiungi 1 gettone Uova sulla Plancia Intruso. Reinserisci il gettone Regina nel sacchetto.
 - **Vuoto:** aggiungi 1 gettone Adulto al sacchetto (se disponibile). Reinserisci il Vuoto nel sacchetto.
@@ -413,6 +425,8 @@ Inizia un nuovo turno dalla Fase Giocatori. Il turno termina solo dopo che tutto
 **Allerta:** durante la partita Epilogo o Missione Scientifica, compaiono carte Allerta che richiedono di completare mini-missioni entro un tempo limite. Se un Allerta non viene completato entro i turni stabiliti, la partita termina con una sconfitta collettiva.
 
 **Torrette (stanza aggiuntiva):** la Sala Torrette permette di cambiare lo stato di una Torretta presente sul tabellone. Le Torrette possono essere in tre stati: Inattiva (nessun effetto), Fuoco su Chiunque (spara a tutto ciò che entra nella Stanza: Personaggi subiscono 1 Ferita Leggera, Intrusi 1 Danno), Fuoco sugli Intrusi (come sopra ma solo sugli Intrusi). Gli Intrusi attivi distruggono una Torretta durante il passaggio Danni da Fuoco.
+
+> La Torretta spara **dopo** aver risolto tutti gli altri effetti di ingresso nella Stanza. Esempio: una Larva che entra tramite Incontro riesce a infestare un Personaggio prima che la Torretta apra il fuoco, e quindi non viene mai colpita.
 
 **Tabellone Navicella:** ha 4 Stanze aggiuntive collegate alla Nemesis tramite i Corridoi Tecnici. Dalla Stanza Principale puoi muoverti in qualsiasi Stanza della Nemesis con un Ingresso ai Corridoi Tecnici, e viceversa. Le Stanze della Navicella non hanno Contatore Strumenti.
 
@@ -437,7 +451,7 @@ Quando un Personaggio deve ricevere una **Mutazione**:
 
 **Attacco del Metavorace:** nessuna carta Attacco dell'Intruso viene pescata. Il Personaggio attaccato riceve automaticamente **1 carta Mutazione + 1 carta Contaminazione + 1 Ferita Leggera**. La miniatura Metavorace viene rimossa e 1 gettone Carnambulo viene aggiunto al sacchetto. Se il Personaggio ha già una carta Mutazione, riceve solo 1 Contaminazione e 1 Ferita Leggera.
 
-**Adattamenti Carnomorfici:** sostituiscono le carte Debolezza ma **rafforzano** i Carnomorfi invece di indebolirli. Quando compare per la prima volta un nuovo tipo di Carnomorfo, prendi la miniatura dalla plancia e scopri la carta Adattamento corrispondente. Usando il Laboratorio per analizzare Oggetti Pesanti, puoi rimuovere carte Adattamento già scoperte dal gioco.
+**Adattamenti Carnomorfici:** sostituiscono le carte Debolezza ma **rafforzano** i Carnomorfi invece di indebolirli. Quando compare per la prima volta un nuovo tipo di Carnomorfo, prendi la miniatura dalla plancia e scopri la carta Adattamento corrispondente. L'effetto di ogni Adattamento si applica a **tutti i tipi di Carnomorfo**, non solo a quello che ne ha determinato la scoperta. Usando il Laboratorio per analizzare Oggetti Pesanti, puoi rimuovere carte Adattamento già scoperte dal gioco.
 
 **Nutrizione (Fase Evento, passo 5):** prima dell'Attacco, i Carnomorfi non in Combattimento che si trovano in una Stanza con Oggetti Pesanti (Cadavere, Carcassa, Uovo) e/o altri Metavoraci si **nutrono**:
 1. **Guarigione:** rimuovi tutti i segnalini Danno dal Carnomorfo.
@@ -457,6 +471,8 @@ In Carnomorphs, il Cadavere del Personaggio Blu può essere consumato dai Carnom
 
 **Sviluppo del Sacchetto — Metavorace Rosso:** invece del normale tiro Rumore, posiziona 1 miniatura Metavorace in ogni Stanza che contiene già un Metavorace o un Oggetto Pesante. Se il Nido è stato esplorato ma non distrutto, aggiungi un Metavorace anche lì.
 
+> **Gettone Vuoto nell'Incontro (Carnomorphs):** il gettone Vuoto va rimesso nel sacchetto **prima** di eseguire i Tiri Rumore derivanti dall'Incontro, in modo che possa essere pescato nuovamente se uno di essi innesca un ulteriore Incontro.
+
 ---
 
 ---
@@ -475,7 +491,11 @@ Un Personaggio con Livello di Pazzia 5 che deve aumentare ulteriormente, **muore
 
 **Tane:** strutture fisiche degli Annichiloidi, compaiono tramite i gettoni Esplorazione Tana. I Personaggi nella stessa Stanza di una Tana sono considerati in Combattimento. Alla fine di ogni round (ogni round!), se un Personaggio si trova in una Stanza con una Tana, deve eseguire un Tiro Rumore. Le Tane non si muovono mai.
 
-Per colpire una Tana occorre tirare almeno ●. Si pescano 2 carte Attacco e si usa il valore "sangue" più alto. Se appare un'icona Ritirata, la Tana non viene distrutta. Una Tana distrutta lascia una Carcassa e la sua miniatura va nell'apposito spazio sulla Plancia Annichiloide. Quando tutte le Tane sono distrutte, il Devastatore viene sconfitto e non può più comparire.
+> Scoprire una Tana tramite un gettone Esplorazione **non** costituisce un Primo Incontro e non obbliga i giocatori a scegliere l'Obiettivo da mantenere.
+
+Per colpire una Tana occorre tirare almeno ●. Un Attacco in Mischia mancato contro una Tana infligge normalmente **1 Ferita Grave** al Personaggio. Si pescano 2 carte Attacco e si usa il valore "sangue" più alto. Se appare un'icona Ritirata, la Tana non viene distrutta. Una Tana distrutta lascia una Carcassa e la sua miniatura va nell'apposito spazio sulla Plancia Annichiloide. Quando tutte le Tane sono distrutte, il Devastatore viene sconfitto e non può più comparire.
+
+> **Fuggire** da una Stanza con una Tana **non** innesca alcun Attacco. Le Tane non attaccano durante il passaggio Attacco dell'Intruso della Fase Evento.
 
 **Il Devastatore** non può essere danneggiato in Combattimento e non riceve segnalini Danno. L'unico modo per sconfiggerlo è distruggere tutte le Tane. Se colpito, si pesca 1 carta Attacco: il valore "sangue" viene ignorato ma il Devastatore può Ritirarsi.
 
