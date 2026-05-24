@@ -14,7 +14,8 @@
       "cover":    "games/war-chest/img/cover.png",
       "coverBig": "games/war-chest/img/cover-big.webp",
       "copertina":"games/war-chest/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.1.0"
     },
     {
       "id": "war-chest-ia",
@@ -45,7 +46,8 @@
       "cover":    "games/thunder-road-vendetta/img/cover.png",
       "coverBig": "games/thunder-road-vendetta/img/cover-big.webp",
       "copertina":"games/thunder-road-vendetta/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.1.0"
     },
     {
       "id": "thunder-road-vendetta-ia",
@@ -76,7 +78,8 @@
       "cover":    "games/flip-7/img/cover.png",
       "coverBig": "games/flip-7/img/cover-big.webp",
       "copertina":"games/flip-7/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.1.0"
     },
     {
       "id": "flip-7-ia",
@@ -139,7 +142,7 @@
       "coverBig": "games/arcs/img/cover-big.webp",
       "copertina":"games/arcs/img/copertina.png",
       "aiSummary": false,
-      "hidden": false
+      "revision": "v.0.1"
     },
     {
       "id": "arcs-ia",
@@ -186,7 +189,7 @@
       "coverBig": "games/aeons-end/img/cover-big.webp",
       "copertina":"games/aeons-end/img/copertina.png",
       "aiSummary": false,
-      "hidden": false
+      "revision": "v.0.1"
     },
     {
       "id": "scout",
@@ -201,7 +204,8 @@
       "cover":    "games/scout/img/cover.png",
       "coverBig": "games/scout/img/cover-big.webp",
       "copertina":"games/scout/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.1.0"
     },
     {
       "id": "scout-ia",
@@ -232,7 +236,8 @@
       "cover":    "games/castle-combo/img/cover.png",
       "coverBig": "games/castle-combo/img/cover-big.webp",
       "copertina":"games/castle-combo/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.1.0"
     },
     {
       "id": "regicide-ia",
@@ -277,7 +282,8 @@
       "cover":    "games/ticket-to-ride-europa/img/cover.png",
       "coverBig": "games/ticket-to-ride-europa/img/cover-big.webp",
       "copertina":"games/ticket-to-ride-europa/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.0.1"
     },
     {
       "id": "nemesis-ia",
@@ -337,7 +343,8 @@
       "cover":    "games/blood-rage/img/cover.png",
       "coverBig": "games/blood-rage/img/cover-big.webp",
       "copertina":"games/blood-rage/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.0.1"
     },
     {
       "id": "carcassonne",
@@ -352,7 +359,8 @@
       "cover":    "games/carcassonne/img/cover.png",
       "coverBig": "games/carcassonne/img/cover-big.webp",
       "copertina":"games/carcassonne/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.0.1"
     },
     {
       "id": "death-roads",
@@ -367,7 +375,8 @@
       "cover":    "games/death-roads/img/cover.png",
       "coverBig": "games/death-roads/img/cover-big.webp",
       "copertina":"games/death-roads/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.0.1"
     },
     {
       "id": "era-medioevo",
@@ -382,7 +391,8 @@
       "cover":    "games/era-medioevo/img/cover.png",
       "coverBig": "games/era-medioevo/img/cover-big.webp",
       "copertina":"games/era-medioevo/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.0.1"
     },
     {
       "id": "duello-per-cardia",
@@ -397,7 +407,8 @@
       "cover":    "games/duello-per-cardia/img/cover.png",
       "coverBig": "games/duello-per-cardia/img/cover-big.webp",
       "copertina":"games/duello-per-cardia/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.0.1"
     },
     {
       "id": "gloomhaven-jotl-ia",
@@ -457,7 +468,71 @@
       "cover":    "games/carnival-zombie/img/cover.png",
       "coverBig": "games/carnival-zombie/img/cover-big.webp",
       "copertina":"games/carnival-zombie/img/copertina.png",
-      "aiSummary": false
+      "aiSummary": false,
+      "revision": "v.0.1"
+    },
+    {
+      "id": "sheep-race-ia",
+      "title": "The Sheep Race",
+      "subtitle": "Scommetti sulle pecore nelle colline del Suffolk",
+      "themeColor": "#4C9900",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-60",
+      "players": "2-6",
+      "folder": "games/sheep-race-ia",
+      "cover":    "games/sheep-race-ia/img/cover.png",
+      "coverBig": "games/sheep-race-ia/img/cover-big.webp",
+      "copertina":"games/sheep-race-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "exploding-kittens",
+      "title": "Exploding Kittens",
+      "subtitle": "Il gioco di carte esplosivo dove l'ultimo sopravvissuto vince",
+      "themeColor": "#C0392B",
+      "bggRank": 120,
+      "bggScore": 6.9,
+      "duration": "15-30",
+      "players": "2-5",
+      "folder": "games/exploding-kittens",
+      "cover":    "games/exploding-kittens/img/cover.png",
+      "coverBig": "games/exploding-kittens/img/cover-big.webp",
+      "copertina":"games/exploding-kittens/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.0.1"
+    },
+    {
+      "id": "el-dorado",
+      "title": "El Dorado",
+      "subtitle": "Corsa verso la città d'oro tra giungla, fiumi e demoni",
+      "themeColor": "#B8860B",
+      "bggRank": 107,
+      "bggScore": 7.7,
+      "duration": "30-60",
+      "players": "2-4",
+      "folder": "games/el-dorado",
+      "cover":    "games/el-dorado/img/cover.png",
+      "coverBig": "games/el-dorado/img/cover-big.webp",
+      "copertina":"games/el-dorado/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.0.1"
+    },
+    {
+      "id": "here-to-slay",
+      "title": "Here to Slay",
+      "subtitle": "Raduna il tuo Gruppo di Eroi e sconfiggi i Mostri",
+      "themeColor": "#c0392b",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-60",
+      "players": "2-6",
+      "folder": "games/here-to-slay",
+      "cover":    "games/here-to-slay/img/cover.png",
+      "coverBig": "games/here-to-slay/img/cover-big.webp",
+      "copertina":"games/here-to-slay/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.0.1"
     }
   ]
 }
