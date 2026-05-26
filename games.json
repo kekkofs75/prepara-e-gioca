@@ -704,6 +704,53 @@
       "coverBig": "games/vektorace-ia/img/cover-big.webp",
       "copertina":"games/vektorace-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "dune-insurrezione",
+      "title": "Dune: Insurrezione",
+      "subtitle": "Conquista Arrakis e guida la tua Casa alla vittoria",
+      "themeColor": "#8B5A2B",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "60-120",
+      "players": "1-6",
+      "folder": "games/dune-insurrezione",
+      "cover":    "games/dune-insurrezione/img/cover.png",
+      "coverBig": "games/dune-insurrezione/img/cover-big.webp",
+      "copertina":"games/dune-insurrezione/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.0.1"
+    },
+    {
+      "id": "orlo-esterno-ia",
+      "title": "Star Wars: Orlo Esterno",
+      "subtitle": "Cacciatori di taglie, contrabbandieri e mercenari nell'Orlo Esterno",
+      "themeColor": "#1a2744",
+      "bggRank": 248,
+      "bggScore": 7.6,
+      "duration": "120-180",
+      "players": "1-4",
+      "folder": "games/orlo-esterno-ia",
+      "cover":    "games/orlo-esterno-ia/img/cover.png",
+      "coverBig": "games/orlo-esterno-ia/img/cover-big.webp",
+      "copertina":"games/orlo-esterno-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "spirit-island",
+      "title": "Spirit Island",
+      "subtitle": "Cooperativo: difendi l'Isola dagli invasori coloniali",
+      "themeColor": "#22552d",
+      "bggRank": 4,
+      "bggScore": 8.4,
+      "duration": "90-120",
+      "players": "1-4",
+      "folder": "games/spirit-island",
+      "cover":    "games/spirit-island/img/cover.png",
+      "coverBig": "games/spirit-island/img/cover-big.webp",
+      "copertina":"games/spirit-island/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.0.1"
     }
   ]
 }

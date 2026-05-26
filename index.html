@@ -51,8 +51,11 @@
       --safe-bottom:  env(safe-area-inset-bottom, 0px);
       --safe-top:     env(safe-area-inset-top, 0px);
 
-      /* Padding inferiore per non finire sotto la nav fissa */
-      --content-pb: calc(var(--nav-height) + var(--safe-bottom) + 20px);
+      /* Pulsante scroll-to-top: 44px + 12px gap sopra la nav */
+      --scroll-btn-size: 56px;
+
+      /* Padding inferiore: nav + safe area + pulsante scroll-to-top + margine */
+      --content-pb: calc(var(--nav-height) + var(--safe-bottom) + var(--scroll-btn-size) + 16px);
 
       /* Game theme – overridden dinamicamente per gioco */
       --game-color:       var(--primary);
@@ -94,8 +97,8 @@
       padding: calc(var(--safe-top) + 10px) 16px 12px;
       display: flex;
       align-items: center;
+      gap: 8px;
       box-shadow: var(--shadow-lg);
-      /* nascosto fuori dallo schermo in alto */
       transform: translateY(-110%);
       transition: transform .26s cubic-bezier(0.34, 1.3, 0.64, 1);
       pointer-events: none;
@@ -132,6 +135,67 @@
     #search-input:focus {
       background: rgba(255,255,255,0.32);
       border-color: rgba(255,255,255,0.7);
+    }
+
+    /* Controlli ricerca in-pagina (counter + frecce) — bianchi */
+    .search-controls {
+      display: none;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+    .search-controls.visible { display: flex; }
+
+    #search-counter {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      min-width: 36px;
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .search-nav-btn {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: #fff;
+      -webkit-tap-highlight-color: transparent;
+      transition: background .15s;
+      flex-shrink: 0;
+    }
+    .search-nav-btn:active { background: rgba(255,255,255,0.32); }
+    .search-nav-btn svg { width: 16px; height: 16px; }
+
+    /* Pulsante ✕ chiudi — bianco */
+    #search-close-btn {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 0.9rem;
+      -webkit-tap-highlight-color: transparent;
+      transition: background .15s;
+      flex-shrink: 0;
+    }
+    #search-close-btn:active { background: rgba(255,255,255,0.32); }
+
+    /* Evidenziazione risultati nel testo */
+    mark.search-hit {
+      background: rgba(255, 220, 80, 0.55);
+      color: inherit;
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+    mark.search-hit.current {
+      background: rgba(255, 180, 0, 0.85);
+      color: #1a0e00;
     }
 
     /* ── Bottom Navigation ────────────────────────────────────── */
@@ -502,22 +566,29 @@
     #markdown-content .md-accent i {
       color: var(--game-color);
     }
-    /* Immagine standard (nessun modificatore) */
-    #markdown-content img:not(.img-inline):not(.img-center) {
+    /* Immagini standard nel markdown — cliccabili per lightbox */
+    #markdown-content img:not(.img-inline):not(.img-center):not(.img-icon) {
       max-width: 100%;
       border-radius: var(--radius-sm);
       margin: 1em 0;
       display: block;
       box-shadow: var(--shadow-md);
+      cursor: zoom-in;
+      transition: opacity .15s;
     }
-    /* {center} — centrata, con ombra */
+    #markdown-content img:not(.img-inline):not(.img-center):not(.img-icon):active {
+      opacity: 0.85;
+    }
     #markdown-content img.img-center {
       display: block;
       max-width: 100%;
       margin: 1em auto;
       border-radius: var(--radius-sm);
       box-shadow: var(--shadow-md);
+      cursor: zoom-in;
+      transition: opacity .15s;
     }
+    #markdown-content img.img-center:active { opacity: 0.85; }
     /* {inline} — icona in linea col testo, nessuna ombra */
     img.img-inline {
       display: inline-block;
@@ -529,22 +600,29 @@
       border-radius: 2px;
       position: relative;
       top: -1px;
+      cursor: zoom-in;
     }
-    /* {.img-inline-lg} — inline doppia dimensione, per segnalini più leggibili */
-    img.img-inline-lg {
+    /* {.img-inline-lg} — wrapper span impedisce il line-break e schiacciamento */
+    span.img-lg-wrap {
       display: inline-block;
+      white-space: nowrap;
       vertical-align: middle;
-      height: 2.4em !important;
-      min-height: 2.4em;
-      width: auto !important;
-      min-width: auto;
-      flex-shrink: 0;
-      margin: 0 3px !important;
-      box-shadow: none;
-      border-radius: 3px;
       position: relative;
       top: -1px;
-      white-space: nowrap;
+      margin: 0 3px;
+      line-height: 0;
+      cursor: zoom-in;
+    }
+    span.img-lg-wrap > img {
+      height: 2.4em;
+      min-height: 2.4em;
+      width: auto;
+      min-width: 2.4em;
+      display: inline-block;
+      vertical-align: middle;
+      box-shadow: none;
+      border-radius: 3px;
+      object-fit: contain;
     }
 
     /* ── Lightbox ─────────────────────────────────────────────── */
@@ -555,6 +633,7 @@
       background: rgba(0,0,0,0.88);
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       padding: 24px;
       cursor: zoom-out;
       animation: lbFadeIn .18s ease both;
@@ -590,7 +669,14 @@
       -webkit-tap-highlight-color: transparent;
       transition: background .15s;
     }
-    #lightbox-close:active { background: rgba(255,255,255,0.25); }
+    #lightbox-caption {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.82rem;
+      text-align: center;
+      margin-top: 10px;
+      max-width: 90vw;
+      font-family: 'DM Sans', sans-serif;
+    }
     #markdown-content table {
       width: 100%; border-collapse: collapse;
       margin: 1em 0; font-size: 0.88rem;
@@ -849,6 +935,41 @@
     .empty-state .empty-icon { font-size: 3.2rem; margin-bottom: 14px; }
     .empty-state p { font-size: 0.95rem; line-height: 1.5; }
 
+    /* ── Pulsante Scroll to Top ───────────────────────────────── */
+    #scroll-top-btn {
+      position: fixed;
+      right: 16px;
+      bottom: calc(var(--nav-height) + var(--safe-bottom) + 12px);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--game-color, var(--primary));
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      z-index: 190;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.7) translateY(8px);
+      transition: opacity .22s ease, transform .22s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #scroll-top-btn.visible {
+      opacity: 1;
+      pointer-events: all;
+      transform: scale(1) translateY(0);
+    }
+    #scroll-top-btn:active {
+      transform: scale(0.92);
+    }
+    #scroll-top-btn svg {
+      width: 20px; height: 20px;
+    }
+
     /* ── Install banner (iOS) ─────────────────────────────────── */
     #install-banner {
       display: none;
@@ -894,20 +1015,36 @@
   <div id="lightbox" role="dialog" aria-modal="true" aria-label="Cover ingrandita">
     <button id="lightbox-close" aria-label="Chiudi">✕</button>
     <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption"></div>
   </div>
 
   <!-- ══════════════════════════════════════════════════════════
        SEARCH OVERLAY — scende dall'alto quando attivata
        Il tastierino si apre dal basso: non si sovrappongono.
   ══════════════════════════════════════════════════════════ -->
-  <div id="search-overlay" role="search" aria-label="Cerca gioco">
+  <div id="search-overlay" role="search" aria-label="Cerca">
     <div class="search-input-wrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
       </svg>
-      <input type="search" id="search-input" placeholder="Cerca gioco…"
+      <input type="search" id="search-input" placeholder="Cerca…"
              autocomplete="off" autocorrect="off" spellcheck="false">
     </div>
+    <!-- Controlli in-pagina: visibili solo nelle sezioni -->
+    <div class="search-controls" id="search-controls">
+      <span id="search-counter">0/0</span>
+      <button class="search-nav-btn" id="search-prev" aria-label="Precedente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18,15 12,9 6,15"/>
+        </svg>
+      </button>
+      <button class="search-nav-btn" id="search-next" aria-label="Successivo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6,9 12,15 18,9"/>
+        </svg>
+      </button>
+    </div>
+    <button id="search-close-btn" aria-label="Chiudi">✕</button>
   </div>
 
   <!-- ════════════════════════════════════════════════════════ -->
@@ -962,6 +1099,16 @@
     </div>
     <div id="markdown-content"></div>
   </div>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- SCROLL TO TOP                                           -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <button id="scroll-top-btn" aria-label="Torna su">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18,15 12,9 6,15"/>
+    </svg>
+  </button>
 
   <!-- ════════════════════════════════════════════════════════ -->
   <!-- BOTTOM NAVIGATION  →  Home | Cerca | Indietro           -->
@@ -1063,14 +1210,15 @@
     $('nav-home').classList.toggle('active', name === 'home');
     $('nav-back').classList.remove('active');
 
-    // Il tasto Cerca è visibile solo sulla home
-    $('nav-search').classList.toggle('hidden', name !== 'home');
+    // Il tasto Cerca è visibile su tutte le view
+    $('nav-search').classList.remove('hidden');
 
     // Chiudi la ricerca se si cambia vista
     if (searchOpen && name !== 'home') closeSearch();
 
     views[name].scrollTop = 0;
     window.scrollTo(0, 0);
+    setTimeout(updateScrollBtn, 50);
   }
 
   /* ── Theme ──────────────────────────────────────────────── */
@@ -1186,7 +1334,9 @@
 
     const aiBadgeHtml = game.aiSummary
       ? '<span class="ai-badge-title">✨ riassunto IA</span>'
-      : '';
+      : (game.revision
+          ? `<span class="ai-badge-title">${game.revision}</span>`
+          : '');
     $('sections-label-wrap').innerHTML = `Sezioni del Regolamento${aiBadgeHtml ? ' ' + aiBadgeHtml : ''}`;
 
     $('game-meta-strip').innerHTML = [
@@ -1233,6 +1383,7 @@
 
       // Preprocessa: glossario, blocchi :::, rebase URL → poi rendering con markdown-it
       glossaryMap = {};
+      clearHighlights();
       const imgBase = currentGame.folder + '/img/';
       md = preprocessMarkdown(md, imgBase);
 
@@ -1241,6 +1392,7 @@
       window.scrollTo(0, 0);
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
+      setTimeout(updateScrollBtn, 50);
     } catch(e) {
       $('markdown-content').innerHTML = `
         <div class="empty-state">
@@ -1250,12 +1402,17 @@
     }
   }
 
+  /* ── Title Case ─────────────────────────────────────────── */
+  function titleCase(str) {
+    return str.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1));
+  }
+
   /* ── Popup Definizione ──────────────────────────────────── */
   function openDefPopup(key) {
     const entry = glossaryMap[key];
     if (!entry) return;
 
-    $('def-popup-term').textContent = entry.term;
+    $('def-popup-term').textContent = titleCase(entry.term);
 
     // Renderizza il markdown della definizione senza toccare glossaryMap
     const imgBase = currentGame ? (currentGame.folder + '/img/') : '';
@@ -1276,26 +1433,41 @@
 
   // Delegazione eventi: click su qualsiasi .def dentro il contenuto markdown
   $('markdown-content').addEventListener('click', function(e) {
-    const el = e.target.closest('.def');
-    if (!el) return;
-    const key = el.dataset.def;
-    if (key) openDefPopup(key);
+    // Popup definizione
+    const defEl = e.target.closest('.def');
+    if (defEl) {
+      const key = defEl.dataset.def;
+      if (key) openDefPopup(key);
+      return;
+    }
+    // Lightbox immagini — esclude solo le .img-icon (mask-image)
+    // Intercetta sia click diretto sull'img che sul wrapper span.img-lg-wrap
+    const imgEl   = e.target.closest('img');
+    const wrapEl  = e.target.closest('.img-lg-wrap');
+    const target  = imgEl || (wrapEl ? wrapEl.querySelector('img') : null);
+    if (target && !target.classList.contains('img-icon')) {
+      const alt   = target.alt || '';
+      const title = alt ? titleCase(alt) : '';
+      openLightbox(target.src, title);
+      return;
+    }
   });
 
   /* ── Lightbox ───────────────────────────────────────────── */
-  function openLightbox(src, alt) {
+  function openLightbox(src, caption) {
     const lb  = $('lightbox');
     const img = $('lightbox-img');
     img.src = src;
-    img.alt = alt || '';
+    img.alt = caption || '';
+    $('lightbox-caption').textContent = caption || '';
     lb.classList.add('open');
-    // Intercetta il tasto back hardware
     history.pushState({ pg: 'lightbox' }, '');
   }
 
   function closeLightbox() {
     $('lightbox').classList.remove('open');
     $('lightbox-img').src = '';
+    $('lightbox-caption').textContent = '';
   }
 
   $('lightbox').addEventListener('click', function(e) {
@@ -1373,8 +1545,7 @@
   function preprocessMarkdown(md, imgBase) {
     glossaryMap = {};
 
-    // 0. ![nome]{.icon} → <span class="img-icon" style="mask-image:url(icons/nome.png)"
-    //    Il percorso è sempre relativo alla root del sito (non al file .md)
+    // 0. ![nome]{.icon} → span.img-icon con mask-image
     md = md.replace(
       /!\[([^\]]*)\]\{\.icon\}/g,
       (_, name) => {
@@ -1382,6 +1553,21 @@
         const url = `icons/${iconName}.png`;
         return `<span class="img-icon" style="-webkit-mask-image:url(${url});mask-image:url(${url})" role="img" aria-label="${name}"></span>`;
       }
+    );
+
+    // 0b. ![alt](url){.img-inline-lg} → <span class="img-lg-wrap"><img ...></span>
+    //     Rebasa subito l'URL (il rebase generale in step 4 non vede più la sintassi md)
+    md = md.replace(
+      /!\[([^\]]*)\]\((?!https?:\/\/|\/|data:)([^)]+)\)\{\.img-inline-lg\}/g,
+      (_, alt, src) => {
+        const cleanSrc = imgBase + src.replace(/^\.?\/?img\//, '');
+        return `<span class="img-lg-wrap"><img src="${cleanSrc}" alt="${alt}"></span>`;
+      }
+    );
+    // URL assoluti (https, /, data:)
+    md = md.replace(
+      /!\[([^\]]*)\]\((https?:\/\/[^)]+|\/[^)]+|data:[^)]+)\)\{\.img-inline-lg\}/g,
+      (_, alt, src) => `<span class="img-lg-wrap"><img src="${src}" alt="${alt}"></span>`
     );
 
     // 1. Estrai e rimuovi :::glossary (con o senza spazio dopo :::)
@@ -1429,10 +1615,99 @@
   }
 
   /* ══════════════════════════════════════════════════════════
-     SEARCH — barra in alto, tastierino dal basso
+     SEARCH — context-aware: filtra home o cerca in-pagina nelle sezioni
   ══════════════════════════════════════════════════════════ */
+
+  /* ── In-page search state ───────────────────────────────── */
+  let searchHits    = [];   // array di <mark> elements
+  let searchHitIdx  = -1;   // indice corrente
+
+  function isInSection() {
+    return navHistory[navHistory.length - 1] === 'section';
+  }
+
+  /* ── Evidenzia occorrenze nel contenuto markdown ─────────── */
+  function highlightInPage(query) {
+    clearHighlights();
+    if (!query) {
+      updateSearchCounter();
+      return;
+    }
+
+    const container = $('markdown-content');
+    // Cammina i nodi di testo, evita elementi già marcati
+    const walker = document.createTreeWalker(
+      container,
+      NodeFilter.SHOW_TEXT,
+      { acceptNode: n => n.parentElement.closest('mark, .def, .search-nav-btn') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT }
+    );
+
+    const regex  = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    const nodes  = [];
+    let   node;
+    while ((node = walker.nextNode())) nodes.push(node);
+
+    nodes.forEach(node => {
+      const text = node.textContent;
+      if (!regex.test(text)) return;
+      regex.lastIndex = 0;
+
+      const frag = document.createDocumentFragment();
+      let last = 0, m;
+      while ((m = regex.exec(text)) !== null) {
+        if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        const mark = document.createElement('mark');
+        mark.className = 'search-hit';
+        mark.textContent = m[0];
+        frag.appendChild(mark);
+        searchHits.push(mark);
+        last = regex.lastIndex;
+      }
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+
+    searchHitIdx = searchHits.length > 0 ? 0 : -1;
+    scrollToHit();
+    updateSearchCounter();
+  }
+
+  function clearHighlights() {
+    searchHits.forEach(mark => {
+      const parent = mark.parentNode;
+      if (!parent) return;
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      parent.normalize();
+    });
+    searchHits   = [];
+    searchHitIdx = -1;
+  }
+
+  function scrollToHit() {
+    searchHits.forEach((m, i) => m.classList.toggle('current', i === searchHitIdx));
+    if (searchHitIdx >= 0 && searchHits[searchHitIdx]) {
+      searchHits[searchHitIdx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  function updateSearchCounter() {
+    const ctrl = $('search-controls');
+    if (!isInSection()) { ctrl.classList.remove('visible'); return; }
+    ctrl.classList.toggle('visible', true);
+    const total = searchHits.length;
+    $('search-counter').textContent = total === 0 ? '0/0'
+      : `${searchHitIdx + 1}/${total}`;
+  }
+
+  function searchNext() { if (!searchHits.length) return; searchHitIdx = (searchHitIdx + 1) % searchHits.length; scrollToHit(); updateSearchCounter(); }
+  function searchPrev() { if (!searchHits.length) return; searchHitIdx = (searchHitIdx - 1 + searchHits.length) % searchHits.length; scrollToHit(); updateSearchCounter(); }
+
+  /* ── Open / Close ───────────────────────────────────────── */
   function openSearch() {
     searchOpen = true;
+    const inSection = isInSection();
+    $('search-input').placeholder = inSection ? 'Cerca nel testo…' : 'Cerca gioco…';
+    $('search-controls').classList.toggle('visible', false);
     $('search-overlay').classList.add('visible');
     $('nav-search').classList.add('active');
     setTimeout(() => $('search-input').focus(), 80);
@@ -1441,25 +1716,40 @@
   function closeSearch() {
     searchOpen = false;
     $('search-overlay').classList.remove('visible');
+    $('search-controls').classList.remove('visible');
     $('nav-search').classList.remove('active');
     const inp = $('search-input');
     inp.value = '';
     inp.blur();
-    renderHomeList(gamesData);
+    if (isInSection()) {
+      clearHighlights();
+    } else {
+      renderHomeList(gamesData);
+    }
   }
 
+  /* ── Event listeners ────────────────────────────────────── */
   $('nav-search').addEventListener('click', () => {
     searchOpen ? closeSearch() : openSearch();
   });
 
+  $('search-close-btn').addEventListener('click', closeSearch);
+  $('search-prev').addEventListener('click', searchPrev);
+  $('search-next').addEventListener('click', searchNext);
+
   $('search-input').addEventListener('input', function () {
-    const q = this.value.trim().toLowerCase();
-    renderHomeList(q
-      ? gamesData.filter(g =>
-          g.title.toLowerCase().includes(q) ||
-          (g.subtitle || '').toLowerCase().includes(q))
-      : gamesData
-    );
+    const q = this.value.trim();
+    if (isInSection()) {
+      highlightInPage(q);
+    } else {
+      const ql = q.toLowerCase();
+      renderHomeList(ql
+        ? gamesData.filter(g =>
+            g.title.toLowerCase().includes(ql) ||
+            (g.subtitle || '').toLowerCase().includes(ql))
+        : gamesData
+      );
+    }
   });
 
   /* ── Nav buttons ────────────────────────────────────────── */
@@ -1468,13 +1758,36 @@
     currentGame = null;
     resetTheme();
     closeSearch();
-    history.replaceState({ pg: 'home' }, '');  // pulisce lo stack
+    history.replaceState({ pg: 'home' }, '');
     showView('home');
   });
 
   $('nav-back').addEventListener('click', () => {
     if (searchOpen) closeSearch();
     else            goBack();
+  });
+
+  /* ── Scroll to Top ──────────────────────────────────────── */
+  const scrollBtn = $('scroll-top-btn');
+  const SCROLL_THRESHOLD = 180;
+
+  function updateScrollBtn() {
+    const scrolled = window.pageYOffset
+      || document.documentElement.scrollTop
+      || document.body.scrollTop
+      || 0;
+    scrollBtn.classList.toggle('visible', scrolled > SCROLL_THRESHOLD);
+  }
+
+  // Ascolta su window e document per coprire tutti i browser
+  window.addEventListener('scroll',   updateScrollBtn, { passive: true });
+  document.addEventListener('scroll', updateScrollBtn, { passive: true });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    setTimeout(updateScrollBtn, 400);
   });
 
   /* ── iOS install hint ───────────────────────────────────── */
