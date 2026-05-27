@@ -726,6 +726,70 @@
 
     /* ── Estensioni markdown-it ───────────────────────────────── */
 
+    /* ── ::: spoiler — regola sbloccabile ────────────────────── */
+    details.md-spoiler {
+      margin: 0.8em 0;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid color-mix(in srgb, var(--game-color) 35%, transparent);
+      overflow: hidden;
+    }
+    details.md-spoiler summary.md-spoiler-summary {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--game-color);
+      background: color-mix(in srgb, var(--game-color) 8%, transparent);
+      list-style: none;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      transition: background .15s;
+    }
+    details.md-spoiler summary.md-spoiler-summary::-webkit-details-marker { display: none; }
+    details.md-spoiler summary.md-spoiler-summary:active {
+      background: color-mix(in srgb, var(--game-color) 16%, transparent);
+    }
+    /* Icona lucchetto: chiuso di default, aperto quando espanso */
+    details.md-spoiler summary.md-spoiler-summary::before {
+      content: '';
+      display: inline-block;
+      width: 1.1em; height: 1.1em;
+      flex-shrink: 0;
+      background-color: var(--game-color);
+      -webkit-mask-image: url(icons/padlock.png);
+      mask-image: url(icons/padlock.png);
+      -webkit-mask-size: contain; mask-size: contain;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      -webkit-mask-position: center; mask-position: center;
+    }
+    details.md-spoiler[open] summary.md-spoiler-summary::before {
+      -webkit-mask-image: url(icons/padlock-open.png);
+      mask-image: url(icons/padlock-open.png);
+    }
+    /* Freccia a destra che ruota all'apertura */
+    details.md-spoiler summary.md-spoiler-summary::after {
+      content: '›';
+      margin-left: auto;
+      font-size: 1.2rem;
+      line-height: 1;
+      color: var(--game-color);
+      transition: transform .2s ease;
+    }
+    details.md-spoiler[open] summary.md-spoiler-summary::after {
+      transform: rotate(90deg);
+    }
+    /* Corpo del contenuto */
+    .md-spoiler-body {
+      padding: 12px 16px;
+      border-top: 1px solid color-mix(in srgb, var(--game-color) 20%, transparent);
+    }
+    .md-spoiler-body > *:first-child { margin-top: 0; }
+    .md-spoiler-body > *:last-child  { margin-bottom: 0; }
+
     /* ::: indent — paragrafo/blocco indentato */
     .md-indent {
       margin-left: 1.4em;
@@ -1570,7 +1634,19 @@
       (_, alt, src) => `<span class="img-lg-wrap"><img src="${src}" alt="${alt}"></span>`
     );
 
-    // 1. Estrai e rimuovi :::glossary (con o senza spazio dopo :::)
+    // 1a. :::spoiler Titolo → <details> con contenuto già renderizzato
+    //     Va prima del blocco generico ::: per non essere catturato da esso
+    md = md.replace(
+      /^:::\s*spoiler\s+(.+?)\s*\r?\n([\s\S]*?)^:::\s*$/gm,
+      (_, title, content) => {
+        // Renderizza il contenuto interno come markdown completo
+        const innerMd   = preprocessMarkdown(content.trim(), imgBase);
+        const innerHtml = mdParser.render(innerMd);
+        return `<details class="md-spoiler">\n<summary class="md-spoiler-summary">${title.trim()}</summary>\n<div class="md-spoiler-body">${innerHtml}</div>\n</details>\n\n`;
+      }
+    );
+
+    // 1b. Blocchi :::tipo → <div class="md-tipo">  (generico)
     md = md.replace(
       /^:::\s*glossary\s*\r?\n([\s\S]*?)^:::\s*$/gm,
       (_, contenuto) => {
