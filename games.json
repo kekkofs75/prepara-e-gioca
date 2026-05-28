@@ -845,6 +845,37 @@
       "copertina":"games/fateforge/img/copertina.png",
       "aiSummary": false,
       "revision": "v.0.1"
+    },
+    {
+      "id": "azul-ia",
+      "title": "Azul",
+      "subtitle": "Decora le pareti del Palazzo Reale con le piastrelle più belle",
+      "themeColor": "#1E64A0",
+      "bggRank": 41,
+      "bggScore": 7.8,
+      "duration": "30-45",
+      "players": "2-4",
+      "folder": "games/azul-ia",
+      "cover":    "games/azul-ia/img/cover.png",
+      "coverBig": "games/azul-ia/img/cover-big.webp",
+      "copertina":"games/azul-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "ticket-to-ride-legacy",
+      "title": "Ticket to Ride Legacy",
+      "subtitle": "Campagna ferroviaria a 12 partite nel Nord America",
+      "themeColor": "#8B1A1A",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "60-120",
+      "players": "2-5",
+      "folder": "games/ticket-to-ride-legacy",
+      "cover":    "games/ticket-to-ride-legacy/img/cover.png",
+      "coverBig": "games/ticket-to-ride-legacy/img/cover-big.webp",
+      "copertina":"games/ticket-to-ride-legacy/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.0.1"
     }
   ]
 }
