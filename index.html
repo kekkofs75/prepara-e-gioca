@@ -285,6 +285,63 @@
       letter-spacing: 0.01em;
     }
 
+    /* Bordo tratteggiato per giochi non posseduti */
+    .game-card.not-owned {
+      border: 1.5px dashed var(--border);
+      opacity: 0.82;
+    }
+    .game-card.not-owned:active { border-color: var(--text-secondary); }
+
+    /* Filtro owned nella games-count bar */
+    #games-count-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px 4px;
+    }
+    #games-count {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    /* Tre pulsanti filtro ownership */
+    .owned-filter {
+      display: flex;
+      gap: 2px;
+      background: var(--surface-2);
+      border-radius: 50px;
+      padding: 2px;
+      border: 1px solid var(--border-light);
+    }
+    .owned-filter-btn {
+      width: 30px; height: 30px;
+      border-radius: 50px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+      transition: background .15s;
+    }
+    .owned-filter-btn .filter-icon {
+      display: inline-block;
+      width: 16px; height: 16px;
+      background-color: var(--text-secondary);
+      -webkit-mask-size: contain; mask-size: contain;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      -webkit-mask-position: center; mask-position: center;
+      transition: background-color .15s;
+    }
+    .owned-filter-btn.active {
+      background: var(--primary);
+    }
+    .owned-filter-btn.active .filter-icon {
+      background-color: #fff;
+    }
+    .owned-filter-btn:not(.active):active { background: var(--border-light); }
+
     /* FIX: padding-bottom sicuro per non finire sotto la nav */
     #games-list {
       padding: 8px 16px var(--content-pb);
@@ -1124,7 +1181,23 @@
         <h1>Prepara &amp; Gioca</h1>
       </div>
     </header>
-    <div id="games-count"></div>
+    <div id="games-count-row">
+      <div id="games-count"></div>
+      <div class="owned-filter" role="group" aria-label="Filtro collezione">
+        <button class="owned-filter-btn active" id="filter-all"
+                aria-label="Tutti i giochi" title="Tutti">
+          <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-all.png);mask-image:url(icons/owned-all.png)"></span>
+        </button>
+        <button class="owned-filter-btn" id="filter-mine"
+                aria-label="Solo i miei giochi" title="I miei">
+          <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-mine.png);mask-image:url(icons/owned-mine.png)"></span>
+        </button>
+        <button class="owned-filter-btn" id="filter-others"
+                aria-label="Giochi degli amici" title="Degli amici">
+          <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-others.png);mask-image:url(icons/owned-others.png)"></span>
+        </button>
+      </div>
+    </div>
     <div id="games-list">
       <div class="loading-state">
         <div class="spinner"></div>
@@ -1231,6 +1304,7 @@
 
   /* ── State ──────────────────────────────────────────────── */
   let gamesData   = [];
+  let ownerFilter = 'all';   // 'all' | 'mine' | 'others'
   let currentGame = null;
   let navHistory  = ['home'];
   let searchOpen  = false;
@@ -1340,7 +1414,16 @@
   function renderHomeList(games) {
     const count = $('games-count');
     const list  = $('games-list');
-    if (!games.length) {
+
+    // Applica filtro ownership
+    const filtered = games.filter(g => {
+      const owned = g.owned !== false;   // default true se assente
+      if (ownerFilter === 'mine')   return owned;
+      if (ownerFilter === 'others') return !owned;
+      return true;
+    });
+
+    if (!filtered.length) {
       count.textContent = '';
       list.innerHTML = `
         <div class="empty-state">
@@ -1349,14 +1432,15 @@
         </div>`;
       return;
     }
-    count.textContent = `${games.length} gioch${games.length === 1 ? 'o' : 'i'}`;
-    list.innerHTML = games.map(g => {
+    count.textContent = `${filtered.length} gioch${filtered.length === 1 ? 'o' : 'i'}`;
+    list.innerHTML = filtered.map(g => {
       const coverSrc  = g.cover     || (g.folder + '/img/cover.png');
       const bigSrc    = g.coverBig  || (g.folder + '/img/cover-big.png');
       const bgColor   = g.themeColor || 'var(--surface-2)';
-      const safeTitle = g.title.replace(/'/g, "\\'");  // sfugge apostrofi nel JS inline
+      const safeTitle = g.title.replace(/'/g, "\\'");
+      const notOwned  = g.owned === false ? ' not-owned' : '';
       return `
-      <div class="game-card" onclick="openGame('${g.id}')" role="button" tabindex="0">
+      <div class="game-card${notOwned}" onclick="openGame('${g.id}')" role="button" tabindex="0">
         <div class="game-card-img-wrap" style="background:${bgColor}; position:relative;"
              onclick="event.stopPropagation(); openLightbox('${bigSrc}','${safeTitle}')">
           <img src="${coverSrc}"
@@ -1841,6 +1925,17 @@
   $('nav-back').addEventListener('click', () => {
     if (searchOpen) closeSearch();
     else            goBack();
+  });
+
+  /* ── Owned filter ───────────────────────────────────────── */
+  ['all','mine','others'].forEach(val => {
+    $(`filter-${val}`).addEventListener('click', () => {
+      ownerFilter = val;
+      ['all','mine','others'].forEach(v =>
+        $(`filter-${v}`).classList.toggle('active', v === val)
+      );
+      renderHomeList(gamesData);
+    });
   });
 
   /* ── Scroll to Top ──────────────────────────────────────── */

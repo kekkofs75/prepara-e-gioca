@@ -376,7 +376,8 @@
       "coverBig": "games/death-roads/img/cover-big.webp",
       "copertina":"games/death-roads/img/copertina.png",
       "aiSummary": false,
-      "revision": "v.0.1"
+      "revision": "v.0.1",
+      "owned": false
     },
     {
       "id": "era-medioevo",
@@ -392,7 +393,8 @@
       "coverBig": "games/era-medioevo/img/cover-big.webp",
       "copertina":"games/era-medioevo/img/copertina.png",
       "aiSummary": false,
-      "revision": "v.0.1"
+      "revision": "v.0.1",
+      "owned": false
     },
     {
       "id": "duello-per-cardia",
@@ -469,7 +471,8 @@
       "coverBig": "games/carnival-zombie/img/cover-big.webp",
       "copertina":"games/carnival-zombie/img/copertina.png",
       "aiSummary": false,
-      "revision": "v.0.1"
+      "revision": "v.0.1",
+      "owned": false
     },
     {
       "id": "sheep-race-ia",
