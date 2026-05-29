@@ -876,6 +876,66 @@
       "copertina":"games/ticket-to-ride-legacy/img/copertina.png",
       "aiSummary": false,
       "revision": "v.0.1"
+    },
+    {
+      "id": "kingdom-legacy-ia",
+      "title": "Kingdom Legacy",
+      "subtitle": "Sviluppa e potenzia il tuo regno carta dopo carta",
+      "themeColor": "#8B5E1A",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-60",
+      "players": "1-1",
+      "folder": "games/kingdom-legacy-ia",
+      "cover":    "games/kingdom-legacy-ia/img/cover.png",
+      "coverBig": "games/kingdom-legacy-ia/img/cover-big.webp",
+      "copertina":"games/kingdom-legacy-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "the-others-ia",
+      "title": "The Others: 7 Sins",
+      "subtitle": "Eroi contro il Peccato nelle strade di Haven",
+      "themeColor": "#8C1414",
+      "bggRank": 877,
+      "bggScore": 7.4,
+      "duration": "90-150",
+      "players": "2-5",
+      "folder": "games/the-others-ia",
+      "cover":    "games/the-others-ia/img/cover.png",
+      "coverBig": "games/the-others-ia/img/cover-big.webp",
+      "copertina":"games/the-others-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "sagrada-ia",
+      "title": "Sagrada",
+      "subtitle": "Crea la vetrata più spettacolare della Sagrada Família",
+      "themeColor": "#1E4699",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-60",
+      "players": "1-4",
+      "folder": "games/sagrada-ia",
+      "cover":    "games/sagrada-ia/img/cover.png",
+      "coverBig": "games/sagrada-ia/img/cover-big.webp",
+      "copertina": "games/sagrada-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "pozioni-esplosive-ia",
+      "title": "Pozioni Esplosive",
+      "subtitle": "Raccoglie biglie, innesca esplosioni, completa pozioni magiche",
+      "themeColor": "#6A1B9A",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-45",
+      "players": "2-4",
+      "folder": "games/pozioni-esplosive-ia",
+      "cover":    "games/pozioni-esplosive-ia/img/cover.png",
+      "coverBig": "games/pozioni-esplosive-ia/img/cover-big.webp",
+      "copertina":"games/pozioni-esplosive-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
