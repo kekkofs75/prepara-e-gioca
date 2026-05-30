@@ -285,63 +285,6 @@
       letter-spacing: 0.01em;
     }
 
-    /* Bordo tratteggiato per giochi non posseduti */
-    .game-card.not-owned {
-      border: 1.5px dashed var(--border);
-      opacity: 0.82;
-    }
-    .game-card.not-owned:active { border-color: var(--text-secondary); }
-
-    /* Filtro owned nella games-count bar */
-    #games-count-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px 4px;
-    }
-    #games-count {
-      font-size: 0.78rem;
-      color: var(--text-secondary);
-      font-weight: 500;
-      letter-spacing: 0.01em;
-    }
-
-    /* Tre pulsanti filtro ownership */
-    .owned-filter {
-      display: flex;
-      gap: 2px;
-      background: var(--surface-2);
-      border-radius: 50px;
-      padding: 2px;
-      border: 1px solid var(--border-light);
-    }
-    .owned-filter-btn {
-      width: 30px; height: 30px;
-      border-radius: 50px;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      -webkit-tap-highlight-color: transparent;
-      transition: background .15s;
-    }
-    .owned-filter-btn .filter-icon {
-      display: inline-block;
-      width: 16px; height: 16px;
-      background-color: var(--text-secondary);
-      -webkit-mask-size: contain; mask-size: contain;
-      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
-      -webkit-mask-position: center; mask-position: center;
-      transition: background-color .15s;
-    }
-    .owned-filter-btn.active {
-      background: var(--primary);
-    }
-    .owned-filter-btn.active .filter-icon {
-      background-color: #fff;
-    }
-    .owned-filter-btn:not(.active):active { background: var(--border-light); }
-
     /* FIX: padding-bottom sicuro per non finire sotto la nav */
     #games-list {
       padding: 8px 16px var(--content-pb);
@@ -1091,6 +1034,95 @@
       width: 20px; height: 20px;
     }
 
+    /* ── Factions list view ───────────────────────────────── */
+    #view-factions-list { background: #fff; }
+
+    #factions-list {
+      padding: 16px 16px var(--content-pb);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Pulsante fazione — simile a section-btn ma con foto/icona custom */
+    .faction-btn {
+      background: var(--surface);
+      border: 2px solid var(--game-color);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 1.0rem;
+      color: var(--game-color);
+      transition: all .15s ease;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      text-align: left;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .faction-btn::after {
+      content: ''; position: absolute; inset: 0;
+      background: var(--game-color); opacity: 0; transition: opacity .15s;
+    }
+    .faction-btn:active::after { opacity: 0.08; }
+
+    /* Icona/immagine fazione — quadrata, bordo arrotondato */
+    .faction-btn-img {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+      background: color-mix(in srgb, var(--game-color) 12%, transparent);
+    }
+    /* Fallback: icona generica via mask-image se non c'è foto */
+    .faction-btn-icon-fallback {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: color-mix(in srgb, var(--game-color) 10%, transparent);
+    }
+    .faction-btn-icon-fallback span {
+      width: 24px; height: 24px;
+      display: inline-block;
+      background-color: var(--game-color);
+      -webkit-mask-image: url(icons/factions.png);
+      mask-image: url(icons/factions.png);
+      -webkit-mask-size: contain; mask-size: contain;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      -webkit-mask-position: center; mask-position: center;
+    }
+    .faction-btn-label { flex: 1; }
+    .faction-btn-arrow { font-size: 0.9rem; opacity: 0.45; flex-shrink: 0; }
+
+    /* Label "Fazioni" nel menu gioco */
+    .factions-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      padding: 14px 20px 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .factions-label-icon {
+      width: 14px; height: 14px;
+      display: inline-block;
+      background-color: var(--text-secondary);
+      -webkit-mask-image: url(icons/factions.png);
+      mask-image: url(icons/factions.png);
+      -webkit-mask-size: contain; mask-size: contain;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    }
+
     /* ── Install banner (iOS) ─────────────────────────────────── */
     #install-banner {
       display: none;
@@ -1181,23 +1213,7 @@
         <h1>Prepara &amp; Gioca</h1>
       </div>
     </header>
-    <div id="games-count-row">
-      <div id="games-count"></div>
-      <div class="owned-filter" role="group" aria-label="Filtro collezione">
-        <button class="owned-filter-btn active" id="filter-all"
-                aria-label="Tutti i giochi" title="Tutti">
-          <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-all.png);mask-image:url(icons/owned-all.png)"></span>
-        </button>
-        <button class="owned-filter-btn" id="filter-mine"
-                aria-label="Solo i miei giochi" title="I miei">
-          <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-mine.png);mask-image:url(icons/owned-mine.png)"></span>
-        </button>
-        <button class="owned-filter-btn" id="filter-others"
-                aria-label="Giochi degli amici" title="Degli amici">
-          <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-others.png);mask-image:url(icons/owned-others.png)"></span>
-        </button>
-      </div>
-    </div>
+    <div id="games-count"></div>
     <div id="games-list">
       <div class="loading-state">
         <div class="spinner"></div>
@@ -1221,6 +1237,13 @@
     </div>
     <div class="sections-label" id="sections-label-wrap">Sezioni del Regolamento</div>
     <div id="sections-list"></div>
+    <div id="factions-menu-block" style="display:none">
+      <div class="factions-label">
+        <span class="factions-label-icon"></span>
+        Fazioni
+      </div>
+      <div id="factions-menu-list"></div>
+    </div>
   </div>
 
   <!-- ════════════════════════════════════════════════════════ -->
@@ -1238,7 +1261,20 @@
   </div>
 
   <!-- ════════════════════════════════════════════════════════ -->
-  <!-- SCROLL TO TOP                                           -->
+  <!-- FACTIONS LIST VIEW                                      -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="view-factions-list" class="view">
+    <div class="section-hero" id="factions-hero">
+      <div class="section-hero-inner">
+        <div class="section-hero-game" id="factions-hero-game">Gioco</div>
+        <h2 id="factions-hero-title">Fazioni</h2>
+      </div>
+      <div class="section-hero-icon" id="factions-hero-icon"></div>
+    </div>
+    <div id="factions-list"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════ -->
   <!-- ════════════════════════════════════════════════════════ -->
   <button id="scroll-top-btn" aria-label="Torna su">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1304,7 +1340,6 @@
 
   /* ── State ──────────────────────────────────────────────── */
   let gamesData   = [];
-  let ownerFilter = 'all';   // 'all' | 'mine' | 'others'
   let currentGame = null;
   let navHistory  = ['home'];
   let searchOpen  = false;
@@ -1312,9 +1347,10 @@
   /* ── DOM refs ───────────────────────────────────────────── */
   const $ = id => document.getElementById(id);
   const views = {
-    home:     $('view-home'),
-    gameMenu: $('view-game-menu'),
-    section:  $('view-section'),
+    home:         $('view-home'),
+    gameMenu:     $('view-game-menu'),
+    section:      $('view-section'),
+    factionsList: $('view-factions-list'),
   };
 
   /* ── markdown-it + markdown-it-attrs ────────────────────────
@@ -1414,16 +1450,7 @@
   function renderHomeList(games) {
     const count = $('games-count');
     const list  = $('games-list');
-
-    // Applica filtro ownership
-    const filtered = games.filter(g => {
-      const owned = g.owned !== false;   // default true se assente
-      if (ownerFilter === 'mine')   return owned;
-      if (ownerFilter === 'others') return !owned;
-      return true;
-    });
-
-    if (!filtered.length) {
+    if (!games.length) {
       count.textContent = '';
       list.innerHTML = `
         <div class="empty-state">
@@ -1432,15 +1459,14 @@
         </div>`;
       return;
     }
-    count.textContent = `${filtered.length} gioch${filtered.length === 1 ? 'o' : 'i'}`;
-    list.innerHTML = filtered.map(g => {
+    count.textContent = `${games.length} gioch${games.length === 1 ? 'o' : 'i'}`;
+    list.innerHTML = games.map(g => {
       const coverSrc  = g.cover     || (g.folder + '/img/cover.png');
       const bigSrc    = g.coverBig  || (g.folder + '/img/cover-big.png');
       const bgColor   = g.themeColor || 'var(--surface-2)';
-      const safeTitle = g.title.replace(/'/g, "\\'");
-      const notOwned  = g.owned === false ? ' not-owned' : '';
+      const safeTitle = g.title.replace(/'/g, "\\'");  // sfugge apostrofi nel JS inline
       return `
-      <div class="game-card${notOwned}" onclick="openGame('${g.id}')" role="button" tabindex="0">
+      <div class="game-card" onclick="openGame('${g.id}')" role="button" tabindex="0">
         <div class="game-card-img-wrap" style="background:${bgColor}; position:relative;"
              onclick="event.stopPropagation(); openLightbox('${bigSrc}','${safeTitle}')">
           <img src="${coverSrc}"
@@ -1502,6 +1528,30 @@
       </button>
     `).join('');
 
+    // Fazioni — visibili solo se il gioco le ha definite
+    const factions = game.factions || [];
+    const fblock   = $('factions-menu-block');
+    if (factions.length) {
+      $('factions-menu-list').innerHTML = factions.map(f => {
+        const iconPath = f.icon ? `${game.folder}/${f.icon}` : null;
+        const imgHtml  = iconPath
+          ? `<img class="faction-btn-img" src="${iconPath}"
+                  alt="${f.label}"
+                  onerror="this.parentElement.innerHTML=this.parentElement.dataset.fallback">`
+          : `<div class="faction-btn-icon-fallback"><span></span></div>`;
+        return `
+        <button class="faction-btn" onclick="openFaction('${f.id}')"
+                style="padding-left:14px">
+          ${imgHtml}
+          <span class="faction-btn-label">${f.label}</span>
+          <span class="faction-btn-arrow">›</span>
+        </button>`;
+      }).join('');
+      fblock.style.display = 'block';
+    } else {
+      fblock.style.display = 'none';
+    }
+
     showView('gameMenu');
   }
 
@@ -1546,6 +1596,64 @@
         <div class="empty-state">
           <div class="empty-icon">📄</div>
           <p>Contenuto non ancora disponibile.<br>Aggiungi il file <code>${sec.file}</code>.</p>
+        </div>`;
+    }
+  }
+
+  /* ── Open Faction ───────────────────────────────────────── */
+  async function openFaction(factionId) {
+    if (!currentGame) return;
+    const faction = (currentGame.factions || []).find(f => f.id === factionId);
+    if (!faction) return;
+    navHistory.push('section');
+    pushNav('section');
+
+    // Hero: usa l'icona fazione se disponibile, altrimenti icona generica
+    const iconPath = faction.icon
+      ? `${currentGame.folder}/${faction.icon}`
+      : 'icons/factions.png';
+    $('section-hero-game').textContent  = currentGame.title;
+    $('section-hero-title').textContent = faction.label;
+    $('section-hero-icon').innerHTML    =
+      faction.icon
+        ? `<img src="${iconPath}" alt="${faction.label}" style="border-radius:var(--radius-sm);object-fit:cover;">`
+        : `<span style="display:inline-block;width:28px;height:28px;
+               background-color:var(--game-color);
+               -webkit-mask-image:url(icons/factions.png);
+               mask-image:url(icons/factions.png);
+               mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>`;
+
+    $('markdown-content').innerHTML = `
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Caricamento…</p>
+      </div>`;
+
+    showView('section');
+
+    const filePath = `${currentGame.folder}/factions/${factionId}.md`;
+    try {
+      const res = await fetch(filePath);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      let md = await res.text();
+
+      glossaryMap = {};
+      clearHighlights();
+      // Il base per le immagini è la cartella factions/img/ del gioco
+      const imgBase = `${currentGame.folder}/factions/img/`;
+      md = preprocessMarkdown(md, imgBase);
+
+      $('markdown-content').innerHTML = mdParser.render(md);
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      setTimeout(updateScrollBtn, 50);
+    } catch(e) {
+      $('markdown-content').innerHTML = `
+        <div class="empty-state">
+          <div class="empty-icon">🎭</div>
+          <p>Contenuto non ancora disponibile.<br>
+             Aggiungi il file <code>factions/${factionId}.md</code>.</p>
         </div>`;
     }
   }
@@ -1925,17 +2033,6 @@
   $('nav-back').addEventListener('click', () => {
     if (searchOpen) closeSearch();
     else            goBack();
-  });
-
-  /* ── Owned filter ───────────────────────────────────────── */
-  ['all','mine','others'].forEach(val => {
-    $(`filter-${val}`).addEventListener('click', () => {
-      ownerFilter = val;
-      ['all','mine','others'].forEach(v =>
-        $(`filter-${v}`).classList.toggle('active', v === val)
-      );
-      renderHomeList(gamesData);
-    });
   });
 
   /* ── Scroll to Top ──────────────────────────────────────── */

@@ -939,6 +939,66 @@
       "coverBig": "games/pozioni-esplosive-ia/img/cover-big.webp",
       "copertina":"games/pozioni-esplosive-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "sushi-go-ia",
+      "title": "Sushi Go!",
+      "subtitle": "Afferra le porzioni migliori prima degli altri!",
+      "themeColor": "#C0392B",
+      "bggRank": 312,
+      "bggScore": 7.1,
+      "duration": "15-20",
+      "players": "3-5",
+      "folder": "games/sushi-go-ia",
+      "cover":    "games/sushi-go-ia/img/cover.png",
+      "coverBig": "games/sushi-go-ia/img/cover-big.webp",
+      "copertina":"games/sushi-go-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "skip-bo-ia",
+      "title": "Skip-Bo",
+      "subtitle": "Il classico gioco di carte in sequenza",
+      "themeColor": "#CC2229",
+      "bggRank": 386,
+      "bggScore": 6.8,
+      "duration": "30-60",
+      "players": "2-6",
+      "folder": "games/skip-bo-ia",
+      "cover":    "games/skip-bo-ia/img/cover.png",
+      "coverBig": "games/skip-bo-ia/img/cover-big.webp",
+      "copertina":"games/skip-bo-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "this-war-of-mine-ia",
+      "title": "This War of Mine",
+      "subtitle": "Sopravvivere è l'unico obiettivo",
+      "themeColor": "#2D2A23",
+      "bggRank": 110,
+      "bggScore": 8.0,
+      "duration": "60-120",
+      "players": "1-6",
+      "folder": "games/this-war-of-minez-ia",
+      "cover":    "games/this-war-of-mine-ia/img/cover.png",
+      "coverBig": "games/this-war-of-mine-ia/img/cover-big.webp",
+      "copertina":"games/this-war-of-mine-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "signore-degli-anelli-ttg-ia",
+      "title": "Il Signore degli Anelli",
+      "subtitle": "Trick-Taking Game — La Compagnia & Le Due Torri",
+      "themeColor": "#5A3C14",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-75",
+      "players": "1-4",
+      "folder": "games/signore-degli-anelli-ttg-ia",
+      "cover":    "games/signore-degli-anelli-ttg-ia/img/cover.png",
+      "coverBig": "games/signore-degli-anelli-ttg-ia/img/cover-big.webp",
+      "copertina":"games/signore-degli-anelli-ttg-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
