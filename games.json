@@ -999,6 +999,36 @@
       "coverBig": "games/signore-degli-anelli-ttg-ia/img/cover-big.webp",
       "copertina":"games/signore-degli-anelli-ttg-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "massive-darkness-ia",
+      "title": "Massive Darkness",
+      "subtitle": "Dungeon crawler cooperativo nell'oscurità",
+      "themeColor": "#8B4A10",
+      "bggRank": 530,
+      "bggScore": 7.1,
+      "duration": "60-120",
+      "players": "1-6",
+      "folder": "games/massive-darkness-ia",
+      "cover":    "games/massive-darkness-ia/img/cover.png",
+      "coverBig": "games/massive-darkness-ia/img/cover-big.webp",
+      "copertina":"games/massive-darkness-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "mage-knight-ia",
+      "title": "Mage Knight",
+      "subtitle": "Esplora, conquista e accumula Fama nell'epico regno Atlanteo",
+      "themeColor": "#8B1A1A",
+      "bggRank": 4,
+      "bggScore": 8.1,
+      "duration": "60-240",
+      "players": "1-4",
+      "folder": "games/mage-knight-ia",
+      "cover":    "games/mage-knight-ia/img/cover.png",
+      "coverBig": "games/mage-knight-ia/img/cover-big.webp",
+      "copertina":"games/mage-knight-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
