@@ -1029,6 +1029,48 @@
       "coverBig": "games/mage-knight-ia/img/cover-big.webp",
       "copertina":"games/mage-knight-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "warhammer-underworlds-ia",
+      "title": "Warhammer Underworlds: Wintermaw",
+      "subtitle": "Strategia e combattimento nelle caverne ghiacciate dei Reami Mortali",
+      "themeColor": "#0A3040",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-60",
+      "players": "2-4",
+      "folder": "games/warhammer-underworlds-ia",
+      "cover":    "games/warhammer-underworlds-ia/img/cover.png",
+      "coverBig": "games/warhammer-underworlds-ia/img/cover-big.webp",
+      "copertina":"games/warhammer-underworlds-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "root-ia",
+      "title": "Root",
+      "subtitle": "Un gioco di potere e giustizia nei Boschi",
+      "themeColor": "#8B1A1A",
+      "bggRank": 11,
+      "bggScore": 8.1,
+      "duration": "60-90",
+      "players": "2-6",
+      "folder": "games/root-ia",
+      "cover":    "games/root-ia/img/cover.png",
+      "coverBig": "games/root-ia/img/cover-big.webp",
+      "copertina":"games/root-ia/img/copertina.png",
+      "aiSummary": true,
+      "factions": [
+        { "id": "marchesa", "label": "Marchesa de Gattis", "icon": "games/root-ia/factions/img/marchesa-icon.png" },
+        { "id": "aquile",   "label": "Dinastia delle Aquile", "icon": "games/root-ia/factions/img/aquile-icon.png" },
+        { "id": "alleanza", "label": "Alleanza dei Boschi", "icon": "games/root-ia/factions/img/alleanza-icon.png" },
+        { "id": "vagabondo","label": "Vagabondo", "icon": "games/root-ia/factions/img/vagabondo-icon.png" },
+        { "id": "lucertole","label": "Setta delle Lucertole", "icon": "games/root-ia/factions/img/lucertole-icon.png" },
+        { "id": "compagnia","label": "Compagnia del Fiume", "icon": "games/root-ia/factions/img/compagnia-icon.png" },
+        { "id": "ducato",   "label": "Ducato Sotterraneo", "icon": "games/root-ia/factions/img/ducato-icon.png" },
+        { "id": "corvidi",  "label": "Congiura dei Corvidi", "icon": "games/root-ia/factions/img/corvidi-icon.png" },
+        { "id": "orda",     "label": "Signore dell'Orda", "icon": "games/root-ia/factions/img/orda-icon.png" },
+        { "id": "custodi",  "label": "Custodi di Ferro", "icon": "games/root-ia/factions/img/custodi-icon.png" }
+      ]
     }
   ]
 }
