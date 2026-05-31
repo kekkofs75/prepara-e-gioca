@@ -1071,6 +1071,22 @@
         { "id": "orda",     "label": "Signore dell'Orda", "icon": "games/root-ia/factions/img/orda-icon.png" },
         { "id": "custodi",  "label": "Custodi di Ferro", "icon": "games/root-ia/factions/img/custodi-icon.png" }
       ]
+    },
+    {
+      "id": "terraforming-mars-ia",
+      "title": "Terraforming Mars",
+      "subtitle": "Trasforma il Pianeta Rosso con la tua Corporation",
+      "themeColor": "#B44A1E",
+      "bggRank": 4,
+      "bggScore": 8.4,
+      "duration": "120-180",
+      "players": "1-5",
+      "folder": "games/terraforming-mars-ia",
+      "cover":    "games/terraforming-mars-ia/img/cover.png",
+      "coverBig": "games/terraforming-mars-ia/img/cover-big.webp",
+      "copertina":"games/terraforming-mars-ia/img/copertina.png",
+      "aiSummary": true,
+      "owned": false
     }
   ]
 }
