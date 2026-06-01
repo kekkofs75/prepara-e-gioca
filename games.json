@@ -1087,6 +1087,21 @@
       "copertina":"games/terraforming-mars-ia/img/copertina.png",
       "aiSummary": true,
       "owned": false
+    },
+    {
+      "id": "under-falling-skies-ia",
+      "title": "Under Falling Skies",
+      "subtitle": "Gioco in solitario di gestione dadi contro l'invasione aliena",
+      "themeColor": "#0F2340",
+      "bggRank": 437,
+      "bggScore": 7.8,
+      "duration": "20-40",
+      "players": "1",
+      "folder": "games/under-falling-skies-ia",
+      "cover":    "games/under-falling-skies-ia/img/cover.png",
+      "coverBig": "games/under-falling-skies-ia/img/cover-big.webp",
+      "copertina":"games/under-falling-skies-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
