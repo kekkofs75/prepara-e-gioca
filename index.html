@@ -1311,7 +1311,19 @@
         <span class="factions-label-icon"></span>
         Fazioni
       </div>
-      <div id="factions-menu-list"></div>
+      <button class="section-btn" onclick="openFactionsList()">
+        <span class="btn-icon" style="
+          display:inline-flex;align-items:center;justify-content:center;
+          width:28px;height:28px;">
+          <span style="display:inline-block;width:22px;height:22px;
+            background-color:var(--game-color);
+            -webkit-mask-image:url(icons/factions.png);
+            mask-image:url(icons/factions.png);
+            mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
+        </span>
+        <span class="btn-label">Fazioni</span>
+        <span class="btn-arrow">›</span>
+      </button>
     </div>
   </div>
 
@@ -1608,25 +1620,10 @@
       </button>
     `).join('');
 
-    // Fazioni — visibili solo se il gioco le ha definite
+    // Fazioni — pulsante singolo di navigazione (solo se il gioco le ha)
     const factions = game.factions || [];
     const fblock   = $('factions-menu-block');
     if (factions.length) {
-      $('factions-menu-list').innerHTML = factions.map(f => {
-        const iconPath = f.icon ? `${game.folder}/${f.icon}` : null;
-        const imgHtml  = iconPath
-          ? `<img class="faction-btn-img" src="${iconPath}"
-                  alt="${f.label}"
-                  onerror="this.parentElement.innerHTML=this.parentElement.dataset.fallback">`
-          : `<div class="faction-btn-icon-fallback"><span></span></div>`;
-        return `
-        <button class="faction-btn" onclick="openFaction('${f.id}')"
-                style="padding-left:14px">
-          ${imgHtml}
-          <span class="faction-btn-label">${f.label}</span>
-          <span class="faction-btn-arrow">›</span>
-        </button>`;
-      }).join('');
       fblock.style.display = 'block';
     } else {
       fblock.style.display = 'none';
@@ -1680,6 +1677,40 @@
     }
   }
 
+  /* ── Open Factions List ─────────────────────────────────── */
+  function openFactionsList() {
+    if (!currentGame) return;
+    const factions = currentGame.factions || [];
+    navHistory.push('factionsList');
+    pushNav('factionsList');
+
+    $('factions-hero-game').textContent  = currentGame.title;
+    $('factions-hero-title').textContent = 'Fazioni';
+    $('factions-hero-icon').innerHTML    =
+      `<span style="display:inline-block;width:28px;height:28px;
+         background-color:var(--game-color);
+         -webkit-mask-image:url(icons/factions.png);
+         mask-image:url(icons/factions.png);
+         mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>`;
+
+    $('factions-list').innerHTML = factions.map(f => {
+      const iconPath    = f.icon ? `${currentGame.folder}/${f.icon}` : null;
+      const borderColor = f.color || 'var(--game-color)';
+      const imgHtml     = iconPath
+        ? `<img class="faction-btn-img" src="${iconPath}" alt="${f.label || ''}">`
+        : `<div class="faction-btn-icon-fallback"><span></span></div>`;
+      return `
+      <button class="faction-btn" onclick="openFaction('${f.id}')"
+              style="border-color:${borderColor}; color:${borderColor}">
+        ${imgHtml}
+        <span class="faction-btn-label">${f.label || f.id}</span>
+        <span class="faction-btn-arrow" style="color:${borderColor}">›</span>
+      </button>`;
+    }).join('');
+
+    showView('factionsList');
+  }
+
   /* ── Open Faction ───────────────────────────────────────── */
   async function openFaction(factionId) {
     if (!currentGame) return;
@@ -1688,20 +1719,22 @@
     navHistory.push('section');
     pushNav('section');
 
-    // Hero: usa l'icona fazione se disponibile, altrimenti icona generica
-    const iconPath = faction.icon
-      ? `${currentGame.folder}/${faction.icon}`
-      : 'icons/factions.png';
+    // Applica il colore fazione se specificato, altrimenti usa quello del gioco
+    const factionColor = faction.color || currentGame.themeColor || '#EE8860';
+    setGameTheme(factionColor);
+
+    // Hero
+    const iconPath = faction.icon ? `${currentGame.folder}/${faction.icon}` : null;
     $('section-hero-game').textContent  = currentGame.title;
-    $('section-hero-title').textContent = faction.label;
-    $('section-hero-icon').innerHTML    =
-      faction.icon
-        ? `<img src="${iconPath}" alt="${faction.label}" style="border-radius:var(--radius-sm);object-fit:cover;">`
-        : `<span style="display:inline-block;width:28px;height:28px;
-               background-color:var(--game-color);
-               -webkit-mask-image:url(icons/factions.png);
-               mask-image:url(icons/factions.png);
-               mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>`;
+    $('section-hero-title').textContent = faction.label || faction.id;
+    $('section-hero-icon').innerHTML    = iconPath
+      ? `<img src="${iconPath}" alt="${faction.label || ''}"
+              style="border-radius:var(--radius-sm);object-fit:cover;width:32px;height:32px;">`
+      : `<span style="display:inline-block;width:28px;height:28px;
+             background-color:var(--game-color);
+             -webkit-mask-image:url(icons/factions.png);
+             mask-image:url(icons/factions.png);
+             mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>`;
 
     $('markdown-content').innerHTML = `
       <div class="loading-state">
@@ -1716,13 +1749,10 @@
       const res = await fetch(filePath);
       if (!res.ok) throw new Error('HTTP ' + res.status);
       let md = await res.text();
-
       glossaryMap = {};
       clearHighlights();
-      // Il base per le immagini è la cartella factions/img/ del gioco
       const imgBase = `${currentGame.folder}/factions/img/`;
       md = preprocessMarkdown(md, imgBase);
-
       $('markdown-content').innerHTML = mdParser.render(md);
       window.scrollTo(0, 0);
       document.documentElement.scrollTop = 0;
@@ -1958,7 +1988,13 @@
       resetTheme();
       showView('home');
     } else if (dest === 'gameMenu') {
+      // Ripristina il colore del gioco (potrebbe essere stato cambiato da una fazione)
+      if (currentGame) setGameTheme(currentGame.themeColor || '#EE8860');
       showView('gameMenu');
+    } else if (dest === 'factionsList') {
+      // Ripristina il colore del gioco quando si torna alla lista fazioni
+      if (currentGame) setGameTheme(currentGame.themeColor || '#EE8860');
+      showView('factionsList');
     }
   }
 
