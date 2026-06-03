@@ -1102,6 +1102,60 @@
       "coverBig": "games/under-falling-skies-ia/img/cover-big.webp",
       "copertina":"games/under-falling-skies-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "zombicide-bp-ia",
+      "title": "Zombicide: Black Plague",
+      "subtitle": "Sopravvivi all'invasione dei non morti in un mondo fantasy medievale",
+      "themeColor": "#8B0000",
+      "bggRank": 76,
+      "bggScore": 7.9,
+      "duration": "60-180",
+      "players": "1-6",
+      "folder": "games/zombicide-bp-ia",
+      "cover":    "games/zombicide-bp-ia/img/cover.png",
+      "coverBig": "games/zombicide-bp-ia/img/cover-big.webp",
+      "copertina":"games/zombicide-bp-ia/img/copertina.png",
+      "aiSummary": true,
+      "factions": [
+        { "id": "walker",      "label": "Deambulante",  "icon": "games/zombicide-bp-ia/factions/img/walker-icon.png" },
+        { "id": "brute",       "label": "Brute",         "icon": "games/zombicide-bp-ia/factions/img/brute-icon.png" },
+        { "id": "runner",      "label": "Corridore",     "icon": "games/zombicide-bp-ia/factions/img/runner-icon.png" },
+        { "id": "abomination", "label": "Abominio",      "icon": "games/zombicide-bp-ia/factions/img/abomination-icon.png" },
+        { "id": "necromancer", "label": "Necromante",    "icon": "games/zombicide-bp-ia/factions/img/necromancer-icon.png" },
+        { "id": "wolf-zombie", "label": "Lupo Zombie",   "icon": "games/zombicide-bp-ia/factions/img/wolf-zombie-icon.png" },
+        { "id": "licabominio", "label": "Licabominio",   "icon": "games/zombicide-bp-ia/factions/img/licabominio-icon.png" }
+      ]
+    },
+    {
+      "id": "summoner-wars-ia",
+      "title": "Summoner Wars",
+      "subtitle": "Guida battaglie tra Evocatori con mazzi di carte e tattiche sul campo",
+      "themeColor": "#8B0000",
+      "bggRank": 373,
+      "bggScore": 7.5,
+      "duration": "30-60",
+      "players": "2-4",
+      "folder": "games/summoner-wars-ia",
+      "cover":    "games/summoner-wars-ia/img/cover.png",
+      "coverBig": "games/summoner-wars-ia/img/cover-big.webp",
+      "copertina":"games/summoner-wars-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "the-crew-ia",
+      "title": "The Crew",
+      "subtitle": "La missione per il Pianeta Nove",
+      "themeColor": "#0F1E50",
+      "bggRank": 4,
+      "bggScore": 7.9,
+      "duration": "15-30",
+      "players": "2-5",
+      "folder": "games/the-crew-ia",
+      "cover":    "games/the-crew-ia/img/cover.png",
+      "coverBig": "games/the-crew-ia/img/cover-big.webp",
+      "copertina":"games/the-crew-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }

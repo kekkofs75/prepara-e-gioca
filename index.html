@@ -1090,6 +1090,69 @@
     /* ── Factions list view ───────────────────────────────── */
     #view-factions-list { background: #fff; }
 
+    /* ── Aiuto al Giocatore ──────────────────────────────── */
+    #view-aid {
+      background: #fff;
+      display: none;
+      flex-direction: column;
+      height: calc(100dvh - var(--nav-height) - var(--safe-bottom));
+      overflow: hidden;
+    }
+    #view-aid.active { display: flex; }
+
+    .aid-header {
+      flex-shrink: 0;
+      background: var(--surface);
+      box-shadow: 0 1px 0 var(--border-light);
+      z-index: 10;
+    }
+    .aid-header .section-hero { margin-bottom: 0 !important; }
+
+    /* Tab bar */
+    .aid-tab-bar {
+      display: flex;
+      border-top: 1px solid var(--border-light);
+    }
+    .aid-tab {
+      flex: 1;
+      padding: 10px 4px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-secondary);
+      background: transparent;
+      border: none;
+      border-bottom: 2.5px solid transparent;
+      cursor: pointer;
+      transition: color .15s, border-color .15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .aid-tab.active {
+      color: var(--game-color);
+      border-bottom-color: var(--game-color);
+    }
+
+    /* Carousel panels */
+    .aid-content-wrap {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+    .aid-panels {
+      display: flex;
+      height: 100%;
+      transition: transform .3s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+    .aid-panel {
+      flex-shrink: 0;
+      overflow-y: auto;
+      padding: 16px 16px var(--content-pb);
+      height: 100%;
+      box-sizing: border-box;
+    }
+
     #factions-list {
       padding: 16px 16px var(--content-pb);
       display: flex;
@@ -1325,6 +1388,23 @@
         <span class="btn-arrow">›</span>
       </button>
     </div>
+    <div id="aid-menu-block" style="display:none">
+      <div class="factions-label">
+        <span class="factions-label-icon" style="-webkit-mask-image:url(icons/aid.png);mask-image:url(icons/aid.png)"></span>
+        Aiuto al Giocatore
+      </div>
+      <button class="section-btn" onclick="openAid()">
+        <span class="btn-icon" style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;">
+          <span style="display:inline-block;width:22px;height:22px;
+            background-color:var(--game-color);
+            -webkit-mask-image:url(icons/aid.png);
+            mask-image:url(icons/aid.png);
+            mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
+        </span>
+        <span class="btn-label">Aiuto al Giocatore</span>
+        <span class="btn-arrow">›</span>
+      </button>
+    </div>
   </div>
 
   <!-- ════════════════════════════════════════════════════════ -->
@@ -1357,6 +1437,31 @@
 
   <!-- ════════════════════════════════════════════════════════ -->
   <!-- ════════════════════════════════════════════════════════ -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- AID VIEW — Aiuto al Giocatore (tab + swipe)            -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="view-aid" class="view">
+    <div class="aid-header">
+      <div class="section-hero" id="aid-hero" style="margin-bottom:0">
+        <div class="section-hero-inner">
+          <div class="section-hero-game" id="aid-hero-game"></div>
+          <h2 id="aid-hero-title">Aiuto al Giocatore</h2>
+        </div>
+        <div class="section-hero-icon" id="aid-hero-icon">
+          <span style="display:inline-block;width:28px;height:28px;
+            background-color:var(--game-color);
+            -webkit-mask-image:url(icons/aid.png);
+            mask-image:url(icons/aid.png);
+            mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
+        </div>
+      </div>
+      <div class="aid-tab-bar" id="aid-tab-bar"></div>
+    </div>
+    <div class="aid-content-wrap">
+      <div class="aid-panels" id="aid-panels"></div>
+    </div>
+  </div>
+
   <button id="scroll-top-btn" aria-label="Torna su">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1433,6 +1538,7 @@
     gameMenu:     $('view-game-menu'),
     section:      $('view-section'),
     factionsList: $('view-factions-list'),
+    aid:          $('view-aid'),
   };
 
   /* ── markdown-it + markdown-it-attrs ────────────────────────
@@ -1623,11 +1729,11 @@
     // Fazioni — pulsante singolo di navigazione (solo se il gioco le ha)
     const factions = game.factions || [];
     const fblock   = $('factions-menu-block');
-    if (factions.length) {
-      fblock.style.display = 'block';
-    } else {
-      fblock.style.display = 'none';
-    }
+    fblock.style.display = factions.length ? 'block' : 'none';
+
+    // Aiuto al Giocatore — pulsante solo se il gioco ha tab aid
+    const aidTabs = game.aid || [];
+    $('aid-menu-block').style.display = aidTabs.length ? 'block' : 'none';
 
     showView('gameMenu');
   }
@@ -1767,6 +1873,105 @@
         </div>`;
     }
   }
+
+  /* ── Aiuto al Giocatore ─────────────────────────────────── */
+  const AID_ORDER = ['preparazione', 'turno', 'riferimento'];
+  const AID_LABELS = { preparazione: 'Preparazione', turno: 'Turno', riferimento: 'Riferimento' };
+  let aidTabs     = [];   // tab disponibili in ordine fisso
+  let aidTabIdx   = 0;    // indice corrente
+  let aidContents = {};   // cache: { id: html }
+  let aidTouchX   = 0;
+
+  async function openAid() {
+    if (!currentGame) return;
+    const gameTabs = currentGame.aid || [];
+    // Mantieni ordine fisso: prep → turno → rif
+    aidTabs = AID_ORDER.filter(id => gameTabs.includes(id));
+    if (!aidTabs.length) return;
+
+    navHistory.push('aid');
+    pushNav('aid');
+
+    $('aid-hero-game').textContent = currentGame.title;
+    $('aid-hero-title').textContent = 'Aiuto al Giocatore';
+
+    // Costruisce tab bar
+    $('aid-tab-bar').innerHTML = aidTabs.map((id, i) => `
+      <button class="aid-tab${id === 'turno' ? ' active' : ''}"
+              id="aid-tab-${id}" onclick="switchAidTab(${i})">
+        ${AID_LABELS[id]}
+      </button>`).join('');
+
+    // Costruisce pannelli (placeholder durante il caricamento)
+    const panelW = 100 / aidTabs.length;
+    $('aid-panels').style.width = `${aidTabs.length * 100}%`;
+    $('aid-panels').innerHTML = aidTabs.map(id => `
+      <div class="aid-panel" id="aid-panel-${id}"
+           style="width:${panelW}%">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Caricamento…</p>
+        </div>
+      </div>`).join('');
+
+    // Default: mostra Turno
+    aidTabIdx = aidTabs.includes('turno') ? aidTabs.indexOf('turno') : 0;
+    _aidMoveTo(aidTabIdx, false);
+
+    showView('aid');
+
+    // Carica tutti i tab in parallelo
+    aidContents = {};
+    const imgBase = `${currentGame.folder}/aid/img/`;
+    await Promise.all(aidTabs.map(async id => {
+      try {
+        const res = await fetch(`${currentGame.folder}/aid/${id}.md`);
+        if (!res.ok) throw new Error();
+        let md = await res.text();
+        md = preprocessMarkdown(md, imgBase);
+        aidContents[id] = mdParser.render(md);
+      } catch {
+        aidContents[id] = `<div class="empty-state">
+          <div class="empty-icon">📋</div>
+          <p>Aggiungi il file <code>aid/${id}.md</code>.</p>
+        </div>`;
+      }
+      const panel = $(`aid-panel-${id}`);
+      if (panel) panel.innerHTML = aidContents[id];
+    }));
+  }
+
+  function switchAidTab(idx) {
+    if (idx < 0 || idx >= aidTabs.length) return;
+    aidTabIdx = idx;
+    aidTabs.forEach((id, i) =>
+      $(`aid-tab-${id}`)?.classList.toggle('active', i === idx)
+    );
+    _aidMoveTo(idx, true);
+  }
+
+  function _aidMoveTo(idx, animate) {
+    const panels = $('aid-panels');
+    if (!animate) panels.style.transition = 'none';
+    const pct = 100 / aidTabs.length;
+    panels.style.transform = `translateX(-${idx * pct}%)`;
+    if (!animate) requestAnimationFrame(() => {
+      panels.style.transition = '';
+    });
+  }
+
+  // Swipe touch handlers
+  $('aid-panels').addEventListener('touchstart', e => {
+    aidTouchX = e.touches[0].clientX;
+  }, { passive: true });
+
+  $('aid-panels').addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - aidTouchX;
+    if (Math.abs(dx) > 50) {
+      if (dx < 0) switchAidTab(aidTabIdx + 1);
+      else        switchAidTab(aidTabIdx - 1);
+    }
+  }, { passive: true });
 
   /* ── Title Case ─────────────────────────────────────────── */
   function titleCase(str) {
@@ -1991,6 +2196,8 @@
       // Ripristina il colore del gioco (potrebbe essere stato cambiato da una fazione)
       if (currentGame) setGameTheme(currentGame.themeColor || '#EE8860');
       showView('gameMenu');
+    } else if (dest === 'aid') {
+      showView('aid');
     } else if (dest === 'factionsList') {
       // Ripristina il colore del gioco quando si torna alla lista fazioni
       if (currentGame) setGameTheme(currentGame.themeColor || '#EE8860');
