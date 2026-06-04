@@ -1171,6 +1171,22 @@
       "coverBig": "games/imperial-settlers-ia/img/cover-big.webp",
       "copertina":"games/imperial-settlers-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "small-world-ia",
+      "title": "Small World",
+      "subtitle": "Conquista il mondo con razze fantasy in lotta per la supremazia",
+      "themeColor": "#8B1A1A",
+      "bggRank": 142,
+      "bggScore": 7.2,
+      "duration": "40-80",
+      "players": "2-5",
+      "folder": "games/small-world-ia",
+      "cover":    "games/small-world-ia/img/cover.png",
+      "coverBig": "games/small-world-ia/img/cover-big.webp",
+      "copertina":"games/small-world-ia/img/copertina.png",
+      "aiSummary": true,
+      "aid": ["preparazione", "turno", "riferimento"]
     }
   ]
 }
