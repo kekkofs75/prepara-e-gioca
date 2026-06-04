@@ -480,10 +480,14 @@
 
     /* FIX: padding-bottom sicuro */
     #sections-list {
-      padding: 0 16px var(--content-pb);
+      padding: 0 16px;
       display: flex;
       flex-direction: column;
       gap: 9px;
+    }
+    /* Il padding inferiore va sul contenitore finale del menu gioco */
+    #game-menu-content {
+      padding-bottom: var(--content-pb);
     }
 
     .section-btn {
@@ -1367,43 +1371,49 @@
       <div id="game-menu-title">Titolo</div>
       <div class="game-meta-strip" id="game-meta-strip"></div>
     </div>
-    <div class="sections-label" id="sections-label-wrap">Sezioni del Regolamento</div>
-    <div id="sections-list"></div>
-    <div id="factions-menu-block" style="display:none">
-      <div class="factions-label">
-        <span class="factions-label-icon"></span>
-        Fazioni
+    <div id="game-menu-content">
+      <div class="sections-label" id="sections-label-wrap">Sezioni del Regolamento</div>
+      <div id="sections-list"></div>
+      <div id="factions-menu-block" style="display:none">
+        <div class="factions-label">
+          <span class="factions-label-icon"></span>
+          Fazioni
+        </div>
+        <div style="padding: 0 16px; display:flex; flex-direction:column; gap:9px;">
+          <button class="section-btn" onclick="openFactionsList()">
+            <span class="btn-icon" style="
+              display:inline-flex;align-items:center;justify-content:center;
+              width:28px;height:28px;">
+              <span style="display:inline-block;width:22px;height:22px;
+                background-color:var(--game-color);
+                -webkit-mask-image:url(icons/factions.png);
+                mask-image:url(icons/factions.png);
+                mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
+            </span>
+            <span class="btn-label">Fazioni</span>
+            <span class="btn-arrow">›</span>
+          </button>
+        </div>
       </div>
-      <button class="section-btn" onclick="openFactionsList()">
-        <span class="btn-icon" style="
-          display:inline-flex;align-items:center;justify-content:center;
-          width:28px;height:28px;">
-          <span style="display:inline-block;width:22px;height:22px;
-            background-color:var(--game-color);
-            -webkit-mask-image:url(icons/factions.png);
-            mask-image:url(icons/factions.png);
-            mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
-        </span>
-        <span class="btn-label">Fazioni</span>
-        <span class="btn-arrow">›</span>
-      </button>
-    </div>
-    <div id="aid-menu-block" style="display:none">
-      <div class="factions-label">
-        <span class="factions-label-icon" style="-webkit-mask-image:url(icons/aid.png);mask-image:url(icons/aid.png)"></span>
-        Aiuto al Giocatore
+      <div id="aid-menu-block" style="display:none">
+        <div class="factions-label">
+          <span class="factions-label-icon" style="-webkit-mask-image:url(icons/aid.png);mask-image:url(icons/aid.png)"></span>
+          Aiuto al Giocatore
+        </div>
+        <div style="padding: 0 16px; display:flex; flex-direction:column; gap:9px;">
+          <button class="section-btn" onclick="openAid()">
+            <span class="btn-icon" style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;">
+              <span style="display:inline-block;width:22px;height:22px;
+                background-color:var(--game-color);
+                -webkit-mask-image:url(icons/aid.png);
+                mask-image:url(icons/aid.png);
+                mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
+            </span>
+            <span class="btn-label">Aiuto al Giocatore</span>
+            <span class="btn-arrow">›</span>
+          </button>
+        </div>
       </div>
-      <button class="section-btn" onclick="openAid()">
-        <span class="btn-icon" style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;">
-          <span style="display:inline-block;width:22px;height:22px;
-            background-color:var(--game-color);
-            -webkit-mask-image:url(icons/aid.png);
-            mask-image:url(icons/aid.png);
-            mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
-        </span>
-        <span class="btn-label">Aiuto al Giocatore</span>
-        <span class="btn-arrow">›</span>
-      </button>
     </div>
   </div>
 
@@ -1802,9 +1812,11 @@
     $('factions-list').innerHTML = factions.map(f => {
       const iconPath    = f.icon ? `${currentGame.folder}/${f.icon}` : null;
       const borderColor = f.color || 'var(--game-color)';
-      const imgHtml     = iconPath
+      const imgHtml = iconPath
         ? `<img class="faction-btn-img" src="${iconPath}" alt="${f.label || ''}">`
-        : `<div class="faction-btn-icon-fallback"><span></span></div>`;
+        : `<div class="faction-btn-icon-fallback">
+             <span style="-webkit-mask-image:url(icons/factions.png);mask-image:url(icons/factions.png)"></span>
+           </div>`;
       return `
       <button class="faction-btn" onclick="openFaction('${f.id}')"
               style="border-color:${borderColor}; color:${borderColor}">
