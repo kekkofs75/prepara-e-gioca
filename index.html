@@ -1374,7 +1374,7 @@
     <div id="game-menu-content">
       <div class="sections-label" id="sections-label-wrap">Sezioni del Regolamento</div>
       <div id="sections-list"></div>
-      <div id="factions-menu-block" style="display:none">
+      <div id="factions-menu-block" style="display:none; margin-top:8px;">
         <div style="padding: 0 16px; display:flex; flex-direction:column; gap:9px;">
           <button class="section-btn" onclick="openFactionsList()">
             <span class="btn-icon" style="
@@ -1391,7 +1391,7 @@
           </button>
         </div>
       </div>
-      <div id="aid-menu-block" style="display:none">
+      <div id="aid-menu-block" style="display:none; margin-top:8px;">
         <div style="padding: 0 16px; display:flex; flex-direction:column; gap:9px;">
           <button class="section-btn" onclick="openAid()">
             <span class="btn-icon" style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;">
@@ -1804,11 +1804,13 @@
     $('factions-list').innerHTML = factions.map(f => {
       const iconPath    = f.icon ? `${currentGame.folder}/${f.icon}` : null;
       const borderColor = f.color || 'var(--game-color)';
-      const imgHtml = iconPath
-        ? `<img class="faction-btn-img" src="${iconPath}" alt="${f.label || ''}">`
-        : `<div class="faction-btn-icon-fallback">
+      const fallbackHtml = `<div class="faction-btn-icon-fallback">
              <span style="-webkit-mask-image:url(icons/factions.png);mask-image:url(icons/factions.png)"></span>
            </div>`;
+      const imgHtml = iconPath
+        ? `<img class="faction-btn-img" src="${iconPath}" alt="${f.label || ''}"
+               onerror="this.outerHTML='${fallbackHtml.replace(/'/g, "&#39;").replace(/\n/g,'')}'>"` 
+        : fallbackHtml;
       return `
       <button class="faction-btn" onclick="openFaction('${f.id}')"
               style="border-color:${borderColor}; color:${borderColor}">

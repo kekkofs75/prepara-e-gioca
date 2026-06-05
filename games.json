@@ -1118,13 +1118,12 @@
       "copertina":"games/zombicide-bp-ia/img/copertina.png",
       "aiSummary": true,
       "factions": [
-        { "id": "walker",      "label": "Deambulante",  "icon": "games/zombicide-bp-ia/factions/img/walker-icon.png" },
-        { "id": "brute",       "label": "Brute",         "icon": "games/zombicide-bp-ia/factions/img/brute-icon.png" },
-        { "id": "runner",      "label": "Corridore",     "icon": "games/zombicide-bp-ia/factions/img/runner-icon.png" },
-        { "id": "abomination", "label": "Abominio",      "icon": "games/zombicide-bp-ia/factions/img/abomination-icon.png" },
-        { "id": "necromancer", "label": "Necromante",    "icon": "games/zombicide-bp-ia/factions/img/necromancer-icon.png" },
-        { "id": "wolf-zombie", "label": "Lupo Zombie",   "icon": "games/zombicide-bp-ia/factions/img/wolf-zombie-icon.png" },
-        { "id": "licabominio", "label": "Licabominio",   "icon": "games/zombicide-bp-ia/factions/img/licabominio-icon.png" }
+        { "id": "deambulanti", "label": "Deambulanti", "icon": "games/zombicide-bp-ia/factions/img/deambulanti-icon.png" },
+        { "id": "bruti",       "label": "Bruti",        "icon": "games/zombicide-bp-ia/factions/img/bruti-icon.png" },
+        { "id": "corridori",   "label": "Corridori",     "icon": "games/zombicide-bp-ia/factions/img/corridori-icon.png" },
+        { "id": "abomini",     "label": "Abomini",       "icon": "games/zombicide-bp-ia/factions/img/abomini-icon.png" },
+        { "id": "necromanti",  "label": "Necromanti",    "icon": "games/zombicide-bp-ia/factions/img/necromanti-icon.png" },
+        { "id": "lupi-zombie", "label": "Lupi Zombie",   "icon": "games/zombicide-bp-ia/factions/img/lupi-zombie-icon.png" }
       ]
     },
     {
@@ -1159,7 +1158,7 @@
     },
     {
       "id": "imperial-settlers-ia",
-      "title": "Imperial Settlers",
+      "title": "Coloni Imperiali",
       "subtitle": "Costruisci il tuo impero, commercia e conquista",
       "themeColor": "#D66B22",
       "bggRank": 227,
