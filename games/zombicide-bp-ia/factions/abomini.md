@@ -1,51 +1,117 @@
-Gli Abomini sono creature colossali e implacabili. Le armi normali sono inutili contro di loro: l'unica cosa che funziona è il fuoco.
+# Abomini
 
-# Caratteristiche
+Gli Abomini sono i mostri più temibili: enormi, coriacei e quasi impossibili da abbattere senza armi speciali.
 
-| | |
+:::indent
+| Statistica | Valore |
 |---|---|
-| **Azioni per turno** | 1 |
-| **Danni minimi per eliminarlo** | 3 (o Fuoco di Drago) |
-| **Punti esperienza** | 5 |
-| **Priorità bersagli** | 2 (insieme al Bruto, a scelta del tiratore) |
+| Azioni | 1 |
+| Danni inflitti | 3 |
+| Danni minimi per distruggerlo | 3 |
+| Punti Esperienza | 5 |
+:::
 
-# Comportamento
-
-L'Abominio si attiva come un Deambulante: una sola Azione spesa ad **attaccare** o a **muoversi**. Non si divide mai: se ci sono percorsi di uguale lunghezza, i giocatori scelgono quale direzione segue.
-
-# Regole Speciali
-
-- Le Ferite inflitte dall'Abominio **non possono essere prevenute** dai tiri Armatura.
-- Per ucciderlo serve un'arma che infligga **3 o più Danni con un singolo successo**, oppure il **[Fuoco di Drago]{.def}**.
-- Nella scatola base non esiste un'arma che infligga 3 Danni da sola. Le opzioni sono: Fuoco di Drago, oppure Samson al Livello Rosso con un'arma da Mischia da 2 Danni e la sua Abilità +1 Danno: Mischia.
-
-# Note
-
-L'Abominio vale 5 punti esperienza — il più alto tra tutti i tipi di zombie. Ucciderlo fa avanzare rapidamente sulla Barra di Pericolo, ma attenzione: questo aumenta anche il numero di zombie generati ogni turno.
-
-La scatola base contiene **una sola miniatura Abominio**. Se il gioco ne richiede una seconda (per penuria di miniature), l'Abominio già in gioco ottiene immediatamente un'Attivazione Extra.
+**Regole speciali:**
+- Le Ferite inflitte dagli Abomini **non possono essere prevenute** dai tiri Armatura.
+- Per uccidere un Abominio occorre un'arma da **3 Danni**, il **Fuoco di Drago** o un **Trabucco** (Macigno da 3 Danni o Grappolo con successo).
+- Gli Abomini non si dividono mai quando si spostano: i giocatori ne scelgono la direzione.
 
 ---
 
-# ![puzzle]{.icon} Wulfsburg — Licabominio
+# ![puzzle]{.icon} Black Plague — Licabominio
 
-Il Licabominio è un Abominio di tipo lupino: un maschio alfa trasformatosi in zombie o il risultato di un esperimento oscuro. Condivide la resistenza dell'Abominio base ma aggiunge la velocità e l'aggressività di un Lupo Zombie.
+Il **Licabominio** è l'Abominio lupo mannaro di Black Plague. Stesse statistiche dell'Abominio standard, con regole speciali aggiuntive indicate sulla sua carta.
 
-## Differenze rispetto all'Abominio base
+---
 
-| | Abominio | Licabominio |
-|---|---|---|
-| **Azioni per turno** | 1 | 3 |
-| **Danni minimi** | 3 (o Fuoco di Drago) | 3 (o Fuoco di Drago) |
-| **Punti esperienza** | 5 | 5 |
-| **Tiri Armatura** | Ignorati | Ignorati |
+# ![puzzle]{.icon} Green Horde — Orco Abominio
 
-Il Licabominio esegue **3 attivazioni** per turno seguendo la stessa sequenza dei [Lupi Zombie]{.def}: prima insieme a tutti gli zombie, poi una seconda volta insieme ai Corridori e Lupi Zombie, poi una terza volta da solo. In ogni attivazione attacca se ha un bersaglio nella zona, altrimenti si muove.
+L'**Orco Abominio** è la versione orco dell'Abominio. Identico nelle statistiche. **Non è soggetto alle regole dell'Orda.**
 
-Non si divide mai: i giocatori scelgono la direzione in caso di percorsi di uguale lunghezza.
+:::accent
+In Green Horde nessuna arma da 3 Danni è presente nella scatola base: l'unico modo per eliminarlo è il **Fuoco di Drago** o il **Trabucco** (Macigno).
+:::
 
-:::glossary
-[Fuoco di Drago]: Combinazione di Bile di Drago e Torcia. Scarta la Bile per posizionare una pozza (Gittata 0–1), poi scarta la Torcia per incendiarla: ogni personaggio nella zona viene eliminato istantaneamente, senza possibilità di tiro Armatura. Non genera Rumore.
+---
 
-[Lupi Zombie]: Lupi infetti con 3 azioni per turno introdotti dall'espansione Wulfsburg. Richiedono 1 solo Danno per essere eliminati ma la loro velocità li rende molto pericolosi in campo aperto.
+# ![puzzle]{.icon} Friends and Foes — Abominio Contaminato
+
+L'**Abominio Contaminato** è un ex-orco corrotto di dimensioni mostruose.
+
+:::indent
+| Statistica | Valore |
+|---|---|
+| Azioni | 1 |
+| Danni inflitti | 3 |
+| Danni minimi per distruggerlo | 3 |
+| Punti Esperienza | 5 |
+:::
+
+**Regole speciali:**
+- **Non** è soggetto alle regole dell'Orda.
+- Le Ferite non possono essere prevenute dai tiri Armatura.
+- Richiede un'arma da 3 Danni o il Fuoco di Drago.
+- **Spruzzo di Sangue Contaminato** — Quando un sopravvissuto uccide un Abominio Contaminato nella **sua stessa Zona**, subisce 3 Ferite (nessun tiro Armatura).
+
+---
+
+# ![puzzle]{.icon} Horde Box — Abomini Extra
+
+La Horde Box introduce numerosi Abomini aggiuntivi. Salvo diversa indicazione seguono le **stesse regole generali** degli Abomini (Danni 1, Min. per distruggerlo 3, 5 PE, nessun tiro Armatura per le ferite inflitte, richiede 3 Danni o Fuoco di Drago).
+
+## AbominaBunny
+
+:::spoiler
+L'AbominaBunny bersaglia **tutti i sopravvissuti** nella sua Zona al momento dell'attacco e li uccide **indipendentemente** dalla salute, dall'armatura o da effetti di gioco. Può essere ucciso **solo con il Fuoco di Drago**.
+:::
+
+## Chromatiz
+
+:::spoiler
+All'inizio di ogni Attivazione di Chromatiz, determinare quante Azioni ha e quanti Danni infligge:
+- Ha **3 Azioni**, ma solo **2** se almeno un sopravvissuto di sesso femminile è nella sua Linea di Vista.
+- Infligge **3 Danni**, ma solo **2** se almeno un sopravvissuto di sesso maschile è nella sua Linea di Vista.
+I Famigli non contano.
+:::
+
+## Gorgomination
+
+:::spoiler
+Quando viene pescata la sua carta Zombie, il Gorgomination viene generato nella **Zona più rumorosa del tabellone che sia la Zona di un Edificio**. Se la Zona più rumorosa non è un Edificio, viene generato nella Zona di Edificio più vicina a essa. **Ignora mura e porte chiuse** quando si sposta verso la sua Zona di destinazione.
+:::
+
+## Guardiano della Cripta
+
+:::spoiler
+Dopo aver generato il Guardiano della Cripta, mettere da parte tutte le carte Arma della Cripta disponibili (non usate per la missione) in un mazzo separato a faccia in giù. Il sopravvissuto che uccide il Guardiano riceve 1 carta Arma della Cripta casuale da quel mazzo (oltre ai 5 PE).
+:::
+
+## Fratello dell'Orda
+
+:::spoiler
+Il Fratello dell'Orda infligge 3 Danni. Va giocato in congiunzione con gli Zombie usando le regole dell'Orda. Quando viene generata l'Orda, aggiungere all'Orda **1 miniatura Abominio extra** (a scelta). Si riproduce nell'Orda ogni volta che viene pescata una carta "Arriva l'Orda!". Se nessun Abominio può essere aggiunto, il Fratello dell'Orda ottiene un'ulteriore Attivazione Extra.
+:::
+
+## Il Lurker della Palude
+
+:::spoiler
+Finché si trova in una **Zona d'Acqua (Allagata)**, il Lurker della Palude **non può essere bersagliato** né ucciso in alcun modo. Altri effetti di gioco (Abilità, regole speciali di missione) si applicano comunque.
+:::
+
+## Siege Breaker
+
+:::spoiler
+Il Siege Breaker dà **priorità allo spostamento verso le Macchine d'Assedio** (Baliste, Trabucchi) piuttosto che verso i sopravvissuti. Si applicano le regole di Movimento zombie standard, ma favorendo la Macchina d'Assedio più vicina ai sopravvissuti. Ogni volta che il Siege Breaker e una Macchina d'Assedio si trovano nella stessa Zona, la **Macchina d'Assedio viene distrutta**.
+:::
+
+## Werezombie
+
+:::spoiler
+Ogni volta che il Werezombie viene ucciso, sostituirlo immediatamente con un altro Abominio disponibile nella collezione (a scelta del giocatore). Se nessun Abominio è disponibile, tutti gli Abomini sul tabellone ottengono un'Attivazione Extra.
+:::
+
+## The Magenta Covfefe of Aaargh
+
+:::spoiler
+Finché i sopravvissuti hanno Linea di Vista sul Magenta Covfefe, devono spendere **1 Azione extra** ogni volta che vogliono eseguire un'Azione di Movimento. Questa penalità **non si applica** se il sopravvissuto è nella stessa Zona del mostro (si applica comunque la penalità normale degli zombie presenti nella zona).
 :::

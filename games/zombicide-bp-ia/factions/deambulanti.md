@@ -1,26 +1,65 @@
-Il Deambulante è lo zombie più comune. Un tempo erano contadini, artigiani e popolani; ora vagano lentamente, animati da un unico scopo.
+# Deambulanti
 
-# Caratteristiche
+I Deambulanti sono gli zombie più comuni: lenti, prevedibili, ma pericolosi in gran numero.
 
-| | |
+:::indent
+| Statistica | Valore |
 |---|---|
-| **Azioni per turno** | 1 |
-| **Danni minimi per eliminarlo** | 1 |
-| **Punti esperienza** | 1 |
-| **Priorità bersagli** | 1 (prima da colpire) |
-
-# Comportamento
-
-Ogni turno il Deambulante spende la sua unica Azione per **attaccare** se c'è un Sopravvissuto nella sua zona, oppure per **muoversi** di una zona verso il bersaglio più rumoroso visibile.
-
-Se più percorsi verso il bersaglio hanno la stessa lunghezza, il gruppo si divide in parti uguali lungo tutti i percorsi disponibili (aggiungendo miniature se necessario per mantenere i gruppi identici).
-
-# Note
-
-I Deambulanti sono lenti e individualmente deboli, ma pericolosi in gruppo. Un'orda numerosa può sovraccaricare anche i Sopravvissuti più coriacei: ogni Deambulante nella zona attacca, e le Ferite si accumulano rapidamente.
-
-Nell'[Ordine di Priorità dei Bersagli]{.def}, i Deambulanti vengono sempre colpiti per primi dagli attacchi a distanza e di magia — utile per liberare la zona prima di occuparsi dei nemici più resistenti.
-
-:::glossary
-[Ordine di Priorità dei Bersagli]: Regola che determina quali zombie vengono colpiti per primi da un attacco a distanza o di magia. Si parte dal tipo con priorità 1 (Deambulante) e si esaurisce prima di passare al successivo.
+| Azioni | 1 |
+| Danni inflitti | 1 *(BP)* / 2 *(GH — Orco Deambulante)* |
+| Danni minimi per distruggerlo | 1 |
+| Punti Esperienza | 1 |
 :::
+
+Nessuna regola speciale: si muovono, si attaccano, vengono generati nel modo standard.
+
+---
+
+# ![puzzle]{.icon} Green Horde — Orco Deambulante
+
+L'**Orco Deambulante** è la versione orco del Deambulante. Statisticamente identico ma infligge **2 Ferite** invece di 1. Tutte le carte Orco Zombie di Green Horde (tranne le Attivazioni Extra e "Arriva l'Orda!") hanno il **simbolo dell'Orda**, attivando la regola dell'Orda (vedi `svolgimento.md`).
+
+---
+
+# ![puzzle]{.icon} No Rest for the Wicked — Deambulante Spettrale
+
+I **Deambulanti Spettrali** sono zombie fantasma che fluttuano nell'aria.
+
+:::indent
+| Statistica | Valore |
+|---|---|
+| Azioni | 1 |
+| Danni inflitti | 1 |
+| Danni minimi per distruggerlo | 1 *(solo da fonti speciali)* |
+| Punti Esperienza | 1 |
+:::
+
+**Regole speciali:**
+
+:::accent
+I Deambulanti Spettrali sono **immuni** a tutte le armi comuni. Possono essere uccisi **solo** da: Baliste, Incantesimi da Combattimento, Armi della Cripta, Equipaggiamento Magico e Fuoco di Drago.
+:::
+
+- Sono classificati come Deambulanti ma **non beneficiano** delle carte Attivazione Extra dei Deambulanti standard.
+- Rientrano nell'Ordine di Priorità dei Bersagli come qualsiasi altro Deambulante (priorità 4).
+
+---
+
+# ![puzzle]{.icon} Friends and Foes — Deambulante Contaminato
+
+I **Deambulanti Contaminati** sono ex-orchi corrotti con sangue acido.
+
+:::indent
+| Statistica | Valore |
+|---|---|
+| Azioni | 1 |
+| Danni inflitti | 2 |
+| Danni minimi per distruggerlo | 1 |
+| Punti Esperienza | 1 |
+:::
+
+**Regole speciali:**
+
+- Sono **Orchi e Deambulanti**. Non beneficiano delle carte Attivazione Extra dei Deambulanti Standard.
+- **Spruzzo di Sangue Contaminato** — Quando un sopravvissuto uccide un Deambulante Contaminato nella **sua stessa Zona**, subisce immediatamente 2 Ferite (è consentito un tiro Armatura).
+- Sono soggetti alle **regole dell'Orda** (vedi `svolgimento.md`). Ogni carta Zombie con simbolo Orda che li genera mette anche 1 Deambulante Contaminato extra nell'Orda.

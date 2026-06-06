@@ -1,26 +1,43 @@
-Il Bruto è uno zombie coriaceo e massiccio. Ignora il dolore e assorbe i colpi che abbatterebbero qualsiasi altro non morto. Serve un'arma robusta — o il fuoco — per metterlo a terra.
+# Bruti
 
-# Caratteristiche
+I Bruti (chiamati "Grassoni" in alcune edizioni) sono zombie corpulenti che richiedono armi più potenti per essere abbattuti.
 
-| | |
+:::indent
+| Statistica | Valore |
 |---|---|
-| **Azioni per turno** | 1 |
-| **Danni minimi per eliminarlo** | 2 |
-| **Punti esperienza** | 1 |
-| **Priorità bersagli** | 2 (insieme all'Abominio) |
-
-# Comportamento
-
-Il Bruto si attiva come un Deambulante: una sola Azione per turno, spesa ad **attaccare** se ha un bersaglio nella zona o a **muoversi** verso il più rumoroso.
-
-# Note
-
-Il Bruto richiede almeno **2 Danni per colpo** per essere eliminato. Qualsiasi arma che infligge 1 Danno non ha effetto su di lui: i successi vengono assorbiti senza conseguenze.
-
-Quando si spara su una zona mista, i Bruti vengono colpiti solo dopo aver eliminato tutti i Deambulanti presenti. Pianifica gli attacchi di conseguenza: un'arma da 1 Danno può pulire i Deambulanti, poi un'arma pesante o un mago chiudono il conto con il Bruto.
-
-Il [Fuoco di Drago]{.def} elimina i Bruti indipendentemente dalla soglia di Danni.
-
-:::glossary
-[Fuoco di Drago]: Combinazione di Bile di Drago e Torcia. Scarta la Bile per posizionare una pozza (Gittata 0–1), poi scarta la Torcia per incendiarla: ogni personaggio nella zona viene eliminato istantaneamente, senza possibilità di tiro Armatura. Non genera Rumore.
+| Azioni | 1 |
+| Danni inflitti | 3 *(BP)* / 3 *(GH — Orco Grassone)* |
+| Danni minimi per distruggerlo | 2 |
+| Punti Esperienza | 1 |
 :::
+
+Occorre un'arma che infligga **almeno 2 Danni per colpo** per abbatterli. Qualsiasi numero di successi con un'arma da 1 Danno viene assorbito senza effetti.
+
+---
+
+# ![puzzle]{.icon} Green Horde — Orco Grassone
+
+L'**Orco Grassone** è la versione orco del Bruto. Identico nelle statistiche al Bruto di Black Plague. Ha il simbolo dell'Orda. Le sue Ferite **non possono essere prevenute** dai tiri Armatura.
+
+---
+
+# ![puzzle]{.icon} Horde Box — Grassone Potenziato
+
+I **Grassoni Potenziati** erano persone colpite da potenti malattie: corpi gonfi di gas pronti a esplodere.
+
+:::indent
+| Statistica | Valore |
+|---|---|
+| Azioni | 1 |
+| Danni inflitti | 2 *(nessun tiro Armatura — vedi esplosione)* |
+| Danni minimi per distruggerlo | 2 |
+| Punti Esperienza | 1 |
+:::
+
+**Regole speciali:**
+
+- È un Grassone ma **non trae vantaggio** dalle carte Attivazione Extra dei Grassoni standard.
+- Quando si pesca una carta Generazione Grassone Potenziato: prima tutti gli altri Grassoni Potenziati presenti ottengono un'**Attivazione Extra**, poi viene generato un nuovo Grassone Potenziato.
+- **I Grassoni Potenziati non attaccano.** Invece, **esplodono** ogni volta che un sopravvissuto si trova nella loro Zona o termina un'Azione di Movimento nella loro Zona. Esplodono anche dopo essere stati eliminati da un'Azione di Combattimento o d'Assedio.
+- L'esplosione infligge **2 Danni** (nessun tiro Armatura) a tutti i sopravvissuti nella Zona.
+- Il sopravvissuto che elimina un Grassone Potenziato guadagna tutta l'esperienza generata dall'esplosione (zombie uccisi dall'esplosione stessa).

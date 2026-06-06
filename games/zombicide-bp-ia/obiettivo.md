@@ -1,13 +1,28 @@
-Zombicide: Black Plague è un gioco **completamente collaborativo**: tutti i giocatori formano un'unica squadra contro il gioco stesso. Lo scopo è completare gli obiettivi della missione, sopravvivere e uccidere il maggior numero possibile di zombie.
+# Obiettivo
 
-Gli obiettivi variano da missione a missione — raggiungere una zona di uscita, raccogliere segnalini, eliminare nemici specifici, trovare oggetti — e sono sempre descritti nella presentazione della missione stessa. Alcune missioni richiedono di completarli in un ordine preciso; altre li lasciano liberi.
+La partita è vinta non appena tutti gli obiettivi della missione sono stati completati. Zombicide è un gioco completamente collaborativo: tutti i giocatori vincono o perdono insieme.
 
-:::accent
-**Vittoria:** la partita è vinta immediatamente quando tutti gli obiettivi della missione sono stati completati. Tutti i giocatori vincono insieme.
+## Tipi di obiettivi comuni
 
-**Sconfitta:** la partita è persa quando tutti i Sopravvissuti vengono eliminati, oppure quando un [Necromante]{.def} riesce a fuggire dal tabellone mentre sono già presenti **6 o più segnalini Zona di Generazione** sul tabellone (inclusi quelli dei Necromanti). Alcune missioni prevedono condizioni di sconfitta aggiuntive descritte nelle rispettive regole speciali.
-:::
+- **Raccogliere oggetti** — prendere un segnalino Obiettivo nella propria Zona con 1 Azione.
+- **Raggiungere una Zona** — portare tutti (o un numero specifico di) sopravvissuti in una Zona indicata.
+- **Aprire una porta colorata** — di solito richiede di trovare prima l'Obiettivo del colore corrispondente.
+- **Uccidere tutti gli zombie** — eliminare ogni zombie sul tabellone.
+- **Usare una Macchina d'Assedio** — sparare con un Trabucco o una Balista su un bersaglio specifico.
+- **Distruggere una Zona di Generazione** — con un'Arma d'Assedio (1 Danno è sufficiente; la Zona di Generazione è all'ultimo posto nell'Ordine di Priorità dei Bersagli).
 
-:::glossary
-[Necromante]: Tipo di zombie speciale che, invece di attaccare, cerca di fuggire dal tabellone. Quando compare, piazza un segnalino Zona di Generazione aggiuntivo e, se riesce a scappare con abbastanza segnalini in gioco, fa perdere la partita.
-:::
+## Segnalini Obiettivo
+
+I segnalini Obiettivo valgono tipicamente **5 Punti Esperienza** al sopravvissuto che li raccoglie. Alcune missioni associano a ogni obiettivo anche una carta Arma della Cripta.
+
+## Zone di Generazione Colorate
+
+Le Zone di Generazione blu e/o verde sono **inattive** all'inizio della partita. Si attivano solo quando si verifica un evento specifico indicato dalla missione (es. raccogliere un certo obiettivo).
+
+---
+
+# ![puzzle]{.icon} Green Horde — Obiettivi specifici
+
+## Bombardare le Zone di Generazione
+
+Qualsiasi Macchina d'Assedio può bersagliare un segnalino Zona di Generazione e rimuoverlo con 1 Danno. I segnalini Zona di Generazione sono all'**ultimo posto** nell'Ordine di Priorità dei Bersagli.

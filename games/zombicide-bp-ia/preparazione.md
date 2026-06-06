@@ -1,54 +1,65 @@
-# Setup del Tabellone
+# Preparazione
 
-- Scegli una [missione]{.def} e assembla le tessere indicate, posizionandole al centro del tavolo.
-- Colloca le **porte**, i **segnalini Obiettivo** (a faccia in giù dove indicato), i **segnalini Zona di Generazione** e tutti gli altri segnalini previsti dalla missione nelle posizioni indicate dalla mappa.
-- Se la missione include **Cripte**, posiziona le tessere Zona Cripta del colore corrispondente accanto al tabellone e colloca gli eventuali artefatti al loro interno come indicato.
-- Forma due mazzi separati — uno con le **carte Zombie** e uno con le **carte Equipaggiamento** — mescolali e posizionali a faccia in giù accanto al tabellone.
-- Separa dal mazzo Equipaggiamento le carte con la parola chiave **"Equipaggiamento di Partenza"** (sfondo grigio): un Martello, una Scarica di Mana, un Arco Corto e tre Spade Corte. Metti da parte anche le carte con la parola chiave **"Cripta"** (sfondo blu): Inferno e Balestra Orchesca. Queste ultime non entrano nel mazzo e si trovano solo nelle Cripte.
+## Passi
 
-# Setup dei Giocatori
+1. Scegliere una Missione.
+2. Collocare le tessere e posizionare porte, obiettivi e segnalini indicati dalla missione.
+3. Ogni giocatore sceglie da 1 a 6 Sopravvissuti. Prendere la relativa plancia, la scheda identità, una base colorata e 5 segnapunti dello stesso colore. Il segnapunti della Barra delle Ferite va su **0**, quello dell'esperienza su **0**, il terzo sull'**Abilità Blu**. I restanti 3 segnapunti vanno negli slot di riserva in cima alla plancia.
+4. Mettere da parte le carte **Equipaggiamento di Partenza** (sfondo grigio) e distribuirle tra i sopravvissuti. Ogni sopravvissuto inizia con almeno 1 carta. Se un'abilità di partenza specifica armi, assegnarle subito.
+5. Mettere da parte le carte **Cripta** (sfondo blu): sono solitamente ricompense degli obiettivi, non vanno nel mazzo standard. Le Armi della Cripta sono anche **Equipaggiamento Magico**: alcune gemme sono rimosse e non sono usabili ai livelli corrispondenti. Sono le uniche armi in grado di danneggiare i Deambulanti Spettrali (insieme a Baliste, Incantesimi da Combattimento e Fuoco di Drago).
+6. Formare il mazzo Zombie e il mazzo Equipaggiamento, mescolarli e posizionarli a faccia in giù accanto al tabellone.
+7. Posizionare le miniature sopravvissuto nella/e Zona/e di partenza indicate dalla missione.
+8. Decidere il Primo Giocatore.
 
-- Ogni giocatore sceglie da **1 a 6 Sopravvissuti** da controllare. Normalmente si gioca con **6 Sopravvissuti in totale**, distribuiti come si preferisce tra i giocatori.
+## Plancia Sopravvissuto
 
-> Per le prime partite si consiglia di iniziare con un solo Sopravvissuto per familiarizzare con le meccaniche.
-
-- Per ogni Sopravvissuto scelto: prendi la **plancia**, inserisci la **scheda identità**, applica una **base colorata** alla miniatura e prendi i **5 segnapunti** dello stesso colore.
-- Posiziona i segnapunti sulla plancia:
-  - uno sullo **"0" della Barra di Pericolo**
-  - uno sullo **"0" della Barra delle Ferite**
-  - uno sullo **slot Abilità Blu**
-  - gli altri **3 negli slot di riserva** in cima alla plancia
-- Distribuisci le carte **Equipaggiamento di Partenza** tra i Sopravvissuti come preferite (il gioco è collaborativo, decidete insieme). Ogni Sopravvissuto deve ricevere almeno una carta. Se un Sopravvissuto ha un'Abilità che specifica armi di partenza, assegnagliele ora.
-- Posiziona le miniature dei Sopravvissuti sulla [Zona]{.def} o sulle Zone di partenza indicate dalla missione.
-- Decidete chi sarà il **primo giocatore** e assegnategli il relativo segnalino.
+:::indent
+- **2 slot Mano** — solo carte con simbolo Mano; le carte qui sono "impugnate" e usabili.
+- **1 slot Corpo** — carte armatura (simbolo Corpo) o lo specifico equipaggiamento indicato sullo slot; se in Corpo, la carta è considerata impugnata.
+- **5 slot Zaino** — qualsiasi carta; le carte Mano/Corpo qui non sono utilizzabili finché non vengono spostate.
+- Carte con simbolo **Zaino**: vanno solo nello zaino e sono sempre attive lì.
+:::
 
 ---
 
-## Regole per 7+ Sopravvissuti
+# ![puzzle]{.icon} Green Horde — Preparazione aggiuntiva
 
-Se volete giocare con più di 6 Sopravvissuti (usando personaggi da espansioni):
+:::accent
+Green Horde si prepara esattamente come Black Plague con le seguenti aggiunte:
+:::
 
-- Aggiungi **1 carta Equipaggiamento di Partenza** in più per ogni Sopravvissuto oltre il sesto.
-- Aggiungi **1 segnalino Zona di Generazione** in più per ogni 2 Sopravvissuti oltre il sesto (arrotondando per eccesso), accumulandolo su Zone già esistenti.
-- Il limite di segnalini Generazione che causa la sconfitta (normalmente 6) aumenta di 1 per ogni 2 Sopravvissuti oltre il sesto.
+- La **carta di Consultazione del Trabucco** va posizionata a portata di tutti i giocatori. Non appartiene a nessun sopravvissuto.
+- Se si gioca con il **Trabucco**, posizionarlo nell'Area di Partenza durante la preparazione.
+- Se si usa una **Cabala di Necromanti**: durante la preparazione, estrarre le 6 carte Orco Necromante standard e sostituirle con la combinazione prescelta di carte Necromante speciali.
 
-| # Sopravvissuti | Segnalini generazione aggiuntivi | Limite segnalini generazione |
+## Giocare con 7+ Sopravvissuti
+
+:::indent
+Per ogni sopravvissuto oltre il sesto: aggiungere 1 carta Equipaggiamento di Partenza in più alla riserva.
+
+Per ogni 2 sopravvissuti oltre il sesto (arrotondando per eccesso): aggiungere 1 segnalino di Generazione Zombie.
+
+Il limite di segnalini Generazione prima che un Necromante in fuga faccia perdere la partita aumenta di 1 ogni 2 sopravvissuti oltre il sesto:
+
+| # Sopravvissuti | Segnalini gen. aggiuntivi | Limite |
 |---|---|---|
 | Fino a 6 | 0 | 6 |
 | 7–8 | 1 | 7 |
 | 9–10 | 2 | 8 |
 | 11–12 | 3 | 9 |
+:::
 
 ---
 
-# ![puzzle]{.icon} Wulfsburg
+# ![puzzle]{.icon} No Rest for the Wicked — Preparazione aggiuntiva
 
-Con l'espansione Wulfsburg aggiungi ai rispettivi mazzi standard tutte le **carte Equipaggiamento** e le **carte Zombie** di Wulfsburg, salvo dove indicato diversamente nella presentazione della missione.
+Se si usa il **Drago Necromantico**:
 
-Non sono presenti ulteriori modifiche al setup rispetto al gioco base.
-
-:::glossary
-[missione]: Scenario di gioco con mappa, obiettivi e regole speciali proprie. Ogni partita si svolge all'interno di una missione specifica.
-
-[Zona]: Unità spaziale del tabellone. In un edificio corrisponde a una stanza; in strada è l'area compresa tra due segni lineari (o tra un segno e il bordo della tessera) delimitata dai muri degli edifici.
+:::indent
+1. Mescolare le carte Zombie Drago nel mazzo Zombie.
+2. Mescolare le carte Vulnerabilità in un **mazzo separato a faccia in giù**.
+3. Collocare le carte Bussola/Detriti accanto al tabellone.
+4. Collocare la **Balista** nell'Area di Partenza dei giocatori.
 :::
+
+Se si usano più Draghi di origini diverse, ogni Drago ha il proprio mazzo Vulnerabilità separato.

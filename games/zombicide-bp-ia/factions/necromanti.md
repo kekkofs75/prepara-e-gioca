@@ -1,45 +1,38 @@
-Il Necromante non combatte: la sua minaccia è strategica. Invece di attaccare i Sopravvissuti, corre verso le Zone di Generazione per fuggire dal tabellone — e ogni fuga porta il gruppo un passo più vicino alla sconfitta.
+# Necromanti
 
-# Caratteristiche
+I Necromanti sono gli orchestratori dell'invasione. Non combattono direttamente: cercano di fuggire per diffondere la loro malattia, portando con sé nuove Zone di Generazione.
 
-| | |
+:::indent
+| Statistica | Valore |
 |---|---|
-| **Azioni per turno** | 1 |
-| **Danni minimi per eliminarlo** | 1 |
-| **Punti esperienza** | 1 |
-| **Priorità bersagli** | 4 (ultima) |
-
-# Comportamento
-
-Il Necromante è uno zombie ai fini delle regole, ma segue un movimento completamente diverso:
-
-- Se nella sua zona c'è un Sopravvissuto, **attacca** (unico caso in cui non fugge).
-- In tutti gli altri casi si **muove di 1 zona** verso la Zona di Generazione più vicina che **non** sia quella della sua entrata, ignorando qualsiasi Sopravvissuto lungo il percorso.
-- Non si divide mai: i giocatori scelgono la direzione in caso di parità.
-- Quando si attiva **sulla sua Zona di Generazione di fuga**, fugge dal tabellone.
-
-# Quando compare
-
-Quando viene pescata una carta Zombie Necromante, si piazza la miniatura **e** un segnalino [Zona di Generazione Necromante]{.def} nella zona d'entrata, poi si risolve immediatamente una generazione zombie su quel segnalino. Da quel momento quella zona genera zombie ogni turno come una normale Zona di Generazione.
-
-Ogni successiva carta Necromante pescata assegna un'**Attivazione Extra** a tutti i Necromanti già in gioco (finché non fuggono o vengono uccisi).
-
-# Fuga e conseguenze
-
-Quando il Necromante fugge, il suo segnalino Zona di Generazione Necromante viene sostituito con un segnalino standard rosso. La zona rimane attiva.
-
-:::accent
-Se un Necromante fugge quando sul tabellone sono già presenti **6 o più segnalini Zona di Generazione** (inclusi quelli Necromante), la partita è immediatamente persa.
+| Azioni | 1 |
+| Danni inflitti | 1 *(BP)* / 2 *(GH — Orco Necromante)* |
+| Danni minimi per distruggerlo | 1 |
+| Punti Esperienza | 1 |
 :::
 
-# Eliminare un Necromante
+**Regole speciali (vedi anche `svolgimento.md`):**
+- Quando un Necromante compare: posizionare un **segnalino di Generazione Necromante** nella sua Zona di entrata. Quella Zona diventa immediatamente una nuova Zona di Generazione attiva (generare subito zombie su di essa).
+- Ogni successiva carta Zombie Necromante pescata assegna un'**Attivazione Extra** a tutti i Necromanti sul tabellone.
+- Il Necromante si muove verso la Zona di Generazione attiva più vicina (non la sua). Se ci sono sopravvissuti nella sua Zona, li attacca invece.
+- I Necromanti **non si dividono** mai.
+- La partita è **persa** se un Necromante fugge quando ci sono ≥ 6 segnalini di Generazione Zombie sul tabellone.
+- Se ucciso: i sopravvissuti rimuovono 1 Zona di Generazione a scelta.
+- I Necromanti sono all'**ultimo posto** nell'Ordine di Priorità dei Bersagli (priorità 8).
 
-Uccidere un Necromante rallenta l'invasione: i giocatori scelgono **una Zona di Generazione** da rimuovere dal tabellone (inclusa quella del Necromante stesso). Se il segnalino Necromante è ancora in gioco, viene sostituito con uno standard.
+---
 
-# Note
+# ![puzzle]{.icon} Green Horde — Orco Necromante
 
-I Necromanti hanno la priorità bersaglio più bassa (4): gli attacchi a distanza li colpiscono solo dopo aver eliminato tutti gli altri zombie nella zona. Tenerli sotto controllo è fondamentale — lasciarli fuggire è spesso più pericoloso di qualsiasi orda di Deambulanti.
+L'**Orco Necromante** funziona esattamente come il Necromante di Black Plague, con le seguenti differenze:
 
-:::glossary
-[Zona di Generazione Necromante]: Segnalino piazzato all'arrivo di un Necromante. Genera zombie ogni turno come una normale Zona di Generazione. Quando il Necromante fugge, viene sostituito con un segnalino standard rosso.
-:::
+- Infligge **2 Ferite** invece di 1.
+- Ogni volta che si pesca una sua carta (generazione o riattivazione), aggiungere all'Orda **1 Orco Deambulante + 1 Orco Grassone + 1 Orco Corridore**.
+
+---
+
+# ![puzzle]{.icon} Green Horde — Cabale di Necromanti
+
+Variante avanzata con più Necromanti speciali. Vedere `svolgimento.md` per le regole complete.
+
+I Necromanti speciali (presenti nei Box Special Guest) hanno **regole proprie** indicate sulle loro carte, attive dal momento in cui entrano sul tabellone fino alla fuga o alla morte.

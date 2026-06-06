@@ -1196,7 +1196,7 @@
     .faction-btn-img {
       width: 40px; height: 40px;
       border-radius: var(--radius-sm);
-      object-fit: cover;
+      object-fit: contain;
       flex-shrink: 0;
       background: color-mix(in srgb, var(--game-color) 12%, transparent);
     }
@@ -1802,15 +1802,17 @@
          mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>`;
 
     $('factions-list').innerHTML = factions.map(f => {
-      const iconPath    = f.icon ? `${currentGame.folder}/${f.icon}` : null;
+      const rawIcon   = f.icon || null;
       const borderColor = f.color || 'var(--game-color)';
-      const fallbackHtml = `<div class="faction-btn-icon-fallback">
-             <span style="-webkit-mask-image:url(icons/factions.png);mask-image:url(icons/factions.png)"></span>
-           </div>`;
+      // Supporta sia path relativo ("factions/img/x.png") che completo ("games/root-ia/factions/img/x.png")
+      const iconPath = rawIcon
+        ? (rawIcon.startsWith('http') || rawIcon.startsWith('/') || rawIcon.startsWith('games/')
+            ? rawIcon
+            : `${currentGame.folder}/${rawIcon}`)
+        : null;
       const imgHtml = iconPath
-        ? `<img class="faction-btn-img" src="${iconPath}" alt="${f.label || ''}"
-               onerror="this.outerHTML='${fallbackHtml.replace(/'/g, "&#39;").replace(/\n/g,'')}'>"` 
-        : fallbackHtml;
+        ? `<img class="faction-btn-img" src="${iconPath}" alt="" data-fallback="1">`
+        : `<div class="faction-btn-icon-fallback"><span style="-webkit-mask-image:url(icons/factions.png);mask-image:url(icons/factions.png)"></span></div>`;
       return `
       <button class="faction-btn" onclick="openFaction('${f.id}')"
               style="border-color:${borderColor}; color:${borderColor}">
@@ -1821,6 +1823,16 @@
     }).join('');
 
     showView('factionsList');
+
+    // Error handler per immagini fazione — mostra icona fallback se non carica
+    $('factions-list').querySelectorAll('img[data-fallback]').forEach(img => {
+      img.addEventListener('error', function() {
+        const fb = document.createElement('div');
+        fb.className = 'faction-btn-icon-fallback';
+        fb.innerHTML = '<span style="-webkit-mask-image:url(icons/factions.png);mask-image:url(icons/factions.png)"></span>';
+        this.parentNode.replaceChild(fb, this);
+      });
+    });
   }
 
   /* ── Open Faction ───────────────────────────────────────── */
