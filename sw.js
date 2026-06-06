@@ -4,7 +4,7 @@
    Modifica CACHE_VERSION per forzare un aggiornamento.
    ═══════════════════════════════════════════════════════════ */
 
-const CACHE_VERSION = 'peg-v24';
+const CACHE_VERSION = 'peg-v25';
 const CACHE_NAME    = `prepara-gioca-${CACHE_VERSION}`;
 
 /* File core da precachare al momento dell'install */
