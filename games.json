@@ -1188,6 +1188,37 @@
       "copertina":"games/small-world-ia/img/copertina.png",
       "aiSummary": true,
       "aid": ["preparazione", "turno", "riferimento"]
+    },
+    {
+      "id": "descent-rtl-ia",
+      "title": "Descent: Road to Legend",
+      "subtitle": "Modalità cooperativa app-driven per Descent 2nd Edition",
+      "themeColor": "#5A1E14",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "60-180",
+      "players": "1-4",
+      "folder": "games/descent-rtl-ia",
+      "cover":    "games/descent-rtl-ia/img/cover.png",
+      "coverBig": "games/descent-rtl-ia/img/cover-big.webp",
+      "copertina":"games/descent-rtl-ia/img/copertina.png",
+      "aiSummary": true
+    },
+    {
+      "id": "memoir44-ia",
+      "title": "Memoir '44",
+      "subtitle": "Rivivi le battaglie decisive del D-Day",
+      "themeColor": "#4A6741",
+      "bggRank": 138,
+      "bggScore": 7.4,
+      "duration": "30-60",
+      "players": "2-8",
+      "folder": "games/memoir44-ia",
+      "cover":    "games/memoir44-ia/img/cover.png",
+      "coverBig": "games/memoir44-ia/img/cover-big.webp",
+      "copertina":"games/memoir44-ia/img/copertina.png",
+      "aiSummary": true,
+      "aid": ["preparazione", "turno", "riferimento"]
     }
   ]
 }
