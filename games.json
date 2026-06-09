@@ -1219,6 +1219,21 @@
       "copertina":"games/memoir44-ia/img/copertina.png",
       "aiSummary": true,
       "aid": ["preparazione", "turno", "riferimento"]
+    },
+    {
+      "id": "room25-ia",
+      "title": "Room 25",
+      "subtitle": "Fuggi dal labirinto mortale… ma fidati di chi ti sta accanto?",
+      "themeColor": "#1E2840",
+      "bggRank": 718,
+      "bggScore": 6.9,
+      "duration": "30-60",
+      "players": "1-6",
+      "folder": "games/room25-ia",
+      "cover":    "games/room25-ia/img/cover.png",
+      "coverBig": "games/room25-ia/img/cover-big.webp",
+      "copertina":"games/room25-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }

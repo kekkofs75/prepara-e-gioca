@@ -2014,7 +2014,7 @@
   $('def-popup-close').addEventListener('click', closeDefPopup);
 
   // Delegazione eventi: click su qualsiasi .def dentro il contenuto markdown
-  $('markdown-content').addEventListener('click', function(e) {
+  function handleMarkdownClick(e) {
     // Popup definizione
     const defEl = e.target.closest('.def');
     if (defEl) {
@@ -2022,18 +2022,20 @@
       if (key) openDefPopup(key);
       return;
     }
-    // Lightbox immagini — esclude solo le .img-icon (mask-image)
-    // Intercetta sia click diretto sull'img che sul wrapper span.img-lg-wrap
-    const imgEl   = e.target.closest('img');
-    const wrapEl  = e.target.closest('.img-lg-wrap');
-    const target  = imgEl || (wrapEl ? wrapEl.querySelector('img') : null);
+    // Lightbox immagini
+    const imgEl  = e.target.closest('img');
+    const wrapEl = e.target.closest('.img-lg-wrap');
+    const target = imgEl || (wrapEl ? wrapEl.querySelector('img') : null);
     if (target && !target.classList.contains('img-icon')) {
       const alt   = target.alt || '';
       const title = alt ? titleCase(alt) : '';
       openLightbox(target.src, title);
       return;
     }
-  });
+  }
+
+  $('markdown-content').addEventListener('click', handleMarkdownClick);
+  $('aid-panels').addEventListener('click', handleMarkdownClick);
 
   /* ── Lightbox ───────────────────────────────────────────── */
   function openLightbox(src, caption) {
