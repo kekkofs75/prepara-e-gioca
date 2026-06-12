@@ -18,7 +18,7 @@
 
 ## Scegliere i Personaggi
 
-Ogni giocatore tira tutti e sei i dadi. Chi ottiene più risultati critico (✦) e colpo (✸) diventa il **primo giocatore**. A partire da lui in senso orario, ogni giocatore sceglie un personaggio.
+Ogni giocatore tira tutti e sei i dadi. Chi ottiene più risultati critico (✦) e colpo (✸) diventa il **primo giocatore**. In caso di pareggio, i giocatori in parità ripetono il tiro. A partire dal primo giocatore in senso orario, ogni giocatore sceglie un personaggio.
 
 Ogni giocatore riceve:
 
@@ -26,7 +26,7 @@ Ogni giocatore riceve:
 - **1 pedina personaggio** corrispondente al personaggio scelto
 - **1 plancia giocatore** con il [segnapunti fama]{.def} sulla casella "0"
 - **4 segnalini reputazione** (1 per fazione), posizionati sugli indicatori di reputazione della plancia a coprire l'icona fazione (posizione neutrale)
-- **1 scheda nave di partenza** (Rigger G9 o Astrocaccia G-1A), girata sul lato a tua scelta
+- **1 scheda nave di partenza** (Rigger G9 o Astrocaccia G-1A), scelta **prima di vedere la carta banca dati di partenza**, girata sul lato preferito
 - **1 carta di consultazione**
 - **Crediti di partenza** in base all'ordine di turno:
 

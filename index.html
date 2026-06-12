@@ -1152,9 +1152,104 @@
     .aid-panel {
       flex-shrink: 0;
       overflow-y: auto;
-      padding: 16px 16px var(--content-pb);
+      overflow-x: hidden;
+      padding: 0;
       height: 100%;
       box-sizing: border-box;
+    }
+    .aid-panel .md-body {
+      padding: 16px 16px var(--content-pb);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+    /* Headings */
+    .aid-panel .md-body h1 {
+      font-family: 'Nunito', sans-serif; font-weight: 800;
+      font-size: 1.15rem; color: var(--game-color);
+      margin: 1.1em 0 0.4em;
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid color-mix(in srgb,var(--game-color) 22%,transparent);
+    }
+    .aid-panel .md-body h2 {
+      font-family: 'Nunito', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--game-color);
+      margin: 0.9em 0 0.35em;
+    }
+    .aid-panel .md-body h3 {
+      font-weight: 700; font-size: 0.95rem;
+      margin: 0.8em 0 0.3em;
+    }
+    .aid-panel .md-body h1:first-child,
+    .aid-panel .md-body h2:first-child,
+    .aid-panel .md-body h3:first-child { margin-top: 0; }
+    .aid-panel .md-body p  { margin: 0.55em 0; }
+    .aid-panel .md-body ul,
+    .aid-panel .md-body ol { margin: 0.5em 0 0.5em 1.3em; }
+    .aid-panel .md-body li { margin: 0.28em 0; }
+    .aid-panel .md-body strong { font-weight: 600; color: var(--text); }
+    .aid-panel .md-body em    { color: var(--text-secondary); }
+    /* Blockquote */
+    .aid-panel .md-body blockquote {
+      border-left: 3px solid var(--game-color);
+      padding: 6px 10px; margin: 0.5em 0;
+      background: color-mix(in srgb,var(--game-color) 6%,transparent);
+      border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+      font-style: italic; color: var(--text-secondary);
+    }
+    /* Code */
+    .aid-panel .md-body code {
+      font-family: 'Courier New', monospace; font-size: 0.85em;
+      background: var(--surface-2); border-radius: 3px;
+      padding: 1px 4px;
+    }
+    /* Tables */
+    .aid-panel .md-body table {
+      display: block; overflow-x: auto; max-width: 100%;
+      border-collapse: collapse; margin: 0.7em 0; font-size: 0.88rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    .aid-panel .md-body th {
+      background: var(--game-color); color: #fff;
+      padding: 7px 12px; font-family: 'Nunito', sans-serif;
+      font-weight: 700; text-align: left;
+    }
+    .aid-panel .md-body td {
+      padding: 6px 12px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .aid-panel .md-body tr:nth-child(even) td { background: var(--surface-2); }
+    /* hr */
+    .aid-panel .md-body hr {
+      border: none; border-top: 1.5px solid var(--border-light); margin: 1em 0;
+    }
+    /* Indent e Accent */
+    .aid-panel .md-body .md-indent {
+      margin-left: 1.4em; padding-left: 10px;
+      border-left: 2px solid var(--game-color);
+    }
+    .aid-panel .md-body .md-accent,
+    .aid-panel .md-body .md-accent p,
+    .aid-panel .md-body .md-accent li,
+    .aid-panel .md-body .md-accent strong { color: var(--game-color); }
+    /* .def popup */
+    .aid-panel .md-body .def {
+      color: var(--game-color);
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+    /* Immagini */
+    .aid-panel .md-body img:not(.img-inline):not(.img-icon) {
+      max-width: 100%; border-radius: var(--radius-sm);
+      margin: 0.7em 0; display: block; box-shadow: var(--shadow-md);
+      cursor: zoom-in;
+    }
+    .aid-panel .md-body img.img-inline {
+      display: inline-block; vertical-align: middle;
+      height: 1.4em; width: auto; margin: 0 3px;
+      box-shadow: none; position: relative; top: -1px;
     }
 
     #factions-list {
@@ -1377,14 +1472,8 @@
       <div id="factions-menu-block" style="display:none; margin-top:8px;">
         <div style="padding: 0 16px; display:flex; flex-direction:column; gap:9px;">
           <button class="section-btn" onclick="openFactionsList()">
-            <span class="btn-icon" style="
-              display:inline-flex;align-items:center;justify-content:center;
-              width:28px;height:28px;">
-              <span style="display:inline-block;width:22px;height:22px;
-                background-color:var(--game-color);
-                -webkit-mask-image:url(icons/factions.png);
-                mask-image:url(icons/factions.png);
-                mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
+            <span class="btn-icon">
+              <img src="icons/factions.png" alt="Fazioni">
             </span>
             <span class="btn-label">Fazioni</span>
             <span class="btn-arrow">›</span>
@@ -1394,12 +1483,8 @@
       <div id="aid-menu-block" style="display:none; margin-top:8px;">
         <div style="padding: 0 16px; display:flex; flex-direction:column; gap:9px;">
           <button class="section-btn" onclick="openAid()">
-            <span class="btn-icon" style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;">
-              <span style="display:inline-block;width:22px;height:22px;
-                background-color:var(--game-color);
-                -webkit-mask-image:url(icons/aid.png);
-                mask-image:url(icons/aid.png);
-                mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
+            <span class="btn-icon">
+              <img src="icons/aid.png" alt="Aiuto al Giocatore">
             </span>
             <span class="btn-label">Aiuto al Giocatore</span>
             <span class="btn-arrow">›</span>
@@ -1449,13 +1534,7 @@
           <div class="section-hero-game" id="aid-hero-game"></div>
           <h2 id="aid-hero-title">Aiuto al Giocatore</h2>
         </div>
-        <div class="section-hero-icon" id="aid-hero-icon">
-          <span style="display:inline-block;width:28px;height:28px;
-            background-color:var(--game-color);
-            -webkit-mask-image:url(icons/aid.png);
-            mask-image:url(icons/aid.png);
-            mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>
-        </div>
+        <div class="section-hero-icon" id="aid-hero-icon"></div>
       </div>
       <div class="aid-tab-bar" id="aid-tab-bar"></div>
     </div>
@@ -1794,12 +1873,8 @@
 
     $('factions-hero-game').textContent  = currentGame.title;
     $('factions-hero-title').textContent = 'Fazioni';
-    $('factions-hero-icon').innerHTML    =
-      `<span style="display:inline-block;width:28px;height:28px;
-         background-color:var(--game-color);
-         -webkit-mask-image:url(icons/factions.png);
-         mask-image:url(icons/factions.png);
-         mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>`;
+    $('factions-hero-icon').innerHTML =
+      `<img src="icons/factions.png" style="width:28px;height:28px;filter:invert(1);opacity:0.75;" alt="">`;
 
     $('factions-list').innerHTML = factions.map(f => {
       const rawIcon   = f.icon || null;
@@ -1897,7 +1972,8 @@
   const AID_LABELS = { preparazione: 'Preparazione', turno: 'Turno', riferimento: 'Riferimento' };
   let aidTabs     = [];   // tab disponibili in ordine fisso
   let aidTabIdx   = 0;    // indice corrente
-  let aidContents = {};   // cache: { id: html }
+  let aidContents     = {};   // cache html: { id: html }
+  let aidGlossaryMaps = {};   // cache glossari: { id: { term: {...} } }
   let aidTouchX   = 0;
 
   async function openAid() {
@@ -1910,8 +1986,10 @@
     navHistory.push('aid');
     pushNav('aid');
 
-    $('aid-hero-game').textContent = currentGame.title;
+    $('aid-hero-game').textContent  = currentGame.title;
     $('aid-hero-title').textContent = 'Aiuto al Giocatore';
+    $('aid-hero-icon').innerHTML    =
+      `<img src="icons/aid.png" style="width:28px;height:28px;filter:invert(1);opacity:0.75;" alt="">`;
 
     // Costruisce tab bar
     $('aid-tab-bar').innerHTML = aidTabs.map((id, i) => `
@@ -1939,7 +2017,8 @@
     showView('aid');
 
     // Carica tutti i tab in parallelo
-    aidContents = {};
+    aidContents     = {};
+    aidGlossaryMaps = {};
     const imgBase = `${currentGame.folder}/aid/img/`;
     await Promise.all(aidTabs.map(async id => {
       try {
@@ -1947,21 +2026,30 @@
         if (!res.ok) throw new Error();
         let md = await res.text();
         md = preprocessMarkdown(md, imgBase);
+        aidGlossaryMaps[id] = { ...glossaryMap };  // salva mappa di questo tab
         aidContents[id] = mdParser.render(md);
       } catch {
+        aidGlossaryMaps[id] = {};
         aidContents[id] = `<div class="empty-state">
           <div class="empty-icon">📋</div>
           <p>Aggiungi il file <code>aid/${id}.md</code>.</p>
         </div>`;
       }
       const panel = $(`aid-panel-${id}`);
-      if (panel) panel.innerHTML = aidContents[id];
+      if (panel) panel.innerHTML = `<div class="md-body">${aidContents[id]}</div>`;
     }));
+
+    // Ripristina glossaryMap del tab default (turno)
+    const defaultId = aidTabs[aidTabIdx];
+    if (aidGlossaryMaps[defaultId]) glossaryMap = { ...aidGlossaryMaps[defaultId] };
   }
 
   function switchAidTab(idx) {
     if (idx < 0 || idx >= aidTabs.length) return;
     aidTabIdx = idx;
+    const tabId = aidTabs[idx];
+    // Ripristina il glossaryMap del tab attivo
+    if (aidGlossaryMaps[tabId]) glossaryMap = { ...aidGlossaryMaps[tabId] };
     aidTabs.forEach((id, i) =>
       $(`aid-tab-${id}`)?.classList.toggle('active', i === idx)
     );
@@ -2021,7 +2109,7 @@
   $('def-popup-close').addEventListener('click', closeDefPopup);
 
   // Delegazione eventi: click su qualsiasi .def dentro il contenuto markdown
-  $('markdown-content').addEventListener('click', function(e) {
+  function handleMarkdownClick(e) {
     // Popup definizione
     const defEl = e.target.closest('.def');
     if (defEl) {
@@ -2029,18 +2117,20 @@
       if (key) openDefPopup(key);
       return;
     }
-    // Lightbox immagini — esclude solo le .img-icon (mask-image)
-    // Intercetta sia click diretto sull'img che sul wrapper span.img-lg-wrap
-    const imgEl   = e.target.closest('img');
-    const wrapEl  = e.target.closest('.img-lg-wrap');
-    const target  = imgEl || (wrapEl ? wrapEl.querySelector('img') : null);
+    // Lightbox immagini
+    const imgEl  = e.target.closest('img');
+    const wrapEl = e.target.closest('.img-lg-wrap');
+    const target = imgEl || (wrapEl ? wrapEl.querySelector('img') : null);
     if (target && !target.classList.contains('img-icon')) {
       const alt   = target.alt || '';
       const title = alt ? titleCase(alt) : '';
       openLightbox(target.src, title);
       return;
     }
-  });
+  }
+
+  $('markdown-content').addEventListener('click', handleMarkdownClick);
+  $('aid-panels').addEventListener('click', handleMarkdownClick);
 
   /* ── Lightbox ───────────────────────────────────────────── */
   function openLightbox(src, caption) {

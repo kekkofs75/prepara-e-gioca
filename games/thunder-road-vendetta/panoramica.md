@@ -10,7 +10,7 @@ Ogni tessera ha **caselle di terreno** diverso e **caselle pericolo**.
 | :---: | :---: | :--- |
 | ![casella strada](img/casella-strada.png){.img-inline} | **Strada** | 1 punto movimento |
 | ![casella fuori-strada](img/casella-fuori-strada.png){.img-inline} | **Fuori-strada** | 1 punto movimento |
-| ![casella fango](img/casella-fango.png){.img-inline} | **Fango** | punto movimento (o 1 rimasto) |
+| ![casella fango](img/casella-fango.png){.img-inline} | **Fango** | 2 punti movimento (o 1 rimasto) |
 | ![casella invalicabile](img/casella-invalicabile.png){.img-inline} | **Invalicabile** | L’auto è eliminata |
 | ![casella pericolo](img/casella-pericolo.png){.img-inline} | **Pericolo** | Posizione per segnalino pericolo |
 
@@ -24,7 +24,7 @@ I **segnalini pericolo** ![segnalino pericolo](img//segnalino-pericolo.png){.img
 | ![pericolo mina](img/pericolo-mina.png){.img-inline} | **Mina** | Subisci 1 danno (pesca e risolvi 1 segnalino danno) e termina il movimento | Scarta il segnalino |
 | ![pericolo strada](img/pericolo-strada.png){.img-inline} | **Strada** | La casella diventa casella Strada | Resta sul tabellone |
 | ![pericolo fango](img/pericolo-fango.png){.img-inline} | **Fango** | La casella diventa casella Fango | Resta sul tabellone |
-| ![pericolo petrolio](img/pericolo-petrolio.png){.img-inline} | **Petrolio** | Sposta l'auto di 1 casella, poi diventa casella Strada | Resta sul tabellone |
+| ![pericolo petrolio](img/pericolo-petrolio.png){.img-inline} | **Petrolio** | Sposta l'auto di 1 casella e continua il movimento, poi diventa casella Strada | Resta sul tabellone |
 
 ## Rottami
 
@@ -87,7 +87,7 @@ Ogni auto ha il proprio **cruscotto** caratterizzato dai seguenti elementi:
 | :---: | :--- | :--- |
 | **Operativa** | 0-1 Danni | Può muovere e sparare normalmente |
 | **Fuori Uso** | 2 Danni | Gira auto e cruscotto. No movimento/fuoco. Riparabile. |
-| **Eliminata** | - | Rimossa dal gioco. Libera i segnalini danno. |
+| **Eliminata** | - | Rimossa dal gioco. Scarta i segnalini danno. |
 
 Un'auto viene **Eliminata** se:
 - Entra in una casella invalicabile o termina su un elicottero.

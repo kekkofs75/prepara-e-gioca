@@ -79,7 +79,7 @@ Se entri in una casella con un **segnalino pericolo** ![segnalino pericolo](img/
 | ![pericolo mina](img/pericolo-mina.png){.img-inline} | **Mina** | Subisci 1 danno (pesca e risolvi 1 segnalino danno) e termina il movimento | Scarta il segnalino |
 | ![pericolo strada](img/pericolo-strada.png){.img-inline} | **Strada** | La casella diventa casella Strada | Resta sul tabellone |
 | ![pericolo fango](img/pericolo-fango.png){.img-inline} | **Fango** | La casella diventa casella Fango | Resta sul tabellone |
-| ![pericolo petrolio](img/pericolo-petrolio.png){.img-inline} | **Petrolio** | Sposta l'auto di 1 casella, poi diventa casella Strada | Resta sul tabellone |
+| ![pericolo petrolio](img/pericolo-petrolio.png){.img-inline} | **Petrolio** | Lancia il ![dado direzione](img/dadofx-direzione.png){.img-inline} e sposta l'auto di 1 casella nella direzione indicata, poi continua il movimento. Diventa casella Strada | Resta sul tabellone |
 
 ## Interruzione del Movimento
 
