@@ -815,7 +815,7 @@
       "coverBig": "games/faraway/img/cover-big.webp",
       "copertina":"games/faraway/img/copertina.png",
       "aiSummary": false,
-      "revision": "v.0.1"
+      "revision": "v.1.0"
     },
     {
       "id": "heat",
@@ -1234,6 +1234,70 @@
       "coverBig": "games/room25-ia/img/cover-big.webp",
       "copertina":"games/room25-ia/img/copertina.png",
       "aiSummary": true
+    },
+    {
+      "id": "mlem-ia",
+      "title": "MLEM: Agenzia Spaziale",
+      "subtitle": "Gatti astronauti alla conquista del cosmo",
+      "themeColor": "#0F1E50",
+      "bggRank": null,
+      "bggScore": 7.0,
+      "duration": "30-45",
+      "players": "2-5",
+      "folder": "games/mlem-ia",
+      "cover":    "games/mlem-ia/img/cover.png",
+      "coverBig": "games/mlem-ia/img/cover-big.webp",
+      "copertina":"games/mlem-ia/img/copertina.png",
+      "aiSummary": true,
+      "owned": false
+    },
+    {
+      "id": "zombicide-gear-up-ia",
+      "title": "Zombicide: Gear Up",
+      "subtitle": "Sopravvivi all'orda e abbatti il Boss",
+      "themeColor": "#B41414",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-60",
+      "players": "1-6",
+      "folder": "games/zombicide-gear-up-ia",
+      "cover":    "games/zombicide-gear-up-ia/img/cover.png",
+      "coverBig": "games/zombicide-gear-up-ia/img/cover-big.webp",
+      "copertina":"games/zombicide-gear-up-ia/img/copertina.png",
+      "aiSummary": true,
+      "owned": false
+    },
+    {
+      "id": "colt-express-ia",
+      "title": "Colt Express",
+      "subtitle": "Rapina al treno nel Selvaggio West",
+      "themeColor": "#B45014",
+      "bggRank": 294,
+      "bggScore": 7.1,
+      "duration": "30-40",
+      "players": "2-6",
+      "folder": "games/colt-express-ia",
+      "cover":    "games/colt-express-ia/img/cover.png",
+      "coverBig": "games/colt-express-ia/img/cover-big.webp",
+      "copertina":"games/colt-express-ia/img/copertina.png",
+      "aiSummary": true,
+      "owned": false
+    },
+    {
+      "id": "century-spezie-ia",
+      "title": "Century: La Via delle Spezie",
+      "subtitle": "Commercia spezie lungo le antiche rotte carovaniere",
+      "themeColor": "#B45A1E",
+      "bggRank": 197,
+      "bggScore": 7.2,
+      "duration": "30-45",
+      "players": "2-5",
+      "folder": "games/century-spezie-ia",
+      "cover":    "games/century-spezie-ia/img/cover.png",
+      "coverBig": "games/century-spezie-ia/img/cover-big.webp",
+      "copertina":"games/century-spezie-ia/img/copertina.png",
+      "aiSummary": true,
+      "owned": false
     }
   ]
 }

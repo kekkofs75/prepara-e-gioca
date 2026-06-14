@@ -1,62 +1,61 @@
 La partita è composta da esattamente **8 round**, ognuno diviso in **3 fasi** da svolgere in ordine:
 
-1. Esplorare 1 Regione
-2. Trovare i Santuari
-3. Fine dell'Esplorazione
+1. **Esplorare 1 Regione**: giocate contemporaneamente 1 carta Regione coperta, poi rivelatela.
+2. **Trovare i Santuari**: giocate 1 carta Santuario.
+3. **Fine dell'Esplorazione**: scegliete 1 nuova carta Regione tra quelle scoperte.
 
-Al termine dell'8° round la partita termina e si calcola il punteggio.
+# Fase 1 — Esplorare una Regione ![carta regione](img/carta-regione.png){.img-inline}
 
-# Esplorare una Regione
+Tutti i giocatori scelgono e pongono **contemporaneamente 1 carta Regione coperta** dalla propria mano davanti a sé.
 
-Tutti i giocatori scelgono e pongono **contemporaneamente 1 carta Regione** dalla propria mano a **faccia in giù** davanti a sé.
+Poi la **rivelano simultaneamente** affiancandola **scoperta** alla **destra** della **carta Regione** giocata in precedenza (poni la 1ª carta alla sinistra della tua area di gioco).
 
-Poi la **rivelano simultaneamente** a faccia in su affiancandola alla destra della carta Regione giocata in precedenza (se è la 1ª che giocate ponetela alla sinistra della vostra area di gioco).
+> Possibilmente posizionate le carte Regione in **un'unica linea retta da sinistra a destra**, altrimenti in modo da distinguerne la successione di gioco corretta.
 
-:::indent
-Possibilmente posizionatele in un'unica linea retta, altrimenti in modo da distinguerne la successione di gioco corretta.
-:::
+# Fase 2 — Trovare i Santuari ![carta santuario](img/carta-santuario.png){.img-inline}
 
----
+Per **trovare un Santuario** è necessario aver giocato **1 carta Regione** con **[Durata di Esplorazione]{.def} più alta** di quella giocata in precedenza (**non** nel 1° round).
 
-# Trovare i Santuari
-
-Per **trovare un Santuario** è necessario aver giocato **1 carta Regione** con [Durata di Esplorazione]{.def} **più alta** di quella giocata in precedenza.
-
-Ogni giocatore che ha trovato un Santuario pesca e pone di fronte a sé a faccia in giù:
+Ogni giocatore che ha **trovato un Santuario** pesca e pone di fronte a sé **coperte**:
 
 - **1 carta Santuario**
-- **+1 carta Santuario** per ogni [Indizio]{.def} che possiede tra le sue carte Regione e/o carte Santuario in gioco (può guardarle in qualsiasi momento)
+- **+1 carta Santuario** per ogni **[Indizio]{.def}** ![indizio](img/indizio.png){.img-inline} che possiede tra le sue carte Regione e carte Santuario in gioco
 
-> **1° round:** essendoci solo 1 carta Regione in gioco **non** è possibile trovare un Santuario e quindi pescare carte Santuario.
+> **Ricorda** che puoi guardare le tue carte Santuario coperte in qualsiasi momento.
+
+# Fase 3 — Fine dell'Esplorazione ![esplorazione](img/esplorazione.png){.img-inline}
+
+Determinate l'**ordine di turno** in base alla **Durata di Esplorazione crescente** (*dalla più bassa alla più alta*) presente sulla **carta Regione** giocata in questo round.
+
+Nel suo turno ogni giocatore risolve in ordine i seguenti **2 passi**:
+
+1. Sceglie e aggiunge alla propria mano **1 carta Regione** tra quelle scoperte al centro del tavolo (per avere ancora 3 carte e solo se **non** è già l'8° round), **senza** rivelare una nuova carta dal mazzo Regione.
+2. Se ha pescato **1+ carte Santuario**, sceglie e pone **scoperta 1 carta Santuario** nella propria area di gioco (da ora può beneficiare dei suoi **bonus**). Poi pone le **altre carte Santuario**, coperte in ordine casuale, **sotto** al mazzo Santuario.
+
+## Fine del round
+
+Quando tutti i giocatori hanno terminato il turno:
+
+- **Se non è l'8° round:** scartate la carta Regione scoperta rimasta e rivelate nuove ***numero di giocatori*+1 carte Regione**, poi iniziate un nuovo round.
+
+:::indent
+**Modalità Avanzata:** dovete rivelare solo nuove ***numero di giocatori* carte Regione**.
+:::
+
+- **Se è l'8° round:** la partita termina e potete procedere con il **calcolo del punteggio**.
 
 ---
+---
 
-# Fine dell'Esplorazione
+# ![puzzle]{.icon} Sotto Cieli Stellati{.expansion}
 
-Determinate l'**ordine di turno** in base alla Durata di Esplorazione **crescente** (*dalla più bassa alla più alta*) presente sulla carta Regione giocata in questo round.
+Quando **2 carte Regione** in gioco condividono la stessa **Durata di Esplorazione**, la **carta Regione Meteora** è considerata **più alta** dell'altra.
 
-Nel suo turno ogni giocatore:
-
-- Sceglie e aggiunge alla propria mano **1 carta Regione** tra quelle a faccia in su al centro del tavolo (per avere ancora 3 carte e solo se **non** è già l'8° round)
-
-:::indent
-**Non** pescate via via nuove carte dal mazzo Regione.
-:::
-
-- Se ha pescato **1+ carte Santuario**: sceglie e pone a faccia in su **1 carta Santuario** nella propria area di gioco (da ora può beneficiare dei suoi bonus). Poi pone le altre carte Santuario, a faccia in giù in ordine casuale, **sotto** al mazzo Santuario.
-
-## Quando tutti i giocatori hanno terminato il turno
-
-- **Se non è l'8° round:** scartate la carta Regione scoperta rimasta e rivelate nuove **numero di giocatori+1 carte Regione**, poi iniziate un nuovo round.
-
-:::indent
-**Modalità Avanzata:** dovete solo rivelare nuove **numero di giocatori carte Regione**.
-:::
-
-- **Se è l'8° round:** procedete con il **calcolo del punteggio**.
+- Se giochi una carta Meteora con Durata identica alla tua carta precedente, **trovi un Santuario** nella **Fase 2**{.accent}.
+- Se due giocatori giocano carte con la stessa Durata nello stesso round, chi ha giocato la carta Meteora esegue la **Fase 3**{.accent} **dopo** l'avversario.
 
 :::glossary
-[Durata di Esplorazione]: Il valore numerico (da 1 a 68) su ogni carta Regione. Più è alta, più è probabile trovare Santuari; più è bassa, maggiore sarà la scelta di carte nella fase successiva.
+[Durata di Esplorazione]: Valore numerico (da 1 a 68) su ogni carta Regione. Bassa = più scelta nella fase finale; alta = accesso ai Santuari. Le carte Meteora sono considerate "più alte" a parità di valore.
 
-[Indizio]: Simbolo presente su alcune carte Regione e Santuario. Ogni Indizio visibile permette di pescare una carta Santuario extra quando si trova un Santuario.
+[Indizio]: Simbolo presente su alcune carte Regione e Santuario. Ogni Indizio permette di pescare una carta Santuario extra quando si trova un Santuario.
 :::

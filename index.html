@@ -72,7 +72,53 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── View System ──────────────────────────────────────────── */
+    /* ── Dark Mode ───────────────────────────────────────────── */
+    [data-theme="dark"] {
+      --bg:              #16161e;
+      --surface:         #1e1e2c;
+      --surface-2:       #252536;
+
+      --text:            #e8e4de;
+      --text-secondary:  #9a8e80;
+      --text-disabled:   #5a5050;
+
+      --border:          #3a3240;
+      --border-light:    #2c2838;
+
+      --shadow-sm:  0 1px 4px rgba(0,0,0,0.4);
+      --shadow-md:  0 4px 16px rgba(0,0,0,0.5);
+      --shadow-lg:  0 8px 32px rgba(0,0,0,0.6);
+
+      --primary-pale:    rgba(238,136,96,0.12);
+      --primary-ghost:   rgba(238,136,96,0.07);
+    }
+    /* Sfondo bianco esplicito nelle view — va sovrascritto */
+    [data-theme="dark"] #view-section,
+    [data-theme="dark"] #view-factions-list,
+    [data-theme="dark"] #view-aid { background: var(--bg); }
+    [data-theme="dark"] .aid-panel .md-body { background: var(--bg); }
+    /* Sezione hero in dark */
+    [data-theme="dark"] .section-hero { background: color-mix(in srgb, var(--game-color) 18%, var(--surface)); }
+    /* Spoiler in dark */
+    [data-theme="dark"] .md-spoiler-body { background: var(--surface); }
+    /* Blockquote in dark — sfondo scuro, testo leggibile */
+    [data-theme="dark"] #markdown-content blockquote,
+    [data-theme="dark"] .aid-panel .md-body blockquote {
+      background: rgba(255,255,255,0.06);
+      color: #b8b0a4;
+    }
+    [data-theme="dark"] #markdown-content blockquote strong,
+    [data-theme="dark"] #markdown-content blockquote b,
+    [data-theme="dark"] .aid-panel .md-body blockquote strong,
+    [data-theme="dark"] .aid-panel .md-body blockquote b {
+      color: #e8e4de !important;
+      font-weight: 700;
+    }
+    /* Icone sezione — in dark mode le icone (già invertite a nero) tornano bianche */
+    [data-theme="dark"] .btn-icon img {
+      filter: invert(0);
+      opacity: 0.85;
+    }
     .view {
       display: none;
       min-height: calc(100dvh - var(--nav-height) - var(--safe-bottom));
@@ -536,7 +582,7 @@
     .btn-arrow { font-size: 0.9rem; opacity: 0.45; flex-shrink: 0; }
 
     /* ── SECTION DETAIL VIEW ──────────────────────────────────── */
-    #view-section { background: #fff; }
+    #view-section { background: var(--bg); }
 
     .section-hero {
       background: var(--game-color);
@@ -574,7 +620,7 @@
     /* FIX: padding-bottom sicuro anche nel markdown */
     #markdown-content {
       padding: 22px 20px var(--content-pb);
-      background: #fff;
+      background: var(--bg);
       line-height: 1.72;
       font-size: 0.94rem;
     }
@@ -760,6 +806,11 @@
       background: var(--game-color-pale);
       border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
       font-style: italic; color: var(--text-secondary);
+    }
+    #markdown-content blockquote strong,
+    #markdown-content blockquote b {
+      color: var(--text);
+      font-weight: 700;
     }
     #markdown-content code {
       background: var(--surface-2);
@@ -1092,11 +1143,11 @@
     }
 
     /* ── Factions list view ───────────────────────────────── */
-    #view-factions-list { background: #fff; }
+    #view-factions-list { background: var(--bg); }
 
     /* ── Aiuto al Giocatore ──────────────────────────────── */
     #view-aid {
-      background: #fff;
+      background: var(--bg);
       display: none;
       flex-direction: column;
       height: calc(100dvh - var(--nav-height) - var(--safe-bottom));
@@ -1196,6 +1247,11 @@
       background: color-mix(in srgb,var(--game-color) 6%,transparent);
       border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
       font-style: italic; color: var(--text-secondary);
+    }
+    .aid-panel .md-body blockquote strong,
+    .aid-panel .md-body blockquote b {
+      color: var(--text);
+      font-weight: 700;
     }
     /* Code */
     .aid-panel .md-body code {
@@ -1430,18 +1486,24 @@
     </header>
     <div id="games-count-row">
       <div id="games-count"></div>
-      <div class="owned-filter" role="group" aria-label="Filtro collezione">
-        <button class="owned-filter-btn active" id="filter-all"
-                aria-label="Tutti i giochi" title="Tutti">
-          <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-all.png);mask-image:url(icons/owned-all.png)"></span>
-        </button>
-        <button class="owned-filter-btn" id="filter-mine"
-                aria-label="Solo i miei giochi" title="I miei">
-          <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-mine.png);mask-image:url(icons/owned-mine.png)"></span>
-        </button>
-        <button class="owned-filter-btn" id="filter-others"
-                aria-label="Giochi degli amici" title="Degli amici">
-          <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-others.png);mask-image:url(icons/owned-others.png)"></span>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <div class="owned-filter" role="group" aria-label="Filtro collezione">
+          <button class="owned-filter-btn active" id="filter-all"
+                  aria-label="Tutti i giochi" title="Tutti">
+            <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-all.png);mask-image:url(icons/owned-all.png)"></span>
+          </button>
+          <button class="owned-filter-btn" id="filter-mine"
+                  aria-label="Solo i miei giochi" title="I miei">
+            <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-mine.png);mask-image:url(icons/owned-mine.png)"></span>
+          </button>
+          <button class="owned-filter-btn" id="filter-others"
+                  aria-label="Giochi degli amici" title="Degli amici">
+            <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-others.png);mask-image:url(icons/owned-others.png)"></span>
+          </button>
+        </div>
+        <button id="dark-mode-btn" class="owned-filter-btn" aria-label="Modalità notturna" title="Tema">
+          <span class="filter-icon" id="dark-mode-icon"
+                style="-webkit-mask-image:url(icons/moon.png);mask-image:url(icons/moon.png)"></span>
         </button>
       </div>
     </div>
@@ -1972,8 +2034,7 @@
   const AID_LABELS = { preparazione: 'Preparazione', turno: 'Turno', riferimento: 'Riferimento' };
   let aidTabs     = [];   // tab disponibili in ordine fisso
   let aidTabIdx   = 0;    // indice corrente
-  let aidContents     = {};   // cache html: { id: html }
-  let aidGlossaryMaps = {};   // cache glossari: { id: { term: {...} } }
+  let aidContents = {};   // cache: { id: html }
   let aidTouchX   = 0;
 
   async function openAid() {
@@ -2017,8 +2078,7 @@
     showView('aid');
 
     // Carica tutti i tab in parallelo
-    aidContents     = {};
-    aidGlossaryMaps = {};
+    aidContents = {};
     const imgBase = `${currentGame.folder}/aid/img/`;
     await Promise.all(aidTabs.map(async id => {
       try {
@@ -2026,10 +2086,8 @@
         if (!res.ok) throw new Error();
         let md = await res.text();
         md = preprocessMarkdown(md, imgBase);
-        aidGlossaryMaps[id] = { ...glossaryMap };  // salva mappa di questo tab
         aidContents[id] = mdParser.render(md);
       } catch {
-        aidGlossaryMaps[id] = {};
         aidContents[id] = `<div class="empty-state">
           <div class="empty-icon">📋</div>
           <p>Aggiungi il file <code>aid/${id}.md</code>.</p>
@@ -2038,18 +2096,11 @@
       const panel = $(`aid-panel-${id}`);
       if (panel) panel.innerHTML = `<div class="md-body">${aidContents[id]}</div>`;
     }));
-
-    // Ripristina glossaryMap del tab default (turno)
-    const defaultId = aidTabs[aidTabIdx];
-    if (aidGlossaryMaps[defaultId]) glossaryMap = { ...aidGlossaryMaps[defaultId] };
   }
 
   function switchAidTab(idx) {
     if (idx < 0 || idx >= aidTabs.length) return;
     aidTabIdx = idx;
-    const tabId = aidTabs[idx];
-    // Ripristina il glossaryMap del tab attivo
-    if (aidGlossaryMaps[tabId]) glossaryMap = { ...aidGlossaryMaps[tabId] };
     aidTabs.forEach((id, i) =>
       $(`aid-tab-${id}`)?.classList.toggle('active', i === idx)
     );
@@ -2465,6 +2516,27 @@
     if (searchOpen) closeSearch();
     else            goBack();
   });
+
+  /* ── Dark Mode ──────────────────────────────────────────── */
+  let isDark = localStorage.getItem('theme') === 'dark';
+
+  function applyDarkMode(dark) {
+    isDark = dark;
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    const icon = $('dark-mode-icon');
+    if (icon) {
+      const src = dark ? 'icons/sun.png' : 'icons/moon.png';
+      icon.style.setProperty('-webkit-mask-image', `url(${src})`);
+      icon.style.setProperty('mask-image', `url(${src})`);
+    }
+    $('dark-mode-btn').classList.toggle('active', dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+
+  // Applica subito al caricamento
+  applyDarkMode(isDark);
+
+  $('dark-mode-btn').addEventListener('click', () => applyDarkMode(!isDark));
 
   /* ── Owned filter ───────────────────────────────────────── */
   ['all','mine','others'].forEach(val => {
