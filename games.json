@@ -1298,6 +1298,22 @@
       "copertina":"games/century-spezie-ia/img/copertina.png",
       "aiSummary": true,
       "owned": false
+    },
+    {
+      "id": "clank-ia",
+      "title": "Clank!",
+      "subtitle": "Un'avventura di deck-building nelle profondità della Fortezza del Drago",
+      "themeColor": "#8B1A1A",
+      "bggRank": 89,
+      "bggScore": 7.8,
+      "duration": "45-90",
+      "players": "2-4",
+      "folder": "games/clank-ia",
+      "cover":    "games/clank-ia/img/cover.png",
+      "coverBig": "games/clank-ia/img/cover-big.webp",
+      "copertina":"games/clank-ia/img/copertina.png",
+      "aiSummary": true,
+      "owned": false
     }
   ]
 }
