@@ -1410,6 +1410,38 @@
       "copertina":"games/marvel-dagger-ia/img/copertina.png",
       "aiSummary": true,
       "owned": false
+    },
+    {
+      "id": "last-night-on-earth-ia",
+      "title": "Last Night on Earth",
+      "subtitle": "Il gioco degli zombie",
+      "themeColor": "#781010",
+      "bggRank": 352,
+      "bggScore": 7.1,
+      "duration": "60-90",
+      "players": "2-6",
+      "folder": "games/last-night-on-earth-ia",
+      "cover":    "games/last-night-on-earth-ia/img/cover.png",
+      "coverBig": "games/last-night-on-earth-ia/img/cover-big.webp",
+      "copertina":"games/last-night-on-earth-ia/img/copertina.png",
+      "aiSummary": true,
+      "owned": false
+    },
+    {
+      "id": "battaglia-di-hoth-ia",
+      "title": "Battaglia di Hoth",
+      "subtitle": "Gioco di miniature Star Wars su ghiaccio",
+      "themeColor": "#1E508C",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-60",
+      "players": "2-4",
+      "folder": "games/battaglia-di-hoth-ia",
+      "cover":    "games/battaglia-di-hoth-ia/img/cover.png",
+      "coverBig": "games/battaglia-di-hoth-ia/img/cover-big.webp",
+      "copertina":"games/battaglia-di-hoth-ia/img/copertina.png",
+      "aiSummary": true,
+      "owned": false
     }
   ]
 }
