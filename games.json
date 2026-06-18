@@ -126,7 +126,21 @@
       "cover":    "games/tag-team-ia/img/cover.png",
       "coverBig": "games/tag-team-ia/img/cover-big.webp",
       "copertina":"games/tag-team-ia/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": true,
+      "factions": [
+        { "id": "bodvar",            "label": "Bödvar",            "icon": "factions/img/bodvar-icon.png" },
+        { "id": "ching-shih",        "label": "Ching Shih",        "icon": "factions/img/ching-shih-icon.png" },
+        { "id": "golem",             "label": "Golem",             "icon": "factions/img/golem-icon.png" },
+        { "id": "jeanne",            "label": "Jeanne",            "icon": "factions/img/jeanne-icon.png" },
+        { "id": "maman-brijit",      "label": "Maman Brijit",      "icon": "factions/img/maman-brijit-icon.png" },
+        { "id": "mefisto",           "label": "Mefisto",           "icon": "factions/img/mefisto-icon.png" },
+        { "id": "milady",            "label": "Milady",            "icon": "factions/img/milady-icon.png" },
+        { "id": "mordred",           "label": "Mordred",           "icon": "factions/img/mordred-icon.png" },
+        { "id": "mucchio-selvaggio", "label": "Mucchio Selvaggio", "icon": "factions/img/mucchio-selvaggio-icon.png" },
+        { "id": "popolo-fatato",     "label": "Popolo Fatato",     "icon": "factions/img/popolo-fatato-icon.png" },
+        { "id": "shango",            "label": "Shango",            "icon": "factions/img/shango-icon.png" },
+        { "id": "wong-fei-hung",     "label": "Wong Fei-Hung",     "icon": "factions/img/wong-fei-hung-icon.png" }
+      ]
     },
     {
       "id": "arcs",
