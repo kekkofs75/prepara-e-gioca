@@ -111,7 +111,7 @@
       "coverBig": "games/tag-team/img/cover-big.webp",
       "copertina":"games/tag-team/img/copertina.png",
       "aiSummary": false,
-      "hidden": true
+      "revision": "v.0.1"
     },
     {
       "id": "tag-team-ia",
@@ -127,6 +127,7 @@
       "coverBig": "games/tag-team-ia/img/cover-big.webp",
       "copertina":"games/tag-team-ia/img/copertina.png",
       "aiSummary": true,
+      "factionsLabel": "Combattenti",
       "factions": [
         { "id": "bodvar",            "label": "Bödvar",            "icon": "factions/img/bodvar-icon.png" },
         { "id": "ching-shih",        "label": "Ching Shih",        "icon": "factions/img/ching-shih-icon.png" },
@@ -1074,16 +1075,16 @@
       "copertina":"games/root-ia/img/copertina.png",
       "aiSummary": true,
       "factions": [
-        { "id": "marchesa", "label": "Marchesa de Gattis", "icon": "games/root-ia/factions/img/marchesa-icon.png" },
-        { "id": "aquile",   "label": "Dinastia delle Aquile", "icon": "games/root-ia/factions/img/aquile-icon.png" },
-        { "id": "alleanza", "label": "Alleanza dei Boschi", "icon": "games/root-ia/factions/img/alleanza-icon.png" },
-        { "id": "vagabondo","label": "Vagabondo", "icon": "games/root-ia/factions/img/vagabondo-icon.png" },
-        { "id": "lucertole","label": "Setta delle Lucertole", "icon": "games/root-ia/factions/img/lucertole-icon.png" },
-        { "id": "compagnia","label": "Compagnia del Fiume", "icon": "games/root-ia/factions/img/compagnia-icon.png" },
-        { "id": "ducato",   "label": "Ducato Sotterraneo", "icon": "games/root-ia/factions/img/ducato-icon.png" },
-        { "id": "corvidi",  "label": "Congiura dei Corvidi", "icon": "games/root-ia/factions/img/corvidi-icon.png" },
-        { "id": "orda",     "label": "Signore dell'Orda", "icon": "games/root-ia/factions/img/orda-icon.png" },
-        { "id": "custodi",  "label": "Custodi di Ferro", "icon": "games/root-ia/factions/img/custodi-icon.png" }
+        { "id": "marchesa", "label": "Marchesa de Gattis",    "icon": "factions/img/marchesa-icon.png" },
+        { "id": "aquile",   "label": "Dinastia delle Aquile", "icon": "factions/img/aquile-icon.png" },
+        { "id": "alleanza", "label": "Alleanza dei Boschi",   "icon": "factions/img/alleanza-icon.png" },
+        { "id": "vagabondo","label": "Vagabondo",             "icon": "factions/img/vagabondo-icon.png" },
+        { "id": "lucertole","label": "Setta delle Lucertole", "icon": "factions/img/lucertole-icon.png" },
+        { "id": "compagnia","label": "Compagnia del Fiume",   "icon": "factions/img/compagnia-icon.png" },
+        { "id": "ducato",   "label": "Ducato Sotterraneo",    "icon": "factions/img/ducato-icon.png" },
+        { "id": "corvidi",  "label": "Congiura dei Corvidi",  "icon": "factions/img/corvidi-icon.png" },
+        { "id": "orda",     "label": "Signore dell'Orda",     "icon": "factions/img/orda-icon.png" },
+        { "id": "custodi",  "label": "Custodi di Ferro",      "icon": "factions/img/custodi-icon.png" }
       ]
     },
     {
@@ -1131,15 +1132,16 @@
       "coverBig": "games/zombicide-bp-ia/img/cover-big.webp",
       "copertina":"games/zombicide-bp-ia/img/copertina.png",
       "aiSummary": true,
+      "factionsLabel": "Bestiario",
       "factions": [
-        { "id": "deambulanti", "label": "Deambulanti", "icon": "games/zombicide-bp-ia/factions/img/deambulanti-icon.png" },
-        { "id": "bruti",       "label": "Bruti",       "icon": "games/zombicide-bp-ia/factions/img/bruti-icon.png" },
-        { "id": "corridori",   "label": "Corridori",   "icon": "games/zombicide-bp-ia/factions/img/corridori-icon.png" },
-        { "id": "abomini",     "label": "Abomini",     "icon": "games/zombicide-bp-ia/factions/img/abomini-icon.png" },
-        { "id": "necromanti",  "label": "Necromanti",  "icon": "games/zombicide-bp-ia/factions/img/necromanti-icon.png" },
-        { "id": "lupi-zombie", "label": "Lupi Zombie", "icon": "games/zombicide-bp-ia/factions/img/lupi-zombie-icon.png" },
-        { "id": "draghi",      "label": "Draghi",      "icon": "games/zombicide-bp-ia/factions/img/draghi-icon.png"},
-        { "id": "giganti",     "label": "Giganti",     "icon": "games/zombicide-bp-ia/factions/img/giganti-icon.png"}
+        { "id": "deambulanti", "label": "Deambulanti", "icon": "factions/img/deambulanti-icon.png" },
+        { "id": "bruti",       "label": "Bruti",       "icon": "factions/img/bruti-icon.png" },
+        { "id": "corridori",   "label": "Corridori",   "icon": "factions/img/corridori-icon.png" },
+        { "id": "abomini",     "label": "Abomini",     "icon": "factions/img/abomini-icon.png" },
+        { "id": "necromanti",  "label": "Necromanti",  "icon": "factions/img/necromanti-icon.png" },
+        { "id": "lupi-zombie", "label": "Lupi Zombie", "icon": "factions/img/lupi-zombie-icon.png" },
+        { "id": "draghi",      "label": "Draghi",      "icon": "factions/img/draghi-icon.png"},
+        { "id": "giganti",     "label": "Giganti",     "icon": "factions/img/giganti-icon.png"}
       ]
     },
     {

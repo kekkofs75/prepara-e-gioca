@@ -1,21 +1,11 @@
-Il combattimento può concludersi in tre modi:
+Il combattimento può terminare in **3 modi**.
 
-# KO — Vittoria
+- **KO!**: se l'**indicatore Salute** di un combattente raggiunge la casella KO al termine di un turno, quel combattente è **messo KO** e il suo giocatore **perde**. Un combattente in casella KO non può più essere curato.
+- **Doppio KO!**: se **2+ combattenti** di squadre diverse vengono **messi KO** nello stesso turno, il combattimento è un **pareggio**.
+- **Mazzo Potenziamento Esaurito**: se un giocatore non riesce a **pescare 3 carte** dal suo mazzo Potenziamento all'inizio del passo "Potenziate!", il combattimento termina immediatamente con un **pareggio** (combattenti sono esausti).
 
-Se l'indicatore salute di un combattente raggiunge la casella **KO** alla fine di un turno, quel combattente è messo fuori combattimento e il suo giocatore **perde**.
-
-> Una volta che l'indicatore salute di un combattente raggiunge la casella KO, quel combattente **non può più essere curato**.
-
-> Alcuni effetti speciali dei combattenti potrebbero modificare le conseguenze del KO: in quel caso, vale la **Regola d'Oro** (gli effetti delle carte hanno la precedenza sulle regole generali).
-
-# Doppio KO — Pareggio
-
-Se 2 o più combattenti di **squadre diverse** vengono messi KO nello **stesso turno**, il combattimento è considerato un **pareggio**.
-
-# Mazzo di Potenziamento Esaurito — Pareggio
-
-Se durante il passo "Potenziate!" un giocatore non riesce a pescare 3 carte dal suo mazzo di potenziamento, il combattimento termina ed è considerato un **pareggio**: i combattenti sono esausti!
+> Ricorda che alcuni effetti speciali dei combattenti possono modificare le condizioni di KO e non voglia dire per forza perdere (consulta sempre la *Guida ai Combattenti*).
 
 # Ripristinare i Mazzi
 
-Per rigiocare, separa le carte combattimento di ogni combattente nei rispettivi mazzi, con la carta iniziale in cima. Tutto è pronto per una rivincita!
+Per rigiocare, separa le **carte Combattimento** di ogni combattente nei rispettivi mazzi (**10 carte** ciascuno), con la **carta iniziale** ★ in cima.

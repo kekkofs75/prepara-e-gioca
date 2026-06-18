@@ -1,80 +1,44 @@
-# Componenti
+# Plance Combattente
 
-| Componente | Quantità | Note |
-|---|---|---|
-| Carte Combattimento | 120 | 10 per combattente (12 combattenti) |
-| Carte Draft | 12 | 1 per combattente, usate per scegliere le squadre |
-| Plance Combattente | 12 | 1 per combattente (Bödvar è fronte/retro) |
-| Cubetti Potere (viola) | 40 | Riserva di potere dei combattenti |
-| Indicatori Salute (verdi) | 6 | Tracciano i PF sul tracciato salute |
-| Indicatori Speciali (gialli) | 4 | Per meccaniche specifiche di certi combattenti |
-| Segnalino Sceriffo | 1 | Meccanica specifica |
-| Segnalino Presenza del Golem | 1 | Meccanica specifica |
-| Segnalino Serpente | 1 | Meccanica specifica |
-| Segnalini Concentrazione | 2 | Meccanica specifica |
-| Segnalini Fiamma! | 5 | Meccanica specifica |
-| Segnalini Congiura | 11 | Meccanica specifica |
-| Guida ai Combattenti | 1 | Stili di gioco, FAQ, sezioni speciali |
+La **[plancia Combattente]{.def}** riporta:
 
-# Struttura di una Carta Combattimento
+1. **Nome** del combattente.
+2. **Immagine** del combattente.
+3. **Simbolo** del combattente (riportato anche sulle sue carte Combattimento).
+4. **Potere base** (valore iniziale di **cubetti Potere** da assegnare al combattente).
+5. **Tracciato Salute**.
 
-| Elemento | Descrizione |
-|---|---|
-| **Simbolo combattente** | Indica a quale combattente appartiene la carta |
-| **Nome** | Il nome della carta |
-| **Frequenza (xN)** | Quante copie di quella carta sono nel mazzo del combattente |
-| **Stella (★)** | Indica che è la carta iniziale del combattente (bordo nero) |
-| **Azione** | Le azioni che la carta esegue quando viene rivelata |
-| **Testo** | Descrizione dettagliata degli effetti |
-| **Bonus Istantaneo** | Icona e testo in una riga separata sotto il nome: si attiva appena la carta viene aggiunta al mazzo di combattimento durante il passo "Potenziate!" |
+:::indent
+5.1. **+1 Potere**: il combattente ottiene 1 cubetto Potere.
 
-# Plancia Combattente
+5.2. **+X PF (cura)**: il combattente recupera X PF.
 
-Ogni plancia combattente contiene:
+5.3. **Blocco**: l'indicatore Salute si ferma sia in caso di danni che in caso di cure.
 
-- **Tracciato Salute:** la sequenza di caselle che l'indicatore salute percorre. Contiene icone che si attivano al passaggio dell'indicatore, blocchi che ne fermano il movimento, e la casella KO al fondo.
-- **Potere Base:** il numero di cubetti potere assegnati durante la preparazione (usato solo in setup, poi si contano i cubetti).
-- **Riserva di Potere:** lo spazio sopra la plancia dove si posizionano i cubetti potere attivi.
-- **Icone Speciali:** alcune plance hanno tracciati o caselle aggiuntive per meccaniche uniche del combattente (descritte nella guida ai combattenti).
+5.4. **Icone speciali**: icone specifiche del combattente e descritte nella *Guida ai Combattenti*.
+:::
 
-# Il Sistema del Potere
+6. Eventuale **tracciato Speciale** o spazi per **segnalini unici** del combattente.
+7. **Complessità** e caratteristiche del combattente.
 
-Il potere non è una risorsa da spendere: i cubetti potere nella riserva di un combattente rappresentano la **forza dei suoi attacchi**. Quando attacca, l'avversario perde PF pari al numero di cubetti presenti all'inizio di quel turno.
+---
 
-- Cubetti aggiunti o rimossi *durante* un turno non modificano retroattivamente l'attacco di quel turno.
-- Un combattente può avere potere 0: un attacco con potere 0 è comunque un attacco (può essere parato e attivare azioni bonus).
-- Il potere non può scendere sotto 0.
-- In caso di esaurimento dei cubetti fisici, si usa qualsiasi sostituto disponibile.
+# Carte Combattente
 
-# Mazzo di Combattimento vs. Mazzo di Potenziamento
+Una **[carta Combattimento]{.def}** riporta:
 
-| | Mazzo di Combattimento | Mazzo di Potenziamento |
-|---|---|---|
-| **Contenuto iniziale** | Le carte iniziali dei 2 combattenti (2 carte al round 1) | Le 9 carte rimanenti di ogni combattente mescolate (18 carte totali) |
-| **Uso** | Rivelato carta per carta durante il passo "Combattete!" | Pescato durante il passo "Potenziate!" |
-| **Ordine** | **Mai mescolato** — l'ordine è fisso e strategico | Mescolato durante la preparazione; le carte scartate tornano in fondo |
-| **Cresce?** | Sì: 1 carta aggiunta a ogni round | No: 1 carta pescata e aggiunta al mazzo di combattimento ogni round, 2 scartate |
+1. **Nome** della carta.
+2. **Simbolo** del combattente (riportato anche sulla plancia Combattente).
+3. **Frequenza**, ovvero numero di copie della carta nel mazzo Combattente.
+4. **Simbolo stella** ★ per identificarla come **carta iniziale** (la carta ha anche un **bordo nero**).
+5. **[Bonus istantaneo]{.def}** da risolvere appena la si aggiunge al mazzo Combattente.
+6. **Azione** che verrà effettuata dalla carta.
+7. **Testo** che descrive le azioni nel dettaglio.
 
-# Icone Ricorrenti
+:::glossary
+[plancia Combattente]: La plancia individuale di ogni combattente, con tracciato Salute, potere base, simbolo identificativo ed eventuali tracciati o spazi speciali.
 
-| Icona | Significato |
-|---|---|
-| ⚔️ Attacca | L'avversario perde PF pari al potere del combattente attivo |
-| 🛡️ Para | Nega tutti gli attacchi avversari del turno; include azione bonus |
-| 💊 Curati X PF | Il combattente attivo recupera X PF |
-| -X (danno diretto) | Perdita fissa di PF, non un attacco, non parabile |
-| +🔷 / -🔷 | Aggiungi / rimuovi cubetti potere dalla riserva |
-| ✅ Successo | Azione bonus che si attiva se l'azione principale ha successo |
-| **POI** | Le azioni dopo questa parola si eseguono dopo le precedenti |
-| **Avversario** | Il combattente attivo dell'altro giocatore |
-| **Avversari** | Il combattente attivo E il partner dell'altro giocatore |
-| **Tu** | Il combattente attivo |
-| 🔳 Blocco | L'indicatore salute si ferma qui, indipendentemente dai PF residui |
+[carta Combattimento]: Una delle 10 carte di un combattente, rivelata durante il passo "Combattete!". Riporta azioni obbligatorie, simbolo, frequenza e possibile bonus istantaneo.
 
-# La Meccanica di Deckbuilding di Tag Team
-
-A differenza dei deckbuilder classici, in Tag Team **il mazzo non viene mai mescolato**: le carte vanno inserite in posizioni specifiche e l'ordine è permanente. Questo rende il posizionamento delle nuove carte una decisione strategica fondamentale: scegliere *quale* carta aggiungere e *dove* inserirla nel mazzo può fare la differenza tra parare un attacco decisivo o subirlo.
-
-# Complessità dei Combattenti
-
-Le carte draft di ogni combattente mostrano un indicatore di **Complessità** e delle etichette che descrivono il suo stile (es. *Manipolazione del Potere*, *Controllo*, *Danni Elevati*, *Versatile*, *Supporto*, *Trasformazione*…). Usa questi indicatori per scegliere combattenti adatti al tuo livello di esperienza.
+[Bonus istantaneo]: Effetto indicato sotto il nome della carta che si risolve immediatamente nel passo "Potenziate!", non appena la carta viene aggiunta al mazzo Combattimento. Va annunciato all'avversario, senza rivelare quale carta sia né dove sia stata inserita.
+:::

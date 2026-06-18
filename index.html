@@ -589,7 +589,7 @@
     #reading-progress-bar {
       position: fixed;
       top: 0; left: 0; right: 0;
-      height: 5px;
+      height: 3px;
       background: transparent;
       z-index: 50;
       display: none; /* mostrata via JS solo se contenuto sufficientemente lungo */
@@ -1555,7 +1555,7 @@
             <span class="btn-icon">
               <img src="icons/factions.png" alt="Fazioni">
             </span>
-            <span class="btn-label">Fazioni</span>
+            <span class="btn-label" id="factions-btn-label">Fazioni</span>
             <span class="btn-arrow">›</span>
           </button>
         </div>
@@ -1916,6 +1916,7 @@
     // Fazioni — pulsante singolo di navigazione (solo se il gioco le ha)
     const factions = game.factions || [];
     const fblock   = $('factions-menu-block');
+    $('factions-btn-label').textContent = game.factionsLabel || 'Fazioni';
     fblock.style.display = factions.length ? 'block' : 'none';
 
     // Aiuto al Giocatore — pulsante solo se il gioco ha tab aid
@@ -1979,9 +1980,9 @@
     pushNav('factionsList');
 
     $('factions-hero-game').textContent  = currentGame.title;
-    $('factions-hero-title').textContent = 'Fazioni';
+    $('factions-hero-title').textContent = currentGame.factionsLabel || 'Fazioni';
     $('factions-hero-icon').innerHTML =
-      `<img src="icons/factions.png" style="width:28px;height:28px;filter:invert(1);opacity:0.75;" alt="">`;
+      `<img src="icons/factions.png" alt="">`;
 
     $('factions-list').innerHTML = factions.map(f => {
       const rawIcon   = f.icon || null;
@@ -2034,14 +2035,10 @@
     const iconPath = faction.icon ? `${currentGame.folder}/${faction.icon}` : null;
     $('section-hero-game').textContent  = currentGame.title;
     $('section-hero-title').textContent = faction.label || faction.id;
-    $('section-hero-icon').innerHTML    = iconPath
+    $('section-hero-icon').innerHTML = iconPath
       ? `<img src="${iconPath}" alt="${faction.label || ''}"
-              style="border-radius:var(--radius-sm);object-fit:cover;width:32px;height:32px;">`
-      : `<span style="display:inline-block;width:28px;height:28px;
-             background-color:var(--game-color);
-             -webkit-mask-image:url(icons/factions.png);
-             mask-image:url(icons/factions.png);
-             mask-size:contain;mask-repeat:no-repeat;mask-position:center;"></span>`;
+              style="border-radius:var(--radius-sm);object-fit:cover;">`
+      : `<img src="icons/factions.png" alt="">`;
 
     $('markdown-content').innerHTML = `
       <div class="loading-state">
@@ -2096,8 +2093,8 @@
 
     $('aid-hero-game').textContent  = currentGame.title;
     $('aid-hero-title').textContent = 'Aiuto al Giocatore';
-    $('aid-hero-icon').innerHTML    =
-      `<img src="icons/aid.png" style="width:28px;height:28px;filter:invert(1);opacity:0.75;" alt="">`;
+    $('aid-hero-icon').innerHTML =
+      `<img src="icons/aid.png" alt="">`;
 
     // Costruisce tab bar
     $('aid-tab-bar').innerHTML = aidTabs.map((id, i) => `
