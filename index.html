@@ -634,6 +634,8 @@
       object-fit: contain;
       /* L'icona è bianca su trasparente: perfetta sull'header colorato */
     }
+    /* Immagini custom fazione: nitide, non semi-trasparenti come le icone generiche */
+    .section-hero-icon.full-opacity { opacity: 1; }
 
     /* FIX: padding-bottom sicuro anche nel markdown */
     #markdown-content {
@@ -1936,6 +1938,7 @@
     $('section-hero-game').textContent  = currentGame.title;
     $('section-hero-title').textContent = sec.label;
     $('section-hero-icon').innerHTML    = `<img src="${sec.icon}" alt="${sec.label}">`;
+    $('section-hero-icon').classList.remove('full-opacity');
 
     $('markdown-content').innerHTML = `
       <div class="loading-state">
@@ -2037,8 +2040,9 @@
     $('section-hero-title').textContent = faction.label || faction.id;
     $('section-hero-icon').innerHTML = iconPath
       ? `<img src="${iconPath}" alt="${faction.label || ''}"
-              style="border-radius:var(--radius-sm);object-fit:cover;">`
+              style="border-radius:var(--radius-sm);object-fit:cover;opacity:1;">`
       : `<img src="icons/factions.png" alt="">`;
+    $('section-hero-icon').classList.toggle('full-opacity', !!iconPath);
 
     $('markdown-content').innerHTML = `
       <div class="loading-state">
