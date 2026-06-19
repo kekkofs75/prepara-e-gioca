@@ -36,11 +36,7 @@ I PF iniziali dell'Orso Berserker sono pari al suo potere quando la sua plancia 
 
 # Dettagli di Gioco
 
-**Se Bödvar subisce danni diretti quando gioca Trance Spiritica, la carta innesca i danni diretti aggiuntivi?**
-No, solo un attacco innesca l'effetto aggiuntivo.
-
-**Se il partner di Bödvar viene attaccato quando Bödvar gioca Trance Spiritica, subisce comunque i 2 danni indiretti?**
-No. Bödvar subisce i danni indiretti solo se è lui a venire attaccato.
+Se Bödvar subisce danni diretti quando gioca Trance Spiritica, la carta non innesca i danni diretti aggiuntivi: solo un attacco innesca quell'effetto. Se invece il partner di Bödvar viene attaccato mentre Bödvar gioca Trance Spiritica, Bödvar non subisce i 2 danni indiretti: li subisce solo se è lui stesso a venire attaccato.
 
 :::glossary
 [tracciato furia]: Il tracciato speciale di Bödvar. Avanza quando vengono giocate carte che aumentano la furia; al raggiungimento della casella più alta applica un bonus di potere e innesca la trasformazione in Orso Berserker.

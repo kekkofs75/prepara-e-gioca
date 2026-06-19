@@ -44,17 +44,7 @@ La carta che segue Rianimazione viene attivata due volte. La prima attivazione v
 
 # Dettagli di Gioco
 
-**Il segnalino presenza di Golem protegge il Golem quando lo ha lui?**
-No, protegge solo il partner del Golem.
-
-**Un attacco che rimuove il segnalino presenza di Golem è considerato parato o effettuato con successo?**
-È un attacco effettuato con successo. Non sono stati persi PF, ma non è stato parato.
-
-**Se Shango gioca Soffio Infuocato contro un combattente con il segnalino presenza di Golem, gli assegna comunque il segnalino fiamma?**
-Sì, eventuali segnalini che accompagnano un attacco effettuato con successo vengono assegnati comunque a un combattente con il segnalino presenza di Golem.
-
-**Se Proteggere gli Innocenti viene giocata nello stesso turno in cui il partner del Golem viene attaccato, il segnalino protegge comunque il partner?**
-No, il segnalino viene assegnato dopo che il partner ha subito la perdita di PF e ha effetto solo dall'inizio del turno successivo.
+Il segnalino presenza di Golem protegge solo il partner del Golem, non il Golem stesso quando lo ha lui. Un attacco che rimuove il segnalino presenza di Golem è considerato un attacco effettuato con successo, anche se non sono stati persi PF: semplicemente non è stato parato. Se Shango gioca Soffio Infuocato contro un combattente con il segnalino presenza di Golem, gli assegna comunque il segnalino fiamma, perché eventuali segnalini che accompagnano un attacco effettuato con successo vengono assegnati comunque. Se invece Proteggere gli Innocenti viene giocata nello stesso turno in cui il partner del Golem viene attaccato, il segnalino non protegge il partner in quel momento: viene assegnato dopo che il partner ha già subito la perdita di PF, e ha effetto solo dall'inizio del turno successivo.
 
 :::glossary
 [segnalino Presenza di Golem]: Il componente speciale del Golem. Quando si trova sulla plancia del partner, lo protegge dagli attacchi: se viene attaccato con successo, non perde PF e il Golem recupera il segnalino.

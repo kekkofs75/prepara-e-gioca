@@ -60,14 +60,7 @@ Il veleno si attiva sempre dopo che sono state risolte tutte le altre azioni del
 
 # Dettagli di Gioco
 
-**Se Milady subisce danni diretti quando gioca Una Pugnalata e un Sorriso, scatena una congiura?**
-No, scatena una congiura solo se viene attaccata.
-
-**Se il suo partner viene attaccato quando Milady gioca Una Pugnalata e un Sorriso, scatena una congiura?**
-No. Scatena una congiura solo se è lei a essere attaccata.
-
-**Che succede se gioco un'azione Ordire una Congiura, ma non ho più congiure da ordire? Posso riutilizzare le congiure scartate?**
-No. Se non hai più congiure nella tua pila, ignori l'azione. Una volta scatenate, le congiure vanno rimosse dal gioco.
+Se Milady subisce danni diretti quando gioca Una Pugnalata e un Sorriso, non scatena una congiura: lo fa solo se viene effettivamente attaccata. Lo stesso vale se è il suo partner a venire attaccato mentre lei gioca quella carta: anche in quel caso non scatena una congiura, perché la condizione si verifica solo se è lei a essere attaccata. Se giochi un'azione Ordire una Congiura ma non hai più congiure nella pila, ignori semplicemente l'azione: una volta scatenate, le congiure vengono rimosse dal gioco e non possono essere riutilizzate.
 
 :::glossary
 [segnalini Congiura]: Gli 11 segnalini di Milady. Vengono ordinati a faccia in giù sulla plancia e scatenati (girati a faccia in su) dalle carte azioni o dalle icone del tracciato salute. Ogni segnalino produce un effetto diverso e viene rimosso dal gioco una volta scatenato.

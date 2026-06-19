@@ -22,17 +22,7 @@ Ignora eventuali navi ottenute dopo che l'indicatore ha raggiunto la casella **2
 
 ## Effetto "20 Navi" di Terrore dei Mari
 
-**Innesca le icone del tracciato salute?**
-Sì. Sono danni diretti, quindi anche non parabili.
-
-**Se un combattente (come il Popolo Fatato) ha 2 o più tracciati salute, l'effetto 20 navi di Terrore dei Mari li riduce tutti a 1 PF?**
-No, viene ridotto a 1 PF solo il tracciato salute attualmente attivo.
-
-**Se Maman Brijit gioca Rum al Peperoncino nello stesso turno in cui Ching Shih gioca l'effetto 20 navi di Terrore dei Mari, cosa succede?**
-Maman Brijit riduce i suoi PF a 1, attacca Ching Shih ma non subisce 1 danno diretto come avrebbe dovuto.
-
-**Se Milady scatena la congiura che infligge 1 danno diretto a tutti i combattenti nello stesso turno in cui i suoi PF sono stati ridotti a 1 da Terrore dei Mari, lei e il suo partner subiscono il danno diretto? E cosa succede se scatena la congiura che cura il suo partner?**
-Milady e il suo partner ignorano il danno diretto, ma Ching Shih e il suo partner ne subiscono 1 entrambi. In questa situazione, la congiura che cura viene ignorata.
+L'effetto 20 navi di Terrore dei Mari innesca le icone del tracciato salute, perché si tratta di danni diretti e quindi anche non parabili. Se un combattente come il Popolo Fatato ha 2 o più tracciati salute, l'effetto non li riduce tutti a 1 PF: viene ridotto a 1 PF solo il tracciato salute attualmente attivo. Se Maman Brijit gioca Rum al Peperoncino nello stesso turno in cui Ching Shih attiva l'effetto 20 navi, Maman Brijit riduce i suoi PF a 1 e attacca Ching Shih, ma non subisce il danno diretto che avrebbe altrimenti dovuto subire. Se invece Milady scatena nello stesso turno la congiura che infligge 1 danno diretto a tutti i combattenti, Milady e il suo partner ignorano quel danno diretto, mentre Ching Shih e il suo partner lo subiscono entrambi; in questa stessa situazione, la congiura di Milady che cura il partner viene invece ignorata.
 
 :::glossary
 [tracciato Flotta]: Il tracciato speciale di Ching Shih. L'indicatore avanza di tante caselle quante navi vengono ottenute, fino a un massimo della casella 20. Alcune carte di Ching Shih hanno effetti che dipendono dalla posizione dell'indicatore sul tracciato.

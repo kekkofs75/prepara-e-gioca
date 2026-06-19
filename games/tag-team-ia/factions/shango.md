@@ -38,11 +38,7 @@ Questo è un attacco specifico di Shango: il combattente bersagliato perde un am
 
 # Dettagli di Gioco
 
-**Dato che Shango inizia con potere 0, i suoi attacchi non parati si considerano comunque effettuati con successo anche se non fanno perdere PF?**
-Sì, sono effettuati con successo.
-
-**Una parata annulla tutti gli attacchi di Colpo Fulminante?**
-Sì, per tutti i combattenti.
+Dato che Shango inizia con potere 0, i suoi attacchi non parati si considerano comunque effettuati con successo anche se non fanno perdere PF. Inoltre, una parata annulla tutti gli attacchi di Colpo Fulminante, per tutti i combattenti.
 
 :::glossary
 [segnalini Fiamma]: I 5 segnalini di Shango. Vengono posizionati sulle plance avversarie tramite l'azione Fiamma!, potenziano il Potere del Fuoco e, se un combattente ne accumula 5, lo incendiano causandone l'immediata sconfitta.

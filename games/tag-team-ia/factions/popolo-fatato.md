@@ -43,32 +43,9 @@ Il Popolo Fatato non viene messo KO quando tutti i personaggi diventano spiriti:
 
 # Dettagli di Gioco
 
-**Lo spirito all'inizio della partita conta per carte come Tempesta di Spiriti?**
-Sì. Il Popolo Fatato inizia la partita con 1 spirito. Quando il primo personaggio diventa uno spirito, il Popolo Fatato avrà 2 spiriti, e così via.
+Lo spirito presente all'inizio della partita conta già per carte come Tempesta di Spiriti: il Popolo Fatato inizia con 1 spirito, e quando il primo personaggio diventa uno spirito ne avrà 2, e così via. Quando un personaggio del Popolo Fatato diventa uno spirito, la perdita di PF rimanente non si trasferisce sul personaggio successivo, perché il nuovo personaggio viene scelto solo alla fine del turno: questo significa anche che un attacco doppio della carta Rianimazione del Golem non può colpire un secondo personaggio nello stesso turno. Il Popolo Fatato può comunque effettuare le azioni delle sue carte anche quando tutti i suoi personaggi sono spiriti, ma non può curarsi né perdere altri PF. Se l'ultimo personaggio del Popolo Fatato diventa uno spirito nello stesso turno in cui viene giocata Ogni Leggenda Ha un Finale, il Popolo Fatato non viene messo KO, perché i personaggi devono essere già tutti spiriti all'inizio del turno in cui quella carta viene giocata. Se Ogni Leggenda Ha un Finale viene annullata dalla carta Gallo Nero di Maman Brijit quando tutti i personaggi del Popolo Fatato sono spiriti, il Popolo Fatato non viene messo KO e sopravvive per un altro round; se invece quella carta viene rimossa dal combattimento dalla carta Tocco Invalidante di Wong Fei-Hung, il Popolo Fatato diventa di fatto invincibile.
 
-**Se un personaggio del Popolo Fatato diventa uno spirito, la perdita di PF rimanente si trasferisce sul personaggio successivo?**
-No. Il nuovo personaggio lo scegli alla fine del turno. Questo vuol dire anche che un attacco doppio della carta Rianimazione del Golem non può colpire un secondo personaggio nello stesso turno.
-
-**Il Popolo Fatato può effettuare comunque azioni anche quando tutti i suoi personaggi sono spiriti?**
-Sì, può effettuare le azioni delle sue carte, ma non può curarsi né perdere altri PF.
-
-**Se il mio ultimo personaggio del Popolo Fatato diventa uno spirito nello stesso turno in cui gioco Ogni Leggenda Ha un Finale, viene messo KO?**
-No, non viene messo KO. I personaggi devono essere tutti spiriti all'inizio del turno in cui viene giocata quella carta!
-
-**Se Ogni Leggenda Ha un Finale viene annullata dalla carta Gallo Nero di Maman Brijit quando tutti i personaggi del Popolo Fatato sono spiriti, il Popolo Fatato viene comunque messo KO?**
-No, la carta è stata annullata. Il Popolo Fatato sopravvive per un altro round!
-
-**Se Ogni Leggenda Ha un Finale viene rimossa dal combattimento dalla carta Tocco Invalidante di Wong Fei-Hung, significa che il Popolo Fatato diventa invincibile?**
-Esatto!
-
-**La nuova azione della carta sostituisce completamente la vecchia azione?**
-Sì.
-
-**Posso attivare la nuova azione non appena giro la carta?**
-No, la nuova azione entra in gioco solo dalla volta successiva in cui viene giocata quella carta.
-
-**Una volta usata la nuova azione, la carta si gira nella posizione originale?**
-No, dopo averla girata, la carta resta orientata in quel modo per il resto del combattimento.
+Per quanto riguarda le carte evocazione: la nuova azione di una carta sostituisce completamente la vecchia, ma non si può attivare non appena si gira la carta — entra in gioco solo dalla volta successiva in cui viene giocata. Una volta usata la nuova azione, la carta non ritorna alla posizione originale: resta orientata in quel modo per il resto del combattimento.
 
 :::glossary
 [tracciato spiriti]: Il tracciato speciale del Popolo Fatato. Avanza ogni volta che un personaggio diventa uno spirito. Quando l'indicatore raggiunge la casella più alta con tutti i personaggi già spiriti, viene rivelata la carta che può metterlo KO.

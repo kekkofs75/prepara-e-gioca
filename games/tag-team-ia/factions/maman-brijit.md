@@ -18,14 +18,4 @@ Se il suo indicatore salute supera queste caselle fino alla casella **+1 potere*
 
 # Dettagli di Gioco
 
-**Se Rum al Peperoncino viene parata, Maman Brijit subisce comunque 1 danno diretto?**
-Sì, lo subisce comunque.
-
-**Se Maman Brijit gioca Eterna Giovinezza ma non si cura, ottiene comunque 2 potere?**
-No, ottiene 2 potere solo se si cura con successo.
-
-**Eterna Giovinezza annulla solo l'azione Curare o tutte le azioni sulla carta dell'avversario?**
-Annulla solo l'azione Curare, non le altre azioni.
-
-**Se Jeanne gioca Visione Divina per curare sé stessa e il suo partner, Eterna Giovinezza ruba entrambe le cure o solo quella di Jeanne?**
-Maman Brijit ruba tutti i guadagni di PF. Si cura dell'ammontare che sarebbe stato applicato al combattente attivo, più le eventuali cure che dovrebbe ricevere il suo partner, se possibile.
+Se Rum al Peperoncino viene parata, Maman Brijit subisce comunque 1 danno diretto. Se Maman Brijit gioca Eterna Giovinezza ma non si cura, ottiene 2 potere solo se la cura ha successo, non altrimenti. Eterna Giovinezza, inoltre, annulla solo l'azione Curare della carta dell'avversario, non le altre azioni presenti sulla stessa carta. Se Jeanne gioca Visione Divina per curare sé stessa e il suo partner, Maman Brijit con Eterna Giovinezza ruba tutti i guadagni di PF: si cura dell'ammontare che sarebbe stato applicato al combattente attivo, più le eventuali cure che sarebbero dovute al suo partner, se possibile.
