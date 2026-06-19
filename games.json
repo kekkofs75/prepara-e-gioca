@@ -112,7 +112,7 @@
       "copertina":"games/tag-team/img/copertina.png",
       "aiSummary": false,
       "revision": "v.0.1",
-      "factionsLabel": "Combattenti",
+      "factionsLabel": "Guida ai Combattenti",
       "factions": [
         { "id": "bodvar",            "label": "Bödvar",            "icon": "factions/img/bodvar-icon.png" },
         { "id": "ching-shih",        "label": "Ching Shih",        "icon": "factions/img/ching-shih-icon.png" },
@@ -1489,6 +1489,21 @@
       "copertina":"games/star-wars-assalto-imperiale-ia/img/copertina.png",
       "aiSummary": true,
       "owned": false
+    },
+    {
+      "id": "harmonies-ia",
+      "title": "Harmonies",
+      "subtitle": "Costruisci paesaggi e crea habitat per i tuoi animali",
+      "themeColor": "#3A6641",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "30-60",
+      "players": "1-4",
+      "folder": "games/harmonies-ia",
+      "cover":    "games/harmonies-ia/img/cover.png",
+      "coverBig": "games/harmonies-ia/img/cover-big.webp",
+      "copertina":"games/harmonies-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
