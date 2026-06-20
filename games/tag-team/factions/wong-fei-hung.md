@@ -6,7 +6,7 @@
 
 # Preparazione
 
-Poni i **2 segnalini Concentrazione** ![segnalino concentrazione](img/segnalino-concentrazione.png){.img-inline} accanto alla plancia di Wong Fei-Hung.
+Poni i **2 segnalini Concentrazione** ![segnalino concentrazione](img/segnalino-concentrazione.png){.img-inline} accanto alla sua plancia Combattente.
 
 # Dettagli di Gioco
 

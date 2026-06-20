@@ -6,7 +6,7 @@
 
 # Preparazione
 
-Lancia e poni il **[segnalino Serpente]{.def}** ![segnalino serpente](img/segnalino-serpente.png){.img-inline} accanto alla plancia Combattente senza cambiare il lato su cui è caduto.
+Lancia e poni il **[segnalino Serpente]{.def}** ![segnalino serpente](img/segnalino-serpente.png){.img-inline} accanto alla sua plancia Combattente senza cambiare il lato su cui è caduto.
 
 > **Non** puoi scegliere quale lato del segnalino Serpente usare: devi usare il lato che è a **faccia in su** nel momento in cui giochi la carta.
 

@@ -6,7 +6,7 @@
 
 # Preparazione
 
-Poni il **[segnalino Sceriffo]{.def}** ![segnalino sceriffo](img/segnalino-sceriffo.png){.img-inline} accanto alla plancia Combattente del Mucchio Selvaggio (può influenzare entrambe le squadre).
+Poni il **[segnalino Sceriffo]{.def}** ![segnalino sceriffo](img/segnalino-sceriffo.png){.img-inline} accanto alla sua plancia Combattente (*può influenzare entrambe le squadre*).
 
 # Stile di Gioco
 

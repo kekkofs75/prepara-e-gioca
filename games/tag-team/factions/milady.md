@@ -18,7 +18,7 @@ Quando Milady ordisce una **congiura**, poni **1 segnalino Congiura coperto** da
 
 Le **congiure** possono essere scatenate dalle azioni delle carte, oppure quando l'**indicatore Salute** si ferma sopra, o supera, una di queste caselle del suo **tracciato Salute**.
 
-Per scatenare una **congiura**, gira a faccia in su **1 segnalino Congiura** dalla cima della pila al di sopra della sua plancia Combattente e applicane l'**effetto**, poi **rimuovi** dal gioco quel segnalino per il resto del combattimento.
+Per scatenare una **congiura**, gira a faccia in su **1 segnalino Congiura** tra quelli posti al di sopra della sua plancia Combattente e applicane l'**effetto**. Poi **rimuovi** dal gioco quel segnalino per il resto del combattimento.
 
 - Quando una **congiura** ![azione congiura](img/azione-congiura.png){.img-inline} viene scatenata da una **carta azione** (*Scacco Matto*, *Così Prevedibile…*, *Una Pugnalata e un Sorriso*), è considerata l'azione di quella carta. Questo vuol dire che l'azione viene effettuata **contemporaneamente** alle azioni dell'avversario.
 - Quando una **congiura** ![casella congiura](img/casella-congiura.png){.img-inline} viene innescata dalle **icone** del **tracciato Salute**, viene **attivata dopo** aver risolto tutte le carte azione e i loro effetti. Le **congiure** scatenate dal **tracciato Salute** vanno risolte in una specie di **mini-fase successiva** alla risoluzione delle carte. Questo significa che gli **indicatori Salute** sui **blocchi** possono essere mossi nuovamente dalle **congiure**.
