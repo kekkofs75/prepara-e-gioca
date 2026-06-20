@@ -6,35 +6,25 @@
 
 # Preparazione
 
-- Lancia il **segnalino Serpente** e collocalo accanto alla plancia di Mefisto senza cambiare il lato su cui è caduto.
+Lancia e poni il **[segnalino Serpente]{.def}** ![segnalino serpente](img/segnalino-serpente.png){.img-inline} accanto alla plancia Combattente senza cambiare il lato su cui è caduto.
 
-## Componente Speciale — Segnalino Serpente
-
-Il [segnalino Serpente]{.def} è a due lati.
-
-> Non puoi scegliere quale lato del segnalino serpente usare: devi usare il lato che è a faccia in su nel momento in cui giochi la carta.
+> **Non** puoi scegliere quale lato del segnalino Serpente usare: devi usare il lato che è a **faccia in su** nel momento in cui giochi la carta.
 
 # Stile di Gioco
 
 ## Icona Speciale
 
-Ogni volta che l'indicatore salute di Mefisto si ferma su questa casella o la supera, gira immediatamente il segnalino serpente sull'altro lato senza applicare alcun effetto.
+![segnalino speciale](img/segnalino-speciale-mefisto.png){.img-center}
 
-> Se giri il segnalino durante il tuo turno, non puoi attivare anche l'effetto del nuovo lato del segnalino.
+Ogni volta che l'**indicatore Salute** si ferma su questa casella o la supera, gira immediatamente il **segnalino Serpente** sull'altro lato **senza** applicare alcun effetto.
+
+> Se giri il segnalino durante il tuo turno, **non** puoi attivare anche l'effetto del nuovo lato del segnalino.
 
 # Dettagli di Gioco
 
-**Posso scegliere quale lato del segnalino serpente usare?**
-No, devi usare il lato che è a faccia in su nel momento in cui giochi la carta.
-
-**Se giro il segnalino durante il mio turno, posso attivare anche l'effetto del nuovo lato del segnalino?**
-No.
-
-**Se Mefisto viene incenerito nello stesso turno in cui gioca Trascinato all'Inferno, vince comunque il combattimento?**
-Sì.
-
-**Se il partner di Mefisto viene messo KO nel turno in cui Mefisto gioca Trascinato all'Inferno, vince comunque il combattimento?**
-Sì! Se perdi il combattimento in qualsiasi modo, invece vinci!
+- **Non** puoi scegliere quale lato del segnalino Serpente usare: devi sempre usare il lato che è a faccia in su nel momento in cui giochi la carta.
+- Se lo giri durante il tuo turno **non** puoi attivare anche l'effetto del nuovo lato.
+- Se **Mefisto**{.accent} viene **incenerito** nello stesso turno in cui gioca *Trascinato all'Inferno*, vince comunque il combattimento; lo stesso vale se il suo **partner** viene messo KO in quel turno: dato che la carta fa vincere quando si perde il combattimento in qualsiasi modo, **Mefisto**{.accent} vince comunque.
 
 :::glossary
 [segnalino Serpente]: Il componente a due lati di Mefisto, lanciato in preparazione. Viene girato automaticamente quando l'indicatore salute di Mefisto attraversa la casella speciale del tracciato salute, senza applicare alcun effetto in quel momento.

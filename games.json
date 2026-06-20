@@ -111,7 +111,7 @@
       "coverBig": "games/tag-team/img/cover-big.webp",
       "copertina":"games/tag-team/img/copertina.png",
       "aiSummary": false,
-      "revision": "v.0.1",
+      "revision": "v.1.0",
       "factionsLabel": "Guida ai Combattenti",
       "factions": [
         { "id": "bodvar",            "label": "Bödvar",            "icon": "factions/img/bodvar-icon.png" },
@@ -142,6 +142,7 @@
       "coverBig": "games/tag-team-ia/img/cover-big.webp",
       "copertina":"games/tag-team-ia/img/copertina.png",
       "aiSummary": true,
+      "hidden": true,
       "factionsLabel": "Combattenti",
       "factions": [
         { "id": "bodvar",            "label": "Bödvar",            "icon": "factions/img/bodvar-icon.png" },

@@ -6,17 +6,13 @@
 
 # Preparazione
 
-- Colloca il **segnalino Sceriffo** accanto alla plancia combattente del Mucchio Selvaggio.
-
-## Componente Speciale — Segnalino Sceriffo
-
-Il [segnalino Sceriffo]{.def} è un componente a due lati che cambia bandiera nel corso del combattimento e può influenzare entrambe le squadre.
+Poni il **[segnalino Sceriffo]{.def}** ![segnalino sceriffo](img/segnalino-sceriffo.png){.img-inline} accanto alla plancia Combattente del Mucchio Selvaggio (può influenzare entrambe le squadre).
 
 # Stile di Gioco
 
 ## Danni e Cure
 
-Ogni casella del tracciato salute del Mucchio Selvaggio è un **blocco**: l'indicatore salute può muoversi solo di **1 casella alla volta**.
+Ogni casella del **tracciato Salute** del Mucchio Selvaggio è un **blocco** ![blocco](img/blocco.png){.img-inline}: l'**indicatore Salute** può muoversi solo di **1 casella alla volta**.
 
 Quando il Mucchio Selvaggio viene curato nello stesso momento in cui perde PF:
 
