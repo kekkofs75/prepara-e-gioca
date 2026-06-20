@@ -29,11 +29,18 @@ Ogni giocatore prende **1 [cedola bancaria]{.def}**, annota l'anno della partita
 - **Valore totale dei Biglietti:** valore totale positivo o negativo indicato dai propri Biglietti in base allo stato di completamento del collegamento tra le città elencate.
 
 :::spoiler Regola X
-*Regola ancora da scoprire.*
+**Convalidare i Biglietti comletati.**{.accent}
+
+Ogni giocatore **convalida** (*con l’obliteratore*) una volta **tutti i Biglietti** che ha **completato** durante la partita sulla fascia colorata della sua compagnia nei cerchi preposti.
 :::
 
 :::spoiler Regola Y
-*Regola ancora da scoprire.*
+**Ritirare i Biglietti**{.accent}
+Se ogni cerchio del suo colore è stato convalidato, **ritira** il Biglietto nell’**Ufficio Ritiri**. 
+- Se indicato, quel giocatore prende poi **1 Cartolina** (promessa, lavoro, conoscenza).
+- Se ritira **2+ Biglietti** contemporaneamente sceglie **1 sola Cartolina** senza guardare le altre e li ritira comunque tutti.
+- Se ritira 1 Cartolina, **legge a tutti il fronte** e **legge segretamente il retro**. 
+- Quando la utilizza, legge a tutti il retro.
 :::
 
 I giocatori **sommano tutto** e annotano il totale sulle proprie cedole bancarie.
