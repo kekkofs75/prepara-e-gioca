@@ -21,7 +21,7 @@ Alla fine del tuo turno:
 
 Con questa azione collocherai i vari elementi che andranno a comporre il tuo Paesaggio. Devi effettuarla **esattamente 1 volta** durante il tuo turno.
 
-- Prendi **3 dischi** da una qualsiasi casella della plancia centrale (anche dalla stessa casella, se vuoi).
+- Prendi **3 dischi** da 1 qualsiasi casella della plancia centrale.
 - Devi collocare questi 3 dischi sulla tua plancia giocatore nel modo che preferisci, uno alla volta, seguendo le regole di posizionamento sottostanti.
 - Dopo aver collocato un disco, puoi effettuare azioni facoltative prima di collocare il disco successivo.
 
@@ -29,6 +29,7 @@ Con questa azione collocherai i vari elementi che andranno a comporre il tuo Pae
 
 - Un disco può sempre essere collocato in una casella vuota.
 - Un disco può essere collocato sopra 1 o 2 dischi collocati in precedenza, per creare **Alberi**, **Edifici** o **Montagne**. Non è consentito impilarlo in nessun altro modo.
+![regole di posizionamento](img/regole-di-posizionamento.png){.img-center}
 - Un disco non può essere collocato sotto dischi già collocati in precedenza.
 - Un disco non può essere collocato su una casella occupata da un **cubo Animale**.
 

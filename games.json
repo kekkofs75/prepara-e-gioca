@@ -102,8 +102,8 @@
       "title": "Tag Team",
       "subtitle": "Classico combattimento arcade due contro due",
       "themeColor": "#1A3A6B",
-      "bggRank": 848,
-      "bggScore": 7.7,
+      "bggRank": 781,
+      "bggScore": 7.6,
       "duration": "15",
       "players": "2",
       "folder": "games/tag-team",
@@ -133,8 +133,8 @@
       "title": "Tag Team",
       "subtitle": "Classico combattimento arcade due contro due",
       "themeColor": "#1A3A6B",
-      "bggRank": 848,
-      "bggScore": 7.7,
+      "bggRank": 781,
+      "bggScore": 7.6,
       "duration": "15",
       "players": "2",
       "folder": "games/tag-team-ia",
@@ -877,6 +877,7 @@
       "cover":    "games/fateforge/img/cover.png",
       "coverBig": "games/fateforge/img/cover-big.webp",
       "copertina":"games/fateforge/img/copertina.png",
+      "unlockedRules": ["1", "2", "3", "4", "5", "10", "11"],
       "aiSummary": false,
       "revision": "v.0.1"
     },
@@ -908,8 +909,9 @@
       "cover":    "games/ticket-to-ride-legacy/img/cover.png",
       "coverBig": "games/ticket-to-ride-legacy/img/cover-big.webp",
       "copertina":"games/ticket-to-ride-legacy/img/copertina.png",
+      "unlockedRules": ["X", "Y"],
       "aiSummary": false,
-      "revision": "v.0.1"
+      "revision": "v.0.2"
     },
     {
       "id": "kingdom-legacy-ia",
@@ -1495,7 +1497,7 @@
       "id": "harmonies-ia",
       "title": "Harmonies",
       "subtitle": "Costruisci paesaggi e crea habitat per i tuoi animali",
-      "themeColor": "#3A6641",
+      "themeColor": "#3B6E8F",
       "bggRank": null,
       "bggScore": null,
       "duration": "30-60",
@@ -1504,7 +1506,24 @@
       "cover":    "games/harmonies-ia/img/cover.png",
       "coverBig": "games/harmonies-ia/img/cover-big.webp",
       "copertina":"games/harmonies-ia/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": true,
+      "hidden": true
+    },
+    {
+      "id": "harmonies",
+      "title": "Harmonies",
+      "subtitle": "Crea il tuo paesaggio e i tuoi habitat per accogliere gli animali",
+      "themeColor": "#3B6E8F",
+      "bggRank": 55,
+      "bggScore": 8.0,
+      "duration": "30-45",
+      "players": "1-4",
+      "folder": "games/harmonies",
+      "cover":    "games/harmonies/img/cover.png",
+      "coverBig": "games/harmonies/img/cover-big.webp",
+      "copertina":"games/harmonies/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.1.0"
     }
   ]
 }

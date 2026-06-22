@@ -2356,7 +2356,19 @@
         // Renderizza il contenuto interno come markdown completo
         const innerMd   = preprocessMarkdown(content.trim(), imgBase);
         const innerHtml = mdParser.render(innerMd);
-        return `<details class="md-spoiler">\n<summary class="md-spoiler-summary">${title.trim()}</summary>\n<div class="md-spoiler-body">${innerHtml}</div>\n</details>\n\n`;
+
+        // Regola sbloccata? Estrae l'identificatore da "Regola X" (X = 1-2 alfanumerici)
+        // e lo confronta (case-insensitive) con currentGame.unlockedRules
+        let openAttr = '';
+        const ruleMatch = title.trim().match(/^Regola\s+([A-Za-z0-9]{1,2})\b/i);
+        if (ruleMatch && currentGame && Array.isArray(currentGame.unlockedRules)) {
+          const ruleId = ruleMatch[1].toUpperCase();
+          const isUnlocked = currentGame.unlockedRules
+            .some(r => String(r).toUpperCase() === ruleId);
+          if (isUnlocked) openAttr = ' open';
+        }
+
+        return `<details class="md-spoiler"${openAttr}>\n<summary class="md-spoiler-summary">${title.trim()}</summary>\n<div class="md-spoiler-body">${innerHtml}</div>\n</details>\n\n`;
       }
     );
 
