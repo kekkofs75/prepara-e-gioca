@@ -1524,6 +1524,21 @@
       "copertina":"games/harmonies/img/copertina.png",
       "aiSummary": false,
       "revision": "v.1.0"
+    },
+    {
+      "id": "oltre-la-porta-ia",
+      "title": "Oltre la Porta",
+      "subtitle": "Trova il percorso giusto per fuggire dal dungeon",
+      "themeColor": "#2D5A64",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "15-30",
+      "players": "1-2",
+      "folder": "games/oltre-la-porta-ia",
+      "cover":    "games/oltre-la-porta-ia/img/cover.png",
+      "coverBig": "games/oltre-la-porta-ia/img/cover-big.webp",
+      "copertina":"games/oltre-la-porta-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
