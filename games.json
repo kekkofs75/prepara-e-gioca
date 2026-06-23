@@ -1518,6 +1518,8 @@
       "bggScore": 8.0,
       "duration": "30-45",
       "players": "1-4",
+      "best": "2-3",
+      "anno": 2004,
       "folder": "games/harmonies",
       "cover":    "games/harmonies/img/cover.png",
       "coverBig": "games/harmonies/img/cover-big.webp",

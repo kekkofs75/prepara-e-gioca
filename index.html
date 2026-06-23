@@ -340,6 +340,7 @@
     .game-card.not-owned:active { border-color: var(--text-secondary); }
 
     /* Filtro owned nella games-count bar */
+
     #games-count-row {
       display: flex;
       align-items: center;
@@ -1520,6 +1521,10 @@
                   aria-label="Giochi degli amici" title="Degli amici">
             <span class="filter-icon" style="-webkit-mask-image:url(icons/owned-others.png);mask-image:url(icons/owned-others.png)"></span>
           </button>
+          <button class="owned-filter-btn" id="filter-recent"
+                  aria-label="Giochi recenti" title="Recenti">
+            <span class="filter-icon" style="-webkit-mask-image:url(icons/recent.png);mask-image:url(icons/recent.png)"></span>
+          </button>
         </div>
         <button id="dark-mode-btn" class="owned-filter-btn" aria-label="Modalità notturna" title="Tema">
           <span class="filter-icon" id="dark-mode-icon"
@@ -1821,31 +1826,64 @@
     score:   `<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`,
     time:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
     players: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>`,
+    best:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>`,
+    calendar:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
   };
+
+  /* ── Recenti ────────────────────────────────────────────── */
+  const RECENT_GAMES_MAX = 8;
+  const RECENT_GAMES_KEY = 'recentGames';
+
+  function trackRecentGame(gameId) {
+    let list = [];
+    try { list = JSON.parse(localStorage.getItem(RECENT_GAMES_KEY)) || []; }
+    catch { list = []; }
+    list = list.filter(id => id !== gameId);
+    list.unshift(gameId);
+    list = list.slice(0, RECENT_GAMES_MAX);
+    localStorage.setItem(RECENT_GAMES_KEY, JSON.stringify(list));
+  }
+
+  function getRecentGameIds() {
+    try { return JSON.parse(localStorage.getItem(RECENT_GAMES_KEY)) || []; }
+    catch { return []; }
+  }
 
   /* ── Render home ────────────────────────────────────────── */
   function renderHomeList(games) {
     const count = $('games-count');
     const list  = $('games-list');
 
-    // Applica filtro ownership (owned assente = true di default)
-    const filtered = games.filter(g => {
-      const owned = g.owned !== false;
-      if (ownerFilter === 'mine')   return owned;
-      if (ownerFilter === 'others') return !owned;
-      return true;
-    });
+    let filtered;
+    if (ownerFilter === 'recent') {
+      // Filtro esclusivo: mostra solo i recenti, nell'ordine di apertura più recente
+      const recentIds = getRecentGameIds();
+      filtered = recentIds
+        .map(id => games.find(g => g.id === id))
+        .filter(Boolean);
+    } else {
+      // Applica filtro ownership (owned assente = true di default)
+      filtered = games.filter(g => {
+        const owned = g.owned !== false;
+        if (ownerFilter === 'mine')   return owned;
+        if (ownerFilter === 'others') return !owned;
+        return true;
+      });
+    }
 
     if (!filtered.length) {
       count.textContent = '';
+      const emptyMsg = ownerFilter === 'recent'
+        ? 'Nessun gioco aperto di recente.'
+        : 'Nessun gioco trovato.';
       list.innerHTML = `
         <div class="empty-state">
           <div class="empty-icon">🔍</div>
-          <p>Nessun gioco trovato.</p>
+          <p>${emptyMsg}</p>
         </div>`;
       return;
     }
-    count.textContent = `${filtered.length} gioch${filtered.length === 1 ? 'o' : 'i'}`;
+    count.textContent = filtered.length === 1 ? '1 gioco' : `${filtered.length} giochi`;
     list.innerHTML = filtered.map(g => {
       const coverSrc  = g.cover     || (g.folder + '/img/cover.png');
       const bigSrc    = g.coverBig  || (g.folder + '/img/cover-big.png');
@@ -1880,6 +1918,7 @@
     const game = gamesData.find(g => g.id === gameId);
     if (!game) return;
     currentGame = game;
+    trackRecentGame(gameId);
     navHistory.push('gameMenu');
     pushNav('gameMenu');                    // ← back hardware
     setGameTheme(game.themeColor || '#EE8860', game.themeColorDark);
@@ -1905,6 +1944,8 @@
       game.bggScore ? `<div class="meta-chip">${metaSVG.score}   ${fmtScore(game.bggScore)}/10</div>`     : '',
       game.duration ? `<div class="meta-chip">${metaSVG.time}    ${game.duration} min</div>`    : '',
       game.players  ? `<div class="meta-chip">${metaSVG.players} ${game.players} gioc.</div>`   : '',
+      game.best     ? `<div class="meta-chip">${metaSVG.best}     Best: ${game.best}</div>`     : '',
+      game.anno     ? `<div class="meta-chip">${metaSVG.calendar} ${game.anno}</div>`           : '',
     ].join('');
 
     $('sections-list').innerHTML = SECTIONS.map(s => `
@@ -2410,6 +2451,7 @@
     if (dest === 'home') {
       currentGame = null;
       resetTheme();
+      renderHomeList(gamesData);
       showView('home');
     } else if (dest === 'gameMenu') {
       // Ripristina il colore del gioco (potrebbe essere stato cambiato da una fazione)
@@ -2568,6 +2610,7 @@
     currentGame = null;
     resetTheme();
     closeSearch();
+    renderHomeList(gamesData);
     history.replaceState({ pg: 'home' }, '');
     showView('home');
   });
@@ -2601,10 +2644,10 @@
   $('dark-mode-btn').addEventListener('click', () => applyDarkMode(!isDark));
 
   /* ── Owned filter ───────────────────────────────────────── */
-  ['all','mine','others'].forEach(val => {
+  ['all','mine','others','recent'].forEach(val => {
     $(`filter-${val}`).addEventListener('click', () => {
       ownerFilter = val;
-      ['all','mine','others'].forEach(v =>
+      ['all','mine','others','recent'].forEach(v =>
         $(`filter-${v}`).classList.toggle('active', v === val)
       );
       renderHomeList(gamesData);
