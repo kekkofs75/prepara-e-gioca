@@ -75,20 +75,30 @@ Alcune città sono collegate da **Doppia o Tripla Linea** con un pari numero di 
 
 Quando prendi il controllo di una linea devi seguire in ordine le seguenti regole, saltando quelle per cui non hai i requisiti.
 
-:::spoiler Regola F
-*Regola ancora da scoprire.*
+:::spoiler Regola F - Andare a Rimorchio
+Gira a **faccia in giù** la tua **carta Rimorchio** e prendi il **controllo di una linea** già **completamente** controllata dagli altri giocatori, su cui **non** sei già andato a rimorchio, come se non fosse controllata da **nessuno**.
+
+Gioca una serie di **carte Treno** valide per la linea, poi colloca i tuoi **vagoni** adiacenti alla linea, infine segui tutte le **regole** relative al controllo delle linee.
+
+> **Più giocatori** possono andare a rimorchio sulla stessa linea.
 :::
 
-:::spoiler Regola G
-*Regola ancora da scoprire.*
+:::spoiler Regola G - Andare a Rimorchio (*continua*)
+*Esempio di gioco per andare a rimorchio.*
 :::
 
-:::spoiler Regola H
-*Regola ancora da scoprire.*
+:::spoiler Regola H - Tracciati
+Le **plance Frontiera** contengono **tracciati** (oltre alle normali linee). La prima volta che prendi il **controllo di un tracciato** gioca una serie di **carte Treno** come di consueto, ma del **colore** che preferisci.
+
+Poi colloca sulle caselle corrispondenti gli **adesivi Binario** di quello stesso colore ed infine i tuoi **vagoni**.
 :::
 
-:::spoiler Regola I
-*Regola ancora da scoprire.*
+:::spoiler Regola I - Tracciati (*continua*)
+Rispetta le seguenti **regole**: 
+- Se usi **solo Locomotive**, scegli il colore che preferisci.
+- **Devono** esserci abbastanza adesivi di quel colore, altrimenti **non** puoi giocare carte di quel colore (se lo hai già fatto riprendile in mano e scegli un’altra opzione per il tuo turno).
+- **Non** puoi costruire 2 linee dello stesso colore tra 2 città.
+- **Non** puoi andare a rimorchio su una linea tra 2 città se tra di esse sono ancora disponibili 1+ tracciati.
 :::
 
 :::spoiler Regola J
@@ -97,12 +107,19 @@ Quando prendi il controllo di una linea devi seguire in ordine le seguenti regol
 
 Se prendi il controllo di una linea di **1+ caselle del tuo colore** ottieni immediatamente il bonus indicato sulla tua **carta Bonus della Compagnia**.
 
-:::spoiler Regola K
-*Regola ancora da scoprire.*
+:::spoiler Regola K – Città della Compagnia
+Se prendi il controllo di una linea collegata ad **1 Città della Compagnia** di un altro giocatore, dagli **$1** o fagli scegliere **1 carta Treno** dalla tua mano.
+Se la Città della Compagni è di **Mama O’Connell**, rimetti **$1** nella riserva o scarta **1 carta Treno** dalla tua mano a tua scelta.
 :::
 
-:::spoiler Regola L
-*Regola ancora da scoprire.*
+:::spoiler Regola L – Città della Compagnia (continua)
+Se la linea è collegata a **2 Città della Compagnia** di altri giocatori, paga per entrambe le città. Se **non** possiedi a sufficienza non pagare nulla.
+
+**Non** puoi collocare gli adesivi Città della Compagnia sopra le Grandi Città **né** sulle Città della Compagnia di altri giocatori.
+
+**Non** puoi collocare gli adesivi delle Grandi Città sopra gli adesivi Città della Compagnia.
+
+Ogni giocatore può possedere fino a **6 Città della Compagnia**.
 :::
 
 :::spoiler Regola M

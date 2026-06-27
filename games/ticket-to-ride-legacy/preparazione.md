@@ -75,10 +75,10 @@ Mescola e poni le **carte Evento** coperte nella casella Eventi sul tabellone (n
 
 Il giocatore con la **carta Primo Giocatore** inizia per primo.
 
-> **Giocatore assente:** prendi e assegna casualmente la carta Primo Giocatore dal suo box Compagnia ad un altro giocatore.
+> **Giocatore assente**: prendi e assegna casualmente la **carta Primo Giocatore** dal suo Ufficio ad un altro giocatore.
 
 :::spoiler Regola E
-*Regola ancora da scoprire.*
+> **Giocatore assente**: prendi le sue **carte Impiegato** dal suo Ufficio e riponile nel Deposito. Quando rientra ne sceglie una tra quelle presenti nel Deposito.
 :::
 
 :::glossary

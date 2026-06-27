@@ -1021,9 +1021,9 @@
       "cover":    "games/ticket-to-ride-legacy/img/cover.png",
       "coverBig": "games/ticket-to-ride-legacy/img/cover-big.webp",
       "copertina":"games/ticket-to-ride-legacy/img/copertina.png",
-      "unlockedRules": ["X", "Y"],
+      "unlockedRules": ["E", "F", "G", "H", "I", "K", "L", "X", "Y", "AA", "BB", "DD"],
       "aiSummary": false,
-      "revision": "v.0.2"
+      "revision": "v.0.3"
     },
     {
       "id": "kingdom-legacy-ia",
@@ -1714,6 +1714,24 @@
       "revision": "v.1.0"
     },
     {
+      "id": "oltre-la-porta",
+      "title": "Oltre la Porta",
+      "subtitle": "Ottimizza il posizionamento delle tue tessere per trovare il percorso verso l'uscita del dungeon",
+      "themeColor": "#2D5A64",
+      "bggRank": 9191,
+      "bggScore": 7.1,
+      "duration": "15-30",
+      "players": "1-2",
+      "best": "1",
+      "anno": 2024,
+      "folder": "games/oltre-la-porta",
+      "cover":    "games/oltre-la-porta/img/cover.png",
+      "coverBig": "games/oltre-la-porta/img/cover-big.webp",
+      "copertina":"games/oltre-la-porta/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.1.0"
+    },
+    {
       "id": "oltre-la-porta-ia",
       "title": "Oltre la Porta",
       "subtitle": "Ottimizza il posizionamento delle tue tessere per trovare il percorso verso l'uscita del dungeon",
@@ -1728,7 +1746,8 @@
       "cover":    "games/oltre-la-porta-ia/img/cover.png",
       "coverBig": "games/oltre-la-porta-ia/img/cover-big.webp",
       "copertina":"games/oltre-la-porta-ia/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": true,
+      "hidden": true
     }
   ]
 }

@@ -78,16 +78,24 @@ Il giocatore che possiede la carta Primo Giocatore sceglie e **ritira** (mostran
 
 Controlla il mazzo Storia per sapere se ci sono nuovi materiali o regole da aggiungere al gioco.
 
-:::spoiler Regola Z
+## ???
+
+:::spoiler Regola Z - ???
 *Regola ancora da scoprire.*
 :::
 
-:::spoiler Regola AA
-*Regola ancora da scoprire.*
+## Scegliere un Impiegato
+
+:::spoiler Regola AA - Scegliere un Impiegato
+Prendi tutti **gli Impiegati** in gioco (nuovi, usati nella partita e nel Deposito) e **ritira** quelle **completamente convalidate**.
+
+Assegna il **Presidente** all’ultimo giocatore. Poi ogni giocatore, procedendo a ritroso dall’ultimo al primo giocatore compresi, sceglie **1 Impiegato**.
 :::
 
-:::spoiler Regola BB
-*Regola ancora da scoprire.*
+:::spoiler Regola BB - Scegliere un Impiegato (*continua*)
+Ogni giocatore che ha scelto una **carta Impiegato** con **1+ numeri** (*in basso a destra*) **deve** ora convalidarla.
+
+Poi ognuno pone le proprie **carte Impiegato** nel proprio **Ufficio** fino alla partita successiva, mentre quelle avanzate vanno nel **Deposito**.
 :::
 
 ## Materiali del Caveau
@@ -98,8 +106,10 @@ Ogni giocatore pone la propria cedola bancaria nel proprio **caveau**.
 *Regola ancora da scoprire.*
 :::
 
-:::spoiler Regola DD
-*Regola ancora da scoprire.*
+## Espandere la Frontiera
+
+:::spoiler Regola DD - Espandere la Frontiera
+Il **vincitore** della partita sceglie **1 Frontiera inesplorata** (*vedi i bordi del tabellone per i nomi corrispondenti*), apre il **box Frontiera** di quella regione, legge la **1a carta**, la gira e segue le cose da fare della **lista**.
 :::
 
 ## Riordinare o Giocare di Nuovo
