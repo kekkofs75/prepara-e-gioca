@@ -1004,7 +1004,26 @@
       "cover":    "games/azul-ia/img/cover.png",
       "coverBig": "games/azul-ia/img/cover-big.webp",
       "copertina":"games/azul-ia/img/copertina.png",
-      "aiSummary": true
+      "aiSummary": true,
+      "owned": false
+    },
+    {
+      "id": "azul-mini",
+      "title": "Azul Mini",
+      "subtitle": "Abbellisci con maestria le pareti del tuo palazzo scegliendo le piastrelle più belle",
+      "themeColor": "#007A99",
+      "bggRank": 99,
+      "bggScore": 7.7,
+      "duration": "30-45",
+      "players": "2-4",
+      "best": "2",
+      "anno": 2023,
+      "folder": "games/azul-mini",
+      "cover":    "games/azul-mini/img/cover.png",
+      "coverBig": "games/azul-mini/img/cover-big.webp",
+      "copertina":"games/azul-mini/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.1.0"
     },
     {
       "id": "ticket-to-ride-legacy",
