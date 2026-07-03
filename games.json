@@ -124,8 +124,6 @@
       "cover":    "games/tag-team/img/cover.png",
       "coverBig": "games/tag-team/img/cover-big.webp",
       "copertina":"games/tag-team/img/copertina.png",
-      "aiSummary": false,
-      "revision": "v.1.0",
       "factionsLabel": "Guida ai Combattenti",
       "factions": [
         { "id": "bodvar",            "label": "Bödvar",            "icon": "factions/img/bodvar-icon.png" },
@@ -140,7 +138,9 @@
         { "id": "popolo-fatato",     "label": "Popolo Fatato",     "icon": "factions/img/popolo-fatato-icon.png" },
         { "id": "shango",            "label": "Shango",            "icon": "factions/img/shango-icon.png" },
         { "id": "wong-fei-hung",     "label": "Wong Fei-Hung",     "icon": "factions/img/wong-fei-hung-icon.png" }
-      ]
+      ],
+      "aiSummary": false,
+      "revision": "v.1.0"
     },
     {
       "id": "tag-team-ia",
@@ -157,8 +157,6 @@
       "cover":    "games/tag-team-ia/img/cover.png",
       "coverBig": "games/tag-team-ia/img/cover-big.webp",
       "copertina":"games/tag-team-ia/img/copertina.png",
-      "aiSummary": true,
-      "hidden": true,
       "factionsLabel": "Combattenti",
       "factions": [
         { "id": "bodvar",            "label": "Bödvar",            "icon": "factions/img/bodvar-icon.png" },
@@ -173,7 +171,9 @@
         { "id": "popolo-fatato",     "label": "Popolo Fatato",     "icon": "factions/img/popolo-fatato-icon.png" },
         { "id": "shango",            "label": "Shango",            "icon": "factions/img/shango-icon.png" },
         { "id": "wong-fei-hung",     "label": "Wong Fei-Hung",     "icon": "factions/img/wong-fei-hung-icon.png" }
-      ]
+      ],
+      "aiSummary": true,
+      "hidden": true
     },
     {
       "id": "arcs",
@@ -297,6 +297,10 @@
       "cover":    "games/castle-combo/img/cover.png",
       "coverBig": "games/castle-combo/img/cover-big.webp",
       "copertina":"games/castle-combo/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "FdS", "label": "Fuori dalle Segrete" }
+      ],
       "aiSummary": false,
       "revision": "v.1.0"
     },
@@ -1246,7 +1250,6 @@
       "cover":    "games/root-ia/img/cover.png",
       "coverBig": "games/root-ia/img/cover-big.webp",
       "copertina":"games/root-ia/img/copertina.png",
-      "aiSummary": true,
       "factions": [
         { "id": "marchesa", "label": "Marchesa de Gattis",    "icon": "factions/img/marchesa-icon.png" },
         { "id": "aquile",   "label": "Dinastia delle Aquile", "icon": "factions/img/aquile-icon.png" },
@@ -1258,7 +1261,8 @@
         { "id": "corvidi",  "label": "Congiura dei Corvidi",  "icon": "factions/img/corvidi-icon.png" },
         { "id": "orda",     "label": "Signore dell'Orda",     "icon": "factions/img/orda-icon.png" },
         { "id": "custodi",  "label": "Custodi di Ferro",      "icon": "factions/img/custodi-icon.png" }
-      ]
+      ],
+      "aiSummary": true
     },
     {
       "id": "terraforming-mars-ia",
@@ -1310,7 +1314,6 @@
       "cover":    "games/zombicide-bp-ia/img/cover.png",
       "coverBig": "games/zombicide-bp-ia/img/cover-big.webp",
       "copertina":"games/zombicide-bp-ia/img/copertina.png",
-      "aiSummary": true,
       "factionsLabel": "Bestiario",
       "factions": [
         { "id": "deambulanti", "label": "Deambulanti", "icon": "factions/img/deambulanti-icon.png" },
@@ -1321,7 +1324,8 @@
         { "id": "lupi-zombie", "label": "Lupi Zombie", "icon": "factions/img/lupi-zombie-icon.png" },
         { "id": "draghi",      "label": "Draghi",      "icon": "factions/img/draghi-icon.png"},
         { "id": "giganti",     "label": "Giganti",     "icon": "factions/img/giganti-icon.png"}
-      ]
+      ],
+      "aiSummary": true
     },
     {
       "id": "summoner-wars-ia",
@@ -1406,8 +1410,8 @@
       "cover":    "games/small-world-ia/img/cover.png",
       "coverBig": "games/small-world-ia/img/cover-big.webp",
       "copertina":"games/small-world-ia/img/copertina.png",
-      "aiSummary": true,
-      "aid": ["preparazione", "turno", "riferimento"]
+      "aid": ["preparazione", "turno", "riferimento"],
+      "aiSummary": true
     },
     {
       "id": "descent-rtl-ia",
@@ -1441,8 +1445,8 @@
       "cover":    "games/memoir44-ia/img/cover.png",
       "coverBig": "games/memoir44-ia/img/cover-big.webp",
       "copertina":"games/memoir44-ia/img/copertina.png",
-      "aiSummary": true,
-      "aid": ["preparazione", "turno", "riferimento"]
+      "aid": ["preparazione", "turno", "riferimento"],
+      "aiSummary": true
     },
     {
       "id": "room25-ia",

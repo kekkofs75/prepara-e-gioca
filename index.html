@@ -1415,6 +1415,82 @@
       -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
     }
 
+    /* ── Guida Rapida (Quickstart) ──────────────────────────── */
+    #view-quickstart {
+      background: var(--bg);
+      display: none;
+      flex-direction: column;
+      height: calc(100dvh - var(--nav-height) - var(--safe-bottom));
+      overflow: hidden;
+    }
+    #view-quickstart.active { display: flex; }
+
+    .qs-header {
+      flex-shrink: 0;
+      background: var(--surface);
+      box-shadow: 0 1px 0 var(--border-light);
+      z-index: 10;
+    }
+    .qs-header .section-hero { margin-bottom: 0 !important; }
+
+    .qs-content-wrap {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      background: var(--bg);
+    }
+    /* Accordion espansioni */
+    .qs-exp-accordion-btn {
+      width: 100%;
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface-2);
+      border: none;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem; font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      text-align: left;
+    }
+    .qs-exp-count {
+      font-size: 0.75rem;
+      background: var(--game-color);
+      color: #fff;
+      border-radius: 20px;
+      padding: 1px 8px;
+      font-weight: 700;
+    }
+    .qs-exp-arrow {
+      margin-left: auto;
+      font-size: 0.75rem;
+      transition: transform .2s;
+    }
+    .qs-exp-panel {
+      padding: 10px 16px 12px;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .qs-exp-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .qs-exp-chip {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1.5px solid var(--game-color);
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--game-color);
+      cursor: pointer;
+      transition: all .15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .qs-exp-chip.active { background: var(--game-color); color: #fff; }
+    .qs-exp-chip-label { font-size: 0.72rem; opacity: 0.8; }
+    .qs-exp-hidden-text { color: var(--text-secondary); font-style: italic; }
+
     /* ── Install banner (iOS) ─────────────────────────────────── */
     #install-banner {
       display: none;
@@ -1578,6 +1654,17 @@
           </button>
         </div>
       </div>
+      <div id="quickstart-menu-block" style="display:none; margin-top:8px;">
+        <div style="padding: 0 16px; display:flex; flex-direction:column; gap:9px;">
+          <button class="section-btn" onclick="openQuickstart()">
+            <span class="btn-icon">
+              <img src="icons/quickstart.png" alt="Guida Rapida">
+            </span>
+            <span class="btn-label">Guida Rapida</span>
+            <span class="btn-arrow">›</span>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1627,6 +1714,36 @@
     </div>
     <div class="aid-content-wrap">
       <div class="aid-panels" id="aid-panels"></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- QUICKSTART VIEW — Guida Rapida                         -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <div id="view-quickstart" class="view">
+    <div class="qs-header">
+      <div class="section-hero" id="qs-hero" style="margin-bottom:0">
+        <div class="section-hero-inner">
+          <div class="section-hero-game" id="qs-hero-game"></div>
+          <h2 id="qs-hero-title">Guida Rapida</h2>
+        </div>
+        <div class="section-hero-icon" id="qs-hero-icon"></div>
+      </div>
+      <div id="qs-exp-accordion" style="display:none">
+        <button class="qs-exp-accordion-btn" id="qs-exp-accordion-btn"
+                onclick="toggleQsAccordion()">
+          <span>Espansioni</span>
+          <span id="qs-exp-count-badge" class="qs-exp-count"></span>
+          <span id="qs-exp-accordion-arrow" class="qs-exp-arrow">▸</span>
+        </button>
+        <div id="qs-exp-panel" class="qs-exp-panel" style="display:none">
+          <div id="qs-exp-chips" class="qs-exp-chips"></div>
+        </div>
+      </div>
+      <div class="aid-tab-bar" id="qs-tab-bar"></div>
+    </div>
+    <div class="qs-content-wrap">
+      <div class="aid-panels" id="qs-panels"></div>
     </div>
   </div>
 
@@ -1709,6 +1826,7 @@
     section:      $('view-section'),
     factionsList: $('view-factions-list'),
     aid:          $('view-aid'),
+    quickstart:   $('view-quickstart'),
   };
 
   /* ── markdown-it + markdown-it-attrs ────────────────────────
@@ -1966,6 +2084,9 @@
     const aidTabs = game.aid || [];
     $('aid-menu-block').style.display = aidTabs.length ? 'block' : 'none';
 
+    const qsTabsGame = game.quickstart || [];
+    $('quickstart-menu-block').style.display = qsTabsGame.length ? 'block' : 'none';
+
     showView('gameMenu');
   }
 
@@ -2219,6 +2340,191 @@
     }
   }, { passive: true });
 
+  /* ── Guida Rapida (Quickstart) ──────────────────────────── */
+  const QS_ORDER  = ['preparazione', 'svolgimento', 'finepartita'];
+  const QS_LABELS = { preparazione: 'Preparazione', svolgimento: 'Svolgimento', finepartita: 'Fine Partita' };
+
+  let qsTabs          = [];
+  let qsTabIdx        = 0;
+  let qsContents      = {};
+  let qsGlossaryMaps  = {};
+  let qsExpansions    = [];
+  let qsActiveExps    = new Set();
+  let qsAccordionOpen = false;
+  let qsTouchX        = 0;
+
+  function markExpansionSteps(html, expansions) {
+    if (!expansions || !expansions.length) return html;
+    expansions.forEach(exp => {
+      const marker = `<strong>[${exp.sigla}]</strong>`;
+      if (!html.includes(marker)) return;
+      let result = html, from = 0;
+      while (true) {
+        const mIdx = result.indexOf(marker, from);
+        if (mIdx === -1) break;
+        const liIdx = result.lastIndexOf('<li', mIdx);
+        if (liIdx === -1) { from = mIdx + 1; continue; }
+        const liEnd = result.indexOf('>', liIdx);
+        if (liEnd === -1) { from = mIdx + 1; continue; }
+        const liTag = result.slice(liIdx, liEnd + 1);
+        if (liTag.includes('data-exp')) { from = mIdx + marker.length; continue; }
+        const newTag = liTag.replace('<li', `<li data-exp="${exp.sigla}"`);
+        result = result.slice(0, liIdx) + newTag + result.slice(liEnd + 1);
+        from = mIdx + marker.length + (newTag.length - liTag.length);
+      }
+      html = result;
+    });
+    return html;
+  }
+
+  function applyQsExpansion(sigla, active) {
+    document.querySelectorAll(`#qs-panels li[data-exp="${sigla}"]`).forEach(li => {
+      if (!active) {
+        if (!li.dataset.savedHtml) li.dataset.savedHtml = li.innerHTML;
+        const icon   = li.querySelector('.img-icon');
+        const strong = li.querySelector('strong');
+        li.innerHTML = (icon ? icon.outerHTML + ' ' : '') +
+                       (strong ? strong.outerHTML + ' ' : '') +
+                       '<span class="qs-exp-hidden-text">—</span>';
+      } else {
+        if (li.dataset.savedHtml) {
+          li.innerHTML = li.dataset.savedHtml;
+          delete li.dataset.savedHtml;
+        }
+      }
+    });
+  }
+
+  function toggleQsExpansion(sigla) {
+    const chip = document.querySelector(`#qs-exp-chips [data-sigla="${sigla}"]`);
+    if (!chip) return;
+    if (qsActiveExps.has(sigla)) {
+      qsActiveExps.delete(sigla);
+      chip.classList.remove('active');
+      applyQsExpansion(sigla, false);
+    } else {
+      qsActiveExps.add(sigla);
+      chip.classList.add('active');
+      applyQsExpansion(sigla, true);
+    }
+    const badge = $('qs-exp-count-badge');
+    if (badge) badge.textContent = `${qsActiveExps.size}/${qsExpansions.length} attive`;
+  }
+
+  function toggleQsAccordion() {
+    qsAccordionOpen = !qsAccordionOpen;
+    $('qs-exp-panel').style.display = qsAccordionOpen ? 'block' : 'none';
+    $('qs-exp-accordion-arrow').style.transform = qsAccordionOpen ? 'rotate(90deg)' : '';
+  }
+
+  async function openQuickstart() {
+    if (!currentGame) return;
+    const gameTabs = currentGame.quickstart || [];
+    qsTabs = QS_ORDER.filter(id => gameTabs.includes(id));
+    if (!qsTabs.length) return;
+
+    qsExpansions    = currentGame.quickstartExpansions || [];
+    qsActiveExps    = new Set(qsExpansions.map(e => e.sigla));
+    qsAccordionOpen = false;
+    qsTabIdx        = 0;
+    qsContents      = {};
+    qsGlossaryMaps  = {};
+
+    navHistory.push('quickstart');
+    pushNav('quickstart');
+
+    $('qs-hero-game').textContent  = currentGame.title;
+    $('qs-hero-title').textContent = 'Guida Rapida';
+    $('qs-hero-icon').innerHTML    = '<img src="icons/quickstart.png" alt="">';
+
+    const acc = $('qs-exp-accordion');
+    if (qsExpansions.length) {
+      acc.style.display = 'block';
+      $('qs-exp-panel').style.display = 'none';
+      $('qs-exp-accordion-arrow').style.transform = '';
+      $('qs-exp-chips').innerHTML = qsExpansions.map(exp => `
+        <button class="qs-exp-chip active" data-sigla="${exp.sigla}"
+                onclick="toggleQsExpansion('${exp.sigla}')">
+          <strong>[${exp.sigla}]</strong>
+          <span class="qs-exp-chip-label">${exp.label}</span>
+        </button>`).join('');
+      $('qs-exp-count-badge').textContent = `${qsActiveExps.size}/${qsExpansions.length} attive`;
+    } else {
+      acc.style.display = 'none';
+    }
+
+    $('qs-tab-bar').innerHTML = qsTabs.map((id, i) => `
+      <button class="aid-tab${i === 0 ? ' active' : ''}"
+              id="qs-tab-${id}" onclick="switchQsTab(${i})">
+        ${QS_LABELS[id]}
+      </button>`).join('');
+
+    const panelW = 100 / qsTabs.length;
+    $('qs-panels').style.width = `${qsTabs.length * 100}%`;
+    $('qs-panels').innerHTML = qsTabs.map(id => `
+      <div class="aid-panel" id="qs-panel-${id}" style="width:${panelW}%">
+        <div class="loading-state"><div class="spinner"></div><p>Caricamento…</p></div>
+      </div>`).join('');
+
+    _qsMoveTo(0, false);
+    showView('quickstart');
+
+    const imgBase = `${currentGame.folder}/quickstart/img/`;
+    await Promise.all(qsTabs.map(async id => {
+      try {
+        const res = await fetch(`${currentGame.folder}/quickstart/${id}.md`);
+        if (!res.ok) throw new Error();
+        let md = await res.text();
+        md = preprocessMarkdown(md, imgBase);
+        qsGlossaryMaps[id] = { ...glossaryMap };
+        let html = mdParser.render(md);
+        html = markExpansionSteps(html, qsExpansions);
+        qsContents[id] = html;
+      } catch {
+        qsGlossaryMaps[id] = {};
+        qsContents[id] = `<div class="empty-state">
+          <div class="empty-icon">📖</div>
+          <p>Aggiungi il file <code>quickstart/${id}.md</code>.</p>
+        </div>`;
+      }
+      const panel = $(`qs-panel-${id}`);
+      if (panel) panel.innerHTML = `<div class="md-body">${qsContents[id]}</div>`;
+    }));
+
+    const defId = qsTabs[0];
+    if (qsGlossaryMaps[defId]) glossaryMap = { ...qsGlossaryMaps[defId] };
+  }
+
+  function switchQsTab(idx) {
+    if (idx < 0 || idx >= qsTabs.length) return;
+    qsTabIdx = idx;
+    const tabId = qsTabs[idx];
+    if (qsGlossaryMaps[tabId]) glossaryMap = { ...qsGlossaryMaps[tabId] };
+    qsTabs.forEach((id, i) => $(`qs-tab-${id}`)?.classList.toggle('active', i === idx));
+    _qsMoveTo(idx, true);
+  }
+
+  function _qsMoveTo(idx, animate) {
+    const panels = $('qs-panels');
+    if (!animate) panels.style.transition = 'none';
+    panels.style.transform = `translateX(-${idx * (100 / qsTabs.length)}%)`;
+    if (!animate) requestAnimationFrame(() => { panels.style.transition = ''; });
+  }
+
+  $('qs-panels').addEventListener('touchstart', e => {
+    qsTouchX = e.touches[0].clientX;
+  }, { passive: true });
+
+  $('qs-panels').addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - qsTouchX;
+    if (Math.abs(dx) > 50) {
+      if (dx < 0) switchQsTab(qsTabIdx + 1);
+      else        switchQsTab(qsTabIdx - 1);
+    }
+  }, { passive: true });
+
+  $('qs-panels').addEventListener('click', handleMarkdownClick);
+
   /* ── Title Case ─────────────────────────────────────────── */
   function titleCase(str) {
     return str.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1));
@@ -2459,6 +2765,8 @@
       showView('gameMenu');
     } else if (dest === 'aid') {
       showView('aid');
+    } else if (dest === 'quickstart') {
+      showView('quickstart');
     } else if (dest === 'factionsList') {
       // Ripristina il colore del gioco quando si torna alla lista fazioni
       if (currentGame) setGameTheme(currentGame.themeColor || '#EE8860', currentGame.themeColorDark);
