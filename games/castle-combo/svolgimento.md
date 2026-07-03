@@ -24,11 +24,9 @@ La **pila degli scarti** è sempre consultabile. Quando un **mazzo termina**, me
 Applica eventuali **sconti permanenti** (*barra dorata*) provenienti dalle carte che hai già nella tua **griglia**. Una carta **non** può costare meno di 0 (lo sconto rimanente è perso). Se la carta che stai acquistando presenta uno sconto, questo si applica **solo dal prossimo turno**.
 :::
 
----
-
 In alternativa, puoi prendere **1 carta coperta** dal luogo occupato dalla **pedina Messaggero**, senza pagare nulla e ottenere **6 Monete d'Oro e 2 Chiavi**. Poi posizionala nella tua **griglia**.
 
-> Non puoi usarne l'**abilità immediata** e non ti darà **punti** a fine partita.
+> **Non** puoi usarne l'abilità immediata e **non** ti darà punti a fine partita.
 
 ## Regole di Posizionamento
 
