@@ -16,8 +16,13 @@
       "cover":    "games/war-chest/img/cover.png",
       "coverBig": "games/war-chest/img/cover-big.webp",
       "copertina":"games/war-chest/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "NB", "label": "Nobiltà" },
+        { "sigla": "AS", "label": "Assedio" }
+      ],
       "aiSummary": false,
-      "revision": "v.1.0"
+      "revision": "v.2.0"
     },
     {
       "id": "war-chest-ia",
@@ -52,6 +57,15 @@
       "cover":    "games/thunder-road-vendetta/img/cover.png",
       "coverBig": "games/thunder-road-vendetta/img/cover-big.webp",
       "copertina":"games/thunder-road-vendetta/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "SPO",    "label": "Solo Parti Originali" },
+        { "sigla": "ME-AAA", "label": "Munizioni Extra: Assalti Aerei Avanzati" },
+        { "sigla": "ME-AnM", "label": "Munizioni Extra: Assi nella Manica" },
+        { "sigla": "ME-CB",  "label": "Munizioni Extra: Comandi Bonus" },
+        { "sigla": "ME-CS",  "label": "Munizioni Extra: Condizioni Stradali" },
+        { "sigla": "ME-R",   "label": "Munizioni Extra: Ricompense" }
+      ],
       "aiSummary": false,
       "revision": "v.1.1"
     },
@@ -139,6 +153,7 @@
         { "id": "shango",            "label": "Shango",            "icon": "factions/img/shango-icon.png" },
         { "id": "wong-fei-hung",     "label": "Wong Fei-Hung",     "icon": "factions/img/wong-fei-hung-icon.png" }
       ],
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
       "aiSummary": false,
       "revision": "v.1.0"
     },
@@ -261,6 +276,7 @@
       "cover":    "games/scout/img/cover.png",
       "coverBig": "games/scout/img/cover-big.webp",
       "copertina":"games/scout/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
       "aiSummary": false,
       "revision": "v.1.0"
     },
@@ -302,7 +318,7 @@
         { "sigla": "FdS", "label": "Fuori dalle Segrete" }
       ],
       "aiSummary": false,
-      "revision": "v.1.0"
+      "revision": "v.2.0"
     },
     {
       "id": "regicide-ia",
@@ -353,6 +369,7 @@
       "cover":    "games/ticket-to-ride-europa/img/cover.png",
       "coverBig": "games/ticket-to-ride-europa/img/cover-big.webp",
       "copertina":"games/ticket-to-ride-europa/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
       "aiSummary": false,
       "revision": "v.0.1"
     },
@@ -440,6 +457,20 @@
       "cover":    "games/carcassonne/img/cover.png",
       "coverBig": "games/carcassonne/img/cover-big.webp",
       "copertina":"games/carcassonne/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "FIU", "label": "Il Fiume" },
+        { "sigla": "ABA", "label": "L'Abate" },
+        { "sigla": "LC",  "label": "Locande e Cattedrali" },
+        { "sigla": "MV",  "label": "Macchine Volanti" },
+        { "sigla": "CC",  "label": "Commercianti e Costruttori" },
+        { "sigla": "MSG", "label": "Il Messaggero" },
+        { "sigla": "TRG", "label": "Il Traghetto" },
+        { "sigla": "MIN", "label": "La Miniera" },
+        { "sigla": "MS",  "label": "Il Mago e la Strega" },
+        { "sigla": "BRG", "label": "Il Brigante" },
+        { "sigla": "CNG", "label": "Cerchi nel Grano" }
+      ],
       "aiSummary": false,
       "revision": "v.0.1"
     },
@@ -848,6 +879,10 @@
       "cover":    "games/dune-insurrezione/img/cover.png",
       "coverBig": "games/dune-insurrezione/img/cover-big.webp",
       "copertina":"games/dune-insurrezione/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "LG", "label": "Lignaggi" }
+      ],
       "aiSummary": false,
       "revision": "v.0.1"
     },
@@ -953,8 +988,13 @@
       "cover":    "games/faraway/img/cover.png",
       "coverBig": "games/faraway/img/cover-big.webp",
       "copertina":"games/faraway/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "PdS", "label": "Popoli del Sottosuolo" },
+        { "sigla": "SCS", "label": "Sotto Cieli Stessalati" }
+      ],
       "aiSummary": false,
-      "revision": "v.1.0"
+      "revision": "v.2.0"
     },
     {
       "id": "heat",
@@ -1026,8 +1066,9 @@
       "cover":    "games/azul-mini/img/cover.png",
       "coverBig": "games/azul-mini/img/cover-big.webp",
       "copertina":"games/azul-mini/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
       "aiSummary": false,
-      "revision": "v.1.0"
+      "revision": "v.2.0"
     },
     {
       "id": "ticket-to-ride-legacy",
@@ -1733,6 +1774,10 @@
       "cover":    "games/harmonies/img/cover.png",
       "coverBig": "games/harmonies/img/cover-big.webp",
       "copertina":"games/harmonies/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "SdN", "label": "Spirito della Natura" }
+      ],
       "aiSummary": false,
       "revision": "v.1.0"
     },
@@ -1751,6 +1796,7 @@
       "cover":    "games/oltre-la-porta/img/cover.png",
       "coverBig": "games/oltre-la-porta/img/cover-big.webp",
       "copertina":"games/oltre-la-porta/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
       "aiSummary": false,
       "revision": "v.1.0"
     },

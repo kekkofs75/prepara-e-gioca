@@ -90,7 +90,7 @@ Per rivivere **battaglie famose** usa le seguenti combinazioni di unità.
 | ![unità mercenario](img/unita-mercenario.png){.img-inline} | Mercenario | ![unità cavaliere](img/unita-cavaliere.png){.img-inline} | Cavaliere |
 | ![unità picchiere](img/unita-picchiere.png){.img-inline} | Picchiere | ![unità spadaccino](img/unita-spadaccino.png){.img-inline} | Spadaccino |
 
-## Battaglia di Xiangyang (1267 d.C.)
+### Battaglia di Xiangyang (1267 d.C.){.accent}
 
 > Richiede l'**Espansione Assedio**
 

@@ -1309,6 +1309,14 @@
     .aid-panel .md-body .md-accent p,
     .aid-panel .md-body .md-accent li,
     .aid-panel .md-body .md-accent strong { color: var(--game-color); }
+
+    /* **testo**{.accent} e *testo*{.accent} inline nei pannelli Aid e Quickstart */
+    .aid-panel .md-body .accent,
+    .aid-panel .md-body .accent strong,
+    .aid-panel .md-body .accent em {
+      color: var(--game-color);
+      font-style: normal;
+    }
     /* .def popup */
     .aid-panel .md-body .def {
       color: var(--game-color);
@@ -1418,74 +1426,42 @@
     /* ── Guida Rapida (Quickstart) ──────────────────────────── */
     #view-quickstart {
       background: var(--bg);
-      display: none;
-      flex-direction: column;
+      display: none; flex-direction: column;
       height: calc(100dvh - var(--nav-height) - var(--safe-bottom));
       overflow: hidden;
     }
     #view-quickstart.active { display: flex; }
-
     .qs-header {
-      flex-shrink: 0;
-      background: var(--surface);
-      box-shadow: 0 1px 0 var(--border-light);
-      z-index: 10;
+      flex-shrink: 0; background: var(--surface);
+      box-shadow: 0 1px 0 var(--border-light); z-index: 10;
     }
     .qs-header .section-hero { margin-bottom: 0 !important; }
-
-    .qs-content-wrap {
-      flex: 1;
-      overflow: hidden;
-      position: relative;
-      background: var(--bg);
-    }
-    /* Accordion espansioni */
+    .qs-content-wrap { flex: 1; overflow: hidden; background: var(--bg); }
     .qs-exp-accordion-btn {
-      width: 100%;
-      display: flex; align-items: center; gap: 8px;
-      padding: 8px 16px;
-      background: var(--surface-2);
-      border: none;
+      width: 100%; display: flex; align-items: center; gap: 8px;
+      padding: 8px 16px; background: var(--surface-2); border: none;
       border-top: 1px solid var(--border-light);
       border-bottom: 1px solid var(--border-light);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.8rem; font-weight: 600;
-      color: var(--text-secondary);
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-      text-align: left;
+      font-family: 'DM Sans', sans-serif; font-size: 0.8rem;
+      font-weight: 600; color: var(--text-secondary);
+      cursor: pointer; -webkit-tap-highlight-color: transparent; text-align: left;
     }
     .qs-exp-count {
-      font-size: 0.75rem;
-      background: var(--game-color);
-      color: #fff;
-      border-radius: 20px;
-      padding: 1px 8px;
-      font-weight: 700;
+      font-size: 0.75rem; background: var(--game-color); color: #fff;
+      border-radius: 20px; padding: 1px 8px; font-weight: 700;
     }
-    .qs-exp-arrow {
-      margin-left: auto;
-      font-size: 0.75rem;
-      transition: transform .2s;
-    }
+    .qs-exp-arrow { margin-left: auto; font-size: 0.75rem; transition: transform .2s; }
     .qs-exp-panel {
-      padding: 10px 16px 12px;
-      background: var(--surface-2);
+      padding: 10px 16px 12px; background: var(--surface-2);
       border-bottom: 1px solid var(--border-light);
     }
     .qs-exp-chips { display: flex; flex-wrap: wrap; gap: 8px; }
     .qs-exp-chip {
-      display: flex; align-items: center; gap: 6px;
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1.5px solid var(--game-color);
-      background: transparent;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.82rem; font-weight: 600;
-      color: var(--game-color);
-      cursor: pointer;
-      transition: all .15s;
-      -webkit-tap-highlight-color: transparent;
+      display: flex; align-items: center; gap: 6px; padding: 6px 12px;
+      border-radius: 20px; border: 1.5px solid var(--game-color);
+      background: transparent; font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; font-weight: 600; color: var(--game-color);
+      cursor: pointer; transition: all .15s; -webkit-tap-highlight-color: transparent;
     }
     .qs-exp-chip.active { background: var(--game-color); color: #fff; }
     .qs-exp-chip-label { font-size: 0.72rem; opacity: 0.8; }
@@ -1717,9 +1693,7 @@
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════════ -->
-  <!-- QUICKSTART VIEW — Guida Rapida                         -->
-  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- QUICKSTART VIEW — Guida Rapida -->
   <div id="view-quickstart" class="view">
     <div class="qs-header">
       <div class="section-hero" id="qs-hero" style="margin-bottom:0">
@@ -1730,11 +1704,10 @@
         <div class="section-hero-icon" id="qs-hero-icon"></div>
       </div>
       <div id="qs-exp-accordion" style="display:none">
-        <button class="qs-exp-accordion-btn" id="qs-exp-accordion-btn"
-                onclick="toggleQsAccordion()">
+        <button class="qs-exp-accordion-btn" id="qs-exp-accordion-btn" onclick="toggleQsAccordion()">
           <span>Espansioni</span>
           <span id="qs-exp-count-badge" class="qs-exp-count"></span>
-          <span id="qs-exp-accordion-arrow" class="qs-exp-arrow">▸</span>
+          <span id="qs-exp-accordion-arrow" class="qs-exp-arrow">&#9658;</span>
         </button>
         <div id="qs-exp-panel" class="qs-exp-panel" style="display:none">
           <div id="qs-exp-chips" class="qs-exp-chips"></div>
@@ -2343,15 +2316,8 @@
   /* ── Guida Rapida (Quickstart) ──────────────────────────── */
   const QS_ORDER  = ['preparazione', 'svolgimento', 'finepartita'];
   const QS_LABELS = { preparazione: 'Preparazione', svolgimento: 'Svolgimento', finepartita: 'Fine Partita' };
-
-  let qsTabs          = [];
-  let qsTabIdx        = 0;
-  let qsContents      = {};
-  let qsGlossaryMaps  = {};
-  let qsExpansions    = [];
-  let qsActiveExps    = new Set();
-  let qsAccordionOpen = false;
-  let qsTouchX        = 0;
+  let qsTabs = [], qsTabIdx = 0, qsContents = {}, qsGlossaryMaps = {};
+  let qsExpansions = [], qsActiveExps = new Set(), qsAccordionOpen = false, qsTouchX = 0;
 
   function markExpansionSteps(html, expansions) {
     if (!expansions || !expansions.length) return html;
@@ -2381,16 +2347,13 @@
     document.querySelectorAll(`#qs-panels li[data-exp="${sigla}"]`).forEach(li => {
       if (!active) {
         if (!li.dataset.savedHtml) li.dataset.savedHtml = li.innerHTML;
-        const icon   = li.querySelector('.img-icon');
+        const icon = li.querySelector('.img-icon');
         const strong = li.querySelector('strong');
         li.innerHTML = (icon ? icon.outerHTML + ' ' : '') +
                        (strong ? strong.outerHTML + ' ' : '') +
                        '<span class="qs-exp-hidden-text">—</span>';
       } else {
-        if (li.dataset.savedHtml) {
-          li.innerHTML = li.dataset.savedHtml;
-          delete li.dataset.savedHtml;
-        }
+        if (li.dataset.savedHtml) { li.innerHTML = li.dataset.savedHtml; delete li.dataset.savedHtml; }
       }
     });
   }
@@ -2399,16 +2362,12 @@
     const chip = document.querySelector(`#qs-exp-chips [data-sigla="${sigla}"]`);
     if (!chip) return;
     if (qsActiveExps.has(sigla)) {
-      qsActiveExps.delete(sigla);
-      chip.classList.remove('active');
-      applyQsExpansion(sigla, false);
+      qsActiveExps.delete(sigla); chip.classList.remove('active'); applyQsExpansion(sigla, false);
     } else {
-      qsActiveExps.add(sigla);
-      chip.classList.add('active');
-      applyQsExpansion(sigla, true);
+      qsActiveExps.add(sigla); chip.classList.add('active'); applyQsExpansion(sigla, true);
     }
-    const badge = $('qs-exp-count-badge');
-    if (badge) badge.textContent = `${qsActiveExps.size}/${qsExpansions.length} attive`;
+    const b = $('qs-exp-count-badge');
+    if (b) b.textContent = `${qsActiveExps.size}/${qsExpansions.length} attive`;
   }
 
   function toggleQsAccordion() {
@@ -2422,16 +2381,10 @@
     const gameTabs = currentGame.quickstart || [];
     qsTabs = QS_ORDER.filter(id => gameTabs.includes(id));
     if (!qsTabs.length) return;
-
-    qsExpansions    = currentGame.quickstartExpansions || [];
-    qsActiveExps    = new Set(qsExpansions.map(e => e.sigla));
-    qsAccordionOpen = false;
-    qsTabIdx        = 0;
-    qsContents      = {};
-    qsGlossaryMaps  = {};
-
-    navHistory.push('quickstart');
-    pushNav('quickstart');
+    qsExpansions = currentGame.quickstartExpansions || [];
+    qsActiveExps = new Set(qsExpansions.map(e => e.sigla));
+    qsAccordionOpen = false; qsTabIdx = 0; qsContents = {}; qsGlossaryMaps = {};
+    navHistory.push('quickstart'); pushNav('quickstart');
 
     $('qs-hero-game').textContent  = currentGame.title;
     $('qs-hero-title').textContent = 'Guida Rapida';
@@ -2449,23 +2402,18 @@
           <span class="qs-exp-chip-label">${exp.label}</span>
         </button>`).join('');
       $('qs-exp-count-badge').textContent = `${qsActiveExps.size}/${qsExpansions.length} attive`;
-    } else {
-      acc.style.display = 'none';
-    }
+    } else { acc.style.display = 'none'; }
 
     $('qs-tab-bar').innerHTML = qsTabs.map((id, i) => `
-      <button class="aid-tab${i === 0 ? ' active' : ''}"
-              id="qs-tab-${id}" onclick="switchQsTab(${i})">
-        ${QS_LABELS[id]}
-      </button>`).join('');
+      <button class="aid-tab${i === 0 ? ' active' : ''}" id="qs-tab-${id}"
+              onclick="switchQsTab(${i})">${QS_LABELS[id]}</button>`).join('');
 
-    const panelW = 100 / qsTabs.length;
+    const pw = 100 / qsTabs.length;
     $('qs-panels').style.width = `${qsTabs.length * 100}%`;
     $('qs-panels').innerHTML = qsTabs.map(id => `
-      <div class="aid-panel" id="qs-panel-${id}" style="width:${panelW}%">
+      <div class="aid-panel" id="qs-panel-${id}" style="width:${pw}%">
         <div class="loading-state"><div class="spinner"></div><p>Caricamento…</p></div>
       </div>`).join('');
-
     _qsMoveTo(0, false);
     showView('quickstart');
 
@@ -2482,15 +2430,12 @@
         qsContents[id] = html;
       } catch {
         qsGlossaryMaps[id] = {};
-        qsContents[id] = `<div class="empty-state">
-          <div class="empty-icon">📖</div>
-          <p>Aggiungi il file <code>quickstart/${id}.md</code>.</p>
-        </div>`;
+        qsContents[id] = `<div class="empty-state"><div class="empty-icon">📖</div>
+          <p>Aggiungi <code>quickstart/${id}.md</code>.</p></div>`;
       }
       const panel = $(`qs-panel-${id}`);
       if (panel) panel.innerHTML = `<div class="md-body">${qsContents[id]}</div>`;
     }));
-
     const defId = qsTabs[0];
     if (qsGlossaryMaps[defId]) glossaryMap = { ...qsGlossaryMaps[defId] };
   }
@@ -2505,24 +2450,17 @@
   }
 
   function _qsMoveTo(idx, animate) {
-    const panels = $('qs-panels');
-    if (!animate) panels.style.transition = 'none';
-    panels.style.transform = `translateX(-${idx * (100 / qsTabs.length)}%)`;
-    if (!animate) requestAnimationFrame(() => { panels.style.transition = ''; });
+    const p = $('qs-panels');
+    if (!animate) p.style.transition = 'none';
+    p.style.transform = `translateX(-${idx * (100 / qsTabs.length)}%)`;
+    if (!animate) requestAnimationFrame(() => { p.style.transition = ''; });
   }
 
-  $('qs-panels').addEventListener('touchstart', e => {
-    qsTouchX = e.touches[0].clientX;
-  }, { passive: true });
-
+  $('qs-panels').addEventListener('touchstart', e => { qsTouchX = e.touches[0].clientX; }, { passive: true });
   $('qs-panels').addEventListener('touchend', e => {
     const dx = e.changedTouches[0].clientX - qsTouchX;
-    if (Math.abs(dx) > 50) {
-      if (dx < 0) switchQsTab(qsTabIdx + 1);
-      else        switchQsTab(qsTabIdx - 1);
-    }
+    if (Math.abs(dx) > 50) { dx < 0 ? switchQsTab(qsTabIdx + 1) : switchQsTab(qsTabIdx - 1); }
   }, { passive: true });
-
   $('qs-panels').addEventListener('click', handleMarkdownClick);
 
   /* ── Title Case ─────────────────────────────────────────── */

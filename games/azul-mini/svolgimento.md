@@ -39,8 +39,6 @@ Se **tutte** le caselle della **linea del pavimento **sono occupate, le ulterior
 
 Questa **fase termina** quando il **centro del tavolo e tutte le tessere vassoio non** contengono più piastrelle.
 
-> Nel raro caso in cui anche la **scatola sia vuota**, inizia il round normalmente anche se alcune tessere vassoio **non** sono completamente rifornite.
-
 # B. Rivestimento delle Pareti
 
 Tutti i giocatori eseguono questa fase **simultaneamente**, svolgendo i seguenti **2 passi**.

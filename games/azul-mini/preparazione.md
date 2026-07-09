@@ -12,7 +12,7 @@ Disponi le **tessere vassoio** in cerchio al centro del tavolo in base al numero
 
 > Puoi inserire le **tessere vassoio** nell'apposito inserto di plastica.
 
-Riempi il **sacchetto** con le **100 piastrelle** (2*0 di ogni colore*) e mescolale.
+Riempi il **sacchetto** con le **100 piastrelle** (*20 di ogni colore*) e mescolale.
 
 Chi ha visitato più di recente il Portogallo prende il **segnalino primo giocatore** ![segnalino primo giocatore](img/segnalino-primo-giocatore.png){.img-inline} e riempie ogni **tessera vassoio** con esattamente **4 piastrelle** pescate casualmente dal sacchetto.
 
