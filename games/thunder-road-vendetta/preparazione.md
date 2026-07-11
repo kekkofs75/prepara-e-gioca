@@ -38,7 +38,7 @@ Puoi aggiungere **uno o più dei seguenti mazzi** al gioco base. Mescola ogni ma
 
 | Mazzo | Distribuisci | Uso |
 | :--- | :--- | :--- |
-| **Assalti Aerei** | **1 carta coperta** a testa. | Gioca quando indicato dalla carta. |
+| **Assalti Aerei Avanzati** | **1 carta coperta** a testa. | Gioca quando indicato dalla carta. |
 | **Assi nella Manica** | **1 carta coperta** a testa. | Gioca quando indicato dalla carta. |
 | **Comandi Bonus** | **1 carta scoperta** a testa. | È un comando aggiuntivo sempre disponibile. |
 | **Ricompense** | **1 carta coperta** a testa. | Riscuoti quando soddisfi la condizione. |

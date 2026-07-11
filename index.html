@@ -919,6 +919,52 @@
     .md-spoiler-body > *:first-child { margin-top: 0; }
     .md-spoiler-body > *:last-child  { margin-bottom: 0; }
 
+    /* ── :::accordion — blocco collassabile generico ────────── */
+    details.md-accordion {
+      margin: 0.8em 0;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border);
+      overflow: hidden;
+    }
+    details.md-accordion summary.md-accordion-summary {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 14px; cursor: pointer;
+      font-family: 'Nunito', sans-serif; font-weight: 700;
+      font-size: 0.92rem; color: var(--text);
+      background: var(--surface-2); list-style: none;
+      -webkit-tap-highlight-color: transparent; user-select: none;
+      transition: background .15s;
+    }
+    details.md-accordion summary.md-accordion-summary::-webkit-details-marker { display: none; }
+    details.md-accordion summary.md-accordion-summary:active { background: var(--border-light); }
+    details.md-accordion summary.md-accordion-summary::before {
+      content: ''; display: inline-block;
+      width: 1.1em; height: 1.1em; flex-shrink: 0;
+      background-color: var(--text-secondary);
+      -webkit-mask-image: url(icons/accordion-close.png);
+      mask-image: url(icons/accordion-close.png);
+      -webkit-mask-size: contain; mask-size: contain;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      -webkit-mask-position: center; mask-position: center;
+    }
+    details.md-accordion[open] summary.md-accordion-summary::before {
+      -webkit-mask-image: url(icons/accordion-open.png);
+      mask-image: url(icons/accordion-open.png);
+    }
+    details.md-accordion summary.md-accordion-summary::after {
+      content: '›'; margin-left: auto;
+      font-size: 1.2rem; line-height: 1;
+      color: var(--text-secondary); transition: transform .2s ease;
+    }
+    details.md-accordion[open] summary.md-accordion-summary::after { transform: rotate(90deg); }
+    .md-accordion-body {
+      padding: 12px 16px;
+      border-top: 1px solid var(--border-light);
+      background: var(--surface);
+    }
+    .md-accordion-body > *:first-child { margin-top: 0; }
+    .md-accordion-body > *:last-child  { margin-bottom: 0; }
+
     /* ::: indent — paragrafo/blocco indentato */
     .md-indent {
       margin-left: 1.4em;
@@ -2657,7 +2703,17 @@
       }
     );
 
-    // 1b. Blocchi :::tipo → <div class="md-tipo">  (generico)
+    // 1b. :::accordion Titolo → <details class="md-accordion">, sempre chiuso
+    md = md.replace(
+      /^:::[ \t]*accordion[ \t]+(.+?)[ \t]*\r?\n([\s\S]*?)^:::[ \t]*$/gm,
+      (_, title, content) => {
+        const innerMd   = preprocessMarkdown(content.trim(), imgBase);
+        const innerHtml = mdParser.render(innerMd);
+        return `<details class="md-accordion">\n<summary class="md-accordion-summary">${title.trim()}</summary>\n<div class="md-accordion-body">${innerHtml}</div>\n</details>\n\n`;
+      }
+    );
+
+    // 1c. Blocchi :::tipo → <div class="md-tipo">  (generico)
     md = md.replace(
       /^:::\s*glossary\s*\r?\n([\s\S]*?)^:::\s*$/gm,
       (_, contenuto) => {

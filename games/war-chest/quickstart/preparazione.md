@@ -6,7 +6,7 @@
 4. Distribuisci le **carte Unità**:
 
    - **Prima partita**: usa le unità consigliate:
-:::spoiler Unità Consigliate
+:::accordion Unità Consigliate
 |   | Giocatore A |   | Giocatore B |
 |:---:|:---|:---:|:---|
 | ![unità spadaccino](img/unita-spadaccino.png){.img-inline} | **Spadaccino** | ![unità arciere](img/unita-arciere.png){.img-inline} | **Arciere** |
@@ -20,7 +20,7 @@
    - **Preparazione avanzata**: mescola e poni **8 carte Unità scoperte** al centro. Il [draft]{.def} si svolge così, iniziando dal giocatore con l'iniziativa: G1 sceglie 1 carta → G2 ne sceglie 2 → G1 ne sceglie 2 → G2 ne sceglie 2 → G1 prende l'ultima. L'**indicatore Iniziativa** passa poi a G2.
 
    - **Battaglie famose**: scegli una battaglia ed usa le unità indicate:
-:::spoiler Battaglia di Guagamela (331 a.C.)
+:::accordion Battaglia di Guagamela (331 a.C.)
 |   | Unità Greche |   | Unità Persiane |
 |:---:|:---|:---:|:---|
 | ![unità cavaliere](img/unita-cavaliere.png){.img-inline} | Cavaliere | ![unità cavalleria](img/unita-cavalleria.png){.img-inline} | Cavalleria |
@@ -28,7 +28,7 @@
 | ![unità picchiere](img/unita-picchiere.png){.img-inline} | Picchiere | ![unità mercenario](img/unita-mercenario.png){.img-inline} | Mercenario |
 | ![unità maresciallo](img/unita-maresciallo.png){.img-inline} | Maresciallo | ![unità guardia reale](img/unita-guardia-reale.png){.img-inline} | Guardia Reale |
 :::
-::: spoiler Battaglia di Bannockburn (1314 d.C.)
+:::accordion Battaglia di Bannockburn (1314 d.C.)
 |   | Unità Inglesi |   | Unità Scozzesi |
 |:---:|:---|:---:|:---|
 | ![unità arciere](img/unita-arciere.png){.img-inline} | Arciere | ![unità cavalleria leggera](img/unita-cavalleria-leggera.png){.img-inline} | Cavalleria Leggera |
@@ -36,7 +36,7 @@
 | ![unità lanciere](img/unita-lanciere.png){.img-inline} | Lanciere | ![unità sacerdote guerriero](img/unita-sacerdote.png){.img-inline} | Sacerdote Guerriero |
 | ![unità fanteria](img/unita-fanteria.png){.img-inline} | Fanteria | ![unità spadaccino](img/unita-spadaccino.png){.img-inline} | Spadaccino |
 :::
-::: spoiler Battaglia di Crécy (1346 d.C.)
+:::accordion Battaglia di Crécy (1346 d.C.)
 |   | Unità Inglesi |   | Unità Francesi |
 |:---:|:---|:---:|:---|
 | ![unità arciere](img/unita-arciere.png){.img-inline} | Arciere | ![unità cavalleria](img/unita-cavalleria.png){.img-inline} | Cavalleria |
@@ -44,7 +44,7 @@
 | ![unità cavaliere](img/unita-cavaliere.png){.img-inline} | Cavaliere | ![unità lanciere](img/unita-lanciere.png){.img-inline} | Lanciere |
 | ![unità guardia reale](img/unita-guardia-reale.png){.img-inline} | Guardia Reale | ![unità esploratore](img/unita-esploratore.png){.img-inline}| Esploratore |
 :::
-::: spoiler Battaglia di Bosworth Field (1485 d.C.)
+:::accordion Battaglia di Bosworth Field (1485 d.C.)
 - ![puzzle]{.icon} **[NB]** Richiede l'**Espansione Nobiltà**
 
 |   | Unità Lancaster |   | Unità York |
@@ -54,7 +54,7 @@
 | ![unità mercenario](img/unita-mercenario.png){.img-inline} | Mercenario | ![unità cavaliere](img/unita-cavaliere.png){.img-inline} | Cavaliere |
 | ![unità picchiere](img/unita-picchiere.png){.img-inline} | Picchiere | ![unità spadaccino](img/unita-spadaccino.png){.img-inline} | Spadaccino |
 :::
-::: spoiler Battaglia di Xiangyang (1267 d.C.)
+:::accordion Battaglia di Xiangyang (1267 d.C.)
 - ![puzzle]{.icon} **[AS]** Richiede l'**Espansione Assedio**
 
 |   | Unità Yuan |   | Unità Song |
@@ -67,7 +67,7 @@
 
 ---
 
-## Preparazione per Giocatore
+## Preparazione dei Giocatori
 
 1. Ogni giocatore sceglie una **fazione** e ne prende i componenti: **1 sacchetto**, **1 gettone Reale**, **6 [indicatori Controllo]{.def}**.
    - ![puzzle]{.icon} **[NB]** Prendi anche i **3 sigilli Proclamazione** corrispondenti alla tua fazione.
