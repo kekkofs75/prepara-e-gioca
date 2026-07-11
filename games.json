@@ -67,7 +67,7 @@
         { "sigla": "ME-R",   "label": "Munizioni Extra: Ricompense" }
       ],
       "aiSummary": false,
-      "revision": "v.1.1"
+      "revision": "v.2.0"
     },
     {
       "id": "thunder-road-vendetta-ia",

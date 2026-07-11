@@ -100,51 +100,34 @@ Se entri in una casella con un **segnalino pericol**o, rivelalo (*se coperto*) e
 
 **Interruzione del movimento**{.accent}
 
-Il movimento si interrompe (perdi il movimento rimanente) se:
-- Entri nella casella di un altro veicolo su strada (tamponamento).
-- Subisci un danno (da mina o da effetto segnalino danno).
+Il movimento si **interrompe** (*perdi il movimento rimanente*) se:
+- Entri nella casella di un **altro veicolo su strada** (*tamponamento*).
+- Subisci un *danno* (*da mina o da effetto segnalino danno*).
 
-*Tamponamento*{.accent}
+**Tamponamento**{.accent}
 
-1. Lancia **dado tamponamento** + **dado direzione**.
-2. Se uno dei due veicoli è di **dimensioni maggiori**, il suo proprietario può richiedere un singolo ritiro di entrambi i dadi (vale anche se fuori uso o se entrambi appartengono allo stesso proprietario).
+1. Lancia i **dadi tamponamento e direzione**.
+2. Se uno dei due veicoli è di **dimensioni maggiori**, il suo proprietario può richiedere un **singolo ritiro** di entrambi i dadi (*vale anche se fuori uso o se entrambi appartengono allo stesso proprietario*).
 3. Muovi il veicolo indicato di **1 casella** nella direzione indicata.
-4. Se si genera un nuovo tamponamento, ripeti finché ogni casella ha al massimo 1 veicolo.
+4. Se si genera un **nuovo tamponamento**, ripeti finché ogni casella ha al massimo 1 veicolo.
 
-*Risoluzione dei danni*{.accent}
+**Oltrepassare il tabellone**{.accent}
 
-Pesca 1 **segnalino danno**, risolvine l'effetto, ponilo coperto in 1 slot danno del cruscotto. Se l'auto si stava muovendo, perde il movimento rimanente. Con 2 segnalini danno, l'auto è **fuori uso**.
+Se l'auto supera il **bordo anteriore** della tessera anteriore e **non è la tessera finale**, aggiorna il tabellone:
 
-:::accordion Segnalini danno
-| Segnalino | Effetto |
-| :---: | :--- |
-| **Ammaccatura** | Nessun effetto aggiuntivo |
-| **Schegge** | Lancia il dado direzione; il primo veicolo in quella direzione riceve 1 danno (*ignora qualsiasi terreno*) |
-| **Slittamento** | Spostati di 1 casella nella direzione mostrata |
-| **Sbandata** | Lancia il dado acrobazia; muoviti di tante caselle lanciando il dado direzione per ognuna (*il terreno ha effetto; la sbandata termina se l'auto perde il movimento*) |
-| **Sbalzo** | Lancia i dadi acrobazia e direzione; salta di tante caselle in quella direzione ignorando tutto ciò che c'è in mezzo (la casella finale ha effetto normale) |
-:::
+1. Rimuovi la **tessera posteriore**, girala e mettila in fondo alla pila di pesca.
+   - Elimina tutte le **auto** sulla tessera posteriore.
+   - Scarta i **segnalini pericolo** sulla tessera posteriore.
+   - Gli **elicotteri** sulla tessera posteriore tornano ai proprietari.
+   - ![puzzle]{.icon} **[ME-CS]** Scarta la **carta Condizioni Stradali** sulla tessera posteriore.
+2. Le **tessere centrale e anteriore** diventano rispettivamente la nuova posteriore e la nuova centrale.
+6. Pesca una **nuova tessera anteriore** e poni **1 segnalino pericolo coperto** su ogni sua casella pericolo.
+   - Se la **pila di pesca** è terminata, rimescola i segnalini scartati e formane una nuova.
+7. Controlla se la nuova tessera è la [tessera finale]{.def} (*se lo è, aggiungi la linea del traguardo*).
+8. Se l'auto ha ancora **movimento**, continua sulla nuova tessera.
+9. ![puzzle]{.icon} **[ME-CS]** Poni **1 carta Condizioni Stradali scoperta** sopra la nuova tessera anteriore.
 
-*Oltrepassare il tabellone*{.accent}
-
-Se l'auto supera il bordo anteriore della tessera anteriore e **non è la tessera finale**, aggiorna il tabellone:
-
-1. Elimina tutte le auto sulla **tessera posteriore**.
-2. Scarta i segnalini pericolo sulla tessera posteriore.
-3. Gli elicotteri sulla tessera posteriore tornano ai proprietari.
-4. Rimuovi la tessera posteriore, girala e mettila in fondo alla pila di pesca.
-5. Tessera centrale → nuova **posteriore**. Tessera anteriore → nuova **centrale**.
-6. Pesca una nuova **tessera anteriore**; poni 1 segnalino pericolo coperto su ogni sua casella pericolo.
-   :::indent
-   Se la pila di pesca è terminata, rimescola i segnalini scartati e formane una nuova.
-   :::
-7. Controlla se la nuova tessera è la [tessera finale]{.def} (aggiungi la linea del traguardo se sì).
-8. Se l'auto ha ancora movimento, continua sulla nuova tessera.
-9. ![puzzle]{.icon} **[ME-CS]** Poni 1 carta **Condizioni Stradali** scoperta sopra la nuova tessera anteriore.
-
-:::accent
-Se l'auto supera il bordo **sinistro, destro o posteriore**, è eliminata.
-:::
+> **Ricorda** che se l'auto supera il bordo **sinistro, destro o posteriore** di una tessera, è eliminata.
 
 ---
 
@@ -160,6 +143,23 @@ L'auto mossa (o l'elicottero posizionato con Assalto Aereo) può sparare a 1 vei
 - Può sparare dopo aver risolto un **tamponamento**.
 
 Lancia il **dado mira**: se la dimensione del bersaglio compare nel risultato, è colpito e riceve **1 segnalino danno**.
+
+**Risoluzione dei danni**{.accent}
+
+1. Pesca 1 **segnalino danno** e risolvine l'effetto.
+2. Ponilo coperto in **1 slot danno** del cruscotto. 
+   - Con 2 segnalini danno, l'auto è **fuori uso**.
+3. Se l'auto si stava muovendo, perde il **movimento** rimanente.
+
+:::accordion Segnalini danno
+| Segnalino | Effetto |
+| :---: | :--- |
+| **Ammaccatura** | Nessun effetto aggiuntivo |
+| **Schegge** | Lancia il dado direzione; il primo veicolo in quella direzione riceve 1 danno (*ignora qualsiasi terreno*) |
+| **Slittamento** | Spostati di 1 casella nella direzione mostrata |
+| **Sbandata** | Lancia il dado acrobazia; muoviti di tante caselle lanciando il dado direzione per ognuna (*il terreno ha effetto; la sbandata termina se l'auto perde il movimento*) |
+| **Sbalzo** | Lancia i dadi acrobazia e direzione; salta di tante caselle in quella direzione ignorando tutto ciò che c'è in mezzo (la casella finale ha effetto normale) |
+:::
 
 *Fine del turno*{.accent}
 
