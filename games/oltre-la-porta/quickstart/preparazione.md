@@ -1,16 +1,19 @@
-## Setup per ogni giocatore
+## Preparazione dei giocatore
 
 1. Prendi una **plancia** e posizionala davanti a te sul lato **Giorno**.
-2. Prendi un **set di [tessere Percorso]{.def}** del tuo colore (verde o blu).
+2. Prendi un **set di [tessere Percorso]{.def}** del tuo colore (*verde o blu*).
 3. Scegli un livello dal [libretto dei livelli]{.def}.
 4. Posiziona le **[tessere Punto di Passaggio]{.def}** del tuo colore sulla plancia nelle caselle indicate dal livello:
-   - **Porta**
-   - **Chiave**
-   - **Forziere**
-   - **Mostro**
-   - **Uscita**
 
-> **Obiettivo:** Costruisci un percorso con le tue tessere che colleghi nell'ordine esatto **Porta → Chiave → Forziere → Mostro → Uscita**. In solitario completa il livello; in due giocatori vince chi ci riesce per primo.
+- ![porta](img/porta.png){.img-inline} **Porta**.
+- ![chiave](img/chiave.png){.img-inline} **Chiave**.
+- ![forziere](img/forziere.png){.img-inline} **Forziere**.
+- ![mostro](img/mostro.png){.img-inline} **Mostro**.
+- ![uscita](img/uscita.png){.img-inline} **Uscita**.
+
+> **Obiettivo:** Costruisci un percorso con le tue tessere che colleghi nell'ordine esatto **Porta → Chiave → Forziere → Mostro → Uscita**.
+> - In solitario completa il livello.
+> - In due giocatori vince chi ci riesce per primo.
 
 :::glossary
 [tessere Percorso]: Le tessere del tuo colore (verde o blu) con cui costruisci il tragitto sulla plancia.

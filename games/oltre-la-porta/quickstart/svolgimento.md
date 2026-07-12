@@ -16,7 +16,7 @@ Tutti i giocatori agiscono in **simultanea**, senza turni: posizionate le tesser
 
 ## Se il livello indica un numero esatto di tessere
 
-1. Costruisci il percorso usando **esattamente** quel numero di tessere Percorso: né una in più, né una in meno.
+1. Costruisci il percorso usando **esattamente** quel numero di tessere Percorso (*né una in più, né una in meno*).
    - A volte è necessario accorciare il percorso.
    - A volte è necessario allungarlo deliberatamente.
 
@@ -26,11 +26,10 @@ Tutti i giocatori agiscono in **simultanea**, senza turni: posizionate le tesser
 2. Posiziona un'altra tessera Percorso sul **lato opposto**, senza toccare altre tessere.
 3. Poni il **[Ponte]{.def}** sul quadrato che viene attraversato.
 
-:::indent
-— Il Ponte **non** può collegarsi a una tessera Punto di Passaggio né attraversarla.
-— Il Ponte **non** può attraversare una **[Buca]{.def}**.
-— Alcuni livelli richiedono l'uso di **1 o 2 Ponti**.
-:::
+> **Ricorda** che:
+> - Il Ponte **non** può collegarsi a una tessera Punto di Passaggio né attraversarla.
+> - Il Ponte **non** può attraversare una **[Buca]{.def}**.
+> - Alcuni livelli richiedono l'uso di **1 o 2 Ponti**.
 
 ## Se il livello ha delle Buche
 

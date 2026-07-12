@@ -13,5 +13,5 @@ Ogni giocatore **aggiunge** al proprio punteggio:
 ## Vittoria e Spareggio
 
 Vince chi ha il **punteggio più alto** dopo i bonus finali.
-- In parità, vince chi ha il **maggior numero di linee orizzontali complete**.
+- In parità, chi ha il **maggior numero di linee orizzontali complete**.
 - In ulteriore parità, la vittoria è **condivisa**.

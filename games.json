@@ -1779,7 +1779,7 @@
         { "sigla": "SdN", "label": "Spirito della Natura" }
       ],
       "aiSummary": false,
-      "revision": "v.1.0"
+      "revision": "v.2.0"
     },
     {
       "id": "oltre-la-porta",
@@ -1798,7 +1798,7 @@
       "copertina":"games/oltre-la-porta/img/copertina.png",
       "quickstart": ["preparazione", "svolgimento", "finepartita"],
       "aiSummary": false,
-      "revision": "v.1.0"
+      "revision": "v.2.0"
     },
     {
       "id": "oltre-la-porta-ia",
