@@ -91,9 +91,11 @@ Rieseguite la **Preparazione del Round** (*vedere sezione Preparazione*).
 Applica le seguenti modifiche al normale regolamento:
 
 - I **segnalini Scout & Show non** vengono usati (**non** è possibile eseguire l’azione Esplorare & Mostrare).
-- Distribuisci **11 carte** a testa (le rimanenti 22 carte vengono usate per il 2° round).
+- 	Durante la *Preparazione del Round*:
+    - Distribuisci **11 carte** a testa (le rimanenti 22 carte vengono usate per il 2° round).
+    - 	Distribuisci **3 segnalini Scout** ad entrambi i giocatori.
 - Durante il turno puoi solo **Mostrare** o **Esplorare**.
-- Quando esegui un’**azione Esplorare**, poni **1 segnalino Scout** al centro del tavolo. Se **non** hai Segnalini Scout, **non** puoi Esplorare.
+    - Quando esegui un'**azione Esplorare**, poni **1 segnalino Scout** al centro del tavolo. Se **non** hai Segnalini Scout, **non** puoi Esplorare.
 - La **condizione (2)** di fine round diventa: dopo un’**azione Mostrare**, l'altro giocatore non può **né** Mostrare **né** Esplorare.
 - Si giocano solo **2 round** (nel 2° round si usano le rimanenti 22 carte).
 
