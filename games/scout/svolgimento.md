@@ -2,7 +2,7 @@ I giocatori si alternano in **turni** partendo dal **primo giocatore** e procede
 
 # 1. Mostrare *(Show)*
 
-Scegli e poni davanti a te sul tavolo un **set di carte** dalla tua mano, poi segui le seguenti **2 regole**.
+Scegli e poni davanti a te sul tavolo un **set di carte** dalla tua mano, rispettando le seguenti **2 regole**.
 
 - **Regola 1 — Composizione del set**{.accent}
 :::indent

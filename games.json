@@ -278,7 +278,7 @@
       "copertina":"games/scout/img/copertina.png",
       "quickstart": ["preparazione", "svolgimento", "finepartita"],
       "aiSummary": false,
-      "revision": "v.1.0"
+      "revision": "v.2.0"
     },
     {
       "id": "scout-ia",
@@ -948,7 +948,7 @@
       "id": "rush-bash-ia",
       "title": "Rush & Bash",
       "subtitle": "Partecipa a una gara folle cercando di mettere in difficoltà i tuoi avversari",
-      "themeColor": "#8A2BE2",
+      "themeColor": "#B41414",
       "bggRank": 3754,
       "bggScore": 6.7,
       "duration": "30",
