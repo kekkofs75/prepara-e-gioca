@@ -879,12 +879,17 @@
       "cover":    "games/dune-insurrezione/img/cover.png",
       "coverBig": "games/dune-insurrezione/img/cover-big.webp",
       "copertina":"games/dune-insurrezione/img/copertina.png",
+      "factionsLabel": "Modalità Aggiuntive",
+      "factions": [
+        { "id": "2-giocatori",       "label": "1-2 Giocatori",       "icon": "factions/img/2-giocatori.png" },
+        { "id": "6-giocatori",       "label": "6 Giocatori",       "icon": "factions/img/6-giocatori.png" }
+      ],
       "quickstart": ["preparazione", "svolgimento", "finepartita"],
       "quickstartExpansions": [
         { "sigla": "LG", "label": "Lignaggi" }
       ],
       "aiSummary": false,
-      "revision": "v.0.1"
+      "revision": "v.2.0"
     },
     {
       "id": "orlo-esterno-ia",
