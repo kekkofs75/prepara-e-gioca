@@ -1822,6 +1822,23 @@
       "copertina":"games/oltre-la-porta-ia/img/copertina.png",
       "aiSummary": true,
       "hidden": true
+    },
+    {
+      "id": "tm-ares-expedition",
+      "title": "Terraforming Mars: Ares Expedition",
+      "subtitle": "Terraforma Marte con le carte, senza plancia di gioco condivisa",
+      "themeColor": "#C1440E",
+      "bggRank": null,
+      "bggScore": null,
+      "duration": "45-60",
+      "players": "1-4",
+      "folder": "games/tm-ares-expedition",
+      "cover":    "games/tm-ares-expedition/img/cover.png",
+      "coverBig": "games/tm-ares-expedition/img/cover-big.webp",
+      "copertina":"games/tm-ares-expedition/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.0.1",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"]
     }
   ]
 }
