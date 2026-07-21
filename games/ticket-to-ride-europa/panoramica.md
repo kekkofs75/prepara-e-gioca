@@ -1,29 +1,19 @@
-**Ticket to Ride Europa** è un gioco da tavolo di Alan R. Moon per **2–5 giocatori**, ambientato sulla rete ferroviaria europea del primo Novecento.
+# Carte Treno
 
-# Di cosa si tratta
+Di seguito i 9 tipi di **carte Treno** usate per controllare le linee presenti nel gioco>
 
-I giocatori competono per costruire reti ferroviarie attraverso le principali città europee, cercando di completare i percorsi indicati sulle proprie **carte Biglietto Destinazione** prima degli avversari.
+![carta treno rosa e bianca](img/treno-rosa-bianco.png){.img-center}
 
-# Meccaniche principali
+![carta treno blu e gialla](img/treno-blu-giallo.png){.img-center}
 
-| Meccanica | Descrizione |
-|-----------|-------------|
-| **Raccolta carte** | Peschi carte Treno colorate per "pagare" le linee sul tabellone |
-| **Controllo linee** | Occupi i tratti ferroviari con i tuoi vagoni per guadagnare punti e costruire percorsi |
-| **Biglietti Destinazione** | Obiettivi segreti che ti danno bonus se completati, penalità se ignorati |
-| **Stazioni Ferroviarie** | Elemento esclusivo dell'edizione Europa: ti permettono di usare linee avversarie |
+![carta treno arancione e nera](img/treno-arancio-nero.png){.img-center}
 
-# Rispetto all'edizione base
+![carta treno rossa e verde](img/treno-rosso-verde.png){.img-center}
 
-Ticket to Ride Europa introduce tre meccaniche assenti nell'edizione originale americana:
+![carta locomotiva](img/locomotiva.png){.img-center}
 
-- **Traghetti** — linee speciali via acqua che richiedono obbligatoriamente carte Locomotiva
-- **Gallerie** — linee alpine con costo variabile e imprevedibile
-- **Stazioni Ferroviarie** — strutture che consentono di "appoggiarsi" alla rete di un avversario
+# Carte Biglietto Destinazione
 
-# Durata e complessità
+Di seguito una **carta Biglietto Destinazione** che indica una tratta da controllare per ottenere punti a fine partita:
 
-- **Giocatori:** 2–5
-- **Durata:** 30–60 minuti
-- **Età consigliata:** 8+
-- **Complessità:** accessibile, ottimo per famiglie e neofiti dei giochi da tavolo
+![carta biglietto destinazione](img/anatomia-bigliett-destinazione.png){.img-center}

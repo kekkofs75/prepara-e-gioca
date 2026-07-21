@@ -8,17 +8,17 @@ Ogni giocatore prende:
 - **3 [Stazioni Ferroviarie]{.def}** dello stesso colore
 - Il **Segnapunti** corrispondente
 
-Posiziona poi il Segnapunti nella casella di partenza del **Tracciato Punteggio** attorno al tabellone.
+Poni poi il Segnapunti nella casella di partenza del **Tracciato Punteggio** attorno al tabellone.
 
 # Carte Treno
 
-Mescola e dai **4 [carte Treno]{.def}** ad ogni giocatore. Poi posiziona il mazzo vicino al tabellone e rivela le **prime 5 carte** a faccia in su disponendole in fila.
+Mescola e dai **4 [carte Treno]{.def}** ad ogni giocatore. Poi poni il mazzo vicino al tabellone e rivela le **prime 5 carte a faccia in su** disponendole in fila.
 
 # Carte Biglietto Destinazione
 
-- Mescola e dai **1 [carta Biglietto Destinazione]{.def} linee lunghe** (sfondo blu) ad ogni giocatore, riponendo nella scatola il resto.
-- Mescola e dai **3 carte Biglietto Destinazione linee regolari** (sfondo marrone) ad ogni giocatore.
-- Posiziona il mazzo vicino al tabellone.
+- Mescola e dai **1 [carta Biglietto Destinazione]{.def} linee lunghe** (*sfondo blu*) ad ogni giocatore, riponendo nella scatola il resto.
+- Mescola e dai **3 carte Biglietto Destinazione linee regolari** (*sfondo marrone*) ad ogni giocatore.
+- Posiziona il mazzo Bisglietti Destinazine vicino al tabellone.
 
 :::accent
 Ogni giocatore sceglie **almeno 2 carte Biglietto Destinazione** da tenere e ripone quelle scartate nella scatola.
@@ -26,7 +26,7 @@ Ogni giocatore sceglie **almeno 2 carte Biglietto Destinazione** da tenere e rip
 
 # Primo giocatore
 
-Determinate il primo giocatore (per es. chi ha visitato il maggior numero di paesi europei). Il gioco procede in **senso orario**.
+Determinate il **primo giocatore** (*per es. chi ha visitato il maggior numero di paesi europei oppure casualmente*). Il gioco procede in **senso orario**.
 
 :::glossary
 [tabellone]: La mappa di gioco raffigurante le città europee e le linee ferroviarie che le collegano.

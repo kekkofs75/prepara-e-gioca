@@ -1,4 +1,4 @@
-Quando la riserva di vagoni di un giocatore scende a **≤ 2 vagoni** alla fine del suo turno, ogni giocatore (incluso quello stesso giocatore) ha diritto ad **1 turno finale**, poi la partita termina.
+Quando la riserva di **vagoni** di un giocatore scende a **≤ 2 vagoni** alla fine del suo turno, ogni giocatore (incluso quello stesso giocatore) ha diritto ad **1 turno finale**, poi la partita termina.
 
 # Calcolo dei punteggi
 
@@ -20,13 +20,11 @@ Le **Stazioni Ferroviarie** e le linee avversarie così usabili **non** devono e
 
 > Se **più giocatori** sono in parità per il Percorso Continuo Più Lungo, **ognuno** riceve i 10 punti bonus.
 
----
-
 # Vincitore
 
 Il giocatore che ha accumulato il **maggior numero di punti** vince.
 
-In caso di parità si applicano i seguenti criteri in ordine:
+In caso di **parità** si applicano i seguenti criteri in ordine:
 
 1. Chi ha completato più **Biglietti Destinazione**
 2. Chi ha usato meno **Stazioni Ferroviarie**

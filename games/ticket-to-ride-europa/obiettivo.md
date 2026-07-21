@@ -1,4 +1,4 @@
-Chi ha più punti a fine partita è il **vincitore**. Puoi ottenere punti in modi differenti.
+Chi ha **più punti** a fine partita è il **vincitore**. Puoi ottenere punti in modi differenti.
 
 # Come guadagnare punti
 
@@ -9,9 +9,7 @@ Chi ha più punti a fine partita è il **vincitore**. Puoi ottenere punti in mod
 | **[Percorso Continuo Più Lungo]{.def}** | Ottieni la carta Bonus European Express |
 | Conserva **Stazioni Ferroviarie** | Più ne hai inutilizzate, più punti ricevi a fine partita |
 
-:::accent
-Le **carte Biglietto Destinazione** non risolte fanno **perdere punti** a fine partita.
-:::
+> Le **carte Biglietto Destinazione** non risolte fanno **perdere punti** a fine partita.
 
 :::glossary
 [Linea]: Serie di caselle continue colorate tra due città adiacenti. Controllarla vale punti in base alla sua lunghezza.

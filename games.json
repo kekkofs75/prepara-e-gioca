@@ -371,7 +371,7 @@
       "copertina":"games/ticket-to-ride-europa/img/copertina.png",
       "quickstart": ["preparazione", "svolgimento", "finepartita"],
       "aiSummary": false,
-      "revision": "v.0.1"
+      "revision": "v.2.0"
     },
     {
       "id": "nemesis-ia",
