@@ -1306,7 +1306,15 @@
         { "id": "ducato",   "label": "Ducato Sotterraneo",    "icon": "factions/img/ducato-icon.png" },
         { "id": "corvidi",  "label": "Congiura dei Corvidi",  "icon": "factions/img/corvidi-icon.png" },
         { "id": "orda",     "label": "Signore dell'Orda",     "icon": "factions/img/orda-icon.png" },
-        { "id": "custodi",  "label": "Custodi di Ferro",      "icon": "factions/img/custodi-icon.png" }
+        { "id": "custodi",  "label": "Custodi di Ferro",      "icon": "factions/img/custodi-icon.png" },
+        { "id": "marchesa-bot",  "label": "Marchesa Meccanica",     "icon": "factions/img/marchesa-bot-icon.png" },
+        { "id": "aquile-bot",    "label": "Aquila Elettrica",       "icon": "factions/img/aquile-bot-icon.png" },
+        { "id": "alleanza-bot",  "label": "Alleanza Automatizzata", "icon": "factions/img/alleanza-bot-icon.png" },
+        { "id": "vagabondo-bot", "label": "Vagabot",                "icon": "factions/img/vagabondo-bot-icon.png" },
+        { "id": "lucertole-bot", "label": "Lucertole Logiche",      "icon": "factions/img/lucertole-bot-icon.png" },
+        { "id": "compagnia-bot", "label": "Riverfolk Robotici",     "icon": "factions/img/compagnia-bot-icon.png" },
+        { "id": "ducato-bot",    "label": "Ducato Trapano",         "icon": "factions/img/ducato-bot-icon.png" },
+        { "id": "corvidi-bot",   "label": "Corvidi Meccanici",      "icon": "factions/img/corvidi-bot-icon.png" }
       ],
       "aiSummary": true
     },

@@ -67,6 +67,23 @@ Se scegliete di usare i [combattenti]{.def}, preparateli **prima** di scegliere 
 
 ---
 
+# ![puzzle]{.icon} Gioco con i Bot
+
+Puoi sostituire uno o più giocatori umani con dei **bot**: ogni bot corrisponde a una fazione specifica, ne usa gli stessi pezzi e segue un algoritmo al posto delle decisioni umane. Potete mescolare liberamente fazioni umane e bot.
+
+1. Scegliete insieme quali fazioni saranno bot.
+2. Dopo aver scelto la mappa, posiziona un **segnalino priorità** (da 1 a 12) in ogni radura, seguendo lo schema specifico stampato per la mappa scelta (Autunno, Inverno, Lago o Montagna) nel manuale *The Law of Rootbotics*. Questi segnalini risolvono le scelte di bersaglio dei bot quando le regole non bastano a decidere.
+3. Nella preparazione di ogni bot, dopo aver assegnato fazioni e primo giocatore, scegli una **difficoltà** (facile, normale, impegnativa o incubo — solo se diversa da normale, posiziona la carta corrispondente vicino alla plancia) e un numero qualsiasi di **carte tratto** (anche zero), che modificano le regole del bot aumentandone generalmente la difficoltà.
+4. Se giocate con **1 o 2 umani**, rimuovete tutte e 4 le carte dominio dal mazzo prima di mescolare (non solo in 2 giocatori come da regola standard). I bot non pescano carte in mano.
+
+> Le carte dominio non possono mai essere usate dai bot per cambiare le proprie condizioni di vittoria.
+
+## Partita Interamente Cooperativa
+
+Se volete giocare tutti insieme contro i bot, rimuovete tutte le carte dominio durante il setup. Vincete se ogni umano raggiunge **30 punti vittoria** prima che un bot lo faccia. I bot non trattano i pezzi degli altri bot come nemici quando scelgono un bersaglio da attaccare o su cui agire (possono comunque rimuovere pezzi di altri bot come danno collaterale, ad esempio con una rivolta o una bomba). Gli umani continuano a considerarsi reciprocamente nemici. Per una sfida maggiore, potete trattare i pezzi di tutti gli umani come appartenenti a un'unica squadra in alcune interazioni (ad esempio, la Setta delle Lucertole può convertire un guerriero umano alleato usando una cospirazione): in caso di dubbio, interpretate a favore della difficoltà.
+
+---
+
 # ![puzzle]{.icon} Scenari Fanmade (Riverfolk)
 
 I quattro scenari fanmade non richiedono componenti aggiuntivi particolari, ma modificano il setup come segue:

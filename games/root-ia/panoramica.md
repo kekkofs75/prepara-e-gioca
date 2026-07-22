@@ -97,9 +97,13 @@ Sul retro della mappa autunnale. Prima di giocare, mescola i **12 indicatori sim
 
 Il lago al centro è considerato un fiume e collega tutte le radure costiere tra loro. Le foreste costiere (che toccano il lago) sono adiacenti alle due foreste costiere più vicine separate da una radura costiera invece che da un sentiero. Il **Traghetto** permette un movimento speciale (una volta per turno) verso qualsiasi radura costiera, poi si sposta lì e il giocatore pesca una carta.
 
+> **Con i bot:** i bot usano il Traghetto seguendo le normali regole di movimento, trattando la radura con il Traghetto e tutte le altre radure costiere come collegate da un sentiero. Ottengono 1 punto vittoria invece di pescare una carta, come sempre per i bot.
+
 ## Mappa della Montagna (espansione Il Mondo Sotterraneo)
 
 **Sentieri nascosti**: i sentieri arancioni sono coperti da indicatori. Le radure collegate da sentieri nascosti **non sono adiacenti**. Durante la propria fase Giorno, un giocatore può scartare una carta per rimuovere permanentemente un indicatore sentiero nascosto (deve avere almeno un pezzo in una delle due radure collegate) e ottenere 1 punto vittoria. Il **Valico** (radura con la Torre) vale 1 punto vittoria per chi lo controlla alla fine della propria fase Crepuscolo.
+
+> **Con i bot:** i bot trattano i sentieri chiusi come sentieri normali e ignorano le regole per riaprirli. Quando un bot deve scegliere una radura in base alla priorità più alta o più bassa, il **Valico** soddisfa sempre questa condizione: i bot tenderanno quindi a puntare al Valico, che vince ogni parità di priorità.
 
 ---
 
@@ -121,6 +125,36 @@ Aggiungono combattenti neutri specifici per le espansioni corrispondenti, utiliz
 
 ---
 
+# ![puzzle]{.icon} Regole dei Bot (Legge della Rootbotica)
+
+I bot seguono le stesse regole della Legge di Root, con le modifiche e le regole aggiuntive descritte qui sotto, comuni a **tutti** i bot. Le regole specifiche di ogni bot sono nella rispettiva sezione fazione.
+
+## Terminologia
+
+Il termine "giocatore" include sia gli [umani]{.def} sia i **bot**. Ogni turno, un bot pesca e rivela una **carta ordine**, che ne determina alcune azioni: il termine [ordinato]{.def} significa "che corrisponde al simbolo della carta ordine attuale". L'espressione "**tale radura**" (o "tale giocatore") indica "la radura (o il giocatore) che soddisfa tutti i criteri di bersaglio elencati dall'azione".
+
+## Priorità e Legalità del Bersaglio
+
+- **Priorità Radura.** Se un bot deve scegliere tra più radure da bersagliare, segue tutte le regole indicate dall'azione. Se queste non bastano a decidere, il bot bersaglia la radura di [priorità]{.def} più alta tra quelle possibili.
+- **Priorità Giocatore.** Analogamente, se deve scegliere tra più giocatori, segue le regole dell'azione; altrimenti bersaglia il giocatore con priorità di preparazione più alta, a partire dalla Marchesa con "A".
+- **Legalità del Bersaglio.** Un bot può bersagliare solo una radura o un giocatore consentiti dall'azione richiesta. Se il bersaglio individuato non è legale, il bot prova con l'altra radura/giocatore a pari priorità; se le ha già tentate tutte, prova con la radura/giocatore successivo in ordine di priorità, e così via finché non trova un bersaglio legale o li ha tentati tutti.
+- **Ordine delle Azioni.** Se un bot deve compiere più azioni con bersagli diversi che potrebbero produrre risultati differenti a seconda dell'ordine, le esegue partendo dal bersaglio di priorità più alta. Per il movimento, si considera la priorità della radura di origine, non quella di destinazione.
+
+## Abilità Comuni a Tutti i Bot
+
+- **Scarsa Manualità.** I bot non hanno una mano di carte e non possono scartare. Se un umano dovrebbe prendere una carta da un bot, l'umano pesca una carta invece. Se un umano dovrebbe dare una carta a un bot, la scarta e il bot ottiene **1 punto vittoria**.
+- **Odia le Sorprese.** Le [carte imboscata]{.def} non possono mai essere giocate contro un bot.
+
+## Modifiche Generali alla Legge
+
+:::accent
+- I bot **fabbricano** oggetti senza attivare unità di produzione (l'oggetto deve comunque essere disponibile nella riserva) e ottengono sempre **1 solo punto vittoria** per la fabbricazione, indipendentemente da quanti ne indica la carta. Non possono fabbricare carte con effetti permanenti.
+- Quando un bot **subisce danni** in battaglia, rimuove prima tutti i propri pezzi dalla radura, poi eventuali edifici (se ne ha di più tipi, sceglie casualmente quale rimuovere).
+- I bot **non possono** attivare carte dominio per cambiare le proprie condizioni di vittoria.
+:::
+
+---
+
 # ![puzzle]{.icon} Scenari Fanmade (Riverfolk) — Panoramica Elementi
 
 **Feline Frenzy.** Margot è una pedina speciale che non può essere rimossa: se qualcosa la rimuovesse, viene spostata in una radura adiacente. È considerata un guerriero per movimento e battaglia, ma non è un giocatore (non può controllare radure). Non può essere usata con altri setup della Marchesa.
@@ -137,4 +171,12 @@ Aggiungono combattenti neutri specifici per le espansioni corrispondenti, utiliz
 
 :::glossary
 [Impatto]: Valore numerico di ogni fazione che indica la sua efficacia nel gioco. Usato per bilanciare la selezione delle fazioni nella preparazione standard.
+
+[umani]: I giocatori umani, per distinguerli dai bot nelle regole che si applicano solo a uno dei due gruppi.
+
+[ordinato]: Che corrisponde al simbolo della carta ordine rivelata dal bot in quel turno.
+
+[priorità]: Il segnalino (da 1 a 12, uno per radura) posizionato durante il setup con i bot, usato per risolvere le scelte di bersaglio quando le regole di un'azione non bastano a decidere.
+
+[carte imboscata]: Le 5 carte speciali (una topo, una coniglio, una volpe, due uccello) che il difensore può giocare per infliggere danni immediati all'inizio di una battaglia.
 :::
