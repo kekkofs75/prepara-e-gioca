@@ -826,8 +826,12 @@
       "cover":    "games/quantum/img/cover.png",
       "coverBig": "games/quantum/img/cover-big.webp",
       "copertina":"games/quantum/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "TV", "label": "The Void" }
+      ],
       "aiSummary": false,
-      "revision": "v.0.1"
+      "revision": "v.2.0"
     },
     {
       "id": "unstable-unicorns",
