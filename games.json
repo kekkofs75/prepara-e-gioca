@@ -896,6 +896,26 @@
       "revision": "v.2.0"
     },
     {
+      "id": "orlo-esterno",
+      "title": "Star Wars: Orlo Esterno",
+      "subtitle": "Cacciatori di taglie, contrabbandieri e mercenari si contendono la fama ai confini della galassia",
+      "themeColor": "#2E2B47",
+      "bggRank": 191,
+      "bggScore": null,
+      "duration": "120-180",
+      "players": "1-4",
+      "folder": "games/orlo-esterno",
+      "cover":    "games/orlo-esterno/img/cover.png",
+      "coverBig": "games/orlo-esterno/img/cover-big.webp",
+      "copertina":"games/orlo-esterno/img/copertina.png",
+      "aiSummary": false,
+      "revision": "v.0.1",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "AiS", "label": "Affari in Sospeso" }
+      ]
+    },
+    {
       "id": "orlo-esterno-ia",
       "title": "Star Wars: Orlo Esterno",
       "subtitle": "I personaggi di Star Wars si sfidano in una corsa attraverso la galassia cercando di raggiungere la fama più grande!",
