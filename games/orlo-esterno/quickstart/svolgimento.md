@@ -41,12 +41,11 @@ Puoi effettuare un qualsiasi numero delle seguenti azioni, in qualsiasi ordine, 
 
 Puoi effettuarla solo se ti trovi su un pianeta. Si compone di 2 passi indipendenti e facoltativi (risolvine uno, entrambi o nessuno):
 1. **Scartare una carta**: prendi la carta in cima a un mazzo Mercato a tua scelta, posizionala coperta in fondo al mazzo, poi rivela la nuova carta in cima.
+   - ![puzzle]{.icon} **[AiS]** Puoi scartare una seconda carta dalla cima dello stesso mazzo Mercato una volta scartata la prima. Non risolvere alcuna icona movimento Pattuglia o rivelazione del contatto sulla seconda carta.
 2. **Comprare una carta**: puoi comprare la carta in cima a qualsiasi mazzo Mercato spendendo il costo indicato (anche 0 crediti). Poi rivela la nuova carta in cima al mazzo e risolvi l'icona Movimento della Pattuglia se presente.
 
 - Ogni carta comprata va collocata in 1 slot corrispondente al tipo di carta della scheda Nave o della plancia (Carico, Modifica, Attrezzatura, Equipaggio, Lavoro o Taglia).
 - Se non hai slot vuoti, devi scartare una carta per fare spazio.
-
-![puzzle]{.icon} **[AiS]** Nel Passo 1 – Scartare una carta, puoi scartare una seconda carta dalla cima dello stesso mazzo Mercato una volta scartata la prima. Non risolvere alcuna icona movimento Pattuglia o rivelazione del contatto sulla seconda carta.
 
 *Movimento della Pattuglia*{.accent}
 - Dopo avere comprato o ottenuto una carta Mercato, se la nuova carta rivelata mostra un'icona Movimento della Pattuglia, muovi il segnalino Pattuglia della corrispondente fazione fino a un numero di caselle pari alla distanza indicata, lungo i percorsi della mappa, verso il tuo Personaggio.
@@ -54,8 +53,7 @@ Puoi effettuarla solo se ti trovi su un pianeta. Si compone di 2 passi indipende
 - Le pattuglie si muovono liberamente fino e attraverso il Maelstrom.
 - Se una pattuglia termina il movimento sulla tua casella, non ti scontri subito in combattimento: dovrai incontrarla durante la Fase 3 solo se ti trovi ancora lì e hai reputazione negativa verso la sua fazione.
 - C'è sempre 1 pattuglia per ogni fazione sulla mappa: se viene distrutta, rimuovi il segnalino e genera una nuova pattuglia di quella fazione sulla Boa di Navigazione adiacente alla pila.
-
-![puzzle]{.icon} **[AiS]** Le Pattuglie non possono attraversare i Mondi del Nucleo né muoversi da una casella all'altra dei Mondi del Nucleo.
+- ![puzzle]{.icon} **[AiS]** Le Pattuglie non possono attraversare i Mondi del Nucleo né muoversi da una casella all'altra dei Mondi del Nucleo.
 
 *Barattare*{.accent}
 - Quando compri una carta, puoi scartare tue attrezzature, carichi o modifiche (in fondo ai rispettivi mazzi) per ridurre il costo di un valore pari al loro costo originale, fino a un minimo di 0 crediti.
@@ -76,9 +74,13 @@ Puoi effettuarla solo se ti trovi su un pianeta. Si compone di 2 passi indipende
 
 > Carichi illegali: quando consegni un carico con il tratto ILLEGALE, devi tirare 1 dado prima di ottenere la ricompensa. Con un risultato colpo lo consegni normalmente; con qualsiasi altro risultato (incluso il critico) devi invece risolvere la carta Banca Dati #1 anziché ottenere la ricompensa standard.
 
-![puzzle]{.icon} **[AiS]** Rotazione delle risorse (carico rotante): alcune carte presentano risorse su entrambe le estremità, una identificata come risorsa di partenza. Quando compri o ottieni la carta, paghi per la risorsa di partenza e la poni in uno slot adeguato in modo che sia visibile. La capacità della carta potrebbe richiedere di ruotarla di 180° per rendere visibile l'altra risorsa. Se ottieni una carta di questo tipo da un altro giocatore, mantienila nell'orientamento attuale.
+*Rotazione delle risorse (carico rotante)*{.accent}
 
-![puzzle]{.icon} **[AiS]** Icone rivelazione del contatto: alcune carte Mercato mostrano questa icona. Risolvila quando riveli la carta dopo averla comprata od ottenuta: se il numero di giocatori in partita rientra nell'intervallo indicato, devi rivelare un contatto sul pianeta in cui ti trovi (se possibile), senza incontrarlo — a meno che tu non lo faccia nel passo dell'incontro come di consueto.
+- ![puzzle]{.icon} **[AiS]** Alcune carte presentano risorse su entrambe le estremità, una identificata come risorsa di partenza. Quando compri o ottieni la carta, paghi per la risorsa di partenza e la poni in uno slot adeguato in modo che sia visibile. La capacità della carta potrebbe richiedere di ruotarla di 180° per rendere visibile l'altra risorsa. Se ottieni una carta di questo tipo da un altro giocatore, mantienila nell'orientamento attuale.
+
+*Icone rivelazione del contatto*{.accent}
+
+- ![puzzle]{.icon} **[AiS]** Alcune carte Mercato mostrano questa icona. Risolvila quando riveli la carta dopo averla comprata od ottenuta: se il numero di giocatori in partita rientra nell'intervallo indicato, devi rivelare un contatto sul pianeta in cui ti trovi (se possibile), senza incontrarlo — a meno che tu non lo faccia nel passo dell'incontro come di consueto.
 
 ## Fase 3 — Incontro
 
@@ -100,9 +102,9 @@ Dopo le azioni, risolvi **1 singolo incontro** scegliendo tra 4 opzioni:
 - Se l'incontro ti consente di ottenere una carta, inseriscila nello slot corretto invece di scartarla.
 - Alcuni effetti sono contrassegnati come **Segreto**: leggili in segreto, tienili nascosti a faccia in giù davanti a te e risolvili in seguito seguendo le istruzioni sulla carta. Non occupano slot sulla tua scheda Nave o plancia.
 
-![puzzle]{.icon} **[AiS]** Mondi del Nucleo: prima di pescare la carta Incontro della tua casella, se ti trovi su una casella Mondo del Nucleo devi annunciare se vuoi attraversarli.
-- Se li attraversi, risolvi la sezione "Attraverso il Nucleo" della carta Incontro (può essere più difficile se hai reputazione Imperiale negativa), poi sposta il tuo personaggio sulla casella Mondo del Nucleo opposta a quella attuale.
-- Altrimenti, risolvi la sezione standard "Mondi del Nucleo".
+- ![puzzle]{.icon} **[AiS]** Mondi del Nucleo: prima di pescare la carta Incontro della tua casella, se ti trovi su una casella Mondo del Nucleo devi annunciare se vuoi attraversarli.
+  - Se li attraversi, risolvi la sezione "Attraverso il Nucleo" della carta Incontro (può essere più difficile se hai reputazione Imperiale negativa), poi sposta il tuo personaggio sulla casella Mondo del Nucleo opposta a quella attuale.
+  - Altrimenti, risolvi la sezione standard "Mondi del Nucleo".
 
 *Incontrare un Contatto*{.accent}
 - Scegli 1 segnalino Contatto sul tuo pianeta e giralo a faccia in su. Recupera e risolvi la capacità della carta Banca Dati (parte superiore) indicata.
@@ -113,7 +115,7 @@ Dopo le azioni, risolvi **1 singolo incontro** scegliendo tra 4 opzioni:
 
 > Alcune capacità ti permettono di guardare segretamente un segnalino Contatto: osservane il fronte senza mostrarlo agli altri giocatori e senza consultare ora la sua carta Banca Dati. Puoi riferire agli altri ciò che hai visto, anche mentendo, ma non puoi mai mostrare fisicamente il segnalino.
 
-![puzzle]{.icon} **[AiS]** Contatti arancioni: se incontri un segnalino corrispondente al tuo personaggio o a quello di un altro giocatore, scartalo immediatamente (non risolvere la sua carta Banca Dati e non combatterlo per la taglia), poi risolvi un incontro differente a tua scelta.
+- ![puzzle]{.icon} **[AiS]** Contatti arancioni: se incontri un segnalino corrispondente al tuo personaggio o a quello di un altro giocatore, scartalo immediatamente (non risolvere la sua carta Banca Dati e non combatterlo per la taglia), poi risolvi un incontro differente a tua scelta.
 
 ## Combattimento
 
