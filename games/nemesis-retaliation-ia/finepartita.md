@@ -4,7 +4,7 @@ La partita termina quando si verifica **una** delle seguenti condizioni:
 - **Tutti i Personaggi sono morti oppure Scappati/Ibernati:** non restano giocatori attivi in gioco.
 
 :::accent
-Prima di determinare i vincitori, risolvi la Sequenza di Autodistruzione se questa è stata innescata a fine partita (il segnalino Autodistruzione si trova oltre il turno 14).
+Se il segnalino Autodistruzione è collocato oltre il turno 14 e non è ancora stato risolto, **risolvi l'Autodistruzione per prima** — prima ancora della Procedura di Infezione, della Schiusa e della verifica degli Obiettivi. Solo dopo procedi con la sequenza di Fine Partita descritta qui sotto.
 :::
 
 ---
@@ -78,6 +78,10 @@ La Procedura di Fine Partita è modificata:
 3. Chi ha conseguito il proprio Obiettivo è vincitore.
 
 > La Procedura di Infezione standard **non si applica** con i Sanguivori (le carte Infezione non hanno il testo "INFETTO").
+
+:::accent
+Le carte Infezione sono trattate come **Contaminazioni sempre Infette** a tutti gli effetti: non è necessaria alcuna scansione. Ne consegue che ogni Personaggio con almeno una carta Infezione nel proprio mazzo che la pesca durante la Procedura di Schiusa muore — non c'è modo di "passare" la Schiusa se si ha un'Infezione in circolazione.
+:::
 
 :::glossary
 [Contaminazione]: Carta con retro identico alle carte Azione che non può essere scartata per pagare Azioni. Contiene testo celato leggibile con lo Scanner. Se la parola "INFETTO" è presente, la carta è Infetta e può causare l'Infezione da Larva alla Fine della Partita.

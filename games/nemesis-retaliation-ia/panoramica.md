@@ -123,6 +123,10 @@ Se i segnalini Fuoco si esauriscono e dovrebbe essere piazzato un altro, il Comp
 
 Proteggono i Personaggi dagli Attacchi di Intrusi che *entrano* nella Stanza (non da quelli già presenti). Massimo **3 per Stanza**. Non puoi piazzarli in una Stanza con Intrusi già presenti. Alcune Stanze non possono mai essere messe in sicurezza (es. Il Nido); alcune lo sono sempre (es. Il Rifugio).
 
+:::accent
+Lo stato "sempre in sicurezza" del **Rifugio** è uno stato **permanente della Stanza**, non un segnalino Sicuro. Non può essere rimosso da Strumenti o effetti che scartano segnalini Sicuro, e non conta per effetti che richiedono la presenza di segnalini Sicuro. Nella Stanza si possono comunque aggiungere fino a **3 segnalini Sicuro** normali: questi vengono scartati per primi in caso di Attacchi o effetti, prima che lo stato permanente agisca.
+:::
+
 ## Il Nido
 
 Il Nido (Settore C) ospita i **5 segnalini Uova** sul Bordo del Settore C, considerato un'estensione della Stanza. Le Uova sono **Strumenti Pesanti** e si raccolgono con l'Azione della Stanza Nido. Quando tutte le Uova sono rimosse, piazza un segnalino universale: il Nido è distrutto (anche se effetti successivi aggiungono nuove Uova, rimane considerato distrutto).
@@ -242,6 +246,10 @@ Gli Strumenti Xyriani contano come **Armature** a tutti gli effetti.
 ## Retro delle Carte Xyriane
 
 Le carte degli Xyriani hanno un retro diverso da quello delle carte ordinarie: sono riconoscibili quando si trovano in cima al mazzo. È vietato sbirciare il mazzo per anticiparne la posizione.
+
+## Xyriani e Modulo da Sbarco
+
+Se un effetto degli Xyriani rimuove il Modulo da Sbarco dalla mappa mentre ci sono Personaggi a bordo, questi vengono **espulsi**: tornano nella Zona d'Atterraggio e riprendono ad agire normalmente dal proprio turno successivo.
 
 ---
 

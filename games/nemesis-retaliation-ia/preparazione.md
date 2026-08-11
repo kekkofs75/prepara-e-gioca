@@ -93,17 +93,17 @@ Ogni giocatore:
 6. Mescola il **mazzo carte Azione** del personaggio e lo piazza a sinistra della plancia (coperto).
 7. Prende la **carta Strumento del Personaggio**: se è Pesante, la piazza in uno spazio Mano; se è Armatura, nello spazio Gravemente Ferito. Aggiunge **1 segnalino Munizioni** (carico) per ogni spazio Munizione dello Strumento.
 
-> Il Mercenario parte con **2 Strumenti del Personaggio** e non partecipa alla Selezione dell'Equipaggiamento di Supporto.
+> Il Mercenario parte con **2 Strumenti del Personaggio** e salta i passi 1–4 della Scelta dell'Equipaggiamento di Supporto qui sotto, ma partecipa al passo 5.
 
 ## Scelta dell'Equipaggiamento di Supporto
 
-*(Si applica a tutti i personaggi tranne il Mercenario.)*
+*(I passi 1–4 si applicano a tutti i personaggi tranne il Mercenario; il passo 5 vale per tutti.)*
 
 1. Mescola il **mazzo Equipaggiamento di Supporto**, pesca **7 carte** e rivelale.
 2. Il giocatore con numero di carta Aiuto **più alto** sceglie 1 carta. Poi tutti gli altri scelgono in **ordine decrescente**.
 3. Se l'Equipaggiamento ha spazi per Dispositivi Tattici, riempili dalla riserva (colori corrispondenti; gli spazi grigi accettano qualsiasi tipo).
 4. Rimuovi dal gioco le carte non scelte (ma lascia il mazzo vicino ai mazzi Strumenti).
-5. Ogni giocatore sceglie **4 segnalini Dispositivo Tattico** qualsiasi dalla riserva e li piazza nella propria **Cintura Tattica**. Le Munizioni si piazzano sempre sul lato completamente carico.
+5. Ogni giocatore — **Mercenario incluso** — sceglie **4 segnalini Dispositivo Tattico** qualsiasi dalla riserva e li piazza nella propria **Cintura Tattica**. Le Munizioni si piazzano sempre sul lato completamente carico.
 
 ## Inizio della Partita
 

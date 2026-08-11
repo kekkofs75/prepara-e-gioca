@@ -73,6 +73,10 @@ Pesca una carta dal mazzo Esplorazione e risolvila nell'ordine indicato sulla ca
 4. Sposta il Personaggio nella nuova Stanza (piazza segnalino Sicuro se Movimento Cauto).
 5. Risolvi l'Effetto d'Ingresso (di solito un Tiro Rumore).
 
+> **Chiusura Portelloni:** quando una carta indica di chiudere tutti i Portelloni attorno alla nuova Stanza, si chiudono **solo** quelli che toccano fisicamente quella Stanza — non quelli in Corridoi adiacenti che non la raggiungono direttamente. L'Hibernatorium non viene mai coinvolto, poiché l'Esplorazione non vi avviene mai.
+
+> **Rimuovere la carta dal gioco:** la dicitura "Rimuovi questa carta dal gioco" non fa parte dell'Effetto d'Ingresso. Anche gli effetti che permettono di Esplorare ignorando l'Effetto d'Ingresso rimuovono comunque la carta dal gioco.
+
 **Tiro Rumore:**
 
 Lancia il dado Rumore (d10) e risolvi in base al risultato per **ogni** Corridoio adiacente con il valore corrispondente:
@@ -80,6 +84,8 @@ Lancia il dado Rumore (d10) e risolvi in base al risultato per **ogni** Corridoi
 - **Corridoio con segnalino Rumore** → risolvi il segnalino (pesca dal Sacchetto, piazza Intrusi nel Corridoio).
 - **Corridoio vuoto** → piazza 1 segnalino Rumore nel Corridoio.
 - **Risultato Pericolo (teschio)** → pesca un segnalino dal Sacchetto e piazza l'Intruso indicato direttamente nella tua Stanza.
+
+> L'Attacco generato dal risultato Pericolo **non è parte della Sequenza di Movimento**: non può essere prevenuto da effetti che ignorano Attacchi durante il Movimento (come alcune carte Azione che proteggono durante lo spostamento).
 
 **Sparare a Colpo Singolo:**
 
@@ -166,6 +172,8 @@ Pesca 1 carta dal mazzo Eventi e risolvila in ordine:
 
 Se un effetto è impossibile (es. piazzare un Malfunzionamento dove ce n'è già uno), ignoralo e continua.
 
+> **Segnalini Rumore negli effetti Evento:** un effetto che ordina di "risolvere un segnalino Rumore in ogni Corridoio Inesplorato" richiede che il segnalino Rumore sia **fisicamente presente** in quel Corridoio. Se il Corridoio non ne ha uno, l'effetto non si applica e non si pesca dal Sacchetto.
+
 ## 4. Sviluppo del Sacchetto
 
 Pesca 1 segnalino casuale dal Sacchetto e risolvilo come indicato dalla Scheda Aiuto dell'Intruso (usa solo il fronte del segnalino). Poi scartalo in fondo alla pila corrispondente.
@@ -230,6 +238,8 @@ I Portelloni si trovano in alcuni spazi Corridoio. Possono essere **Aperti**, **
 - **Chiuso** → blocca il Movimento e lo Sparare a Raffica dei Personaggi. Il Fuoco non si propaga attraverso. Gli Intrusi lo distruggono se cercano di attraversarlo.
 - **Distrutto** → funziona come Aperto, ma non può più essere chiuso.
 
+> **Propagazione del Fuoco:** il Fuoco si propaga esclusivamente attraverso Corridoi che hanno uno **spazio Portellone** (aperto o distrutto). Se il Corridoio tra due Stanze non ha alcuno spazio Portellone, il Fuoco **non si propaga** — non piazzare il segnalino Fuoco.
+
 ---
 
 ## Carte Contaminazione
@@ -250,7 +260,7 @@ Le carte Contaminazione hanno lo stesso retro delle carte Azione ma **non posson
 - I **Frementi** (equivalenti delle Larve) non si spostano sulla plancia Personaggio quando attaccano; il Personaggio attaccato pesca 1 carta Contaminazione. I Frementi rimangono sulla mappa.
 - I **Cultisti** non attaccano mai.
 
-**Passo 2 (nuovo) — Attivazione dei Frementi:** tutti i Frementi sulla mappa si attivano e muovono verso il **Corridoio Inesplorato più vicino**. Se un Fremente si trova già su un Corridoio Inesplorato, lascia la mappa: rimettilo nella riserva e avanza tutti i segnalini Corpo di 1 spazio sul Tracciato dei Turni.
+**Passo 2 (nuovo) — Attivazione dei Frementi:** tutti i Frementi sulla mappa si attivano e muovono verso il **Corridoio Inesplorato più vicino** — anche quelli che si trovano già in una Stanza con Personaggi (seguono comunque le regole standard dell'Attacco se durante il movimento entrano in una Stanza con qualcuno). Se un Fremente si trova già su un Corridoio Inesplorato, lascia la mappa: rimettilo nella riserva e avanza tutti i segnalini Corpo di 1 spazio sul Tracciato dei Turni.
 
 ## Segnalini Corpo e Corpi Assorbiti
 
@@ -283,6 +293,8 @@ Le abilità dei 4 tipi di Adulto e dei Frementi sono attive fin dall'inizio e po
 ## Sconfiggere i Cultisti
 
 Quando sconfiggi un Cultista, poni il suo modello sulla tessera Cultisti Morti e **disattiva 1 Abilità** a tua scelta (capovolgila). Fintanto che l'**Abilità dei Cultisti** è attiva, ogni volta che infliggi Colpi a un Cultista devi eseguire un Tiro Rumore.
+
+> Indipendentemente da quanti Colpi vengono inflitti in una singola Azione (es. con una Raffica), si esegue **un solo Tiro Rumore** al termine dell'intera Azione.
 
 ---
 
