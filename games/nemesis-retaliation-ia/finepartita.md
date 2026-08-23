@@ -1,10 +1,10 @@
 La partita termina quando si verifica **una** delle seguenti condizioni:
 
-- **Il turno 14 termina:** il tempo è scaduto. Tutti i Personaggi che non sono Scappati o Ibernati muoiono.
+- **Il round 14 termina:** il tempo è scaduto. Tutti i Personaggi che non sono Scappati o Ibernati muoiono.
 - **Tutti i Personaggi sono morti oppure Scappati/Ibernati:** non restano giocatori attivi in gioco.
 
 :::accent
-Se il segnalino Autodistruzione è collocato oltre il turno 14 e non è ancora stato risolto, **risolvi l'Autodistruzione per prima** — prima ancora della Procedura di Infezione, della Schiusa e della verifica degli Obiettivi. Solo dopo procedi con la sequenza di Fine Partita descritta qui sotto.
+Se il segnalino Autodistruzione è collocato oltre il round 14 e non è ancora stato risolto, **risolvi l'Autodistruzione per prima** — prima ancora della Procedura di Infezione, della Schiusa e della verifica degli Obiettivi. Solo dopo procedi con la sequenza di Fine Partita descritta qui sotto.
 :::
 
 ---

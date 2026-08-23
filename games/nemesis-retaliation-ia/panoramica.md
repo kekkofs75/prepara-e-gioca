@@ -79,7 +79,7 @@ Il [tracciato Salute]{.def} ha 3 stati: **Illeso**, **Ferito**, **Gravemente Fer
 
 ## Ossigeno
 
-Il [Complesso]{.def} contiene ossigeno contaminato non purificabile senza il Supporto Vitale. Ogni Personaggio inizia con **Ossigeno 7** (massimo). Alla fine di ogni proprio round, se ti trovi in un Settore con Supporto Vitale **Inattivo**, perdi 1 Ossigeno.
+Il [Complesso]{.def} contiene ossigeno contaminato non purificabile senza il Supporto Vitale. Ogni Personaggio inizia con **Ossigeno 7** (massimo). Alla fine di ogni proprio turno, se ti trovi in un Settore con Supporto Vitale **Inattivo**, perdi 1 Ossigeno.
 
 Quando l'Ossigeno raggiunge 0 ottieni un **segnalino Soffocare**: la prossima volta che perdi Ossigeno, muori. Il segnalino si scarta quando ottieni Ossigeno o termini il movimento in un Settore con Supporto Vitale Attivo.
 
@@ -111,7 +111,7 @@ Se i segnalini Malfunzionamento si esauriscono, piazza invece un segnalino Fuoco
 
 Il fuoco è pericoloso sia per i Personaggi che per gli Intrusi. Ogni Stanza può contenere **1 solo segnalino Fuoco**. Gli effetti:
 
-1. Alla fine del tuo round in una Stanza con Fuoco, perdi **1 Punto Salute**.
+1. Alla fine del tuo turno in una Stanza con Fuoco, perdi **1 Punto Salute**.
 2. Durante la Fase Intruso, ogni Intruso nella Stanza subisce **1 Colpo** (non usa dadi, non uccide tranne le Larve). Se è nel Nido, distrugge 1 Uovo.
 3. Può propagarsi a Stanze vicine per effetto di alcune carte Evento (i Portelloni Chiusi bloccano la propagazione).
 
@@ -142,14 +142,14 @@ Il Robot si muove sempre da Stanza a Stanza vicina, ignora gli Intrusi ma non at
 
 ## Modulo da Sbarco e Antiaerea
 
-Il **Modulo da Sbarco** tenta di atterrare al turno 10. Il sistema **Antiaerea** (2 segnalini sovrapposti in ordine casuale) determina l'esito:
+Il **Modulo da Sbarco** tenta di atterrare al round 10. Il sistema **Antiaerea** (2 segnalini sovrapposti in ordine casuale) determina l'esito:
 
 - Segnalino in cima **Inattivo** → il Modulo atterra nella Zona d'Atterraggio; i segnalini Antiaerea vengono rimossi definitivamente.
 - Segnalino in cima **Attivo** → il Modulo è distrutto.
 
 I giocatori possono controllare (in segreto) e riordinare i segnalini Antiaerea usando la Stanza **Supporto Vitale B**.
 
-Una volta atterrato, i Personaggi possono salire a bordo con l'Azione della Zona d'Atterraggio. Chi è a bordo salta i propri round ma non è considerato aver Passato, non consuma Ossigeno e non può subire danni. All'inizio della Fase Evento, uno qualsiasi dei giocatori a bordo può decidere il **Lancio**: il Modulo parte e tutti i passeggeri sono Scappati.
+Una volta atterrato, i Personaggi possono salire a bordo con l'Azione della Zona d'Atterraggio. Chi è a bordo salta i propri turni ma non è considerato aver Passato, non consuma Ossigeno e non può subire danni. All'inizio della Fase Evento, uno qualsiasi dei giocatori a bordo può decidere il **Lancio**: il Modulo parte e tutti i passeggeri sono Scappati.
 
 ## Procedure di Emergenza
 

@@ -8,12 +8,12 @@ Per vincere devi soddisfare **tutte e tre** le seguenti condizioni:
 
 Devi assicurarti una via di fuga prima della fine della partita. Le opzioni sono:
 
-- **Scappare tramite il Modulo da Sbarco** nella Zona d'Atterraggio (disponibile solo dopo che il Modulo atterra al turno 10, se l'Antiaerea è inattiva).
+- **Scappare tramite il Modulo da Sbarco** nella Zona d'Atterraggio (disponibile solo dopo che il Modulo atterra al round 10, se l'Antiaerea è inattiva).
 - **Ibernarti** in una capsula dell'Hibernatorium (solo se il sistema è Attivo).
 - **Scappare tramite la Navetta d'Emergenza** nel Settore C (posto singolo).
 
 :::accent
-Restare in vita non basta: devi usare fisicamente una di queste tre Stanze prima dello scadere del turno 14.
+Restare in vita non basta: devi usare fisicamente una di queste tre Stanze prima dello scadere del round 14.
 :::
 
 ## 2. Raggiungere uno dei tuoi Obiettivi

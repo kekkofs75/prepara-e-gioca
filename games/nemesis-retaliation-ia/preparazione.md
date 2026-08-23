@@ -211,7 +211,7 @@ Risolvi i passi Preparazione dei Settori, degli Altri Componenti e dei Giocatori
 Aggiungi le **nuove carte Scelta del Personaggio** al pool di scelta e segui la preparazione standard del gioco. I componenti specifici dell'Operatore Droni entrano in gioco all'inizio della partita: il **modello Drone** e il **modello dell'Operatore Droni** si trovano entrambi nella Zona d'Atterraggio.
 
 :::glossary
-[Segnaturno]: Segnalino che scorre sul Tracciato dei Turni; ogni avanzamento di 1 spazio corrisponde a un Turno trascorso. Quando raggiunge la fine del tracciato, la partita termina.
+[Segnaturno]: Segnalino che scorre sul Tracciato dei Turni; ogni avanzamento di 1 spazio corrisponde a un Round trascorso. Quando raggiunge la fine del tracciato, la partita termina.
 
 [Sacchetto degli Intrusi]: Sacchetto opaco da cui vengono pescati a caso i segnalini Intruso. Rappresenta la colonia aliena che si aggira nel Complesso fuori dalla portata dei Personaggi.
 

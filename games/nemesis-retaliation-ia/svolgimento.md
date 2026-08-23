@@ -1,4 +1,4 @@
-La partita è divisa in una serie di **Turni**, ognuno composto da 4 Fasi in sequenza:
+La partita è divisa in una serie di **Round**, ognuno composto da 4 Fasi in sequenza:
 
 :::indent
 **1. Fase dei Giocatori → 2. Fase Intruso → 3. Fase Evento → 4. Fase di Ripristino**
@@ -8,11 +8,11 @@ La partita è divisa in una serie di **Turni**, ognuno composto da 4 Fasi in seq
 
 # Fase dei Giocatori
 
-A partire dal [Primo Giocatore]{.def} e procedendo in senso orario, ogni giocatore esegue il proprio **round**. Quando tutti hanno passato, la fase termina.
+A partire dal [Primo Giocatore]{.def} e procedendo in senso orario, ogni giocatore esegue il proprio **turno**. Quando tutti hanno passato, la fase termina.
 
-## Il Round del Giocatore
+## Il Turno del Giocatore
 
-Ogni round si articola in 3 passi:
+Ogni turno si articola in 3 passi:
 
 **1. Esegui 2 Azioni**
 
@@ -49,7 +49,7 @@ Se ti trovi in una Stanza con un **segnalino Fuoco**, perdi **1 Punto Salute**.
 > 🚫 = Azione **Non in Combattimento**: non può essere eseguita in una Stanza che ospita almeno 1 Intruso.
 
 :::accent
-Passare è un'Azione. Non avviene automaticamente quando finisci le carte. Una volta passato, il tuo round è saltato per il resto del Turno corrente — puoi però ancora usare le Reazioni.
+Passare è un'Azione. Non avviene automaticamente quando finisci le carte. Una volta passato, il tuo turno è saltato per il resto del Round corrente — puoi però ancora usare le Reazioni.
 :::
 
 ---
@@ -123,7 +123,7 @@ Scegli un numero qualsiasi di segnalini Dispositivo Tattico e usali:
 
 ## Scegliere l'Obiettivo
 
-Una volta per partita, nel tuo round (non durante la risoluzione di un'Azione), puoi **Scegliere l'Obiettivo**: rimuovi dal gioco una delle tue 2 carte Obiettivo (senza mostrarla). L'altra è quella che devi conseguire.
+Una volta per partita, nel tuo turno (non durante la risoluzione di un'Azione), puoi **Scegliere l'Obiettivo**: rimuovi dal gioco una delle tue 2 carte Obiettivo (senza mostrarla). L'altra è quella che devi conseguire.
 
 :::indent
 Il segnalino sul tracciato Scelta Obiettivo avanza di 1 passo e peschi carte Azione aggiuntive: il 1° giocatore pesca 3 carte, il 2° e 3° pescano 2 carte, il 4° e 5° pescano 1 carta.
@@ -133,7 +133,7 @@ Il segnalino sul tracciato Scelta Obiettivo avanza di 1 passo e peschi carte Azi
 
 ## Reazioni
 
-Alcune carte Azione sono **Reazioni**: possono essere giocate al di fuori del tuo turno, in qualsiasi momento, purché le condizioni sulla carta siano soddisfatte. Non contano come Azione e non rispettano il limite delle 2 Azioni per round.
+Alcune carte Azione sono **Reazioni**: possono essere giocate al di fuori del tuo turno, in qualsiasi momento, purché le condizioni sulla carta siano soddisfatte. Non contano come Azione e non rispettano il limite delle 2 Azioni per turno.
 
 ---
 
@@ -334,7 +334,7 @@ L'Infiltrata si trova solo nelle Stanze e può muovere solo attraverso Corridoi 
 
 # ![puzzle]{.icon} Intrusi Xyriani
 
-## Struttura del Turno (Xyriani)
+## Struttura del Round (Xyriani)
 
 Prima della normale Fase Evento, si aggiunge la **Fase degli Xyriani** (solo se almeno 1 Xyriano è sulla mappa):
 
@@ -414,7 +414,7 @@ Non possono essere scartate in nessun altro modo e non possono pagare il costo d
 
 ## Carte Sangue Corrotto
 
-Alcuni effetti dei Sanguivori ti lasciano una **carta Sangue Corrotto**: un'Abilità speciale (con costo) usabile una volta per Turno, che conta come Azione. Puoi averne al massimo 2 (1 Attiva e 1 Inattiva). Quando ti è chiesto di scartarne una, scarta sempre quella più in basso.
+Alcuni effetti dei Sanguivori ti lasciano una **carta Sangue Corrotto**: un'Abilità speciale (con costo) usabile una volta per Round, che conta come Azione. Puoi averne al massimo 2 (1 Attiva e 1 Inattiva). Quando ti è chiesto di scartarne una, scarta sempre quella più in basso.
 
 ---
 
@@ -433,7 +433,7 @@ L'Operatore Droni controlla un **Drone** attraverso le proprie carte Azione. Il 
 :::glossary
 [Primo Giocatore]: Il giocatore in possesso del segnalino Primo Giocatore. Comincia la Fase dei Giocatori e funge da spareggiatore in caso di pareggio.
 
-[Supporto Vitale]: Sistema che regola l'ossigeno di un Settore. Se Inattivo, i Personaggi in quel Settore perdono 1 Ossigeno alla fine di ogni loro round. Può essere attivato/disattivato nelle Stanze Supporto Vitale.
+[Supporto Vitale]: Sistema che regola l'ossigeno di un Settore. Se Inattivo, i Personaggi in quel Settore perdono 1 Ossigeno alla fine di ogni loro turno. Può essere attivato/disattivato nelle Stanze Supporto Vitale.
 
 [Attacco di Opportunità]: Attacco immediato di un Intruso quando il Personaggio si muove attraverso il Corridoio in cui si trova o lascia una Stanza in cui si trova. Si risolvono fino a un massimo di 3, partendo dall'Intruso più grande.
 
