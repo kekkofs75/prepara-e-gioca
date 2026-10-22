@@ -453,6 +453,33 @@
       "aiSummary": true
     },
     {
+      "id": "nemesis-retaliation",
+      "title": "Nemesis: Retaliation",
+      "subtitle": "Marine altamente addestrati entrano in un nido alieno con ordini severi e strumenti avanzati",
+      "themeColor": "#12343A",
+      "bggRank": 348,
+      "bggScore": 8.7,
+      "duration": "120-180",
+      "players": "1-5",
+      "best": "4-5",
+      "anno": 2025,
+      "folder": "games/nemesis-retaliation",
+      "cover": "games/nemesis-retaliation/img/cover.png",
+      "coverBig": "games/nemesis-retaliation/img/cover-big.webp",
+      "copertina": "games/nemesis-retaliation/img/copertina.png",
+      "quickstart": ["preparazione", "svolgimento", "finepartita"],
+      "quickstartExpansions": [
+        { "sigla": "SdS", "label": "Squadra di Supporto" },
+        { "sigla": "Me", "label": "Mercenari" },
+        { "sigla": "In", "label": "Infiltrata" },
+        { "sigla": "Xy", "label": "Intrusi Xyriani" },
+        { "sigla": "CdNC", "label": "Culto della Nuova Carne" },
+        { "sigla": "Sa", "label": "Sanguivori" }
+      ],
+      "aiSummary": false,
+      "revision": "v.0.1"
+    },
+    {
       "id": "blood-rage",
       "title": "Blood Rage",
       "subtitle": "Il Ragnarök è arrivato! Assicurati un posto nel Valhalla in epiche battaglie vichinghe",
