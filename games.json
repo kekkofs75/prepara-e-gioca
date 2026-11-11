@@ -1926,6 +1926,23 @@
       "aiSummary": false,
       "revision": "v.0.1",
       "quickstart": ["preparazione", "svolgimento", "finepartita"]
+    },
+    {
+      "id": "intrighi-a-corte-ia",
+      "title": "Intrighi a Corte",
+      "subtitle": "Quando la Regina tiene il suo banchetto, nel menu c'è anche l'intrigo!",
+      "themeColor": "#0F4A52",
+      "bggRank": 989,
+      "bggScore": 7.3,
+      "duration": "20-30",
+      "players": "2-5",
+      "best": "4",
+      "anno": 2024,
+      "folder": "games/intrighi-a-corte-ia",
+      "cover": "games/intrighi-a-corte-ia/img/cover.png",
+      "coverBig": "games/intrighi-a-corte-ia/img/cover-big.webp",
+      "copertina": "games/intrighi-a-corte-ia/img/copertina.png",
+      "aiSummary": true
     }
   ]
 }
